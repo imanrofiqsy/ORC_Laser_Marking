@@ -143,7 +143,8 @@ Public Class MainForm
                         Dim rd As SqlDataReader = sc.ExecuteReader()
 
                         If rd.HasRows Then
-
+                            ' kirim string ke plc
+                            ' trigger load data
                             SequenceIndex = MainSequence.ScanOP
                         Else
                             lbl_op_ins.Text = "Invalid References..."
@@ -165,6 +166,7 @@ Public Class MainForm
                 Case MainSequence.ScanPO
                     If txt_po_num.Text <> "" Then
                         ' program add datalog
+                        ' load data finish 
                         SequenceIndex = MainSequence.GetData
                     Else
                         lbl_op_ins.Text = "Please Scan PO Number..."
