@@ -114,15 +114,22 @@ Partial Class MainForm
         Me.lbl_fail = New System.Windows.Forms.Label()
         Me.lbl_pass = New System.Windows.Forms.Label()
         Me.GroupBox77 = New System.Windows.Forms.GroupBox()
+        Me.ind_plc_status = New System.Windows.Forms.PictureBox()
+        Me.Label64 = New System.Windows.Forms.Label()
         Me.ind_software_stop = New System.Windows.Forms.PictureBox()
         Me.Label67 = New System.Windows.Forms.Label()
         Me.ind_software_run = New System.Windows.Forms.PictureBox()
         Me.Label66 = New System.Windows.Forms.Label()
         Me.ind_software_open = New System.Windows.Forms.PictureBox()
         Me.Label65 = New System.Windows.Forms.Label()
-        Me.ind_plc_status = New System.Windows.Forms.PictureBox()
-        Me.Label64 = New System.Windows.Forms.Label()
         Me.GroupBox80 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.ind_load_data_fail = New System.Windows.Forms.PictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.ind_load_data_busy = New System.Windows.Forms.PictureBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.ind_load_data_finish = New System.Windows.Forms.PictureBox()
         Me.txt_po_num = New System.Windows.Forms.TextBox()
         Me.txt_ope_id = New System.Windows.Forms.TextBox()
         Me.txt_ref = New System.Windows.Forms.TextBox()
@@ -149,30 +156,25 @@ Partial Class MainForm
         Me.pb_status_bar = New System.Windows.Forms.PictureBox()
         Me.pb_status_mc = New System.Windows.Forms.PictureBox()
         Me.pb_logo = New System.Windows.Forms.PictureBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.ind_load_data_busy = New System.Windows.Forms.PictureBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.ind_load_data_finish = New System.Windows.Forms.PictureBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.ind_load_data_fail = New System.Windows.Forms.PictureBox()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txt_qty = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox78.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox175.SuspendLayout()
         Me.GroupBox77.SuspendLayout()
+        CType(Me.ind_plc_status, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ind_software_stop, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ind_software_run, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ind_software_open, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_plc_status, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox80.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.ind_load_data_fail, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_load_data_busy, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_load_data_finish, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_load_data_busy, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_load_data_finish, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_load_data_fail, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -1148,7 +1150,7 @@ Partial Class MainForm
         Me.GroupBox175.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox175.Location = New System.Drawing.Point(446, 19)
         Me.GroupBox175.Name = "GroupBox175"
-        Me.GroupBox175.Size = New System.Drawing.Size(256, 118)
+        Me.GroupBox175.Size = New System.Drawing.Size(252, 118)
         Me.GroupBox175.TabIndex = 75
         Me.GroupBox175.TabStop = False
         Me.GroupBox175.Text = "Product Output"
@@ -1259,6 +1261,25 @@ Partial Class MainForm
         Me.GroupBox77.TabStop = False
         Me.GroupBox77.Text = "Software Indicator"
         '
+        'ind_plc_status
+        '
+        Me.ind_plc_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_plc_status.Location = New System.Drawing.Point(16, 90)
+        Me.ind_plc_status.Name = "ind_plc_status"
+        Me.ind_plc_status.Size = New System.Drawing.Size(15, 15)
+        Me.ind_plc_status.TabIndex = 33
+        Me.ind_plc_status.TabStop = False
+        '
+        'Label64
+        '
+        Me.Label64.AutoSize = True
+        Me.Label64.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label64.Location = New System.Drawing.Point(37, 87)
+        Me.Label64.Name = "Label64"
+        Me.Label64.Size = New System.Drawing.Size(77, 20)
+        Me.Label64.TabIndex = 31
+        Me.Label64.Text = "PLC Ready"
+        '
         'ind_software_stop
         '
         Me.ind_software_stop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
@@ -1315,31 +1336,14 @@ Partial Class MainForm
         Me.Label65.TabIndex = 31
         Me.Label65.Text = "Software Open"
         '
-        'ind_plc_status
-        '
-        Me.ind_plc_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_plc_status.Location = New System.Drawing.Point(16, 90)
-        Me.ind_plc_status.Name = "ind_plc_status"
-        Me.ind_plc_status.Size = New System.Drawing.Size(15, 15)
-        Me.ind_plc_status.TabIndex = 33
-        Me.ind_plc_status.TabStop = False
-        '
-        'Label64
-        '
-        Me.Label64.AutoSize = True
-        Me.Label64.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label64.Location = New System.Drawing.Point(37, 87)
-        Me.Label64.Name = "Label64"
-        Me.Label64.Size = New System.Drawing.Size(77, 20)
-        Me.Label64.TabIndex = 31
-        Me.Label64.Text = "PLC Ready"
-        '
         'GroupBox80
         '
         Me.GroupBox80.Controls.Add(Me.GroupBox3)
+        Me.GroupBox80.Controls.Add(Me.txt_qty)
         Me.GroupBox80.Controls.Add(Me.txt_po_num)
         Me.GroupBox80.Controls.Add(Me.txt_ope_id)
         Me.GroupBox80.Controls.Add(Me.txt_ref)
+        Me.GroupBox80.Controls.Add(Me.Label6)
         Me.GroupBox80.Controls.Add(Me.Label85)
         Me.GroupBox80.Controls.Add(Me.Label83)
         Me.GroupBox80.Controls.Add(Me.btn_run)
@@ -1350,10 +1354,82 @@ Partial Class MainForm
         Me.GroupBox80.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox80.Location = New System.Drawing.Point(6, 19)
         Me.GroupBox80.Name = "GroupBox80"
-        Me.GroupBox80.Size = New System.Drawing.Size(200, 492)
+        Me.GroupBox80.Size = New System.Drawing.Size(200, 521)
         Me.GroupBox80.TabIndex = 70
         Me.GroupBox80.TabStop = False
         Me.GroupBox80.Text = "Product Information"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.Label5)
+        Me.GroupBox3.Controls.Add(Me.ind_load_data_fail)
+        Me.GroupBox3.Controls.Add(Me.Label3)
+        Me.GroupBox3.Controls.Add(Me.ind_load_data_busy)
+        Me.GroupBox3.Controls.Add(Me.Label4)
+        Me.GroupBox3.Controls.Add(Me.ind_load_data_finish)
+        Me.GroupBox3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox3.Location = New System.Drawing.Point(10, 251)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(170, 103)
+        Me.GroupBox3.TabIndex = 71
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Laser Change Ref Info"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(32, 67)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(98, 20)
+        Me.Label5.TabIndex = 31
+        Me.Label5.Text = "Load Data Fail"
+        '
+        'ind_load_data_fail
+        '
+        Me.ind_load_data_fail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_load_data_fail.Location = New System.Drawing.Point(11, 70)
+        Me.ind_load_data_fail.Name = "ind_load_data_fail"
+        Me.ind_load_data_fail.Size = New System.Drawing.Size(15, 15)
+        Me.ind_load_data_fail.TabIndex = 33
+        Me.ind_load_data_fail.TabStop = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(32, 25)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(106, 20)
+        Me.Label3.TabIndex = 31
+        Me.Label3.Text = "Load Data Busy"
+        '
+        'ind_load_data_busy
+        '
+        Me.ind_load_data_busy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_load_data_busy.Location = New System.Drawing.Point(11, 28)
+        Me.ind_load_data_busy.Name = "ind_load_data_busy"
+        Me.ind_load_data_busy.Size = New System.Drawing.Size(15, 15)
+        Me.ind_load_data_busy.TabIndex = 33
+        Me.ind_load_data_busy.TabStop = False
+        '
+        'Label4
+        '
+        Me.Label4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(32, 46)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(114, 19)
+        Me.Label4.TabIndex = 31
+        Me.Label4.Text = "Load Data Finish"
+        '
+        'ind_load_data_finish
+        '
+        Me.ind_load_data_finish.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_load_data_finish.Location = New System.Drawing.Point(11, 49)
+        Me.ind_load_data_finish.Name = "ind_load_data_finish"
+        Me.ind_load_data_finish.Size = New System.Drawing.Size(15, 15)
+        Me.ind_load_data_finish.TabIndex = 33
+        Me.ind_load_data_finish.TabStop = False
         '
         'txt_po_num
         '
@@ -1405,7 +1481,7 @@ Partial Class MainForm
         Me.btn_run.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_run.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_run.Image = Global.MASTER.My.Resources.Resources.icons8_run_command_50
-        Me.btn_run.Location = New System.Drawing.Point(15, 309)
+        Me.btn_run.Location = New System.Drawing.Point(15, 355)
         Me.btn_run.Name = "btn_run"
         Me.btn_run.Size = New System.Drawing.Size(80, 79)
         Me.btn_run.TabIndex = 69
@@ -1419,7 +1495,7 @@ Partial Class MainForm
         Me.btn_empty.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_empty.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_empty.Image = Global.MASTER.My.Resources.Resources.icons8_emptying_baskets_56
-        Me.btn_empty.Location = New System.Drawing.Point(13, 380)
+        Me.btn_empty.Location = New System.Drawing.Point(13, 426)
         Me.btn_empty.Name = "btn_empty"
         Me.btn_empty.Size = New System.Drawing.Size(80, 79)
         Me.btn_empty.TabIndex = 69
@@ -1433,7 +1509,7 @@ Partial Class MainForm
         Me.btn_stop.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_stop.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_stop.Image = Global.MASTER.My.Resources.Resources.icons8_stop_56
-        Me.btn_stop.Location = New System.Drawing.Point(120, 309)
+        Me.btn_stop.Location = New System.Drawing.Point(120, 355)
         Me.btn_stop.Name = "btn_stop"
         Me.btn_stop.Size = New System.Drawing.Size(60, 79)
         Me.btn_stop.TabIndex = 69
@@ -1447,7 +1523,7 @@ Partial Class MainForm
         Me.btn_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_clear.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_clear.Image = Global.MASTER.My.Resources.Resources.icons8_erase_56
-        Me.btn_clear.Location = New System.Drawing.Point(123, 380)
+        Me.btn_clear.Location = New System.Drawing.Point(123, 426)
         Me.btn_clear.Name = "btn_clear"
         Me.btn_clear.Size = New System.Drawing.Size(60, 79)
         Me.btn_clear.TabIndex = 69
@@ -1652,77 +1728,23 @@ Partial Class MainForm
         Me.pb_logo.TabIndex = 5
         Me.pb_logo.TabStop = False
         '
-        'Label3
+        'Label6
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(32, 25)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(106, 20)
-        Me.Label3.TabIndex = 31
-        Me.Label3.Text = "Load Data Busy"
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(6, 181)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(45, 23)
+        Me.Label6.TabIndex = 31
+        Me.Label6.Text = "Qty :"
         '
-        'ind_load_data_busy
+        'txt_qty
         '
-        Me.ind_load_data_busy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_load_data_busy.Location = New System.Drawing.Point(11, 28)
-        Me.ind_load_data_busy.Name = "ind_load_data_busy"
-        Me.ind_load_data_busy.Size = New System.Drawing.Size(15, 15)
-        Me.ind_load_data_busy.TabIndex = 33
-        Me.ind_load_data_busy.TabStop = False
-        '
-        'Label4
-        '
-        Me.Label4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(32, 46)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(114, 19)
-        Me.Label4.TabIndex = 31
-        Me.Label4.Text = "Load Data Finish"
-        '
-        'ind_load_data_finish
-        '
-        Me.ind_load_data_finish.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_load_data_finish.Location = New System.Drawing.Point(11, 49)
-        Me.ind_load_data_finish.Name = "ind_load_data_finish"
-        Me.ind_load_data_finish.Size = New System.Drawing.Size(15, 15)
-        Me.ind_load_data_finish.TabIndex = 33
-        Me.ind_load_data_finish.TabStop = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(32, 67)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(98, 20)
-        Me.Label5.TabIndex = 31
-        Me.Label5.Text = "Load Data Fail"
-        '
-        'ind_load_data_fail
-        '
-        Me.ind_load_data_fail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_load_data_fail.Location = New System.Drawing.Point(11, 70)
-        Me.ind_load_data_fail.Name = "ind_load_data_fail"
-        Me.ind_load_data_fail.Size = New System.Drawing.Size(15, 15)
-        Me.ind_load_data_fail.TabIndex = 33
-        Me.ind_load_data_fail.TabStop = False
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.Controls.Add(Me.Label5)
-        Me.GroupBox3.Controls.Add(Me.ind_load_data_fail)
-        Me.GroupBox3.Controls.Add(Me.Label3)
-        Me.GroupBox3.Controls.Add(Me.ind_load_data_busy)
-        Me.GroupBox3.Controls.Add(Me.Label4)
-        Me.GroupBox3.Controls.Add(Me.ind_load_data_finish)
-        Me.GroupBox3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(10, 200)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(170, 103)
-        Me.GroupBox3.TabIndex = 71
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Laser Change Ref Info"
+        Me.txt_qty.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_qty.Location = New System.Drawing.Point(10, 205)
+        Me.txt_qty.Name = "txt_qty"
+        Me.txt_qty.Size = New System.Drawing.Size(170, 29)
+        Me.txt_qty.TabIndex = 70
         '
         'MainForm
         '
@@ -1764,20 +1786,20 @@ Partial Class MainForm
         Me.GroupBox175.PerformLayout()
         Me.GroupBox77.ResumeLayout(False)
         Me.GroupBox77.PerformLayout()
+        CType(Me.ind_plc_status, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ind_software_stop, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ind_software_run, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ind_software_open, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_plc_status, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox80.ResumeLayout(False)
         Me.GroupBox80.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        CType(Me.ind_load_data_fail, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_load_data_busy, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_load_data_finish, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_load_data_busy, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_load_data_finish, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_load_data_fail, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1915,4 +1937,6 @@ Partial Class MainForm
     Friend WithEvents ind_load_data_busy As PictureBox
     Friend WithEvents Label4 As Label
     Friend WithEvents ind_load_data_finish As PictureBox
+    Friend WithEvents txt_qty As TextBox
+    Friend WithEvents Label6 As Label
 End Class

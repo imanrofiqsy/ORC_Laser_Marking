@@ -4,12 +4,30 @@
     Public LoadingBarMessage As String
     Public PlcTrigger As Boolean
     Public SequenceIndex As Integer
+    Public LaserTrigger As Boolean
     Public Enum MainSequence
         ScanRef
         ScanOP
         ScanPO
+        ScanQty
         GetData
     End Enum
+    Public ProductReferences As References
+    Public Structure References
+        Dim References As String
+        Dim LaserStringData As String
+        Dim LaserCharData As Char
+        Dim PunchingMode As Integer
+        Dim LevelDistance As Double
+        Dim LevelTolerance As Double
+        Dim OringCheck As Integer
+        Dim FestoLeftDistance As Int32
+        Dim FestoRightDistance As Int32
+        Dim FestoLeftSpeed As Integer
+        Dim FestoRightSpeed As Integer
+        Dim LaserTemplateAddress As Integer
+        Dim CameraProgram As Integer
+    End Structure
     Public MachineStatus As Status
     Public Structure Status
         Dim PlcReady As Integer
