@@ -262,8 +262,6 @@ Public Class MainForm
                     PlcWriteState = True
                     'end trigger finish save data
                 ElseIf .MW11100_2 = 1 Then
-                    ' update count
-                    CountST3 += 1
                     ' update text box
                     Invoke(Sub()
 
