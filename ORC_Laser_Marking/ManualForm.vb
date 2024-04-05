@@ -46,31 +46,31 @@ Public Class ManualForm
 
     Private Sub btn_v101_fw_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_v101_fw.MouseDown
         SetCylinder.V101 = 1
-        PlcTrigger = True
+        PlcTrigger.V101 = True
     End Sub
 
     Private Sub btn_v101_fw_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_v101_fw.MouseUp
         SetCylinder.V101 = 0
-        PlcTrigger = True
+        PlcTrigger.V101 = True
     End Sub
 
     Private Sub btn_v101_bw_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_v101_bw.MouseDown
         SetCylinder.V101 = 2
-        PlcTrigger = True
+        PlcTrigger.V101 = True
     End Sub
 
     Private Sub btn_v101_bw_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_v101_bw.MouseUp
         SetCylinder.V101 = 0
-        PlcTrigger = True
+        PlcTrigger.V101 = True
     End Sub
 
     Private Sub Button3_MouseDown(sender As Object, e As MouseEventArgs) Handles Button3.MouseDown
         SetCylinder.TurnTable = 1
-        PlcTrigger = True
+        PlcTrigger.TurnTable = True
     End Sub
 
     Private Sub Button3_MouseUp(sender As Object, e As MouseEventArgs) Handles Button3.MouseUp
         SetCylinder.TurnTable = 0
-        PlcTrigger = True
+        PlcTrigger.TurnTable = True
     End Sub
 End Class

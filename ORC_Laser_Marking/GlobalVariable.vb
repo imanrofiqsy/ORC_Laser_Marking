@@ -2,9 +2,40 @@
     Public UserLevel As Integer
     Public LoadingBarValue As Integer
     Public LoadingBarMessage As String
-    Public PlcTrigger As Boolean
     Public SequenceIndex As Integer
     Public LaserTrigger As Boolean
+    Public PlcWriteState As Boolean
+    Public ProductResult As Result
+    Public Structure Result
+        Dim MeasurementLeft As Integer
+        Dim MeasurementRight As Integer
+        Dim CameraLeft As Integer
+        Dim CameraRight As Integer
+        Dim ProductLeft As Integer
+        Dim ProductRight As Integer
+    End Structure
+    Public PlcSave As Save
+    Public Structure Save
+        Dim MW11100_ As Integer
+        Dim MW11100_0 As Integer
+        Dim MW11100_1 As Integer
+        Dim MW11100_2 As Integer
+        Dim MW11100_3 As Integer
+        Dim MW11100_4 As Integer
+    End Structure
+    Public PlcTrigger As Trigger
+    Public Structure Trigger
+        'PC Status
+        Dim App As Boolean
+
+        'References
+        Dim TrigLoadData As Boolean
+
+        Dim TurnTable As Boolean
+        Dim V101 As Boolean
+
+        Dim MW11100_ As Boolean
+    End Structure
     Public Enum MainSequence
         ScanRef
         ScanOP
@@ -32,9 +63,7 @@
     Public Structure Status
         Dim PlcReady As Integer
         'PC Status
-        Dim AppOpen As Integer
-        Dim AppRun As Integer
-        Dim AppStop As Integer
+        Dim App As Integer
 
         Dim State As Integer
         Dim Mode As Integer
@@ -71,5 +100,6 @@
         Dim dbDatabase As String
         Dim dbUsername As String
         Dim dbPassword As String
+        Dim CountProduct As Integer
     End Structure
 End Module

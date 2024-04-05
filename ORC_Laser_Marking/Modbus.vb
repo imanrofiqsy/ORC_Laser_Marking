@@ -12,42 +12,24 @@ Public Class Modbus
     Public Function _ConnectionError() As Boolean
         Return ConnectionError
     End Function
-    Public Sub WriteBit(addr As Integer, bit As Integer, val As Integer)
-        Dim address_val() As Integer
-        address_val = modbusClient.ReadHoldingRegisters(addr, 1)
-
-        Dim binaryString As String = Convert.ToString(address_val(0), 2).PadLeft(16, "0"c)
+    Public Function WriteBit(val As Integer, bit As Integer, sett As Integer) As Integer
+        Dim binaryString As String = Convert.ToString(val, 2).PadLeft(16, "0"c)
+        Dim binaryCharArray As Char() = binaryString.ToCharArray()
+        Array.Reverse(binaryCharArray)
+        If sett = 1 Then
+            binaryCharArray(bit) = "1"
+        Else
+            binaryCharArray(bit) = "0"
+        End If
+        Array.Reverse(binaryCharArray)
+        Dim modifiedBinaryString As New String(binaryCharArray)
+        Dim integer_val As Integer = Convert.ToInt16(modifiedBinaryString, 2)
+        Return integer_val
+    End Function
+    Public Function ReadBit(val As Integer, bit As Integer) As Integer
+        Dim binaryString As String = Convert.ToString(val, 2).PadLeft(16, "0"c)
         binaryString = binaryString.Reverse.ToArray
-        Dim temp(16)
-        Dim temp_str As String
-        For i As Integer = 0 To binaryString.Length - 1
-            If i = bit Then
-                temp(i) = val
-            Else
-                If binaryString(i) = "1" Then
-                    temp(i) = 1
-                Else
-                    temp(i) = 0
-                End If
-            End If
-            temp_str = temp_str + temp(i).ToString
-        Next
-        temp_str = temp_str.Reverse.ToArray
-        Dim integer_val As Integer = Convert.ToInt16(temp_str.ToString, 2)
-
-        modbusClient.WriteSingleRegister(addr, integer_val)
-    End Sub
-    Public Function ReadBit(addr As Integer, bit As Integer) As Integer
-        Dim address_val() As Integer
-        address_val = modbusClient.ReadHoldingRegisters(addr, 1)
-
-        Dim binaryString As String = Convert.ToString(address_val(0), 2).PadLeft(16, "0"c)
-        binaryString = binaryString.Reverse.ToArray
-        For i As Integer = 0 To binaryString.Length - 1
-            If i = bit Then
-                Return Val(binaryString(i))
-            End If
-        Next
+        Return CInt(Char.GetNumericValue(binaryString(bit)))
     End Function
     Public Function ReadDoubleInteger(addr As Integer) As Integer
         Dim address_val() As Integer

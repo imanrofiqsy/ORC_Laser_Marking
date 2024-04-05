@@ -5,13 +5,17 @@ Imports ControlBPM
 Public Class MainForm
     Dim ThreadLoadingBar As Thread
     Dim ThreadModbus As Thread
-    Dim ThreadProcess As Thread
+    Dim ThreadLoadData As Thread
+    Dim ThreadST3 As Thread
     Dim Modbus = New Modbus
     Dim Database = New DatabaseConnection
 
     Dim fullPath As String = System.AppDomain.CurrentDomain.BaseDirectory
     Dim projectFolder As String = fullPath.Replace("\ORC_Laser_Marking\bin\Debug\", "").Replace("\ORC_Laser_Marking\bin\Release\", "")
     Dim iniPath As String = projectFolder + "\config\Config.INI"
+
+    Dim CountST3 As Integer = 0
+    Dim CountSt5 As Integer = 0
     Private Sub initLoadingBar()
         ThreadLoadingBar = New Thread(New ThreadStart(AddressOf ProcessLoad))
         ThreadLoadingBar.Start()
@@ -133,11 +137,16 @@ Public Class MainForm
                 UpdateLoadingBar(80, "Creating Multithreading...")
                 ThreadModbus = New Thread(AddressOf MainModbus)
                 ThreadModbus.Start()
-                ThreadProcess = New Thread(AddressOf MainProcess)
-                ThreadProcess.Start()
+                ThreadLoadData = New Thread(AddressOf MainLoad)
+                ThreadLoadData.Start()
+                ThreadST3 = New Thread(AddressOf MainST3)
+                ThreadST3.Start()
                 Thread.Sleep(500)
 
                 UpdateLoadingBar(100, "Loading?? 6...")
+                .CountProduct = ReadINI(iniPath, "STATUS", "CountProduct")
+                CountST3 = .CountProduct
+                CountSt5 = .CountProduct
                 Thread.Sleep(500)
             End With
         Catch ex As Exception
@@ -150,10 +159,67 @@ Public Class MainForm
         Cursor = Cursors.Default
         GetUserLevel()
 
-        MachineStatus.AppOpen = 1
-        PlcTrigger = True
+        MachineStatus.App = Modbus.WriteBit(MachineStatus.App, 0, 1)
+        PlcTrigger.App = True
+        PlcWriteState = True
         ind_software_open.BackColor = Color.Lime
         SequenceIndex = MainSequence.ScanRef
+    End Sub
+    Private Sub MainST3()
+        Do
+            With PlcSave
+                If .MW11100_0 = 1 Then
+                    ' update count
+                    CountST3 += 1
+                    ' update config
+                    Config.CountProduct = CountST3
+                    WriteINI(iniPath, "[STATUS]", "CountProduct", Config.CountProduct)
+                    ' update text box
+                    Invoke(Sub()
+
+                           End Sub)
+                    ' end update text box
+                    ' data aquisition from instrument
+                    Dim LeftHeidenResult As String = "999"
+                    Dim RightHeidenResult As String = "999"
+                    ' end data aquisition from instrument
+                    ' save database
+
+                    ' end save database
+                    ' send data to modbus
+
+                    ' end send data to modbus
+                    ' trigger finish save data
+                    .MW11100_ = Modbus.WriteBit(.MW11100_, 1, 1)
+                    .MW11100_ = Modbus.WriteBit(.MW11100_, 0, 0)
+                    PlcTrigger.MW11100_ = True
+                    PlcWriteState = True
+                    'end trigger finish save data
+                ElseIf .MW11100_2 = 1 Then
+                    ' update count
+                    CountST3 += 1
+                    ' update text box
+                    Invoke(Sub()
+
+                           End Sub)
+                    ' end update text box
+                    ' data aquisition from plc
+                    Dim LeftMeasureResult As Integer = ProductResult.MeasurementLeft
+                    Dim RightMeasureResult As Integer = ProductResult.MeasurementRight
+                    ' end data aquisition from plc
+                    ' save database
+
+                    ' end save database
+                    ' trigger finish save data
+                    .MW11100_ = Modbus.WriteBit(.MW11100_, 3, 1)
+                    .MW11100_ = Modbus.WriteBit(.MW11100_, 2, 0)
+                    PlcTrigger.MW11100_ = True
+                    PlcWriteState = True
+                    'end trigger finish save data
+                End If
+            End With
+            Thread.Sleep(150)
+        Loop
     End Sub
     Private Sub sendLaserString(data As String)
         With ProductReferences
@@ -167,7 +233,7 @@ Public Class MainForm
             LaserTrigger = True
         End With
     End Sub
-    Private Sub MainProcess()
+    Private Sub MainLoad()
         Do
             With MachineStatus
                 If .LoadDataBusy Then
@@ -229,7 +295,8 @@ Public Class MainForm
 
                                 ' trigger load data
                                 MachineStatus.TrigLoadData = 1
-                                PlcTrigger = True
+                                PlcTrigger.TrigLoadData = True
+                                PlcWriteState = True
                             End With
                             SequenceIndex = MainSequence.ScanOP
                         Else
@@ -295,27 +362,36 @@ Public Class MainForm
     End Sub
     Private Sub MainModbus()
         Do
-            If Not PlcTrigger Then
+            If Not PlcWriteState Then
                 PlcReading()
             Else
                 PlcWriting()
-                Thread.Sleep(100)
-                PlcTrigger = False
+                PlcWriteState = False
             End If
-            Thread.Sleep(150)
+            Thread.Sleep(50)
         Loop
     End Sub
     Private Sub PlcWriting()
         With SetCylinder
-            Modbus.WriteInteger(1101, .V101)
-            Modbus.WriteInteger(1110, .TurnTable)
+            If PlcTrigger.V101 Then
+                PlcTrigger.V101 = False
+                Modbus.WriteInteger(1101, .V101)
+            End If
+            If PlcTrigger.TurnTable Then
+                PlcTrigger.TurnTable = False
+                Modbus.WriteInteger(1110, .TurnTable)
+            End If
         End With
 
         With MachineStatus
-            Modbus.WriteBit(6, 0, .AppOpen)
-            Modbus.WriteBit(6, 1, .AppRun)
-            Modbus.WriteBit(6, 2, .AppStop)
-            Modbus.WriteBit(11, 0, .TrigLoadData)
+            If PlcTrigger.App Then
+                PlcTrigger.App = False
+                Modbus.WriteInteger(6, .App)
+            End If
+            If PlcTrigger.TrigLoadData Then
+                PlcTrigger.TrigLoadData = False
+                Modbus.WriteBit(11, 0, .TrigLoadData)
+            End If
         End With
 
         If LaserTrigger Then
@@ -330,18 +406,30 @@ Public Class MainForm
                 Next
             End With
         End If
+
+        With PlcSave
+            If PlcTrigger.MW11100_ Then
+                PlcTrigger.MW11100_ = False
+                Modbus.WriteInteger(11100, .MW11100_)
+            End If
+        End With
     End Sub
     Private Sub PlcReading()
         With MachineStatus
             .PlcReady = Modbus.ReadInteger(10)
             .Mode = Modbus.ReadInteger(1)
             .State = Modbus.ReadInteger(2)
-            .LoadDataBusy = Modbus.ReadBit(11, 1)
-            .LoadDataFinish = Modbus.ReadBit(11, 2)
-            .LoadDataFail = Modbus.ReadBit(11, 3)
-            .MachineInitialized = Modbus.ReadBit(12, 0)
-            .EmptyBusy = Modbus.ReadBit(9, 1)
-            .EmptyFinish = Modbus.ReadBit(10, 1)
+
+            Dim TempSaveLoadData As Integer = Modbus.ReadInteger(11)
+            .LoadDataBusy = Modbus.ReadBit(TempSaveLoadData, 1)
+            .LoadDataFinish = Modbus.ReadBit(TempSaveLoadData, 2)
+            .LoadDataFail = Modbus.ReadBit(TempSaveLoadData, 3)
+
+            .MachineInitialized = Modbus.ReadInteger(11)
+
+            Dim TempSaveEmpty As Integer = Modbus.ReadInteger(9)
+            .EmptyBusy = Modbus.ReadBit(TempSaveEmpty, 1)
+            .EmptyFinish = Modbus.ReadBit(TempSaveEmpty, 2)
             .OutputFail = Modbus.ReadInteger(4)
             .OutputPass = Modbus.ReadInteger(3)
         End With
@@ -349,6 +437,21 @@ Public Class MainForm
         With GetCylinder
             .V101 = Modbus.ReadInteger(6101)
             .V102 = Modbus.ReadInteger(6102)
+        End With
+
+        With PlcSave
+            .MW11100_ = Modbus.ReadInteger(11100)
+            .MW11100_0 = Modbus.ReadBit(.MW11100_, 0)
+            .MW11100_2 = Modbus.ReadBit(.MW11100_, 2)
+        End With
+
+        With ProductResult
+            .MeasurementLeft = Modbus.ReadInteger(12004)
+            .MeasurementRight = Modbus.ReadInteger(12006)
+            .CameraLeft = Modbus.ReadInteger(12008)
+            .CameraRight = Modbus.ReadInteger(12010)
+            .ProductLeft = Modbus.ReadInteger(12012)
+            .ProductRight = Modbus.ReadInteger(12013)
         End With
     End Sub
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
@@ -374,8 +477,10 @@ Public Class MainForm
             End If
 
             If .LoadDataFinish Then
-                .AppRun = 1
-                PlcTrigger = True
+                .App = Modbus.WriteBit(.App, 1, 1)
+                .App = Modbus.WriteBit(.App, 2, 0)
+                PlcTrigger.App = True
+                PlcWriteState = True
                 btn_run.Enabled = False
                 btn_stop.Enabled = True
                 ind_software_run.BackColor = Color.Lime
@@ -386,8 +491,10 @@ Public Class MainForm
 
     Private Sub btn_stop_Click(sender As Object, e As EventArgs) Handles btn_stop.Click
         With MachineStatus
-            .AppStop = 1
-            PlcTrigger = True
+            .App = Modbus.WriteBit(.App, 1, 0)
+            .App = Modbus.WriteBit(.App, 2, 1)
+            PlcTrigger.App = True
+            PlcWriteState = True
             btn_stop.Enabled = False
             btn_run.Enabled = True
             ind_software_run.BackColor = Color.Red
