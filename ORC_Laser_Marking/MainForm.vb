@@ -7,6 +7,8 @@ Public Class MainForm
     Dim ThreadModbus As Thread
     Dim ThreadLoadData As Thread
     Dim ThreadST3 As Thread
+    Dim ThreadST5 As Thread
+    Dim ThreadProductResult As Thread
     Dim Modbus = New Modbus
     Dim Database = New DatabaseConnection
 
@@ -16,6 +18,7 @@ Public Class MainForm
 
     Dim CountST3 As Integer = 0
     Dim CountSt5 As Integer = 0
+    Dim CountProductResult As Integer = 0
     Private Sub initLoadingBar()
         ThreadLoadingBar = New Thread(New ThreadStart(AddressOf ProcessLoad))
         ThreadLoadingBar.Start()
@@ -141,12 +144,17 @@ Public Class MainForm
                 ThreadLoadData.Start()
                 ThreadST3 = New Thread(AddressOf MainST3)
                 ThreadST3.Start()
+                ThreadST5 = New Thread(AddressOf MainST5)
+                ThreadST5.Start()
+                ThreadProductResult = New Thread(AddressOf MainProductResult)
+                ThreadProductResult.Start()
                 Thread.Sleep(500)
 
                 UpdateLoadingBar(100, "Loading?? 6...")
                 .CountProduct = ReadINI(iniPath, "STATUS", "CountProduct")
                 CountST3 = .CountProduct
                 CountSt5 = .CountProduct
+                CountProductResult = .CountProduct
                 Thread.Sleep(500)
             End With
         Catch ex As Exception
@@ -164,6 +172,64 @@ Public Class MainForm
         PlcWriteState = True
         ind_software_open.BackColor = Color.Lime
         SequenceIndex = MainSequence.ScanRef
+    End Sub
+    Private Sub MainProductResult()
+        Do
+            With PlcSave
+                If .MW11100_10 = 1 Then
+                    ' update count
+                    CountProductResult += 1
+                    ' update text box
+                    Invoke(Sub()
+
+                           End Sub)
+                    ' end update text box
+                    ' data aquisition from plc
+                    Dim LeftProdResult As Integer = ProductResult.ProductLeft
+                    Dim RightProdResult As Integer = ProductResult.ProductRight
+                    ' end data aquisition from plc
+                    ' save database
+
+                    ' end save database
+                    ' trigger finish save data
+                    .MW11100_ = Modbus.WriteBit(.MW11100_, 11, 1)
+                    .MW11100_ = Modbus.WriteBit(.MW11100_, 10, 0)
+                    PlcTrigger.MW11100_ = True
+                    PlcWriteState = True
+                    'end trigger finish save data
+                End If
+            End With
+            Thread.Sleep(150)
+        Loop
+    End Sub
+    Private Sub MainST5()
+        Do
+            With PlcSave
+                If .MW11100_6 = 1 Then
+                    ' update count
+                    CountSt5 += 1
+                    ' update text box
+                    Invoke(Sub()
+
+                           End Sub)
+                    ' end update text box
+                    ' data aquisition from plc
+                    Dim LeftCameraResult As Integer = ProductResult.CameraLeft
+                    Dim RightCameraResult As Integer = ProductResult.CameraRight
+                    ' end data aquisition from plc
+                    ' save database
+
+                    ' end save database
+                    ' trigger finish save data
+                    .MW11100_ = Modbus.WriteBit(.MW11100_, 7, 1)
+                    .MW11100_ = Modbus.WriteBit(.MW11100_, 6, 0)
+                    PlcTrigger.MW11100_ = True
+                    PlcWriteState = True
+                    'end trigger finish save data
+                End If
+            End With
+            Thread.Sleep(150)
+        Loop
     End Sub
     Private Sub MainST3()
         Do
@@ -443,6 +509,8 @@ Public Class MainForm
             .MW11100_ = Modbus.ReadInteger(11100)
             .MW11100_0 = Modbus.ReadBit(.MW11100_, 0)
             .MW11100_2 = Modbus.ReadBit(.MW11100_, 2)
+            .MW11100_6 = Modbus.ReadBit(.MW11100_, 6)
+            .MW11100_10 = Modbus.ReadBit(.MW11100_, 10)
         End With
 
         With ProductResult

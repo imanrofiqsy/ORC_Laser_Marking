@@ -22,6 +22,10 @@
         Dim MW11100_2 As Integer
         Dim MW11100_3 As Integer
         Dim MW11100_4 As Integer
+        Dim MW11100_6 As Integer
+        Dim MW11100_7 As Integer
+        Dim MW11100_10 As Integer
+        Dim MW11100_11 As Integer
     End Structure
     Public PlcTrigger As Trigger
     Public Structure Trigger
