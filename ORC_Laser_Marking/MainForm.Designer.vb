@@ -32,6 +32,23 @@ Partial Class MainForm
         Me.lbl_user = New System.Windows.Forms.Label()
         Me.DateTime = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.lbl_oring_check = New System.Windows.Forms.Label()
+        Me.lbl_camera_program = New System.Windows.Forms.Label()
+        Me.lbl_festo_distance_right = New System.Windows.Forms.Label()
+        Me.lbl_actuation_mode = New System.Windows.Forms.Label()
+        Me.lbl_laser_template = New System.Windows.Forms.Label()
+        Me.lbl_festo_distance_left = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.lbl_tolerance = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.lbl_level_distance = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
         Me.GroupBox78 = New System.Windows.Forms.GroupBox()
         Me.Label68 = New System.Windows.Forms.Label()
         Me.Label84 = New System.Windows.Forms.Label()
@@ -90,18 +107,36 @@ Partial Class MainForm
         Me.lbl_st5_left_camera_2 = New System.Windows.Forms.Label()
         Me.lbl_st5_left_camera_1 = New System.Windows.Forms.Label()
         Me.lbl_st5_left_camera = New System.Windows.Forms.Label()
-        Me.lbl_item_6 = New System.Windows.Forms.Label()
-        Me.lbl_item_5 = New System.Windows.Forms.Label()
-        Me.lbl_status_5 = New System.Windows.Forms.Label()
-        Me.lbl_item_4 = New System.Windows.Forms.Label()
-        Me.lbl_status_4 = New System.Windows.Forms.Label()
-        Me.lbl_item_3 = New System.Windows.Forms.Label()
-        Me.lbl_status_3 = New System.Windows.Forms.Label()
-        Me.lbl_item_2 = New System.Windows.Forms.Label()
-        Me.lbl_status_2 = New System.Windows.Forms.Label()
-        Me.lbl_item_1 = New System.Windows.Forms.Label()
-        Me.lbl_status_1 = New System.Windows.Forms.Label()
-        Me.lbl_status = New System.Windows.Forms.Label()
+        Me.lbl_status_r_5 = New System.Windows.Forms.Label()
+        Me.lbl_status_r_2 = New System.Windows.Forms.Label()
+        Me.lbl_status_l_5 = New System.Windows.Forms.Label()
+        Me.lbl_status_l_2 = New System.Windows.Forms.Label()
+        Me.lbl_status_r_4 = New System.Windows.Forms.Label()
+        Me.lbl_status_r_1 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.lbl_status_l_4 = New System.Windows.Forms.Label()
+        Me.lbl_status_l_1 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.lbl_status_r_3 = New System.Windows.Forms.Label()
+        Me.lbl_status_r = New System.Windows.Forms.Label()
+        Me.lbl_status_l_3 = New System.Windows.Forms.Label()
+        Me.lbl_status_l = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.lbl_op_ins = New System.Windows.Forms.Label()
         Me.GroupBox175 = New System.Windows.Forms.GroupBox()
@@ -123,6 +158,7 @@ Partial Class MainForm
         Me.ind_software_open = New System.Windows.Forms.PictureBox()
         Me.Label65 = New System.Windows.Forms.Label()
         Me.GroupBox80 = New System.Windows.Forms.GroupBox()
+        Me.txt_ref = New System.Windows.Forms.ComboBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ind_load_data_fail = New System.Windows.Forms.PictureBox()
@@ -130,9 +166,10 @@ Partial Class MainForm
         Me.ind_load_data_busy = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ind_load_data_finish = New System.Windows.Forms.PictureBox()
+        Me.txt_qty = New System.Windows.Forms.TextBox()
         Me.txt_po_num = New System.Windows.Forms.TextBox()
         Me.txt_ope_id = New System.Windows.Forms.TextBox()
-        Me.txt_ref = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label85 = New System.Windows.Forms.Label()
         Me.Label83 = New System.Windows.Forms.Label()
         Me.btn_run = New System.Windows.Forms.Button()
@@ -156,9 +193,11 @@ Partial Class MainForm
         Me.pb_status_bar = New System.Windows.Forms.PictureBox()
         Me.pb_status_mc = New System.Windows.Forms.PictureBox()
         Me.pb_logo = New System.Windows.Forms.PictureBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txt_qty = New System.Windows.Forms.TextBox()
+        Me.dgv_temp = New System.Windows.Forms.DataGridView()
+        Me.StartDate = New System.Windows.Forms.DateTimePicker()
+        Me.EndDate = New System.Windows.Forms.DateTimePicker()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
         Me.GroupBox78.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox175.SuspendLayout()
@@ -175,6 +214,7 @@ Partial Class MainForm
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_temp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -254,6 +294,7 @@ Partial Class MainForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.GroupBox4)
         Me.GroupBox1.Controls.Add(Me.GroupBox78)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.GroupBox175)
@@ -264,6 +305,200 @@ Partial Class MainForm
         Me.GroupBox1.Size = New System.Drawing.Size(1074, 546)
         Me.GroupBox1.TabIndex = 27
         Me.GroupBox1.TabStop = False
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.Label37)
+        Me.GroupBox4.Controls.Add(Me.Label28)
+        Me.GroupBox4.Controls.Add(Me.lbl_oring_check)
+        Me.GroupBox4.Controls.Add(Me.lbl_camera_program)
+        Me.GroupBox4.Controls.Add(Me.lbl_festo_distance_right)
+        Me.GroupBox4.Controls.Add(Me.lbl_actuation_mode)
+        Me.GroupBox4.Controls.Add(Me.lbl_laser_template)
+        Me.GroupBox4.Controls.Add(Me.lbl_festo_distance_left)
+        Me.GroupBox4.Controls.Add(Me.Label39)
+        Me.GroupBox4.Controls.Add(Me.lbl_tolerance)
+        Me.GroupBox4.Controls.Add(Me.Label32)
+        Me.GroupBox4.Controls.Add(Me.Label38)
+        Me.GroupBox4.Controls.Add(Me.lbl_level_distance)
+        Me.GroupBox4.Controls.Add(Me.Label31)
+        Me.GroupBox4.Controls.Add(Me.Label30)
+        Me.GroupBox4.Controls.Add(Me.Label29)
+        Me.GroupBox4.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox4.Location = New System.Drawing.Point(212, 302)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(200, 238)
+        Me.GroupBox4.TabIndex = 78
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Product Database :"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Location = New System.Drawing.Point(6, 97)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(86, 20)
+        Me.Label37.TabIndex = 38
+        Me.Label37.Text = "Oring Check"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(6, 28)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(106, 20)
+        Me.Label28.TabIndex = 39
+        Me.Label28.Text = "Actuation Mode"
+        '
+        'lbl_oring_check
+        '
+        Me.lbl_oring_check.BackColor = System.Drawing.Color.White
+        Me.lbl_oring_check.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_oring_check.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_oring_check.Location = New System.Drawing.Point(144, 97)
+        Me.lbl_oring_check.Name = "lbl_oring_check"
+        Me.lbl_oring_check.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_oring_check.TabIndex = 46
+        Me.lbl_oring_check.Text = "..."
+        '
+        'lbl_camera_program
+        '
+        Me.lbl_camera_program.BackColor = System.Drawing.Color.White
+        Me.lbl_camera_program.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_camera_program.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_camera_program.Location = New System.Drawing.Point(144, 189)
+        Me.lbl_camera_program.Name = "lbl_camera_program"
+        Me.lbl_camera_program.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_camera_program.TabIndex = 47
+        Me.lbl_camera_program.Text = "..."
+        '
+        'lbl_festo_distance_right
+        '
+        Me.lbl_festo_distance_right.BackColor = System.Drawing.Color.White
+        Me.lbl_festo_distance_right.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_festo_distance_right.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_festo_distance_right.Location = New System.Drawing.Point(144, 143)
+        Me.lbl_festo_distance_right.Name = "lbl_festo_distance_right"
+        Me.lbl_festo_distance_right.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_festo_distance_right.TabIndex = 48
+        Me.lbl_festo_distance_right.Text = "..."
+        '
+        'lbl_actuation_mode
+        '
+        Me.lbl_actuation_mode.BackColor = System.Drawing.Color.White
+        Me.lbl_actuation_mode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_actuation_mode.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_actuation_mode.Location = New System.Drawing.Point(144, 28)
+        Me.lbl_actuation_mode.Name = "lbl_actuation_mode"
+        Me.lbl_actuation_mode.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_actuation_mode.TabIndex = 49
+        Me.lbl_actuation_mode.Text = "..."
+        '
+        'lbl_laser_template
+        '
+        Me.lbl_laser_template.BackColor = System.Drawing.Color.White
+        Me.lbl_laser_template.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_laser_template.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_laser_template.Location = New System.Drawing.Point(144, 166)
+        Me.lbl_laser_template.Name = "lbl_laser_template"
+        Me.lbl_laser_template.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_laser_template.TabIndex = 50
+        Me.lbl_laser_template.Text = "..."
+        '
+        'lbl_festo_distance_left
+        '
+        Me.lbl_festo_distance_left.BackColor = System.Drawing.Color.White
+        Me.lbl_festo_distance_left.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_festo_distance_left.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_festo_distance_left.Location = New System.Drawing.Point(144, 120)
+        Me.lbl_festo_distance_left.Name = "lbl_festo_distance_left"
+        Me.lbl_festo_distance_left.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_festo_distance_left.TabIndex = 51
+        Me.lbl_festo_distance_left.Text = "..."
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.Location = New System.Drawing.Point(6, 166)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(125, 20)
+        Me.Label39.TabIndex = 40
+        Me.Label39.Text = "Laser Template No"
+        '
+        'lbl_tolerance
+        '
+        Me.lbl_tolerance.BackColor = System.Drawing.Color.White
+        Me.lbl_tolerance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_tolerance.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_tolerance.Location = New System.Drawing.Point(144, 74)
+        Me.lbl_tolerance.Name = "lbl_tolerance"
+        Me.lbl_tolerance.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_tolerance.TabIndex = 52
+        Me.lbl_tolerance.Text = "..."
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(6, 120)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(127, 20)
+        Me.Label32.TabIndex = 41
+        Me.Label32.Text = "Festo Distance Left"
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.Location = New System.Drawing.Point(6, 190)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(114, 20)
+        Me.Label38.TabIndex = 42
+        Me.Label38.Text = "Camera Program"
+        '
+        'lbl_level_distance
+        '
+        Me.lbl_level_distance.BackColor = System.Drawing.Color.White
+        Me.lbl_level_distance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_level_distance.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_level_distance.Location = New System.Drawing.Point(144, 51)
+        Me.lbl_level_distance.Name = "lbl_level_distance"
+        Me.lbl_level_distance.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_level_distance.TabIndex = 53
+        Me.lbl_level_distance.Text = "..."
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(6, 144)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(137, 20)
+        Me.Label31.TabIndex = 43
+        Me.Label31.Text = "Festo Distance Right"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(6, 51)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(99, 20)
+        Me.Label30.TabIndex = 44
+        Me.Label30.Text = "Level Distance"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(6, 75)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(70, 20)
+        Me.Label29.TabIndex = 45
+        Me.Label29.Text = "Tolerance"
         '
         'GroupBox78
         '
@@ -324,22 +559,40 @@ Partial Class MainForm
         Me.GroupBox78.Controls.Add(Me.lbl_st5_left_camera_2)
         Me.GroupBox78.Controls.Add(Me.lbl_st5_left_camera_1)
         Me.GroupBox78.Controls.Add(Me.lbl_st5_left_camera)
-        Me.GroupBox78.Controls.Add(Me.lbl_item_6)
-        Me.GroupBox78.Controls.Add(Me.lbl_item_5)
-        Me.GroupBox78.Controls.Add(Me.lbl_status_5)
-        Me.GroupBox78.Controls.Add(Me.lbl_item_4)
-        Me.GroupBox78.Controls.Add(Me.lbl_status_4)
-        Me.GroupBox78.Controls.Add(Me.lbl_item_3)
-        Me.GroupBox78.Controls.Add(Me.lbl_status_3)
-        Me.GroupBox78.Controls.Add(Me.lbl_item_2)
-        Me.GroupBox78.Controls.Add(Me.lbl_status_2)
-        Me.GroupBox78.Controls.Add(Me.lbl_item_1)
-        Me.GroupBox78.Controls.Add(Me.lbl_status_1)
-        Me.GroupBox78.Controls.Add(Me.lbl_status)
+        Me.GroupBox78.Controls.Add(Me.lbl_status_r_5)
+        Me.GroupBox78.Controls.Add(Me.lbl_status_r_2)
+        Me.GroupBox78.Controls.Add(Me.lbl_status_l_5)
+        Me.GroupBox78.Controls.Add(Me.lbl_status_l_2)
+        Me.GroupBox78.Controls.Add(Me.lbl_status_r_4)
+        Me.GroupBox78.Controls.Add(Me.lbl_status_r_1)
+        Me.GroupBox78.Controls.Add(Me.Label24)
+        Me.GroupBox78.Controls.Add(Me.Label22)
+        Me.GroupBox78.Controls.Add(Me.Label20)
+        Me.GroupBox78.Controls.Add(Me.Label16)
+        Me.GroupBox78.Controls.Add(Me.Label19)
+        Me.GroupBox78.Controls.Add(Me.Label14)
+        Me.GroupBox78.Controls.Add(Me.lbl_status_l_4)
+        Me.GroupBox78.Controls.Add(Me.lbl_status_l_1)
+        Me.GroupBox78.Controls.Add(Me.Label12)
+        Me.GroupBox78.Controls.Add(Me.Label10)
+        Me.GroupBox78.Controls.Add(Me.Label11)
+        Me.GroupBox78.Controls.Add(Me.Label9)
+        Me.GroupBox78.Controls.Add(Me.Label8)
+        Me.GroupBox78.Controls.Add(Me.Label23)
+        Me.GroupBox78.Controls.Add(Me.Label7)
+        Me.GroupBox78.Controls.Add(Me.Label21)
+        Me.GroupBox78.Controls.Add(Me.Label18)
+        Me.GroupBox78.Controls.Add(Me.Label15)
+        Me.GroupBox78.Controls.Add(Me.Label17)
+        Me.GroupBox78.Controls.Add(Me.Label13)
+        Me.GroupBox78.Controls.Add(Me.lbl_status_r_3)
+        Me.GroupBox78.Controls.Add(Me.lbl_status_r)
+        Me.GroupBox78.Controls.Add(Me.lbl_status_l_3)
+        Me.GroupBox78.Controls.Add(Me.lbl_status_l)
         Me.GroupBox78.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox78.Location = New System.Drawing.Point(212, 143)
         Me.GroupBox78.Name = "GroupBox78"
-        Me.GroupBox78.Size = New System.Drawing.Size(486, 244)
+        Me.GroupBox78.Size = New System.Drawing.Size(856, 153)
         Me.GroupBox78.TabIndex = 77
         Me.GroupBox78.TabStop = False
         Me.GroupBox78.Text = "Production Data :"
@@ -348,7 +601,7 @@ Partial Class MainForm
         '
         Me.Label68.AutoSize = True
         Me.Label68.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label68.Location = New System.Drawing.Point(6, 229)
+        Me.Label68.Location = New System.Drawing.Point(12, 363)
         Me.Label68.Name = "Label68"
         Me.Label68.Size = New System.Drawing.Size(21, 20)
         Me.Label68.TabIndex = 36
@@ -359,7 +612,7 @@ Partial Class MainForm
         '
         Me.Label84.AutoSize = True
         Me.Label84.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label84.Location = New System.Drawing.Point(6, 139)
+        Me.Label84.Location = New System.Drawing.Point(12, 273)
         Me.Label84.Name = "Label84"
         Me.Label84.Size = New System.Drawing.Size(113, 20)
         Me.Label84.TabIndex = 36
@@ -369,7 +622,7 @@ Partial Class MainForm
         '
         Me.Label310.AutoSize = True
         Me.Label310.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label310.Location = New System.Drawing.Point(6, 183)
+        Me.Label310.Location = New System.Drawing.Point(12, 317)
         Me.Label310.Name = "Label310"
         Me.Label310.Size = New System.Drawing.Size(121, 20)
         Me.Label310.TabIndex = 36
@@ -379,7 +632,7 @@ Partial Class MainForm
         '
         Me.laabel2.AutoSize = True
         Me.laabel2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.laabel2.Location = New System.Drawing.Point(6, 206)
+        Me.laabel2.Location = New System.Drawing.Point(12, 340)
         Me.laabel2.Name = "laabel2"
         Me.laabel2.Size = New System.Drawing.Size(21, 20)
         Me.laabel2.TabIndex = 36
@@ -390,17 +643,17 @@ Partial Class MainForm
         '
         Me.Label116.AutoSize = True
         Me.Label116.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label116.Location = New System.Drawing.Point(6, 70)
+        Me.Label116.Location = New System.Drawing.Point(6, 99)
         Me.Label116.Name = "Label116"
-        Me.Label116.Size = New System.Drawing.Size(116, 20)
+        Me.Label116.Size = New System.Drawing.Size(120, 20)
         Me.Label116.TabIndex = 36
-        Me.Label116.Text = "ST3 Left Measure"
+        Me.Label116.Text = "ST3 Measurement"
         '
         'Label257
         '
         Me.Label257.AutoSize = True
         Me.Label257.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label257.Location = New System.Drawing.Point(6, 116)
+        Me.Label257.Location = New System.Drawing.Point(12, 250)
         Me.Label257.Name = "Label257"
         Me.Label257.Size = New System.Drawing.Size(103, 20)
         Me.Label257.TabIndex = 36
@@ -410,7 +663,7 @@ Partial Class MainForm
         '
         Me.Label119.AutoSize = True
         Me.Label119.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label119.Location = New System.Drawing.Point(6, 93)
+        Me.Label119.Location = New System.Drawing.Point(12, 227)
         Me.Label119.Name = "Label119"
         Me.Label119.Size = New System.Drawing.Size(126, 20)
         Me.Label119.TabIndex = 36
@@ -420,17 +673,17 @@ Partial Class MainForm
         '
         Me.laabel1.AutoSize = True
         Me.laabel1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.laabel1.Location = New System.Drawing.Point(6, 161)
+        Me.laabel1.Location = New System.Drawing.Point(6, 123)
         Me.laabel1.Name = "laabel1"
-        Me.laabel1.Size = New System.Drawing.Size(111, 20)
+        Me.laabel1.Size = New System.Drawing.Size(126, 20)
         Me.laabel1.TabIndex = 36
-        Me.laabel1.Text = "ST5 Left Camera"
+        Me.laabel1.Text = "ST5 Camera Check"
         '
         'Label121
         '
         Me.Label121.AutoSize = True
         Me.Label121.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label121.Location = New System.Drawing.Point(6, 46)
+        Me.Label121.Location = New System.Drawing.Point(6, 76)
         Me.Label121.Name = "Label121"
         Me.Label121.Size = New System.Drawing.Size(101, 20)
         Me.Label121.TabIndex = 36
@@ -441,7 +694,7 @@ Partial Class MainForm
         Me.lbl_unscrew_status_5.BackColor = System.Drawing.Color.White
         Me.lbl_unscrew_status_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_unscrew_status_5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_unscrew_status_5.Location = New System.Drawing.Point(426, 227)
+        Me.lbl_unscrew_status_5.Location = New System.Drawing.Point(432, 361)
         Me.lbl_unscrew_status_5.Name = "lbl_unscrew_status_5"
         Me.lbl_unscrew_status_5.Size = New System.Drawing.Size(50, 20)
         Me.lbl_unscrew_status_5.TabIndex = 37
@@ -453,7 +706,7 @@ Partial Class MainForm
         Me.lbl_unscrew_status_4.BackColor = System.Drawing.Color.White
         Me.lbl_unscrew_status_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_unscrew_status_4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_unscrew_status_4.Location = New System.Drawing.Point(373, 227)
+        Me.lbl_unscrew_status_4.Location = New System.Drawing.Point(379, 361)
         Me.lbl_unscrew_status_4.Name = "lbl_unscrew_status_4"
         Me.lbl_unscrew_status_4.Size = New System.Drawing.Size(50, 20)
         Me.lbl_unscrew_status_4.TabIndex = 37
@@ -465,7 +718,7 @@ Partial Class MainForm
         Me.lbl_unscrew_status_3.BackColor = System.Drawing.Color.White
         Me.lbl_unscrew_status_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_unscrew_status_3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_unscrew_status_3.Location = New System.Drawing.Point(320, 227)
+        Me.lbl_unscrew_status_3.Location = New System.Drawing.Point(326, 361)
         Me.lbl_unscrew_status_3.Name = "lbl_unscrew_status_3"
         Me.lbl_unscrew_status_3.Size = New System.Drawing.Size(50, 20)
         Me.lbl_unscrew_status_3.TabIndex = 37
@@ -477,7 +730,7 @@ Partial Class MainForm
         Me.lbl_unscrew_status_2.BackColor = System.Drawing.Color.White
         Me.lbl_unscrew_status_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_unscrew_status_2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_unscrew_status_2.Location = New System.Drawing.Point(267, 227)
+        Me.lbl_unscrew_status_2.Location = New System.Drawing.Point(273, 361)
         Me.lbl_unscrew_status_2.Name = "lbl_unscrew_status_2"
         Me.lbl_unscrew_status_2.Size = New System.Drawing.Size(50, 20)
         Me.lbl_unscrew_status_2.TabIndex = 37
@@ -489,7 +742,7 @@ Partial Class MainForm
         Me.lbl_unscrew_status_1.BackColor = System.Drawing.Color.White
         Me.lbl_unscrew_status_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_unscrew_status_1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_unscrew_status_1.Location = New System.Drawing.Point(214, 227)
+        Me.lbl_unscrew_status_1.Location = New System.Drawing.Point(220, 361)
         Me.lbl_unscrew_status_1.Name = "lbl_unscrew_status_1"
         Me.lbl_unscrew_status_1.Size = New System.Drawing.Size(50, 20)
         Me.lbl_unscrew_status_1.TabIndex = 37
@@ -501,7 +754,7 @@ Partial Class MainForm
         Me.lbl_unscrew_status.BackColor = System.Drawing.Color.White
         Me.lbl_unscrew_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_unscrew_status.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_unscrew_status.Location = New System.Drawing.Point(161, 227)
+        Me.lbl_unscrew_status.Location = New System.Drawing.Point(167, 361)
         Me.lbl_unscrew_status.Name = "lbl_unscrew_status"
         Me.lbl_unscrew_status.Size = New System.Drawing.Size(50, 20)
         Me.lbl_unscrew_status.TabIndex = 37
@@ -513,7 +766,7 @@ Partial Class MainForm
         Me.lbl_st3_right_status_5.BackColor = System.Drawing.Color.White
         Me.lbl_st3_right_status_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_right_status_5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_right_status_5.Location = New System.Drawing.Point(426, 137)
+        Me.lbl_st3_right_status_5.Location = New System.Drawing.Point(432, 271)
         Me.lbl_st3_right_status_5.Name = "lbl_st3_right_status_5"
         Me.lbl_st3_right_status_5.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_right_status_5.TabIndex = 37
@@ -524,7 +777,7 @@ Partial Class MainForm
         Me.lbl_st3_right_status_4.BackColor = System.Drawing.Color.White
         Me.lbl_st3_right_status_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_right_status_4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_right_status_4.Location = New System.Drawing.Point(373, 137)
+        Me.lbl_st3_right_status_4.Location = New System.Drawing.Point(379, 271)
         Me.lbl_st3_right_status_4.Name = "lbl_st3_right_status_4"
         Me.lbl_st3_right_status_4.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_right_status_4.TabIndex = 37
@@ -535,7 +788,7 @@ Partial Class MainForm
         Me.lbl_st3_right_status_3.BackColor = System.Drawing.Color.White
         Me.lbl_st3_right_status_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_right_status_3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_right_status_3.Location = New System.Drawing.Point(320, 137)
+        Me.lbl_st3_right_status_3.Location = New System.Drawing.Point(326, 271)
         Me.lbl_st3_right_status_3.Name = "lbl_st3_right_status_3"
         Me.lbl_st3_right_status_3.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_right_status_3.TabIndex = 37
@@ -546,7 +799,7 @@ Partial Class MainForm
         Me.lbl_st3_right_status_2.BackColor = System.Drawing.Color.White
         Me.lbl_st3_right_status_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_right_status_2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_right_status_2.Location = New System.Drawing.Point(267, 137)
+        Me.lbl_st3_right_status_2.Location = New System.Drawing.Point(273, 271)
         Me.lbl_st3_right_status_2.Name = "lbl_st3_right_status_2"
         Me.lbl_st3_right_status_2.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_right_status_2.TabIndex = 37
@@ -557,7 +810,7 @@ Partial Class MainForm
         Me.lbl_st3_right_status_1.BackColor = System.Drawing.Color.White
         Me.lbl_st3_right_status_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_right_status_1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_right_status_1.Location = New System.Drawing.Point(214, 137)
+        Me.lbl_st3_right_status_1.Location = New System.Drawing.Point(220, 271)
         Me.lbl_st3_right_status_1.Name = "lbl_st3_right_status_1"
         Me.lbl_st3_right_status_1.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_right_status_1.TabIndex = 37
@@ -568,7 +821,7 @@ Partial Class MainForm
         Me.lbl_st3_right_status.BackColor = System.Drawing.Color.White
         Me.lbl_st3_right_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_right_status.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_right_status.Location = New System.Drawing.Point(161, 137)
+        Me.lbl_st3_right_status.Location = New System.Drawing.Point(167, 271)
         Me.lbl_st3_right_status.Name = "lbl_st3_right_status"
         Me.lbl_st3_right_status.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_right_status.TabIndex = 37
@@ -579,7 +832,7 @@ Partial Class MainForm
         Me.lbl_st5_right_camera_5.BackColor = System.Drawing.Color.White
         Me.lbl_st5_right_camera_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st5_right_camera_5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st5_right_camera_5.Location = New System.Drawing.Point(426, 181)
+        Me.lbl_st5_right_camera_5.Location = New System.Drawing.Point(750, 122)
         Me.lbl_st5_right_camera_5.Name = "lbl_st5_right_camera_5"
         Me.lbl_st5_right_camera_5.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st5_right_camera_5.TabIndex = 37
@@ -590,7 +843,7 @@ Partial Class MainForm
         Me.lbl_diff_result_5.BackColor = System.Drawing.Color.White
         Me.lbl_diff_result_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_diff_result_5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_diff_result_5.Location = New System.Drawing.Point(426, 204)
+        Me.lbl_diff_result_5.Location = New System.Drawing.Point(432, 338)
         Me.lbl_diff_result_5.Name = "lbl_diff_result_5"
         Me.lbl_diff_result_5.Size = New System.Drawing.Size(50, 20)
         Me.lbl_diff_result_5.TabIndex = 37
@@ -602,7 +855,7 @@ Partial Class MainForm
         Me.lbl_st5_right_camera_4.BackColor = System.Drawing.Color.White
         Me.lbl_st5_right_camera_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st5_right_camera_4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st5_right_camera_4.Location = New System.Drawing.Point(373, 181)
+        Me.lbl_st5_right_camera_4.Location = New System.Drawing.Point(644, 122)
         Me.lbl_st5_right_camera_4.Name = "lbl_st5_right_camera_4"
         Me.lbl_st5_right_camera_4.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st5_right_camera_4.TabIndex = 37
@@ -613,7 +866,7 @@ Partial Class MainForm
         Me.lbl_diff_result_4.BackColor = System.Drawing.Color.White
         Me.lbl_diff_result_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_diff_result_4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_diff_result_4.Location = New System.Drawing.Point(373, 204)
+        Me.lbl_diff_result_4.Location = New System.Drawing.Point(379, 338)
         Me.lbl_diff_result_4.Name = "lbl_diff_result_4"
         Me.lbl_diff_result_4.Size = New System.Drawing.Size(50, 20)
         Me.lbl_diff_result_4.TabIndex = 37
@@ -625,7 +878,7 @@ Partial Class MainForm
         Me.lbl_st5_right_camera_3.BackColor = System.Drawing.Color.White
         Me.lbl_st5_right_camera_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st5_right_camera_3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st5_right_camera_3.Location = New System.Drawing.Point(320, 181)
+        Me.lbl_st5_right_camera_3.Location = New System.Drawing.Point(538, 122)
         Me.lbl_st5_right_camera_3.Name = "lbl_st5_right_camera_3"
         Me.lbl_st5_right_camera_3.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st5_right_camera_3.TabIndex = 37
@@ -636,7 +889,7 @@ Partial Class MainForm
         Me.lbl_diff_result_3.BackColor = System.Drawing.Color.White
         Me.lbl_diff_result_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_diff_result_3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_diff_result_3.Location = New System.Drawing.Point(320, 204)
+        Me.lbl_diff_result_3.Location = New System.Drawing.Point(326, 338)
         Me.lbl_diff_result_3.Name = "lbl_diff_result_3"
         Me.lbl_diff_result_3.Size = New System.Drawing.Size(50, 20)
         Me.lbl_diff_result_3.TabIndex = 37
@@ -648,7 +901,7 @@ Partial Class MainForm
         Me.lbl_st5_right_camera_2.BackColor = System.Drawing.Color.White
         Me.lbl_st5_right_camera_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st5_right_camera_2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st5_right_camera_2.Location = New System.Drawing.Point(267, 181)
+        Me.lbl_st5_right_camera_2.Location = New System.Drawing.Point(432, 122)
         Me.lbl_st5_right_camera_2.Name = "lbl_st5_right_camera_2"
         Me.lbl_st5_right_camera_2.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st5_right_camera_2.TabIndex = 37
@@ -659,7 +912,7 @@ Partial Class MainForm
         Me.lbl_diff_result_2.BackColor = System.Drawing.Color.White
         Me.lbl_diff_result_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_diff_result_2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_diff_result_2.Location = New System.Drawing.Point(267, 204)
+        Me.lbl_diff_result_2.Location = New System.Drawing.Point(273, 338)
         Me.lbl_diff_result_2.Name = "lbl_diff_result_2"
         Me.lbl_diff_result_2.Size = New System.Drawing.Size(50, 20)
         Me.lbl_diff_result_2.TabIndex = 37
@@ -671,7 +924,7 @@ Partial Class MainForm
         Me.lbl_st5_right_camera_1.BackColor = System.Drawing.Color.White
         Me.lbl_st5_right_camera_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st5_right_camera_1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st5_right_camera_1.Location = New System.Drawing.Point(214, 181)
+        Me.lbl_st5_right_camera_1.Location = New System.Drawing.Point(326, 122)
         Me.lbl_st5_right_camera_1.Name = "lbl_st5_right_camera_1"
         Me.lbl_st5_right_camera_1.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st5_right_camera_1.TabIndex = 37
@@ -682,7 +935,7 @@ Partial Class MainForm
         Me.lbl_diff_result_1.BackColor = System.Drawing.Color.White
         Me.lbl_diff_result_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_diff_result_1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_diff_result_1.Location = New System.Drawing.Point(214, 204)
+        Me.lbl_diff_result_1.Location = New System.Drawing.Point(220, 338)
         Me.lbl_diff_result_1.Name = "lbl_diff_result_1"
         Me.lbl_diff_result_1.Size = New System.Drawing.Size(50, 20)
         Me.lbl_diff_result_1.TabIndex = 37
@@ -694,7 +947,7 @@ Partial Class MainForm
         Me.lbl_st5_right_camera.BackColor = System.Drawing.Color.White
         Me.lbl_st5_right_camera.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st5_right_camera.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st5_right_camera.Location = New System.Drawing.Point(161, 181)
+        Me.lbl_st5_right_camera.Location = New System.Drawing.Point(220, 122)
         Me.lbl_st5_right_camera.Name = "lbl_st5_right_camera"
         Me.lbl_st5_right_camera.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st5_right_camera.TabIndex = 37
@@ -705,7 +958,7 @@ Partial Class MainForm
         Me.lbl_diff_result.BackColor = System.Drawing.Color.White
         Me.lbl_diff_result.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_diff_result.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_diff_result.Location = New System.Drawing.Point(161, 204)
+        Me.lbl_diff_result.Location = New System.Drawing.Point(167, 338)
         Me.lbl_diff_result.Name = "lbl_diff_result"
         Me.lbl_diff_result.Size = New System.Drawing.Size(50, 20)
         Me.lbl_diff_result.TabIndex = 37
@@ -717,7 +970,7 @@ Partial Class MainForm
         Me.lbl_st3_left_measure_5.BackColor = System.Drawing.Color.White
         Me.lbl_st3_left_measure_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_left_measure_5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_left_measure_5.Location = New System.Drawing.Point(426, 68)
+        Me.lbl_st3_left_measure_5.Location = New System.Drawing.Point(697, 99)
         Me.lbl_st3_left_measure_5.Name = "lbl_st3_left_measure_5"
         Me.lbl_st3_left_measure_5.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_left_measure_5.TabIndex = 37
@@ -728,7 +981,7 @@ Partial Class MainForm
         Me.lbl_st3_left_measure_4.BackColor = System.Drawing.Color.White
         Me.lbl_st3_left_measure_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_left_measure_4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_left_measure_4.Location = New System.Drawing.Point(373, 68)
+        Me.lbl_st3_left_measure_4.Location = New System.Drawing.Point(591, 99)
         Me.lbl_st3_left_measure_4.Name = "lbl_st3_left_measure_4"
         Me.lbl_st3_left_measure_4.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_left_measure_4.TabIndex = 37
@@ -739,7 +992,7 @@ Partial Class MainForm
         Me.lbl_st3_left_measure_3.BackColor = System.Drawing.Color.White
         Me.lbl_st3_left_measure_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_left_measure_3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_left_measure_3.Location = New System.Drawing.Point(320, 68)
+        Me.lbl_st3_left_measure_3.Location = New System.Drawing.Point(485, 99)
         Me.lbl_st3_left_measure_3.Name = "lbl_st3_left_measure_3"
         Me.lbl_st3_left_measure_3.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_left_measure_3.TabIndex = 37
@@ -750,7 +1003,7 @@ Partial Class MainForm
         Me.lbl_st3_left_measure_2.BackColor = System.Drawing.Color.White
         Me.lbl_st3_left_measure_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_left_measure_2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_left_measure_2.Location = New System.Drawing.Point(267, 68)
+        Me.lbl_st3_left_measure_2.Location = New System.Drawing.Point(379, 99)
         Me.lbl_st3_left_measure_2.Name = "lbl_st3_left_measure_2"
         Me.lbl_st3_left_measure_2.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_left_measure_2.TabIndex = 37
@@ -761,7 +1014,7 @@ Partial Class MainForm
         Me.lbl_st3_left_measure_1.BackColor = System.Drawing.Color.White
         Me.lbl_st3_left_measure_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_left_measure_1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_left_measure_1.Location = New System.Drawing.Point(214, 68)
+        Me.lbl_st3_left_measure_1.Location = New System.Drawing.Point(273, 99)
         Me.lbl_st3_left_measure_1.Name = "lbl_st3_left_measure_1"
         Me.lbl_st3_left_measure_1.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_left_measure_1.TabIndex = 37
@@ -772,7 +1025,7 @@ Partial Class MainForm
         Me.lbl_st3_left_measure.BackColor = System.Drawing.Color.White
         Me.lbl_st3_left_measure.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_left_measure.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_left_measure.Location = New System.Drawing.Point(161, 68)
+        Me.lbl_st3_left_measure.Location = New System.Drawing.Point(167, 99)
         Me.lbl_st3_left_measure.Name = "lbl_st3_left_measure"
         Me.lbl_st3_left_measure.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_left_measure.TabIndex = 37
@@ -783,7 +1036,7 @@ Partial Class MainForm
         Me.lbl_st3_left_status_5.BackColor = System.Drawing.Color.White
         Me.lbl_st3_left_status_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_left_status_5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_left_status_5.Location = New System.Drawing.Point(426, 114)
+        Me.lbl_st3_left_status_5.Location = New System.Drawing.Point(432, 248)
         Me.lbl_st3_left_status_5.Name = "lbl_st3_left_status_5"
         Me.lbl_st3_left_status_5.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_left_status_5.TabIndex = 37
@@ -794,7 +1047,7 @@ Partial Class MainForm
         Me.lbl_st3_left_status_4.BackColor = System.Drawing.Color.White
         Me.lbl_st3_left_status_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_left_status_4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_left_status_4.Location = New System.Drawing.Point(373, 114)
+        Me.lbl_st3_left_status_4.Location = New System.Drawing.Point(379, 248)
         Me.lbl_st3_left_status_4.Name = "lbl_st3_left_status_4"
         Me.lbl_st3_left_status_4.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_left_status_4.TabIndex = 37
@@ -805,7 +1058,7 @@ Partial Class MainForm
         Me.lbl_st3_right_measure_5.BackColor = System.Drawing.Color.White
         Me.lbl_st3_right_measure_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_right_measure_5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_right_measure_5.Location = New System.Drawing.Point(426, 91)
+        Me.lbl_st3_right_measure_5.Location = New System.Drawing.Point(750, 99)
         Me.lbl_st3_right_measure_5.Name = "lbl_st3_right_measure_5"
         Me.lbl_st3_right_measure_5.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_right_measure_5.TabIndex = 37
@@ -816,7 +1069,7 @@ Partial Class MainForm
         Me.lbl_st3_left_status_3.BackColor = System.Drawing.Color.White
         Me.lbl_st3_left_status_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_left_status_3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_left_status_3.Location = New System.Drawing.Point(320, 114)
+        Me.lbl_st3_left_status_3.Location = New System.Drawing.Point(326, 248)
         Me.lbl_st3_left_status_3.Name = "lbl_st3_left_status_3"
         Me.lbl_st3_left_status_3.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_left_status_3.TabIndex = 37
@@ -827,7 +1080,7 @@ Partial Class MainForm
         Me.lbl_st3_right_measure_4.BackColor = System.Drawing.Color.White
         Me.lbl_st3_right_measure_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_right_measure_4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_right_measure_4.Location = New System.Drawing.Point(373, 91)
+        Me.lbl_st3_right_measure_4.Location = New System.Drawing.Point(644, 99)
         Me.lbl_st3_right_measure_4.Name = "lbl_st3_right_measure_4"
         Me.lbl_st3_right_measure_4.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_right_measure_4.TabIndex = 37
@@ -838,7 +1091,7 @@ Partial Class MainForm
         Me.lbl_st3_left_status_2.BackColor = System.Drawing.Color.White
         Me.lbl_st3_left_status_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_left_status_2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_left_status_2.Location = New System.Drawing.Point(267, 114)
+        Me.lbl_st3_left_status_2.Location = New System.Drawing.Point(273, 248)
         Me.lbl_st3_left_status_2.Name = "lbl_st3_left_status_2"
         Me.lbl_st3_left_status_2.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_left_status_2.TabIndex = 37
@@ -849,7 +1102,7 @@ Partial Class MainForm
         Me.lbl_st3_right_measure_3.BackColor = System.Drawing.Color.White
         Me.lbl_st3_right_measure_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_right_measure_3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_right_measure_3.Location = New System.Drawing.Point(320, 91)
+        Me.lbl_st3_right_measure_3.Location = New System.Drawing.Point(538, 99)
         Me.lbl_st3_right_measure_3.Name = "lbl_st3_right_measure_3"
         Me.lbl_st3_right_measure_3.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_right_measure_3.TabIndex = 37
@@ -860,7 +1113,7 @@ Partial Class MainForm
         Me.lbl_st3_left_status_1.BackColor = System.Drawing.Color.White
         Me.lbl_st3_left_status_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_left_status_1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_left_status_1.Location = New System.Drawing.Point(214, 114)
+        Me.lbl_st3_left_status_1.Location = New System.Drawing.Point(220, 248)
         Me.lbl_st3_left_status_1.Name = "lbl_st3_left_status_1"
         Me.lbl_st3_left_status_1.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_left_status_1.TabIndex = 37
@@ -871,7 +1124,7 @@ Partial Class MainForm
         Me.lbl_st3_right_measure_2.BackColor = System.Drawing.Color.White
         Me.lbl_st3_right_measure_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_right_measure_2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_right_measure_2.Location = New System.Drawing.Point(267, 91)
+        Me.lbl_st3_right_measure_2.Location = New System.Drawing.Point(432, 99)
         Me.lbl_st3_right_measure_2.Name = "lbl_st3_right_measure_2"
         Me.lbl_st3_right_measure_2.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_right_measure_2.TabIndex = 37
@@ -882,7 +1135,7 @@ Partial Class MainForm
         Me.lbl_st3_left_status.BackColor = System.Drawing.Color.White
         Me.lbl_st3_left_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_left_status.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_left_status.Location = New System.Drawing.Point(161, 114)
+        Me.lbl_st3_left_status.Location = New System.Drawing.Point(167, 248)
         Me.lbl_st3_left_status.Name = "lbl_st3_left_status"
         Me.lbl_st3_left_status.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_left_status.TabIndex = 37
@@ -893,7 +1146,7 @@ Partial Class MainForm
         Me.lbl_st3_right_measure_1.BackColor = System.Drawing.Color.White
         Me.lbl_st3_right_measure_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_right_measure_1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_right_measure_1.Location = New System.Drawing.Point(214, 91)
+        Me.lbl_st3_right_measure_1.Location = New System.Drawing.Point(326, 99)
         Me.lbl_st3_right_measure_1.Name = "lbl_st3_right_measure_1"
         Me.lbl_st3_right_measure_1.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_right_measure_1.TabIndex = 37
@@ -904,7 +1157,7 @@ Partial Class MainForm
         Me.lbl_st3_right_measure.BackColor = System.Drawing.Color.White
         Me.lbl_st3_right_measure.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st3_right_measure.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st3_right_measure.Location = New System.Drawing.Point(161, 91)
+        Me.lbl_st3_right_measure.Location = New System.Drawing.Point(220, 99)
         Me.lbl_st3_right_measure.Name = "lbl_st3_right_measure"
         Me.lbl_st3_right_measure.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st3_right_measure.TabIndex = 37
@@ -915,7 +1168,7 @@ Partial Class MainForm
         Me.lbl_st5_left_camera_5.BackColor = System.Drawing.Color.White
         Me.lbl_st5_left_camera_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st5_left_camera_5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st5_left_camera_5.Location = New System.Drawing.Point(426, 159)
+        Me.lbl_st5_left_camera_5.Location = New System.Drawing.Point(697, 122)
         Me.lbl_st5_left_camera_5.Name = "lbl_st5_left_camera_5"
         Me.lbl_st5_left_camera_5.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st5_left_camera_5.TabIndex = 37
@@ -926,7 +1179,7 @@ Partial Class MainForm
         Me.lbl_st5_left_camera_4.BackColor = System.Drawing.Color.White
         Me.lbl_st5_left_camera_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st5_left_camera_4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st5_left_camera_4.Location = New System.Drawing.Point(373, 159)
+        Me.lbl_st5_left_camera_4.Location = New System.Drawing.Point(591, 122)
         Me.lbl_st5_left_camera_4.Name = "lbl_st5_left_camera_4"
         Me.lbl_st5_left_camera_4.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st5_left_camera_4.TabIndex = 37
@@ -937,7 +1190,7 @@ Partial Class MainForm
         Me.lbl_st5_left_camera_3.BackColor = System.Drawing.Color.White
         Me.lbl_st5_left_camera_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st5_left_camera_3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st5_left_camera_3.Location = New System.Drawing.Point(320, 159)
+        Me.lbl_st5_left_camera_3.Location = New System.Drawing.Point(485, 122)
         Me.lbl_st5_left_camera_3.Name = "lbl_st5_left_camera_3"
         Me.lbl_st5_left_camera_3.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st5_left_camera_3.TabIndex = 37
@@ -948,7 +1201,7 @@ Partial Class MainForm
         Me.lbl_st5_left_camera_2.BackColor = System.Drawing.Color.White
         Me.lbl_st5_left_camera_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st5_left_camera_2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st5_left_camera_2.Location = New System.Drawing.Point(267, 159)
+        Me.lbl_st5_left_camera_2.Location = New System.Drawing.Point(379, 122)
         Me.lbl_st5_left_camera_2.Name = "lbl_st5_left_camera_2"
         Me.lbl_st5_left_camera_2.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st5_left_camera_2.TabIndex = 37
@@ -959,7 +1212,7 @@ Partial Class MainForm
         Me.lbl_st5_left_camera_1.BackColor = System.Drawing.Color.White
         Me.lbl_st5_left_camera_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st5_left_camera_1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st5_left_camera_1.Location = New System.Drawing.Point(214, 159)
+        Me.lbl_st5_left_camera_1.Location = New System.Drawing.Point(273, 122)
         Me.lbl_st5_left_camera_1.Name = "lbl_st5_left_camera_1"
         Me.lbl_st5_left_camera_1.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st5_left_camera_1.TabIndex = 37
@@ -970,149 +1223,359 @@ Partial Class MainForm
         Me.lbl_st5_left_camera.BackColor = System.Drawing.Color.White
         Me.lbl_st5_left_camera.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lbl_st5_left_camera.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_st5_left_camera.Location = New System.Drawing.Point(161, 159)
+        Me.lbl_st5_left_camera.Location = New System.Drawing.Point(167, 122)
         Me.lbl_st5_left_camera.Name = "lbl_st5_left_camera"
         Me.lbl_st5_left_camera.Size = New System.Drawing.Size(50, 20)
         Me.lbl_st5_left_camera.TabIndex = 37
         Me.lbl_st5_left_camera.Text = "..."
         '
-        'lbl_item_6
+        'lbl_status_r_5
         '
-        Me.lbl_item_6.BackColor = System.Drawing.Color.White
-        Me.lbl_item_6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_item_6.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_item_6.Location = New System.Drawing.Point(426, 21)
-        Me.lbl_item_6.Name = "lbl_item_6"
-        Me.lbl_item_6.Size = New System.Drawing.Size(50, 20)
-        Me.lbl_item_6.TabIndex = 37
-        Me.lbl_item_6.Text = "6"
-        Me.lbl_item_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lbl_status_r_5.BackColor = System.Drawing.Color.White
+        Me.lbl_status_r_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_status_r_5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_status_r_5.Location = New System.Drawing.Point(750, 76)
+        Me.lbl_status_r_5.Name = "lbl_status_r_5"
+        Me.lbl_status_r_5.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_status_r_5.TabIndex = 37
+        Me.lbl_status_r_5.Text = "..."
         '
-        'lbl_item_5
+        'lbl_status_r_2
         '
-        Me.lbl_item_5.BackColor = System.Drawing.Color.White
-        Me.lbl_item_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_item_5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_item_5.Location = New System.Drawing.Point(373, 21)
-        Me.lbl_item_5.Name = "lbl_item_5"
-        Me.lbl_item_5.Size = New System.Drawing.Size(50, 20)
-        Me.lbl_item_5.TabIndex = 37
-        Me.lbl_item_5.Text = "5"
-        Me.lbl_item_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lbl_status_r_2.BackColor = System.Drawing.Color.White
+        Me.lbl_status_r_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_status_r_2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_status_r_2.Location = New System.Drawing.Point(432, 76)
+        Me.lbl_status_r_2.Name = "lbl_status_r_2"
+        Me.lbl_status_r_2.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_status_r_2.TabIndex = 37
+        Me.lbl_status_r_2.Text = "..."
         '
-        'lbl_status_5
+        'lbl_status_l_5
         '
-        Me.lbl_status_5.BackColor = System.Drawing.Color.White
-        Me.lbl_status_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_status_5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_status_5.Location = New System.Drawing.Point(426, 44)
-        Me.lbl_status_5.Name = "lbl_status_5"
-        Me.lbl_status_5.Size = New System.Drawing.Size(50, 20)
-        Me.lbl_status_5.TabIndex = 37
-        Me.lbl_status_5.Text = "..."
+        Me.lbl_status_l_5.BackColor = System.Drawing.Color.White
+        Me.lbl_status_l_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_status_l_5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_status_l_5.Location = New System.Drawing.Point(697, 76)
+        Me.lbl_status_l_5.Name = "lbl_status_l_5"
+        Me.lbl_status_l_5.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_status_l_5.TabIndex = 37
+        Me.lbl_status_l_5.Text = "..."
         '
-        'lbl_item_4
+        'lbl_status_l_2
         '
-        Me.lbl_item_4.BackColor = System.Drawing.Color.White
-        Me.lbl_item_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_item_4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_item_4.Location = New System.Drawing.Point(320, 21)
-        Me.lbl_item_4.Name = "lbl_item_4"
-        Me.lbl_item_4.Size = New System.Drawing.Size(50, 20)
-        Me.lbl_item_4.TabIndex = 37
-        Me.lbl_item_4.Text = "4"
-        Me.lbl_item_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lbl_status_l_2.BackColor = System.Drawing.Color.White
+        Me.lbl_status_l_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_status_l_2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_status_l_2.Location = New System.Drawing.Point(379, 76)
+        Me.lbl_status_l_2.Name = "lbl_status_l_2"
+        Me.lbl_status_l_2.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_status_l_2.TabIndex = 37
+        Me.lbl_status_l_2.Text = "..."
         '
-        'lbl_status_4
+        'lbl_status_r_4
         '
-        Me.lbl_status_4.BackColor = System.Drawing.Color.White
-        Me.lbl_status_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_status_4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_status_4.Location = New System.Drawing.Point(373, 44)
-        Me.lbl_status_4.Name = "lbl_status_4"
-        Me.lbl_status_4.Size = New System.Drawing.Size(50, 20)
-        Me.lbl_status_4.TabIndex = 37
-        Me.lbl_status_4.Text = "..."
+        Me.lbl_status_r_4.BackColor = System.Drawing.Color.White
+        Me.lbl_status_r_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_status_r_4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_status_r_4.Location = New System.Drawing.Point(644, 76)
+        Me.lbl_status_r_4.Name = "lbl_status_r_4"
+        Me.lbl_status_r_4.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_status_r_4.TabIndex = 37
+        Me.lbl_status_r_4.Text = "..."
         '
-        'lbl_item_3
+        'lbl_status_r_1
         '
-        Me.lbl_item_3.BackColor = System.Drawing.Color.White
-        Me.lbl_item_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_item_3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_item_3.Location = New System.Drawing.Point(267, 21)
-        Me.lbl_item_3.Name = "lbl_item_3"
-        Me.lbl_item_3.Size = New System.Drawing.Size(50, 20)
-        Me.lbl_item_3.TabIndex = 37
-        Me.lbl_item_3.Text = "3"
-        Me.lbl_item_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lbl_status_r_1.BackColor = System.Drawing.Color.White
+        Me.lbl_status_r_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_status_r_1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_status_r_1.Location = New System.Drawing.Point(326, 76)
+        Me.lbl_status_r_1.Name = "lbl_status_r_1"
+        Me.lbl_status_r_1.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_status_r_1.TabIndex = 37
+        Me.lbl_status_r_1.Text = "..."
         '
-        'lbl_status_3
+        'Label24
         '
-        Me.lbl_status_3.BackColor = System.Drawing.Color.White
-        Me.lbl_status_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_status_3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_status_3.Location = New System.Drawing.Point(320, 44)
-        Me.lbl_status_3.Name = "lbl_status_3"
-        Me.lbl_status_3.Size = New System.Drawing.Size(50, 20)
-        Me.lbl_status_3.TabIndex = 37
-        Me.lbl_status_3.Text = "..."
+        Me.Label24.BackColor = System.Drawing.Color.White
+        Me.Label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label24.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(750, 53)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(50, 20)
+        Me.Label24.TabIndex = 37
+        Me.Label24.Text = "R"
+        Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lbl_item_2
+        'Label22
         '
-        Me.lbl_item_2.BackColor = System.Drawing.Color.White
-        Me.lbl_item_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_item_2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_item_2.Location = New System.Drawing.Point(214, 21)
-        Me.lbl_item_2.Name = "lbl_item_2"
-        Me.lbl_item_2.Size = New System.Drawing.Size(50, 20)
-        Me.lbl_item_2.TabIndex = 37
-        Me.lbl_item_2.Text = "2"
-        Me.lbl_item_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label22.BackColor = System.Drawing.Color.White
+        Me.Label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label22.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(644, 53)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(50, 20)
+        Me.Label22.TabIndex = 37
+        Me.Label22.Text = "R"
+        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lbl_status_2
+        'Label20
         '
-        Me.lbl_status_2.BackColor = System.Drawing.Color.White
-        Me.lbl_status_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_status_2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_status_2.Location = New System.Drawing.Point(267, 44)
-        Me.lbl_status_2.Name = "lbl_status_2"
-        Me.lbl_status_2.Size = New System.Drawing.Size(50, 20)
-        Me.lbl_status_2.TabIndex = 37
-        Me.lbl_status_2.Text = "..."
+        Me.Label20.BackColor = System.Drawing.Color.White
+        Me.Label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label20.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(538, 53)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(50, 20)
+        Me.Label20.TabIndex = 37
+        Me.Label20.Text = "R"
+        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lbl_item_1
+        'Label16
         '
-        Me.lbl_item_1.BackColor = System.Drawing.Color.White
-        Me.lbl_item_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_item_1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_item_1.Location = New System.Drawing.Point(161, 21)
-        Me.lbl_item_1.Name = "lbl_item_1"
-        Me.lbl_item_1.Size = New System.Drawing.Size(50, 20)
-        Me.lbl_item_1.TabIndex = 37
-        Me.lbl_item_1.Text = "1"
-        Me.lbl_item_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label16.BackColor = System.Drawing.Color.White
+        Me.Label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label16.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(326, 53)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(50, 20)
+        Me.Label16.TabIndex = 37
+        Me.Label16.Text = "R"
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lbl_status_1
+        'Label19
         '
-        Me.lbl_status_1.BackColor = System.Drawing.Color.White
-        Me.lbl_status_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_status_1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_status_1.Location = New System.Drawing.Point(214, 44)
-        Me.lbl_status_1.Name = "lbl_status_1"
-        Me.lbl_status_1.Size = New System.Drawing.Size(50, 20)
-        Me.lbl_status_1.TabIndex = 37
-        Me.lbl_status_1.Text = "..."
+        Me.Label19.BackColor = System.Drawing.Color.White
+        Me.Label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label19.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(432, 53)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(50, 20)
+        Me.Label19.TabIndex = 37
+        Me.Label19.Text = "R"
+        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lbl_status
+        'Label14
         '
-        Me.lbl_status.BackColor = System.Drawing.Color.White
-        Me.lbl_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_status.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_status.Location = New System.Drawing.Point(161, 44)
-        Me.lbl_status.Name = "lbl_status"
-        Me.lbl_status.Size = New System.Drawing.Size(50, 20)
-        Me.lbl_status.TabIndex = 37
-        Me.lbl_status.Text = "..."
+        Me.Label14.BackColor = System.Drawing.Color.White
+        Me.Label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label14.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(220, 53)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(50, 20)
+        Me.Label14.TabIndex = 37
+        Me.Label14.Text = "R"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl_status_l_4
+        '
+        Me.lbl_status_l_4.BackColor = System.Drawing.Color.White
+        Me.lbl_status_l_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_status_l_4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_status_l_4.Location = New System.Drawing.Point(591, 76)
+        Me.lbl_status_l_4.Name = "lbl_status_l_4"
+        Me.lbl_status_l_4.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_status_l_4.TabIndex = 37
+        Me.lbl_status_l_4.Text = "..."
+        '
+        'lbl_status_l_1
+        '
+        Me.lbl_status_l_1.BackColor = System.Drawing.Color.White
+        Me.lbl_status_l_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_status_l_1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_status_l_1.Location = New System.Drawing.Point(273, 76)
+        Me.lbl_status_l_1.Name = "lbl_status_l_1"
+        Me.lbl_status_l_1.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_status_l_1.TabIndex = 37
+        Me.lbl_status_l_1.Text = "..."
+        '
+        'Label12
+        '
+        Me.Label12.BackColor = System.Drawing.Color.White
+        Me.Label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label12.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(697, 30)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(103, 20)
+        Me.Label12.TabIndex = 37
+        Me.Label12.Text = "Cavity 6"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label10
+        '
+        Me.Label10.BackColor = System.Drawing.Color.White
+        Me.Label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label10.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(485, 30)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(103, 20)
+        Me.Label10.TabIndex = 37
+        Me.Label10.Text = "Cavity 4"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label11
+        '
+        Me.Label11.BackColor = System.Drawing.Color.White
+        Me.Label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label11.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(591, 30)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(103, 20)
+        Me.Label11.TabIndex = 37
+        Me.Label11.Text = "Cavity 5"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label9
+        '
+        Me.Label9.BackColor = System.Drawing.Color.White
+        Me.Label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label9.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(379, 30)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(103, 20)
+        Me.Label9.TabIndex = 37
+        Me.Label9.Text = "Cavity 3"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label8
+        '
+        Me.Label8.BackColor = System.Drawing.Color.White
+        Me.Label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label8.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(273, 30)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(103, 20)
+        Me.Label8.TabIndex = 37
+        Me.Label8.Text = "Cavity 2"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label23
+        '
+        Me.Label23.BackColor = System.Drawing.Color.White
+        Me.Label23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label23.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(697, 53)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(50, 20)
+        Me.Label23.TabIndex = 37
+        Me.Label23.Text = "L"
+        Me.Label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label7
+        '
+        Me.Label7.BackColor = System.Drawing.Color.White
+        Me.Label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label7.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(167, 30)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(103, 20)
+        Me.Label7.TabIndex = 37
+        Me.Label7.Text = "Cavity 1"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label21
+        '
+        Me.Label21.BackColor = System.Drawing.Color.White
+        Me.Label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label21.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(591, 53)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(50, 20)
+        Me.Label21.TabIndex = 37
+        Me.Label21.Text = "L"
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label18
+        '
+        Me.Label18.BackColor = System.Drawing.Color.White
+        Me.Label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label18.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(485, 53)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(50, 20)
+        Me.Label18.TabIndex = 37
+        Me.Label18.Text = "L"
+        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label15
+        '
+        Me.Label15.BackColor = System.Drawing.Color.White
+        Me.Label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label15.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(273, 53)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(50, 20)
+        Me.Label15.TabIndex = 37
+        Me.Label15.Text = "L"
+        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label17
+        '
+        Me.Label17.BackColor = System.Drawing.Color.White
+        Me.Label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label17.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(379, 53)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(50, 20)
+        Me.Label17.TabIndex = 37
+        Me.Label17.Text = "L"
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label13
+        '
+        Me.Label13.BackColor = System.Drawing.Color.White
+        Me.Label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label13.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(167, 53)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(50, 20)
+        Me.Label13.TabIndex = 37
+        Me.Label13.Text = "L"
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl_status_r_3
+        '
+        Me.lbl_status_r_3.BackColor = System.Drawing.Color.White
+        Me.lbl_status_r_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_status_r_3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_status_r_3.Location = New System.Drawing.Point(538, 76)
+        Me.lbl_status_r_3.Name = "lbl_status_r_3"
+        Me.lbl_status_r_3.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_status_r_3.TabIndex = 37
+        Me.lbl_status_r_3.Text = "..."
+        '
+        'lbl_status_r
+        '
+        Me.lbl_status_r.BackColor = System.Drawing.Color.White
+        Me.lbl_status_r.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_status_r.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_status_r.Location = New System.Drawing.Point(220, 76)
+        Me.lbl_status_r.Name = "lbl_status_r"
+        Me.lbl_status_r.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_status_r.TabIndex = 37
+        Me.lbl_status_r.Text = "..."
+        '
+        'lbl_status_l_3
+        '
+        Me.lbl_status_l_3.BackColor = System.Drawing.Color.White
+        Me.lbl_status_l_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_status_l_3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_status_l_3.Location = New System.Drawing.Point(485, 76)
+        Me.lbl_status_l_3.Name = "lbl_status_l_3"
+        Me.lbl_status_l_3.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_status_l_3.TabIndex = 37
+        Me.lbl_status_l_3.Text = "..."
+        '
+        'lbl_status_l
+        '
+        Me.lbl_status_l.BackColor = System.Drawing.Color.White
+        Me.lbl_status_l.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_status_l.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_status_l.Location = New System.Drawing.Point(167, 76)
+        Me.lbl_status_l.Name = "lbl_status_l"
+        Me.lbl_status_l.Size = New System.Drawing.Size(50, 20)
+        Me.lbl_status_l.TabIndex = 37
+        Me.lbl_status_l.Text = "..."
         '
         'GroupBox2
         '
@@ -1120,7 +1583,7 @@ Partial Class MainForm
         Me.GroupBox2.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(212, 19)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(228, 118)
+        Me.GroupBox2.Size = New System.Drawing.Size(392, 118)
         Me.GroupBox2.TabIndex = 76
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Operator Instruction"
@@ -1133,7 +1596,7 @@ Partial Class MainForm
         Me.lbl_op_ins.ForeColor = System.Drawing.Color.Red
         Me.lbl_op_ins.Location = New System.Drawing.Point(6, 26)
         Me.lbl_op_ins.Name = "lbl_op_ins"
-        Me.lbl_op_ins.Size = New System.Drawing.Size(216, 85)
+        Me.lbl_op_ins.Size = New System.Drawing.Size(380, 85)
         Me.lbl_op_ins.TabIndex = 73
         Me.lbl_op_ins.Text = "Please Scan Product References.."
         '
@@ -1148,7 +1611,7 @@ Partial Class MainForm
         Me.GroupBox175.Controls.Add(Me.lbl_fail)
         Me.GroupBox175.Controls.Add(Me.lbl_pass)
         Me.GroupBox175.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox175.Location = New System.Drawing.Point(446, 19)
+        Me.GroupBox175.Location = New System.Drawing.Point(816, 19)
         Me.GroupBox175.Name = "GroupBox175"
         Me.GroupBox175.Size = New System.Drawing.Size(252, 118)
         Me.GroupBox175.TabIndex = 75
@@ -1254,7 +1717,7 @@ Partial Class MainForm
         Me.GroupBox77.Controls.Add(Me.ind_software_open)
         Me.GroupBox77.Controls.Add(Me.Label65)
         Me.GroupBox77.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox77.Location = New System.Drawing.Point(212, 393)
+        Me.GroupBox77.Location = New System.Drawing.Point(610, 19)
         Me.GroupBox77.Name = "GroupBox77"
         Me.GroupBox77.Size = New System.Drawing.Size(200, 118)
         Me.GroupBox77.TabIndex = 71
@@ -1338,11 +1801,11 @@ Partial Class MainForm
         '
         'GroupBox80
         '
+        Me.GroupBox80.Controls.Add(Me.txt_ref)
         Me.GroupBox80.Controls.Add(Me.GroupBox3)
         Me.GroupBox80.Controls.Add(Me.txt_qty)
         Me.GroupBox80.Controls.Add(Me.txt_po_num)
         Me.GroupBox80.Controls.Add(Me.txt_ope_id)
-        Me.GroupBox80.Controls.Add(Me.txt_ref)
         Me.GroupBox80.Controls.Add(Me.Label6)
         Me.GroupBox80.Controls.Add(Me.Label85)
         Me.GroupBox80.Controls.Add(Me.Label83)
@@ -1358,6 +1821,16 @@ Partial Class MainForm
         Me.GroupBox80.TabIndex = 70
         Me.GroupBox80.TabStop = False
         Me.GroupBox80.Text = "Product Information"
+        '
+        'txt_ref
+        '
+        Me.txt_ref.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_ref.FormattingEnabled = True
+        Me.txt_ref.Items.AddRange(New Object() {"PRODUCT0"})
+        Me.txt_ref.Location = New System.Drawing.Point(10, 48)
+        Me.txt_ref.Name = "txt_ref"
+        Me.txt_ref.Size = New System.Drawing.Size(170, 31)
+        Me.txt_ref.TabIndex = 79
         '
         'GroupBox3
         '
@@ -1431,6 +1904,14 @@ Partial Class MainForm
         Me.ind_load_data_finish.TabIndex = 33
         Me.ind_load_data_finish.TabStop = False
         '
+        'txt_qty
+        '
+        Me.txt_qty.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_qty.Location = New System.Drawing.Point(10, 205)
+        Me.txt_qty.Name = "txt_qty"
+        Me.txt_qty.Size = New System.Drawing.Size(170, 29)
+        Me.txt_qty.TabIndex = 70
+        '
         'txt_po_num
         '
         Me.txt_po_num.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1447,13 +1928,15 @@ Partial Class MainForm
         Me.txt_ope_id.Size = New System.Drawing.Size(170, 29)
         Me.txt_ope_id.TabIndex = 70
         '
-        'txt_ref
+        'Label6
         '
-        Me.txt_ref.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_ref.Location = New System.Drawing.Point(10, 52)
-        Me.txt_ref.Name = "txt_ref"
-        Me.txt_ref.Size = New System.Drawing.Size(170, 29)
-        Me.txt_ref.TabIndex = 70
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(6, 181)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(45, 23)
+        Me.Label6.TabIndex = 31
+        Me.Label6.Text = "Qty :"
         '
         'Label85
         '
@@ -1728,23 +2211,27 @@ Partial Class MainForm
         Me.pb_logo.TabIndex = 5
         Me.pb_logo.TabStop = False
         '
-        'Label6
+        'dgv_temp
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(6, 181)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(45, 23)
-        Me.Label6.TabIndex = 31
-        Me.Label6.Text = "Qty :"
+        Me.dgv_temp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_temp.Location = New System.Drawing.Point(1353, 172)
+        Me.dgv_temp.Name = "dgv_temp"
+        Me.dgv_temp.Size = New System.Drawing.Size(113, 76)
+        Me.dgv_temp.TabIndex = 28
         '
-        'txt_qty
+        'StartDate
         '
-        Me.txt_qty.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_qty.Location = New System.Drawing.Point(10, 205)
-        Me.txt_qty.Name = "txt_qty"
-        Me.txt_qty.Size = New System.Drawing.Size(170, 29)
-        Me.txt_qty.TabIndex = 70
+        Me.StartDate.Location = New System.Drawing.Point(1353, 121)
+        Me.StartDate.Name = "StartDate"
+        Me.StartDate.Size = New System.Drawing.Size(113, 20)
+        Me.StartDate.TabIndex = 29
+        '
+        'EndDate
+        '
+        Me.EndDate.Location = New System.Drawing.Point(1353, 147)
+        Me.EndDate.Name = "EndDate"
+        Me.EndDate.Size = New System.Drawing.Size(113, 20)
+        Me.EndDate.TabIndex = 29
         '
         'MainForm
         '
@@ -1752,6 +2239,9 @@ Partial Class MainForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1350, 729)
+        Me.Controls.Add(Me.EndDate)
+        Me.Controls.Add(Me.StartDate)
+        Me.Controls.Add(Me.dgv_temp)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.btn_st6)
@@ -1779,6 +2269,8 @@ Partial Class MainForm
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Project Title"
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         Me.GroupBox78.ResumeLayout(False)
         Me.GroupBox78.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -1800,6 +2292,7 @@ Partial Class MainForm
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_temp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1852,7 +2345,6 @@ Partial Class MainForm
     Friend WithEvents GroupBox80 As GroupBox
     Friend WithEvents txt_po_num As TextBox
     Friend WithEvents txt_ope_id As TextBox
-    Friend WithEvents txt_ref As TextBox
     Friend WithEvents Label85 As Label
     Friend WithEvents Label83 As Label
     Friend WithEvents btn_run As Button
@@ -1918,18 +2410,7 @@ Partial Class MainForm
     Friend WithEvents lbl_st5_left_camera_2 As Label
     Friend WithEvents lbl_st5_left_camera_1 As Label
     Friend WithEvents lbl_st5_left_camera As Label
-    Friend WithEvents lbl_item_6 As Label
-    Friend WithEvents lbl_item_5 As Label
-    Friend WithEvents lbl_status_5 As Label
-    Friend WithEvents lbl_item_4 As Label
-    Friend WithEvents lbl_status_4 As Label
-    Friend WithEvents lbl_item_3 As Label
-    Friend WithEvents lbl_status_3 As Label
-    Friend WithEvents lbl_item_2 As Label
-    Friend WithEvents lbl_status_2 As Label
-    Friend WithEvents lbl_item_1 As Label
-    Friend WithEvents lbl_status_1 As Label
-    Friend WithEvents lbl_status As Label
+    Friend WithEvents lbl_status_l As Label
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents Label5 As Label
     Friend WithEvents ind_load_data_fail As PictureBox
@@ -1939,4 +2420,54 @@ Partial Class MainForm
     Friend WithEvents ind_load_data_finish As PictureBox
     Friend WithEvents txt_qty As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents lbl_status_r_2 As Label
+    Friend WithEvents lbl_status_l_2 As Label
+    Friend WithEvents lbl_status_r_1 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents lbl_status_l_1 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents lbl_status_r As Label
+    Friend WithEvents lbl_status_r_5 As Label
+    Friend WithEvents lbl_status_l_5 As Label
+    Friend WithEvents lbl_status_r_4 As Label
+    Friend WithEvents lbl_status_l_4 As Label
+    Friend WithEvents lbl_status_r_3 As Label
+    Friend WithEvents lbl_status_l_3 As Label
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents lbl_oring_check As Label
+    Friend WithEvents lbl_camera_program As Label
+    Friend WithEvents lbl_festo_distance_right As Label
+    Friend WithEvents lbl_actuation_mode As Label
+    Friend WithEvents lbl_laser_template As Label
+    Friend WithEvents lbl_festo_distance_left As Label
+    Friend WithEvents Label39 As Label
+    Friend WithEvents lbl_tolerance As Label
+    Friend WithEvents Label32 As Label
+    Friend WithEvents Label38 As Label
+    Friend WithEvents lbl_level_distance As Label
+    Friend WithEvents Label31 As Label
+    Friend WithEvents Label30 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents txt_ref As ComboBox
+    Friend WithEvents dgv_temp As DataGridView
+    Friend WithEvents StartDate As DateTimePicker
+    Friend WithEvents EndDate As DateTimePicker
 End Class

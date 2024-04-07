@@ -2,6 +2,7 @@
 Imports System.Threading
 Imports System.Data.SqlClient
 Imports ControlBPM
+Imports System.IO
 Public Class MainForm
     Dim ThreadLoadingBar As Thread
     Dim ThreadModbus As Thread
@@ -117,8 +118,8 @@ Public Class MainForm
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Hide()
         LoginForm.ShowDialog()
+        Hide()
         initLoadingBar()
 
         Try
@@ -172,6 +173,66 @@ Public Class MainForm
         PlcWriteState = True
         ind_software_open.BackColor = Color.Lime
         SequenceIndex = MainSequence.ScanRef
+    End Sub
+    Private Sub SaveDataLog()
+        StartDate.Value = Date.Today
+        EndDate.Value = Date.Today
+        Dim _start As String = StartDate.Value.ToString("yyyy-MM-dd 00:00:00")
+        Dim _end As String = EndDate.Value.ToString("yyyy-MM-dd 23:59:59")
+        Try
+            Call Database.Connect()
+            Dim sc As New SqlCommand("SELECT * FROM tb_datalog WHERE [Date Time] BETWEEN '" + _start + "' AND '" + _end + "'", Database.Connection)
+            Dim adapter As New SqlDataAdapter(sc)
+            Dim ds As New DataSet
+
+            adapter.Fill(ds)
+            dgv_temp.DataSource = ds.Tables(0)
+            dgv_temp.ClearSelection()
+
+            Dim logFileName = $"Log_{Date.Now.ToString("yyyyMMdd")}.csv"
+            Dim strFile As String = projectFolder & "\log\" & logFileName
+
+            If dgv_temp.Rows.Count > 0 Then
+                Dim value As String = ""
+                Dim dr As New DataGridViewRow()
+
+                Dim swOut As StreamWriter = File.CreateText(strFile)
+
+                'write header rows to csv
+                For i As Integer = 0 To dgv_temp.Columns.Count - 1
+                    If i > 0 Then
+                        swOut.Write(";")
+                    End If
+                    swOut.Write(dgv_temp.Columns(i).HeaderText)
+                Next
+
+                swOut.WriteLine()
+
+                'write DataGridView rows to csv
+                For j As Integer = 0 To dgv_temp.Rows.Count - 1
+                    If j > 0 Then
+                        swOut.WriteLine()
+                    End If
+
+                    dr = dgv_temp.Rows(j)
+
+                    For i As Integer = 0 To dgv_temp.Columns.Count - 1
+                        If i > 0 Then
+                            swOut.Write(";")
+                        End If
+                        If IsDBNull(dr.Cells(i).Value) Then
+                            value = "0"
+                        Else
+                            value = CStr(dr.Cells(i).Value)
+                        End If
+                        swOut.Write(value)
+                    Next
+                Next
+                swOut.Close()
+            End If
+        Catch ex As Exception
+            Console.WriteLine("Error Save Datalog" + ex.Message)
+        End Try
     End Sub
     Private Sub MainProductResult()
         Do
@@ -239,21 +300,74 @@ Public Class MainForm
                     CountST3 += 1
                     ' update config
                     Config.CountProduct = CountST3
-                    WriteINI(iniPath, "[STATUS]", "CountProduct", Config.CountProduct)
+                    WriteINI(iniPath, "STATUS", "CountProduct", Config.CountProduct)
+                    ' data aquisition from instrument
+                    Dim LeftHeidenResult As String = "99.9"
+                    Dim RightHeidenResult As String = "99.9"
+                    ' end data aquisition from instrument
                     ' update text box
                     Invoke(Sub()
-
+                               Select Case MachineStatus.CavityST3
+                                   Case 1
+                                       lbl_st3_left_measure.Text = LeftHeidenResult
+                                       lbl_st3_right_measure.Text = RightHeidenResult
+                                       lbl_st5_left_camera.Text = ""
+                                       lbl_st5_right_camera.Text = ""
+                                       lbl_status_l.Text = ""
+                                       lbl_status_r.Text = ""
+                                   Case 2
+                                       lbl_st3_left_measure_1.Text = LeftHeidenResult
+                                       lbl_st3_right_measure_1.Text = RightHeidenResult
+                                       lbl_st5_left_camera_1.Text = ""
+                                       lbl_st5_right_camera_1.Text = ""
+                                       lbl_status_l_1.Text = ""
+                                       lbl_status_r_1.Text = ""
+                                   Case 3
+                                       lbl_st3_left_measure_2.Text = LeftHeidenResult
+                                       lbl_st3_right_measure_2.Text = RightHeidenResult
+                                       lbl_st5_left_camera_2.Text = ""
+                                       lbl_st5_right_camera_2.Text = ""
+                                       lbl_status_l_2.Text = ""
+                                       lbl_status_r_2.Text = ""
+                                   Case 4
+                                       lbl_st3_left_measure_3.Text = LeftHeidenResult
+                                       lbl_st3_right_measure_3.Text = RightHeidenResult
+                                       lbl_st5_left_camera_3.Text = ""
+                                       lbl_st5_right_camera_3.Text = ""
+                                       lbl_status_l_3.Text = ""
+                                       lbl_status_r_3.Text = ""
+                                   Case 5
+                                       lbl_st3_left_measure_4.Text = LeftHeidenResult
+                                       lbl_st3_right_measure_4.Text = RightHeidenResult
+                                       lbl_st5_left_camera_4.Text = ""
+                                       lbl_st5_right_camera_4.Text = ""
+                                       lbl_status_l_4.Text = ""
+                                       lbl_status_r_4.Text = ""
+                                   Case 6
+                                       lbl_st3_left_measure_5.Text = LeftHeidenResult
+                                       lbl_st3_right_measure_5.Text = RightHeidenResult
+                                       lbl_st5_left_camera_5.Text = ""
+                                       lbl_st5_right_camera_5.Text = ""
+                                       lbl_status_l_5.Text = ""
+                                       lbl_status_r_5.Text = ""
+                               End Select
                            End Sub)
                     ' end update text box
-                    ' data aquisition from instrument
-                    Dim LeftHeidenResult As String = "999"
-                    Dim RightHeidenResult As String = "999"
-                    ' end data aquisition from instrument
                     ' save database
-
+                    Call Database.Connect()
+                    Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right]) VALUES(" & CountST3 & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & LeftHeidenResult.Replace(".", ",") & "', '" & LeftHeidenResult.Replace(".", ",") & "')", Database.Connection)
+                    Dim adapter As New SqlDataAdapter(sc)
+                    adapter.SelectCommand.ExecuteNonQuery()
                     ' end save database
+                    ' save datalog file
+                    Invoke(Sub()
+                               SaveDataLog()
+                           End Sub)
+                    ' end save datalog file
                     ' send data to modbus
-
+                    ProductResult.MeasurementLeft = LeftHeidenResult.Replace(".", ",")
+                    ProductResult.MeasurementRight = RightHeidenResult.Replace(".", ",")
+                    PlcTrigger.HeidenResult = True
                     ' end send data to modbus
                     ' trigger finish save data
                     .MW11100_ = Modbus.WriteBit(.MW11100_, 1, 1)
@@ -262,18 +376,99 @@ Public Class MainForm
                     PlcWriteState = True
                     'end trigger finish save data
                 ElseIf .MW11100_2 = 1 Then
+                    ' data aquisition from plc
+                    Dim LeftMeasureResult As Integer = ProductResult.MeasurementLeftStatus
+                    Dim RightMeasureResult As Integer = ProductResult.MeasurementRightStatus
+                    ' end data aquisition from plc
                     ' update text box
                     Invoke(Sub()
+                               Select Case MachineStatus.CavityST3
+                                   Case 1
+                                       If LeftMeasureResult = 1 Then
+                                           lbl_st3_left_measure.BackColor = Color.Green
+                                       ElseIf LeftMeasureResult = 2 Then
+                                           lbl_st3_left_measure.BackColor = Color.Red
+                                       End If
 
+                                       If RightMeasureResult = 1 Then
+                                           lbl_st3_right_measure.BackColor = Color.Green
+                                       ElseIf RightMeasureResult = 2 Then
+                                           lbl_st3_right_measure.BackColor = Color.Red
+                                       End If
+                                   Case 2
+                                       If LeftMeasureResult = 1 Then
+                                           lbl_st3_left_measure_1.BackColor = Color.Green
+                                       ElseIf LeftMeasureResult = 2 Then
+                                           lbl_st3_left_measure_1.BackColor = Color.Red
+                                       End If
+
+                                       If RightMeasureResult = 1 Then
+                                           lbl_st3_right_measure_1.BackColor = Color.Green
+                                       ElseIf RightMeasureResult = 2 Then
+                                           lbl_st3_right_measure_1.BackColor = Color.Red
+                                       End If
+                                   Case 3
+                                       If LeftMeasureResult = 1 Then
+                                           lbl_st3_left_measure_2.BackColor = Color.Green
+                                       ElseIf LeftMeasureResult = 2 Then
+                                           lbl_st3_left_measure_2.BackColor = Color.Red
+                                       End If
+
+                                       If RightMeasureResult = 1 Then
+                                           lbl_st3_right_measure_2.BackColor = Color.Green
+                                       ElseIf RightMeasureResult = 2 Then
+                                           lbl_st3_right_measure_2.BackColor = Color.Red
+                                       End If
+                                   Case 4
+                                       If LeftMeasureResult = 1 Then
+                                           lbl_st3_left_measure_3.BackColor = Color.Green
+                                       ElseIf LeftMeasureResult = 2 Then
+                                           lbl_st3_left_measure_3.BackColor = Color.Red
+                                       End If
+
+                                       If RightMeasureResult = 1 Then
+                                           lbl_st3_right_measure_3.BackColor = Color.Green
+                                       ElseIf RightMeasureResult = 2 Then
+                                           lbl_st3_right_measure_3.BackColor = Color.Red
+                                       End If
+                                   Case 5
+                                       If LeftMeasureResult = 1 Then
+                                           lbl_st3_left_measure_4.BackColor = Color.Green
+                                       ElseIf LeftMeasureResult = 2 Then
+                                           lbl_st3_left_measure_4.BackColor = Color.Red
+                                       End If
+
+                                       If RightMeasureResult = 1 Then
+                                           lbl_st3_right_measure_4.BackColor = Color.Green
+                                       ElseIf RightMeasureResult = 2 Then
+                                           lbl_st3_right_measure_4.BackColor = Color.Red
+                                       End If
+                                   Case 6
+                                       If LeftMeasureResult = 1 Then
+                                           lbl_st3_left_measure_5.BackColor = Color.Green
+                                       ElseIf LeftMeasureResult = 2 Then
+                                           lbl_st3_left_measure_5.BackColor = Color.Red
+                                       End If
+
+                                       If RightMeasureResult = 1 Then
+                                           lbl_st3_right_measure_5.BackColor = Color.Green
+                                       ElseIf RightMeasureResult = 2 Then
+                                           lbl_st3_right_measure_5.BackColor = Color.Red
+                                       End If
+                               End Select
                            End Sub)
                     ' end update text box
-                    ' data aquisition from plc
-                    Dim LeftMeasureResult As Integer = ProductResult.MeasurementLeft
-                    Dim RightMeasureResult As Integer = ProductResult.MeasurementRight
-                    ' end data aquisition from plc
                     ' save database
-
+                    Call Database.Connect()
+                    Dim sc As New SqlCommand("UPDATE tb_datalog SET [ST3 Measurement Left Status] = '" & LeftMeasureResult & "', [ST3 Measurement Right Status] = '" & RightMeasureResult & "' WHERE [ID] = " & CountST3 & "", Database.Connection)
+                    Dim adapter As New SqlDataAdapter(sc)
+                    adapter.SelectCommand.ExecuteNonQuery()
                     ' end save database
+                    ' save datalog file
+                    Invoke(Sub()
+                               SaveDataLog()
+                           End Sub)
+                    ' end save datalog file
                     ' trigger finish save data
                     .MW11100_ = Modbus.WriteBit(.MW11100_, 3, 1)
                     .MW11100_ = Modbus.WriteBit(.MW11100_, 2, 0)
@@ -332,51 +527,65 @@ Public Class MainForm
             End With
             Select Case SequenceIndex
                 Case MainSequence.ScanRef
-                    If txt_ref.Text <> "" Then
-                        ' program check reference
-                        Call Database.Connect()
-                        Dim Query As String = "SELECT * FROM tb_References WHERE [References]='" & txt_ref.Text & "'"
-                        Dim sc As New SqlCommand(Query, Database.Connection)
-                        Dim rd As SqlDataReader = sc.ExecuteReader()
-                        rd.Read()
+                    Invoke(Sub()
+                               If txt_ref.Text <> "" Then
+                                   ' program check reference
+                                   Call Database.Connect()
+                                   Dim Query As String = "SELECT * FROM tb_References WHERE [References]='" & txt_ref.Text & "'"
+                                   Dim sc As New SqlCommand(Query, Database.Connection)
+                                   Dim rd As SqlDataReader = sc.ExecuteReader()
+                                   rd.Read()
 
-                        If rd.HasRows Then
-                            With ProductReferences
-                                .References = rd.Item("References")
-                                .PunchingMode = rd.Item("Punching Mode")
-                                .LevelDistance = rd.Item("Level Distance")
-                                .LevelTolerance = rd.Item("Level Tolerance")
-                                .OringCheck = rd.Item("Oring Check")
-                                .FestoLeftDistance = rd.Item("Festo Left Distance")
-                                .FestoRightDistance = rd.Item("Festo Right Distance")
-                                .FestoLeftSpeed = rd.Item("Festo Left Speed")
-                                .FestoRightSpeed = rd.Item("Festo Right Speed")
-                                .LaserTemplateAddress = rd.Item("Laser Template Address")
-                                .CameraProgram = rd.Item("Camera Program")
+                                   If rd.HasRows Then
+                                       With ProductReferences
+                                           .References = rd.Item("References")
+                                           .PunchingMode = rd.Item("Punching Mode")
+                                           .LevelDistance = rd.Item("Level Distance")
+                                           .LevelTolerance = rd.Item("Level Tolerance")
+                                           .OringCheck = rd.Item("Oring Check")
+                                           .FestoLeftDistance = rd.Item("Festo Left Distance")
+                                           .FestoRightDistance = rd.Item("Festo Right Distance")
+                                           .FestoLeftSpeed = rd.Item("Festo Left Speed")
+                                           .FestoRightSpeed = rd.Item("Festo Right Speed")
+                                           .LaserTemplateAddress = rd.Item("Laser Template Address")
+                                           .CameraProgram = rd.Item("Camera Program")
 
-                                ' kirim string ke plc
-                                sendLaserString(.References)
+                                           lbl_actuation_mode.Text = .PunchingMode
+                                           lbl_level_distance.Text = .LevelDistance
+                                           lbl_tolerance.Text = .LevelTolerance
+                                           lbl_oring_check.Text = .OringCheck
+                                           lbl_festo_distance_left.Text = .FestoLeftDistance
+                                           lbl_festo_distance_right.Text = .FestoRightDistance
+                                           lbl_laser_template.Text = .LaserTemplateAddress
+                                           lbl_camera_program.Text = .CameraProgram
 
-                                ' trigger load data
-                                MachineStatus.TrigLoadData = 1
-                                PlcTrigger.TrigLoadData = True
-                                PlcWriteState = True
-                            End With
-                            SequenceIndex = MainSequence.ScanOP
-                        Else
-                            Invoke(Sub()
-                                       lbl_op_ins.Text = "Invalid References..."
-                                       txt_ref.Text = ""
-                                   End Sub)
-                        End If
+                                           ' kirim database ke plc
+                                           PlcTrigger.References = True
 
-                        rd.Close()
-                    Else
-                        Invoke(Sub()
-                                   lbl_op_ins.Text = "Please Scan Product References..."
-                               End Sub)
-                    End If
+                                           ' kirim string ke plc
+                                           sendLaserString(.References)
 
+                                           ' trigger load data
+                                           MachineStatus.TrigLoadData = Modbus.WriteBit(MachineStatus.TrigLoadData, 0, 1)
+                                           PlcTrigger.TrigLoadData = True
+                                           PlcWriteState = True
+                                       End With
+                                       SequenceIndex = MainSequence.ScanOP
+                                   Else
+                                       Invoke(Sub()
+                                                  lbl_op_ins.Text = "Invalid References..."
+                                                  txt_ref.Text = ""
+                                              End Sub)
+                                   End If
+
+                                   rd.Close()
+                               Else
+                                   Invoke(Sub()
+                                              lbl_op_ins.Text = "Please Scan Product References..."
+                                          End Sub)
+                               End If
+
+                           End Sub)
                 Case MainSequence.ScanOP
                     If txt_ope_id.Text <> "" Then
                         SequenceIndex = MainSequence.ScanPO
@@ -454,7 +663,23 @@ Public Class MainForm
             End If
             If PlcTrigger.TrigLoadData Then
                 PlcTrigger.TrigLoadData = False
-                Modbus.WriteBit(11, 0, .TrigLoadData)
+                Modbus.WriteInteger(11, .TrigLoadData)
+            End If
+        End With
+
+        With ProductReferences
+            If PlcTrigger.References Then
+                PlcTrigger.References = False
+                Modbus.WriteInteger(10000, .PunchingMode)
+                Modbus.WriteFloat(10002, Single.Parse(.LevelDistance))
+                Modbus.WriteFloat(10004, Single.Parse(.LevelTolerance))
+                Modbus.WriteInteger(10006, .OringCheck)
+                Modbus.WriteDoubleInteger(10008, .FestoLeftDistance)
+                Modbus.WriteDoubleInteger(10010, .FestoRightDistance)
+                Modbus.WriteInteger(10012, .FestoLeftSpeed)
+                Modbus.WriteInteger(10014, .FestoRightSpeed)
+                Modbus.WriteInteger(10030, .LaserTemplateAddress)
+                Modbus.WriteInteger(10032, .CameraProgram)
             End If
         End With
 
@@ -477,6 +702,14 @@ Public Class MainForm
                 Modbus.WriteInteger(11100, .MW11100_)
             End If
         End With
+
+        With ProductResult
+            If PlcTrigger.HeidenResult Then
+                PlcTrigger.HeidenResult = False
+                Modbus.WriteFloat(12000, Single.Parse(.MeasurementLeft))
+                Modbus.WriteFloat(12002, Single.Parse(.MeasurementRight))
+            End If
+        End With
     End Sub
     Private Sub PlcReading()
         With MachineStatus
@@ -484,16 +717,20 @@ Public Class MainForm
             .Mode = Modbus.ReadInteger(1)
             .State = Modbus.ReadInteger(2)
 
-            Dim TempSaveLoadData As Integer = Modbus.ReadInteger(11)
-            .LoadDataBusy = Modbus.ReadBit(TempSaveLoadData, 1)
-            .LoadDataFinish = Modbus.ReadBit(TempSaveLoadData, 2)
-            .LoadDataFail = Modbus.ReadBit(TempSaveLoadData, 3)
+            .TrigLoadData = Modbus.ReadInteger(11)
+            .LoadDataBusy = Modbus.ReadBit(.TrigLoadData, 1)
+            .LoadDataFinish = Modbus.ReadBit(.TrigLoadData, 2)
+            .LoadDataFail = Modbus.ReadBit(.TrigLoadData, 3)
 
             .MachineInitialized = Modbus.ReadInteger(11)
 
-            Dim TempSaveEmpty As Integer = Modbus.ReadInteger(9)
-            .EmptyBusy = Modbus.ReadBit(TempSaveEmpty, 1)
-            .EmptyFinish = Modbus.ReadBit(TempSaveEmpty, 2)
+            .EmptyRequest = Modbus.ReadInteger(9)
+            .EmptyBusy = Modbus.ReadBit(.EmptyRequest, 1)
+            .EmptyFinish = Modbus.ReadBit(.EmptyRequest, 2)
+
+            .CavityST3 = Modbus.ReadInteger(3952)
+            .CavityST5 = Modbus.ReadInteger(5952)
+
             .OutputFail = Modbus.ReadInteger(4)
             .OutputPass = Modbus.ReadInteger(3)
         End With
@@ -512,8 +749,8 @@ Public Class MainForm
         End With
 
         With ProductResult
-            .MeasurementLeft = Modbus.ReadInteger(12004)
-            .MeasurementRight = Modbus.ReadInteger(12006)
+            .MeasurementLeftStatus = Modbus.ReadInteger(12004)
+            .MeasurementRightStatus = Modbus.ReadInteger(12006)
             .CameraLeft = Modbus.ReadInteger(12008)
             .CameraRight = Modbus.ReadInteger(12010)
             .ProductLeft = Modbus.ReadInteger(12012)

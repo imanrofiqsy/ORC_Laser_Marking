@@ -23,34 +23,39 @@ Partial Class ReferencesForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DateTime = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.rtb_references = New System.Windows.Forms.RichTextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txt_camera_program = New System.Windows.Forms.TextBox()
+        Me.txt_laser_template = New System.Windows.Forms.TextBox()
+        Me.txt_festo_speed_right = New System.Windows.Forms.TextBox()
+        Me.txt_festo_speed_left = New System.Windows.Forms.TextBox()
+        Me.txt_festo_distance_right = New System.Windows.Forms.TextBox()
+        Me.txt_festo_distance_left = New System.Windows.Forms.TextBox()
+        Me.txt_oring_check = New System.Windows.Forms.TextBox()
+        Me.txt_level_tolerance = New System.Windows.Forms.TextBox()
+        Me.txt_level_distance = New System.Windows.Forms.TextBox()
+        Me.txt_references = New System.Windows.Forms.TextBox()
+        Me.txt_actuation_mode = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
         Me.btn_delete = New System.Windows.Forms.Button()
         Me.btn_update = New System.Windows.Forms.Button()
         Me.btn_add = New System.Windows.Forms.Button()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.lbl_date = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -99,6 +104,8 @@ Partial Class ReferencesForm
         '
         'DataGridView1
         '
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(6, 15)
         Me.DataGridView1.Name = "DataGridView1"
@@ -107,57 +114,259 @@ Partial Class ReferencesForm
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.RichTextBox1)
+        Me.GroupBox3.Controls.Add(Me.rtb_references)
         Me.GroupBox3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(6, 401)
+        Me.GroupBox3.Location = New System.Drawing.Point(6, 357)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(219, 139)
+        Me.GroupBox3.Size = New System.Drawing.Size(219, 183)
         Me.GroupBox3.TabIndex = 1
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Status"
         '
-        'RichTextBox1
+        'rtb_references
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(6, 25)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(207, 109)
-        Me.RichTextBox1.TabIndex = 0
-        Me.RichTextBox1.Text = ""
+        Me.rtb_references.Location = New System.Drawing.Point(6, 25)
+        Me.rtb_references.Name = "rtb_references"
+        Me.rtb_references.Size = New System.Drawing.Size(207, 149)
+        Me.rtb_references.TabIndex = 0
+        Me.rtb_references.Text = ""
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.txt_camera_program)
+        Me.GroupBox2.Controls.Add(Me.txt_laser_template)
+        Me.GroupBox2.Controls.Add(Me.txt_festo_speed_right)
+        Me.GroupBox2.Controls.Add(Me.txt_festo_speed_left)
+        Me.GroupBox2.Controls.Add(Me.txt_festo_distance_right)
+        Me.GroupBox2.Controls.Add(Me.txt_festo_distance_left)
+        Me.GroupBox2.Controls.Add(Me.txt_oring_check)
+        Me.GroupBox2.Controls.Add(Me.txt_level_tolerance)
+        Me.GroupBox2.Controls.Add(Me.txt_level_distance)
+        Me.GroupBox2.Controls.Add(Me.txt_references)
+        Me.GroupBox2.Controls.Add(Me.txt_actuation_mode)
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.Label37)
+        Me.GroupBox2.Controls.Add(Me.Label28)
+        Me.GroupBox2.Controls.Add(Me.Label39)
+        Me.GroupBox2.Controls.Add(Me.Label5)
+        Me.GroupBox2.Controls.Add(Me.Label32)
+        Me.GroupBox2.Controls.Add(Me.Label4)
+        Me.GroupBox2.Controls.Add(Me.Label38)
+        Me.GroupBox2.Controls.Add(Me.Label31)
+        Me.GroupBox2.Controls.Add(Me.Label30)
+        Me.GroupBox2.Controls.Add(Me.Label29)
         Me.GroupBox2.Controls.Add(Me.btn_delete)
         Me.GroupBox2.Controls.Add(Me.btn_update)
         Me.GroupBox2.Controls.Add(Me.btn_add)
-        Me.GroupBox2.Controls.Add(Me.TextBox9)
-        Me.GroupBox2.Controls.Add(Me.TextBox5)
-        Me.GroupBox2.Controls.Add(Me.Label10)
-        Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.TextBox10)
-        Me.GroupBox2.Controls.Add(Me.TextBox8)
-        Me.GroupBox2.Controls.Add(Me.Label11)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
-        Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.TextBox7)
-        Me.GroupBox2.Controls.Add(Me.TextBox3)
-        Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.TextBox6)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
-        Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(6, 19)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(219, 376)
+        Me.GroupBox2.Size = New System.Drawing.Size(219, 332)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Reference Control"
         '
+        'txt_camera_program
+        '
+        Me.txt_camera_program.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_camera_program.Location = New System.Drawing.Point(149, 255)
+        Me.txt_camera_program.Name = "txt_camera_program"
+        Me.txt_camera_program.Size = New System.Drawing.Size(64, 22)
+        Me.txt_camera_program.TabIndex = 62
+        '
+        'txt_laser_template
+        '
+        Me.txt_laser_template.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_laser_template.Location = New System.Drawing.Point(149, 232)
+        Me.txt_laser_template.Name = "txt_laser_template"
+        Me.txt_laser_template.Size = New System.Drawing.Size(64, 22)
+        Me.txt_laser_template.TabIndex = 62
+        '
+        'txt_festo_speed_right
+        '
+        Me.txt_festo_speed_right.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_festo_speed_right.Location = New System.Drawing.Point(149, 209)
+        Me.txt_festo_speed_right.Name = "txt_festo_speed_right"
+        Me.txt_festo_speed_right.Size = New System.Drawing.Size(64, 22)
+        Me.txt_festo_speed_right.TabIndex = 62
+        '
+        'txt_festo_speed_left
+        '
+        Me.txt_festo_speed_left.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_festo_speed_left.Location = New System.Drawing.Point(149, 186)
+        Me.txt_festo_speed_left.Name = "txt_festo_speed_left"
+        Me.txt_festo_speed_left.Size = New System.Drawing.Size(64, 22)
+        Me.txt_festo_speed_left.TabIndex = 62
+        '
+        'txt_festo_distance_right
+        '
+        Me.txt_festo_distance_right.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_festo_distance_right.Location = New System.Drawing.Point(149, 163)
+        Me.txt_festo_distance_right.Name = "txt_festo_distance_right"
+        Me.txt_festo_distance_right.Size = New System.Drawing.Size(64, 22)
+        Me.txt_festo_distance_right.TabIndex = 62
+        '
+        'txt_festo_distance_left
+        '
+        Me.txt_festo_distance_left.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_festo_distance_left.Location = New System.Drawing.Point(149, 140)
+        Me.txt_festo_distance_left.Name = "txt_festo_distance_left"
+        Me.txt_festo_distance_left.Size = New System.Drawing.Size(64, 22)
+        Me.txt_festo_distance_left.TabIndex = 62
+        '
+        'txt_oring_check
+        '
+        Me.txt_oring_check.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_oring_check.Location = New System.Drawing.Point(149, 117)
+        Me.txt_oring_check.Name = "txt_oring_check"
+        Me.txt_oring_check.Size = New System.Drawing.Size(64, 22)
+        Me.txt_oring_check.TabIndex = 62
+        '
+        'txt_level_tolerance
+        '
+        Me.txt_level_tolerance.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_level_tolerance.Location = New System.Drawing.Point(149, 94)
+        Me.txt_level_tolerance.Name = "txt_level_tolerance"
+        Me.txt_level_tolerance.Size = New System.Drawing.Size(64, 22)
+        Me.txt_level_tolerance.TabIndex = 62
+        '
+        'txt_level_distance
+        '
+        Me.txt_level_distance.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_level_distance.Location = New System.Drawing.Point(149, 71)
+        Me.txt_level_distance.Name = "txt_level_distance"
+        Me.txt_level_distance.Size = New System.Drawing.Size(64, 22)
+        Me.txt_level_distance.TabIndex = 62
+        '
+        'txt_references
+        '
+        Me.txt_references.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_references.Location = New System.Drawing.Point(149, 25)
+        Me.txt_references.Name = "txt_references"
+        Me.txt_references.Size = New System.Drawing.Size(64, 22)
+        Me.txt_references.TabIndex = 62
+        '
+        'txt_actuation_mode
+        '
+        Me.txt_actuation_mode.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_actuation_mode.Location = New System.Drawing.Point(149, 48)
+        Me.txt_actuation_mode.Name = "txt_actuation_mode"
+        Me.txt_actuation_mode.Size = New System.Drawing.Size(64, 22)
+        Me.txt_actuation_mode.TabIndex = 62
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(6, 25)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(77, 20)
+        Me.Label3.TabIndex = 55
+        Me.Label3.Text = "References"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label37.Location = New System.Drawing.Point(6, 117)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(86, 20)
+        Me.Label37.TabIndex = 54
+        Me.Label37.Text = "Oring Check"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(6, 48)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(106, 20)
+        Me.Label28.TabIndex = 55
+        Me.Label28.Text = "Actuation Mode"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label39.Location = New System.Drawing.Point(6, 232)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(125, 20)
+        Me.Label39.TabIndex = 56
+        Me.Label39.Text = "Laser Template No"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(6, 210)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(123, 20)
+        Me.Label5.TabIndex = 59
+        Me.Label5.Text = "Festo Speed Right"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(6, 140)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(127, 20)
+        Me.Label32.TabIndex = 57
+        Me.Label32.Text = "Festo Distance Left"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(6, 187)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(113, 20)
+        Me.Label4.TabIndex = 59
+        Me.Label4.Text = "Festo Speed Left"
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label38.Location = New System.Drawing.Point(6, 256)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(114, 20)
+        Me.Label38.TabIndex = 58
+        Me.Label38.Text = "Camera Program"
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(6, 164)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(137, 20)
+        Me.Label31.TabIndex = 59
+        Me.Label31.Text = "Festo Distance Right"
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(6, 71)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(99, 20)
+        Me.Label30.TabIndex = 60
+        Me.Label30.Text = "Level Distance"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(6, 95)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(70, 20)
+        Me.Label29.TabIndex = 61
+        Me.Label29.Text = "Tolerance"
+        '
         'btn_delete
         '
-        Me.btn_delete.Location = New System.Drawing.Point(151, 325)
+        Me.btn_delete.Location = New System.Drawing.Point(152, 291)
         Me.btn_delete.Name = "btn_delete"
         Me.btn_delete.Size = New System.Drawing.Size(62, 35)
         Me.btn_delete.TabIndex = 13
@@ -166,7 +375,7 @@ Partial Class ReferencesForm
         '
         'btn_update
         '
-        Me.btn_update.Location = New System.Drawing.Point(77, 325)
+        Me.btn_update.Location = New System.Drawing.Point(78, 291)
         Me.btn_update.Name = "btn_update"
         Me.btn_update.Size = New System.Drawing.Size(62, 35)
         Me.btn_update.TabIndex = 13
@@ -175,156 +384,12 @@ Partial Class ReferencesForm
         '
         'btn_add
         '
-        Me.btn_add.Location = New System.Drawing.Point(3, 325)
+        Me.btn_add.Location = New System.Drawing.Point(4, 291)
         Me.btn_add.Name = "btn_add"
         Me.btn_add.Size = New System.Drawing.Size(62, 35)
         Me.btn_add.TabIndex = 13
         Me.btn_add.Text = "Add"
         Me.btn_add.UseVisualStyleBackColor = True
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(63, 249)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(150, 26)
-        Me.TextBox9.TabIndex = 6
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(63, 120)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(150, 26)
-        Me.TextBox5.TabIndex = 6
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(7, 252)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(50, 20)
-        Me.Label10.TabIndex = 2
-        Me.Label10.Text = "Label3"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(7, 123)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(50, 20)
-        Me.Label6.TabIndex = 2
-        Me.Label6.Text = "Label3"
-        '
-        'TextBox10
-        '
-        Me.TextBox10.Location = New System.Drawing.Point(63, 281)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(150, 26)
-        Me.TextBox10.TabIndex = 7
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(63, 217)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(150, 26)
-        Me.TextBox8.TabIndex = 7
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(7, 284)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(50, 20)
-        Me.Label11.TabIndex = 3
-        Me.Label11.Text = "Label3"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(63, 88)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(150, 26)
-        Me.TextBox4.TabIndex = 7
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(7, 220)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(50, 20)
-        Me.Label9.TabIndex = 3
-        Me.Label9.Text = "Label3"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(7, 91)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(50, 20)
-        Me.Label5.TabIndex = 3
-        Me.Label5.Text = "Label3"
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(63, 185)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(150, 26)
-        Me.TextBox7.TabIndex = 8
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(63, 56)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(150, 26)
-        Me.TextBox3.TabIndex = 8
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(7, 188)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(50, 20)
-        Me.Label8.TabIndex = 4
-        Me.Label8.Text = "Label3"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(7, 59)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(50, 20)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Label3"
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(63, 153)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(150, 26)
-        Me.TextBox6.TabIndex = 9
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(63, 24)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(150, 26)
-        Me.TextBox2.TabIndex = 9
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(7, 156)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(50, 20)
-        Me.Label7.TabIndex = 5
-        Me.Label7.Text = "Label3"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(7, 27)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(50, 20)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Label3"
         '
         'TextBox1
         '
@@ -501,29 +566,33 @@ Partial Class ReferencesForm
     Friend WithEvents pb_status_mc As PictureBox
     Friend WithEvents pb_logo As PictureBox
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents rtb_references As RichTextBox
     Friend WithEvents btn_delete As Button
     Friend WithEvents btn_update As Button
     Friend WithEvents btn_add As Button
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents Label11 As Label
     Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label39 As Label
+    Friend WithEvents Label32 As Label
+    Friend WithEvents Label38 As Label
+    Friend WithEvents Label31 As Label
+    Friend WithEvents Label30 As Label
+    Friend WithEvents Label29 As Label
+    Friend WithEvents txt_actuation_mode As TextBox
+    Friend WithEvents txt_camera_program As TextBox
+    Friend WithEvents txt_laser_template As TextBox
+    Friend WithEvents txt_festo_distance_right As TextBox
+    Friend WithEvents txt_oring_check As TextBox
+    Friend WithEvents txt_level_tolerance As TextBox
+    Friend WithEvents txt_level_distance As TextBox
+    Private WithEvents txt_festo_distance_left As TextBox
+    Friend WithEvents txt_references As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txt_festo_speed_left As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txt_festo_speed_right As TextBox
+    Friend WithEvents Label5 As Label
 End Class

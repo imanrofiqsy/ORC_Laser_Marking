@@ -7,8 +7,10 @@
     Public PlcWriteState As Boolean
     Public ProductResult As Result
     Public Structure Result
-        Dim MeasurementLeft As Integer
-        Dim MeasurementRight As Integer
+        Dim MeasurementLeft As String
+        Dim MeasurementRight As String
+        Dim MeasurementLeftStatus As Integer
+        Dim MeasurementRightStatus As Integer
         Dim CameraLeft As Integer
         Dim CameraRight As Integer
         Dim ProductLeft As Integer
@@ -39,6 +41,8 @@
         Dim V101 As Boolean
 
         Dim MW11100_ As Boolean
+        Dim References As Boolean
+        Dim HeidenResult As Boolean
     End Structure
     Public Enum MainSequence
         ScanRef
@@ -88,6 +92,10 @@
 
         'General Status
         Dim MachineInitialized As Integer
+
+        'Current Cav number for each station
+        Dim CavityST3 As Integer
+        Dim CavityST5 As Integer
     End Structure
     Public SetCylinder As Cylinder
     Public GetCylinder As Cylinder

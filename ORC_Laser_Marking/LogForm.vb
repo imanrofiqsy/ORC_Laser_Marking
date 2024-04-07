@@ -1,4 +1,6 @@
-﻿Public Class LogForm
+﻿Imports System.Data.SqlClient
+Public Class LogForm
+    Dim Database = New DatabaseConnection
     Private Sub DateTime_Tick(sender As Object, e As EventArgs) Handles DateTime.Tick
         lbl_curr_time.Text = Date.Now.ToString("dd-MM-yyyy")
         lbl_curr_time.Text = Date.Now.ToString("hh:mm:ss")
@@ -21,9 +23,15 @@
 
     Private Sub LogForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         GetUserLevel()
-        DataGridView1.ColumnHeadersDefaultCellStyle.Font = New Font("Arial", 15)
-        DataGridView1.DefaultCellStyle.Font = New Font("Arial", 15)
-        DataGridView1.Dock = DockStyle.Fill
-        DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+
+    End Sub
+    Private Sub LoadTable()
+        Call Database.Connect()
+        Dim sc As New SqlCommand("SELECT * FROM tb_datalog", Database.Connection)
+        Dim adapter As New SqlDataAdapter(sc)
+        Dim ds As New DataSet
+
+        adapter.Fill(ds)
+        DataGridView1.DataSource = ds.Tables(0)
     End Sub
 End Class

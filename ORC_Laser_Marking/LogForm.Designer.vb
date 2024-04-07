@@ -23,6 +23,9 @@ Partial Class LogForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.lbl_date = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -32,6 +35,7 @@ Partial Class LogForm
         Me.btn_home = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.GroupBox_Status = New System.Windows.Forms.GroupBox()
         Me.RTB_Status = New System.Windows.Forms.RichTextBox()
         Me.GroupBox_Export = New System.Windows.Forms.GroupBox()
@@ -55,9 +59,9 @@ Partial Class LogForm
         Me.pb_status_mc = New System.Windows.Forms.PictureBox()
         Me.pb_logo = New System.Windows.Forms.PictureBox()
         Me.pb_status_bar = New System.Windows.Forms.PictureBox()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
         Me.GroupBox_Status.SuspendLayout()
         Me.GroupBox_Export.SuspendLayout()
         Me.GroupBox_Filter.SuspendLayout()
@@ -66,7 +70,6 @@ Partial Class LogForm
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -154,7 +157,27 @@ Partial Class LogForm
         '
         'DataGridView1
         '
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.Location = New System.Drawing.Point(6, 13)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(1176, 339)
@@ -171,6 +194,15 @@ Partial Class LogForm
         Me.GroupBox1.Size = New System.Drawing.Size(1200, 546)
         Me.GroupBox1.TabIndex = 74
         Me.GroupBox1.TabStop = False
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.DataGridView1)
+        Me.GroupBox4.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(1188, 358)
+        Me.GroupBox4.TabIndex = 25
+        Me.GroupBox4.TabStop = False
         '
         'GroupBox_Status
         '
@@ -416,15 +448,6 @@ Partial Class LogForm
         Me.pb_status_bar.TabIndex = 65
         Me.pb_status_bar.TabStop = False
         '
-        'GroupBox4
-        '
-        Me.GroupBox4.Controls.Add(Me.DataGridView1)
-        Me.GroupBox4.Location = New System.Drawing.Point(6, 6)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(1188, 358)
-        Me.GroupBox4.TabIndex = 25
-        Me.GroupBox4.TabStop = False
-        '
         'LogForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -448,6 +471,7 @@ Partial Class LogForm
         Me.Text = "LogForm"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox_Status.ResumeLayout(False)
         Me.GroupBox_Export.ResumeLayout(False)
         Me.GroupBox_Export.PerformLayout()
@@ -460,7 +484,6 @@ Partial Class LogForm
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox4.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

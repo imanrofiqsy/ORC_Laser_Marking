@@ -681,7 +681,7 @@ Partial Class SettingForm
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.pb_status_bar)
         Me.Name = "SettingForm"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "SettingForm"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox7.ResumeLayout(False)
