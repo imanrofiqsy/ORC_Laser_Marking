@@ -671,8 +671,9 @@ Public Class MainForm
             If PlcTrigger.References Then
                 PlcTrigger.References = False
                 Modbus.WriteInteger(10000, .PunchingMode)
-                Modbus.WriteFloat(10002, Single.Parse(.LevelDistance))
-                Modbus.WriteFloat(10004, Single.Parse(.LevelTolerance))
+                Console.WriteLine(Single.Parse(.LevelDistance.ToString.Replace(".", ",")))
+                Modbus.WriteFloat(10002, Single.Parse(.LevelDistance.ToString.Replace(".", ",")))
+                Modbus.WriteFloat(10004, Single.Parse(.LevelTolerance.ToString.Replace(".", ",")))
                 Modbus.WriteInteger(10006, .OringCheck)
                 Modbus.WriteDoubleInteger(10008, .FestoLeftDistance)
                 Modbus.WriteDoubleInteger(10010, .FestoRightDistance)
@@ -803,5 +804,13 @@ Public Class MainForm
             ind_software_run.BackColor = Color.Red
             ind_software_stop.BackColor = Color.Lime
         End With
+    End Sub
+
+    Private Sub btn_clear_Click(sender As Object, e As EventArgs) Handles btn_clear.Click
+        txt_ref.Text = ""
+        txt_ope_id.Text = ""
+        txt_po_num.Text = ""
+        txt_qty.Text = ""
+        SequenceIndex = MainSequence.ScanRef
     End Sub
 End Class
