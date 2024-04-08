@@ -114,6 +114,22 @@
 
         'Empty
         Dim Empty As Boolean
+
+        ' Calibration
+        Dim Left1 As Boolean
+        Dim Left2 As Boolean
+        Dim Left3 As Boolean
+        Dim Left4 As Boolean
+        Dim Left5 As Boolean
+        Dim Left6 As Boolean
+        Dim Right1 As Boolean
+        Dim Right2 As Boolean
+        Dim Right3 As Boolean
+        Dim Right4 As Boolean
+        Dim Right5 As Boolean
+        Dim Right6 As Boolean
+        Dim MW2000_ As Boolean
+        Dim EnableDisable As Boolean
     End Structure
     Public Enum MainSequence
         ScanRef
@@ -209,6 +225,29 @@
         Dim RCamError As Integer
         Dim RCamOK As Integer
         Dim RCamNG As Integer
+
+        'Calibration
+
+        Dim Left1 As Integer
+        Dim Left2 As Integer
+        Dim Left3 As Integer
+        Dim Left4 As Integer
+        Dim Left5 As Integer
+        Dim Left6 As Integer
+        Dim Right1 As Integer
+        Dim Right2 As Integer
+        Dim Right3 As Integer
+        Dim Right4 As Integer
+        Dim Right5 As Integer
+        Dim Right6 As Integer
+
+        'Station enable disable
+        Dim MW1000_ As Integer
+        Dim MW2000_ As Integer
+        Dim MW3000_ As Integer
+        Dim MW4000_ As Integer
+        Dim MW5000_ As Integer
+        Dim MW6000_ As Integer
     End Structure
     Public SetCylinder As Cylinder
     Public GetCylinder As Cylinder
@@ -239,6 +278,7 @@
         Dim MW2900_ As Integer
         Dim MW2900_0 As Integer
         Dim MW2900_1 As Integer
+        Dim MW2900_2 As Integer
         Dim MW3900_ As Integer
         Dim MW3900_0 As Integer
         Dim MW3900_1 As Integer

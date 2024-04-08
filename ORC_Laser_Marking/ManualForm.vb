@@ -1,7 +1,12 @@
 ﻿Imports System.Threading
+Imports ControlBPM
 Public Class ManualForm
     Dim ManualThread As Thread
     Dim Modbus = New Modbus
+
+    Dim fullPath As String = System.AppDomain.CurrentDomain.BaseDirectory
+    Dim projectFolder As String = fullPath.Replace("\ORC_Laser_Marking\bin\Debug\", "").Replace("\ORC_Laser_Marking\bin\Release\", "")
+    Dim iniPath As String = projectFolder + "\config\Config.INI"
     Private Sub DateTime_Tick(sender As Object, e As EventArgs) Handles DateTime.Tick
         lbl_date.Text = Date.Now.ToString("dd-MM-yyyy")
         lbl_curr_time.Text = Date.Now.ToString("hh:mm:ss")
@@ -430,6 +435,8 @@ Public Class ManualForm
             '           txt_Rfesto_fault.Text = Fest.TextFaultR
             '       End Sub)
 
+
+
             If IsHandleCreated Then
                 ' Access controls using Invoke or BeginInvoke
                 Invoke(Sub()
@@ -449,6 +456,92 @@ Public Class ManualForm
                            lbl_cyc_4.Text = MachineStatus.CycleST4
                            lbl_cyc_5.Text = MachineStatus.CycleST5
                            lbl_cyc_6.Text = MachineStatus.CycleST6
+
+                           Dim HeidenhainLeft As String = "10.000"
+                           Dim HeidenhainRight As String = "10.000"
+                           If GetCylinder.MW2900_2 = 1 Then
+                               Select Case MachineStatus.CavityST3
+                                   Case 1
+                                       lbl_cal_l_1.Text = HeidenhainLeft
+                                       lbl_cal_r_1.Text = HeidenhainRight
+                                       lbl_cal_l_1.BackColor = Color.Green
+                                       lbl_cal_r_1.BackColor = Color.Green
+                                       lbl_cal_l_2.BackColor = Color.White
+                                       lbl_cal_r_2.BackColor = Color.White
+                                       lbl_cal_l_3.BackColor = Color.White
+                                       lbl_cal_r_3.BackColor = Color.White
+                                       lbl_cal_l_4.BackColor = Color.White
+                                       lbl_cal_r_4.BackColor = Color.White
+                                       lbl_cal_l_5.BackColor = Color.White
+                                       lbl_cal_r_5.BackColor = Color.White
+                                       lbl_cal_l_6.BackColor = Color.White
+                                       lbl_cal_r_6.BackColor = Color.White
+                                       MachineStatus.Left1 = HeidenhainLeft
+                                       MachineStatus.Right1 = HeidenhainRight
+                                       PlcTrigger.Left1 = True
+                                       PlcTrigger.Right1 = True
+                                       WriteINI(iniPath, "CALIBRATION LEFT", "Cavity1", HeidenhainLeft)
+                                       WriteINI(iniPath, "CALIBRATION RIGHT", "Cavity1", HeidenhainRight)
+                                   Case 2
+                                       lbl_cal_l_2.Text = HeidenhainLeft
+                                       lbl_cal_r_2.Text = HeidenhainRight
+                                       lbl_cal_l_2.BackColor = Color.Green
+                                       lbl_cal_r_2.BackColor = Color.Green
+                                       MachineStatus.Left2 = HeidenhainLeft
+                                       MachineStatus.Right2 = HeidenhainRight
+                                       PlcTrigger.Left2 = True
+                                       PlcTrigger.Right2 = True
+                                       WriteINI(iniPath, "CALIBRATION LEFT", "Cavity2", HeidenhainLeft)
+                                       WriteINI(iniPath, "CALIBRATION RIGHT", "Cavity2", HeidenhainRight)
+                                   Case 3
+                                       lbl_cal_l_3.Text = HeidenhainLeft
+                                       lbl_cal_r_3.Text = HeidenhainRight
+                                       lbl_cal_l_3.BackColor = Color.Green
+                                       lbl_cal_r_3.BackColor = Color.Green
+                                       MachineStatus.Left3 = HeidenhainLeft
+                                       MachineStatus.Right3 = HeidenhainRight
+                                       PlcTrigger.Left3 = True
+                                       PlcTrigger.Right3 = True
+                                       WriteINI(iniPath, "CALIBRATION LEFT", "Cavity3", HeidenhainLeft)
+                                       WriteINI(iniPath, "CALIBRATION RIGHT", "Cavity3", HeidenhainRight)
+                                   Case 4
+                                       lbl_cal_l_4.Text = HeidenhainLeft
+                                       lbl_cal_r_4.Text = HeidenhainRight
+                                       lbl_cal_l_4.BackColor = Color.Green
+                                       lbl_cal_r_4.BackColor = Color.Green
+                                       MachineStatus.Left4 = HeidenhainLeft
+                                       MachineStatus.Right4 = HeidenhainRight
+                                       PlcTrigger.Left4 = True
+                                       PlcTrigger.Right4 = True
+                                       WriteINI(iniPath, "CALIBRATION LEFT", "Cavity4", HeidenhainLeft)
+                                       WriteINI(iniPath, "CALIBRATION RIGHT", "Cavity4", HeidenhainRight)
+                                   Case 5
+                                       lbl_cal_l_5.Text = HeidenhainLeft
+                                       lbl_cal_r_5.Text = HeidenhainRight
+                                       lbl_cal_l_5.BackColor = Color.Green
+                                       lbl_cal_r_5.BackColor = Color.Green
+                                       MachineStatus.Left5 = HeidenhainLeft
+                                       MachineStatus.Right5 = HeidenhainRight
+                                       PlcTrigger.Left5 = True
+                                       PlcTrigger.Right5 = True
+                                       WriteINI(iniPath, "CALIBRATION LEFT", "Cavity5", HeidenhainLeft)
+                                       WriteINI(iniPath, "CALIBRATION RIGHT", "Cavity5", HeidenhainRight)
+                                   Case 6
+                                       lbl_cal_l_6.Text = HeidenhainLeft
+                                       lbl_cal_r_6.Text = HeidenhainRight
+                                       lbl_cal_l_6.BackColor = Color.Green
+                                       lbl_cal_r_6.BackColor = Color.Green
+                                       MachineStatus.Left6 = HeidenhainLeft
+                                       MachineStatus.Right6 = HeidenhainRight
+                                       PlcTrigger.Left6 = True
+                                       PlcTrigger.Right6 = True
+                                       WriteINI(iniPath, "CALIBRATION LEFT", "Cavity6", HeidenhainLeft)
+                                       WriteINI(iniPath, "CALIBRATION RIGHT", "Cavity6", HeidenhainRight)
+                               End Select
+                               MachineStatus.MW2000_ = Modbus.WriteBit(MachineStatus.MW2000_, 3, 1)
+                               PlcTrigger.MW2000_ = True
+                               PlcWriteState = True
+                           End If
                        End Sub)
             Else
                 ' Handle the case where the handle is not created yet
@@ -634,13 +727,13 @@ Public Class ManualForm
         PlcWriteState = True
     End Sub
 
-    Private Sub btn_v304_bw_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_v304_bw.MouseDown
+    Private Sub btn_v304_bw_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_v304_bw.MouseDown, btn_start_calibration.MouseDown
         SetCylinder.V304 = 2
         PlcTrigger.V304 = True
         PlcWriteState = True
     End Sub
 
-    Private Sub btn_v304_bw_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_v304_bw.MouseUp
+    Private Sub btn_v304_bw_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_v304_bw.MouseUp, btn_start_calibration.MouseUp
         SetCylinder.V304 = 0
         PlcTrigger.V304 = True
         PlcWriteState = True

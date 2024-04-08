@@ -937,6 +937,66 @@ Public Class MainForm
                 PlcTrigger.Empty = False
                 Modbus.WriteInteger(9, .EmptyRequest)
             End If
+            If PlcTrigger.Left1 Then
+                PlcTrigger.Left1 = False
+                Modbus.WriteInteger(2020, .Left1)
+            End If
+            If PlcTrigger.Left2 Then
+                PlcTrigger.Left2 = False
+                Modbus.WriteInteger(2022, .Left2)
+            End If
+            If PlcTrigger.Left3 Then
+                PlcTrigger.Left3 = False
+                Modbus.WriteInteger(2024, .Left3)
+            End If
+            If PlcTrigger.Left4 Then
+                PlcTrigger.Left4 = False
+                Modbus.WriteInteger(2026, .Left4)
+            End If
+            If PlcTrigger.Left5 Then
+                PlcTrigger.Left5 = False
+                Modbus.WriteInteger(2028, .Left5)
+            End If
+            If PlcTrigger.Left6 Then
+                PlcTrigger.Left6 = False
+                Modbus.WriteInteger(2030, .Left6)
+            End If
+            If PlcTrigger.Right1 Then
+                PlcTrigger.Right1 = False
+                Modbus.WriteInteger(2032, .Right1)
+            End If
+            If PlcTrigger.Right2 Then
+                PlcTrigger.Right2 = False
+                Modbus.WriteInteger(2034, .Right2)
+            End If
+            If PlcTrigger.Right3 Then
+                PlcTrigger.Right3 = False
+                Modbus.WriteInteger(2036, .Right3)
+            End If
+            If PlcTrigger.Right4 Then
+                PlcTrigger.Right4 = False
+                Modbus.WriteInteger(2038, .Right4)
+            End If
+            If PlcTrigger.Right5 Then
+                PlcTrigger.Right5 = False
+                Modbus.WriteInteger(2040, .Right5)
+            End If
+            If PlcTrigger.Right6 Then
+                PlcTrigger.Right6 = False
+                Modbus.WriteInteger(2042, .Right6)
+            End If
+            If PlcTrigger.MW2000_ Or PlcTrigger.EnableDisable Then
+                PlcTrigger.MW2000_ = False
+                Modbus.WriteInteger(2000, .MW2000_)
+            End If
+            If PlcTrigger.EnableDisable Then
+                PlcTrigger.EnableDisable = False
+                Modbus.WriteInteger(1000, .MW1000_)
+                Modbus.WriteInteger(3000, .MW3000_)
+                Modbus.WriteInteger(4000, .MW4000_)
+                Modbus.WriteInteger(5000, .MW5000_)
+                Modbus.WriteInteger(6000, .MW6000_)
+            End If
         End With
 
         With ProductReferences
@@ -1111,6 +1171,7 @@ Public Class MainForm
             .MW2900_ = Modbus.ReadInteger(2900)
             .MW2900_0 = Modbus.ReadBit(.MW2900_, 0)
             .MW2900_1 = Modbus.ReadBit(.MW2900_, 1)
+            .MW2900_2 = Modbus.ReadBit(.MW2900_, 2)
 
             .MW3900_ = Modbus.ReadInteger(3900)
             .MW3900_0 = Modbus.ReadBit(.MW3900_, 0)
