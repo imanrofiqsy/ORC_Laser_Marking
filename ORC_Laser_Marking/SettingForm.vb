@@ -14,7 +14,12 @@
             lbl_user.Text = "QUA"
         End If
     End Sub
+    Private Sub DateTime_Tick(sender As Object, e As EventArgs) Handles DateTime.Tick
+        lbl_date.Text = Date.Now.ToString("dd-MM-yyyy")
+        lbl_curr_time.Text = Date.Now.ToString("hh:mm:ss")
+    End Sub
     Private Sub SettingForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         GetUserLevel()
     End Sub
+
 End Class

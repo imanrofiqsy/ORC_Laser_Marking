@@ -38,21 +38,13 @@ Partial Class ManualForm
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.btn_v101_bw = New System.Windows.Forms.Button()
         Me.btn_v101_fw = New System.Windows.Forms.Button()
-        Me.ind_v101_min = New System.Windows.Forms.PictureBox()
-        Me.ind_v101_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox36 = New System.Windows.Forms.GroupBox()
         Me.Label57 = New System.Windows.Forms.Label()
-        Me.ind_stn_initialized_1 = New System.Windows.Forms.PictureBox()
         Me.Label56 = New System.Windows.Forms.Label()
-        Me.ind_stn_initialized_5 = New System.Windows.Forms.PictureBox()
         Me.Label55 = New System.Windows.Forms.Label()
-        Me.ind_stn_initialized_3 = New System.Windows.Forms.PictureBox()
         Me.Label54 = New System.Windows.Forms.Label()
-        Me.ind_stn_initialized_2 = New System.Windows.Forms.PictureBox()
         Me.Label53 = New System.Windows.Forms.Label()
-        Me.ind_stn_initialized_6 = New System.Windows.Forms.PictureBox()
         Me.Label52 = New System.Windows.Forms.Label()
-        Me.ind_stn_initialized_4 = New System.Windows.Forms.PictureBox()
         Me.GroupBox38 = New System.Windows.Forms.GroupBox()
         Me.lbl_cav_4 = New System.Windows.Forms.Label()
         Me.Label71 = New System.Windows.Forms.Label()
@@ -86,23 +78,6 @@ Partial Class ManualForm
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label284 = New System.Windows.Forms.Label()
         Me.Label281 = New System.Windows.Forms.Label()
-        Me.ind_safe_motor_4 = New System.Windows.Forms.PictureBox()
-        Me.ind_safe_motor_6 = New System.Windows.Forms.PictureBox()
-        Me.ind_safe_motor_2 = New System.Windows.Forms.PictureBox()
-        Me.ind_safe_motor_3 = New System.Windows.Forms.PictureBox()
-        Me.ind_safe_motor_5 = New System.Windows.Forms.PictureBox()
-        Me.ind_safe_motor_1 = New System.Windows.Forms.PictureBox()
-        Me.btn_st6 = New System.Windows.Forms.Button()
-        Me.btn_st5 = New System.Windows.Forms.Button()
-        Me.btn_st4 = New System.Windows.Forms.Button()
-        Me.btn_st3 = New System.Windows.Forms.Button()
-        Me.btn_st2 = New System.Windows.Forms.Button()
-        Me.btn_st1 = New System.Windows.Forms.Button()
-        Me.btn_home = New System.Windows.Forms.Button()
-        Me.btn_login = New System.Windows.Forms.Button()
-        Me.pb_status_bar = New System.Windows.Forms.PictureBox()
-        Me.pb_status_mc = New System.Windows.Forms.PictureBox()
-        Me.pb_logo = New System.Windows.Forms.PictureBox()
         Me.gb_ST2 = New System.Windows.Forms.GroupBox()
         Me.gb_ST3 = New System.Windows.Forms.GroupBox()
         Me.tab_ST3 = New System.Windows.Forms.TabControl()
@@ -110,23 +85,15 @@ Partial Class ManualForm
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.btn_v302_bw = New System.Windows.Forms.Button()
         Me.btn_v302_fw = New System.Windows.Forms.Button()
-        Me.ind_v302_min = New System.Windows.Forms.PictureBox()
-        Me.ind_v302_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
         Me.btn_v304_bw = New System.Windows.Forms.Button()
         Me.btn_v304_fw = New System.Windows.Forms.Button()
-        Me.ind_v304_min = New System.Windows.Forms.PictureBox()
-        Me.ind_v304_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
         Me.btn_v303_bw = New System.Windows.Forms.Button()
         Me.btn_v303_fw = New System.Windows.Forms.Button()
-        Me.ind_v303_min = New System.Windows.Forms.PictureBox()
-        Me.ind_v303_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.btn_v301_bw = New System.Windows.Forms.Button()
         Me.btn_v301_fw = New System.Windows.Forms.Button()
-        Me.ind_v301_min = New System.Windows.Forms.PictureBox()
-        Me.ind_v301_max = New System.Windows.Forms.PictureBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox30 = New System.Windows.Forms.GroupBox()
         Me.Label34 = New System.Windows.Forms.Label()
@@ -151,15 +118,6 @@ Partial Class ManualForm
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
-        Me.ind_Lfesto_error = New System.Windows.Forms.PictureBox()
-        Me.ind_Lfesto_lock = New System.Windows.Forms.PictureBox()
-        Me.ind_Lfesto_ax_ack = New System.Windows.Forms.PictureBox()
-        Me.ind_Lfesto_ax_warn = New System.Windows.Forms.PictureBox()
-        Me.ind_Lfesto_ax_pos = New System.Windows.Forms.PictureBox()
-        Me.ind_Lfesto_ax_error = New System.Windows.Forms.PictureBox()
-        Me.ind_Lfesto_ax_sp = New System.Windows.Forms.PictureBox()
-        Me.ind_Lfesto_ax_ref = New System.Windows.Forms.PictureBox()
-        Me.ind_Lfesto_ax_enabled = New System.Windows.Forms.PictureBox()
         Me.GroupBox29 = New System.Windows.Forms.GroupBox()
         Me.btn_Lfesto_jogplus = New System.Windows.Forms.Button()
         Me.btn_Lfesto_clear = New System.Windows.Forms.Button()
@@ -199,15 +157,6 @@ Partial Class ManualForm
         Me.Label49 = New System.Windows.Forms.Label()
         Me.Label50 = New System.Windows.Forms.Label()
         Me.Label51 = New System.Windows.Forms.Label()
-        Me.ind_Rfesto_error = New System.Windows.Forms.PictureBox()
-        Me.ind_Rfesto_lock = New System.Windows.Forms.PictureBox()
-        Me.ind_Rfesto_ax_ack = New System.Windows.Forms.PictureBox()
-        Me.ind_Rfesto_ax_warn = New System.Windows.Forms.PictureBox()
-        Me.ind_Rfesto_ax_pos = New System.Windows.Forms.PictureBox()
-        Me.ind_Rfesto_ax_error = New System.Windows.Forms.PictureBox()
-        Me.ind_Rfesto_ax_sp = New System.Windows.Forms.PictureBox()
-        Me.ind_Rfesto_ax_ref = New System.Windows.Forms.PictureBox()
-        Me.ind_Rfesto_ax_enabled = New System.Windows.Forms.PictureBox()
         Me.GroupBox34 = New System.Windows.Forms.GroupBox()
         Me.btn_Rfesto_jogplus = New System.Windows.Forms.Button()
         Me.btn_Rfesto_clear = New System.Windows.Forms.Button()
@@ -225,16 +174,10 @@ Partial Class ManualForm
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ind_laser_command = New System.Windows.Forms.PictureBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.ind_laser_shutter = New System.Windows.Forms.PictureBox()
-        Me.ind_laser_ready = New System.Windows.Forms.PictureBox()
-        Me.ind_laser_busy = New System.Windows.Forms.PictureBox()
-        Me.ind_laser_interlock = New System.Windows.Forms.PictureBox()
-        Me.ind_laser_error = New System.Windows.Forms.PictureBox()
         Me.GroupBox12 = New System.Windows.Forms.GroupBox()
         Me.GroupBox15 = New System.Windows.Forms.GroupBox()
         Me.btn_send_laser = New System.Windows.Forms.Button()
@@ -245,8 +188,6 @@ Partial Class ManualForm
         Me.GroupBox14 = New System.Windows.Forms.GroupBox()
         Me.btn_v401_bw = New System.Windows.Forms.Button()
         Me.btn_v401_fw = New System.Windows.Forms.Button()
-        Me.ind_v401_min = New System.Windows.Forms.PictureBox()
-        Me.ind_v401_max = New System.Windows.Forms.PictureBox()
         Me.gb_ST5 = New System.Windows.Forms.GroupBox()
         Me.GroupBox27 = New System.Windows.Forms.GroupBox()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -254,22 +195,12 @@ Partial Class ManualForm
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.ind_Rcam_ok = New System.Windows.Forms.PictureBox()
-        Me.ind_Rcam_ready = New System.Windows.Forms.PictureBox()
-        Me.ind_Rcam_run = New System.Windows.Forms.PictureBox()
-        Me.ind_Rcam_ng = New System.Windows.Forms.PictureBox()
-        Me.ind_Rcam_error = New System.Windows.Forms.PictureBox()
         Me.GroupBox18 = New System.Windows.Forms.GroupBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.ind_Lcam_ok = New System.Windows.Forms.PictureBox()
-        Me.ind_Lcam_ready = New System.Windows.Forms.PictureBox()
-        Me.ind_Lcam_run = New System.Windows.Forms.PictureBox()
-        Me.ind_Lcam_ng = New System.Windows.Forms.PictureBox()
-        Me.ind_Lcam_error = New System.Windows.Forms.PictureBox()
         Me.GroupBox16 = New System.Windows.Forms.GroupBox()
         Me.GroupBox26 = New System.Windows.Forms.GroupBox()
         Me.btn_Rcam_reset = New System.Windows.Forms.Button()
@@ -280,78 +211,187 @@ Partial Class ManualForm
         Me.GroupBox19 = New System.Windows.Forms.GroupBox()
         Me.btn_v502_bw = New System.Windows.Forms.Button()
         Me.btn_v502_fw = New System.Windows.Forms.Button()
-        Me.ind_v502_min = New System.Windows.Forms.PictureBox()
-        Me.ind_v502_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox20 = New System.Windows.Forms.GroupBox()
         Me.btn_v503_bw = New System.Windows.Forms.Button()
         Me.btn_v503_fw = New System.Windows.Forms.Button()
-        Me.ind_v503_min = New System.Windows.Forms.PictureBox()
-        Me.ind_v503_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox17 = New System.Windows.Forms.GroupBox()
         Me.btn_v501_bw = New System.Windows.Forms.Button()
         Me.btn_v501_fw = New System.Windows.Forms.Button()
-        Me.ind_v501_min = New System.Windows.Forms.PictureBox()
-        Me.ind_v501_max = New System.Windows.Forms.PictureBox()
         Me.gb_ST6 = New System.Windows.Forms.GroupBox()
         Me.GroupBox22 = New System.Windows.Forms.GroupBox()
         Me.GroupBox23 = New System.Windows.Forms.GroupBox()
         Me.btn_v602_bw = New System.Windows.Forms.Button()
         Me.btn_v602_fw = New System.Windows.Forms.Button()
-        Me.ind_v602_min = New System.Windows.Forms.PictureBox()
-        Me.ind_v602_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox24 = New System.Windows.Forms.GroupBox()
         Me.btn_v603_bw = New System.Windows.Forms.Button()
         Me.btn_v603_fw = New System.Windows.Forms.Button()
-        Me.ind_v603_min = New System.Windows.Forms.PictureBox()
-        Me.ind_v603_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox25 = New System.Windows.Forms.GroupBox()
         Me.btn_v601_bw = New System.Windows.Forms.Button()
         Me.btn_v601_fw = New System.Windows.Forms.Button()
+        Me.ind_v602_min = New System.Windows.Forms.PictureBox()
+        Me.ind_v602_max = New System.Windows.Forms.PictureBox()
+        Me.ind_v603_min = New System.Windows.Forms.PictureBox()
+        Me.ind_v603_max = New System.Windows.Forms.PictureBox()
         Me.ind_v601_min = New System.Windows.Forms.PictureBox()
         Me.ind_v601_max = New System.Windows.Forms.PictureBox()
+        Me.ind_Rcam_ok = New System.Windows.Forms.PictureBox()
+        Me.ind_Rcam_ready = New System.Windows.Forms.PictureBox()
+        Me.ind_Rcam_run = New System.Windows.Forms.PictureBox()
+        Me.ind_Rcam_ng = New System.Windows.Forms.PictureBox()
+        Me.ind_Rcam_error = New System.Windows.Forms.PictureBox()
+        Me.ind_Lcam_ok = New System.Windows.Forms.PictureBox()
+        Me.ind_Lcam_ready = New System.Windows.Forms.PictureBox()
+        Me.ind_Lcam_run = New System.Windows.Forms.PictureBox()
+        Me.ind_Lcam_ng = New System.Windows.Forms.PictureBox()
+        Me.ind_Lcam_error = New System.Windows.Forms.PictureBox()
+        Me.ind_v502_min = New System.Windows.Forms.PictureBox()
+        Me.ind_v502_max = New System.Windows.Forms.PictureBox()
+        Me.ind_v503_min = New System.Windows.Forms.PictureBox()
+        Me.ind_v503_max = New System.Windows.Forms.PictureBox()
+        Me.ind_v501_min = New System.Windows.Forms.PictureBox()
+        Me.ind_v501_max = New System.Windows.Forms.PictureBox()
+        Me.ind_laser_command = New System.Windows.Forms.PictureBox()
+        Me.ind_laser_shutter = New System.Windows.Forms.PictureBox()
+        Me.ind_laser_ready = New System.Windows.Forms.PictureBox()
+        Me.ind_laser_busy = New System.Windows.Forms.PictureBox()
+        Me.ind_laser_interlock = New System.Windows.Forms.PictureBox()
+        Me.ind_laser_error = New System.Windows.Forms.PictureBox()
+        Me.ind_v401_min = New System.Windows.Forms.PictureBox()
+        Me.ind_v401_max = New System.Windows.Forms.PictureBox()
+        Me.ind_v302_min = New System.Windows.Forms.PictureBox()
+        Me.ind_v302_max = New System.Windows.Forms.PictureBox()
+        Me.ind_v304_min = New System.Windows.Forms.PictureBox()
+        Me.ind_v304_max = New System.Windows.Forms.PictureBox()
+        Me.ind_v303_min = New System.Windows.Forms.PictureBox()
+        Me.ind_v303_max = New System.Windows.Forms.PictureBox()
+        Me.ind_v301_min = New System.Windows.Forms.PictureBox()
+        Me.ind_v301_max = New System.Windows.Forms.PictureBox()
+        Me.ind_Lfesto_error = New System.Windows.Forms.PictureBox()
+        Me.ind_Lfesto_lock = New System.Windows.Forms.PictureBox()
+        Me.ind_Lfesto_ax_ack = New System.Windows.Forms.PictureBox()
+        Me.ind_Lfesto_ax_warn = New System.Windows.Forms.PictureBox()
+        Me.ind_Lfesto_ax_pos = New System.Windows.Forms.PictureBox()
+        Me.ind_Lfesto_ax_error = New System.Windows.Forms.PictureBox()
+        Me.ind_Lfesto_ax_sp = New System.Windows.Forms.PictureBox()
+        Me.ind_Lfesto_ax_ref = New System.Windows.Forms.PictureBox()
+        Me.ind_Lfesto_ax_enabled = New System.Windows.Forms.PictureBox()
+        Me.ind_Rfesto_error = New System.Windows.Forms.PictureBox()
+        Me.ind_Rfesto_lock = New System.Windows.Forms.PictureBox()
+        Me.ind_Rfesto_ax_ack = New System.Windows.Forms.PictureBox()
+        Me.ind_Rfesto_ax_warn = New System.Windows.Forms.PictureBox()
+        Me.ind_Rfesto_ax_pos = New System.Windows.Forms.PictureBox()
+        Me.ind_Rfesto_ax_error = New System.Windows.Forms.PictureBox()
+        Me.ind_Rfesto_ax_sp = New System.Windows.Forms.PictureBox()
+        Me.ind_Rfesto_ax_ref = New System.Windows.Forms.PictureBox()
+        Me.ind_Rfesto_ax_enabled = New System.Windows.Forms.PictureBox()
+        Me.ind_v101_min = New System.Windows.Forms.PictureBox()
+        Me.ind_v101_max = New System.Windows.Forms.PictureBox()
+        Me.ind_stn_initialized_1 = New System.Windows.Forms.PictureBox()
+        Me.ind_stn_initialized_5 = New System.Windows.Forms.PictureBox()
+        Me.ind_stn_initialized_3 = New System.Windows.Forms.PictureBox()
+        Me.ind_stn_initialized_2 = New System.Windows.Forms.PictureBox()
+        Me.ind_stn_initialized_6 = New System.Windows.Forms.PictureBox()
+        Me.ind_stn_initialized_4 = New System.Windows.Forms.PictureBox()
+        Me.ind_safe_motor_4 = New System.Windows.Forms.PictureBox()
+        Me.ind_safe_motor_6 = New System.Windows.Forms.PictureBox()
+        Me.ind_safe_motor_2 = New System.Windows.Forms.PictureBox()
+        Me.ind_safe_motor_3 = New System.Windows.Forms.PictureBox()
+        Me.ind_safe_motor_5 = New System.Windows.Forms.PictureBox()
+        Me.ind_safe_motor_1 = New System.Windows.Forms.PictureBox()
+        Me.btn_st6 = New System.Windows.Forms.Button()
+        Me.btn_st5 = New System.Windows.Forms.Button()
+        Me.btn_st4 = New System.Windows.Forms.Button()
+        Me.btn_st3 = New System.Windows.Forms.Button()
+        Me.btn_st2 = New System.Windows.Forms.Button()
+        Me.btn_st1 = New System.Windows.Forms.Button()
+        Me.btn_home = New System.Windows.Forms.Button()
+        Me.btn_login = New System.Windows.Forms.Button()
+        Me.pb_status_bar = New System.Windows.Forms.PictureBox()
+        Me.pb_status_mc = New System.Windows.Forms.PictureBox()
+        Me.pb_logo = New System.Windows.Forms.PictureBox()
         Me.gb_ST1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
-        CType(Me.ind_v101_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_v101_max, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox36.SuspendLayout()
-        CType(Me.ind_stn_initialized_1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_stn_initialized_5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_stn_initialized_3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_stn_initialized_2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_stn_initialized_6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_stn_initialized_4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox38.SuspendLayout()
         Me.GroupBox37.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.ind_safe_motor_4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_safe_motor_6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_safe_motor_2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_safe_motor_3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_safe_motor_5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_safe_motor_1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gb_ST3.SuspendLayout()
         Me.tab_ST3.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
-        CType(Me.ind_v302_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_v302_max, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox10.SuspendLayout()
-        CType(Me.ind_v304_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_v304_max, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox9.SuspendLayout()
-        CType(Me.ind_v303_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_v303_max, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox8.SuspendLayout()
-        CType(Me.ind_v301_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_v301_max, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox30.SuspendLayout()
         Me.GroupBox31.SuspendLayout()
+        Me.GroupBox29.SuspendLayout()
+        Me.GroupBox28.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        Me.GroupBox32.SuspendLayout()
+        Me.GroupBox33.SuspendLayout()
+        Me.GroupBox34.SuspendLayout()
+        Me.GroupBox35.SuspendLayout()
+        Me.gb_ST4.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.GroupBox12.SuspendLayout()
+        Me.GroupBox15.SuspendLayout()
+        Me.GroupBox11.SuspendLayout()
+        Me.GroupBox14.SuspendLayout()
+        Me.gb_ST5.SuspendLayout()
+        Me.GroupBox27.SuspendLayout()
+        Me.GroupBox18.SuspendLayout()
+        Me.GroupBox16.SuspendLayout()
+        Me.GroupBox26.SuspendLayout()
+        Me.GroupBox21.SuspendLayout()
+        Me.GroupBox19.SuspendLayout()
+        Me.GroupBox20.SuspendLayout()
+        Me.GroupBox17.SuspendLayout()
+        Me.gb_ST6.SuspendLayout()
+        Me.GroupBox22.SuspendLayout()
+        Me.GroupBox23.SuspendLayout()
+        Me.GroupBox24.SuspendLayout()
+        Me.GroupBox25.SuspendLayout()
+        CType(Me.ind_v602_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v602_max, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v603_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v603_max, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v601_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v601_max, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_Rcam_ok, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_Rcam_ready, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_Rcam_run, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_Rcam_ng, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_Rcam_error, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_Lcam_ok, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_Lcam_ready, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_Lcam_run, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_Lcam_ng, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_Lcam_error, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v502_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v502_max, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v503_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v503_max, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v501_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v501_max, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_laser_command, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_laser_shutter, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_laser_ready, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_laser_busy, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_laser_interlock, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_laser_error, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v401_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v401_max, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v302_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v302_max, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v304_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v304_max, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v303_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v303_max, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v301_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v301_max, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ind_Lfesto_error, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ind_Lfesto_lock, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ind_Lfesto_ax_ack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -361,11 +401,6 @@ Partial Class ManualForm
         CType(Me.ind_Lfesto_ax_sp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ind_Lfesto_ax_ref, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ind_Lfesto_ax_enabled, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox29.SuspendLayout()
-        Me.GroupBox28.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
-        Me.GroupBox32.SuspendLayout()
-        Me.GroupBox33.SuspendLayout()
         CType(Me.ind_Rfesto_error, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ind_Rfesto_lock, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ind_Rfesto_ax_ack, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -375,58 +410,23 @@ Partial Class ManualForm
         CType(Me.ind_Rfesto_ax_sp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ind_Rfesto_ax_ref, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ind_Rfesto_ax_enabled, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox34.SuspendLayout()
-        Me.GroupBox35.SuspendLayout()
-        Me.gb_ST4.SuspendLayout()
-        Me.GroupBox6.SuspendLayout()
-        CType(Me.ind_laser_command, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_laser_shutter, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_laser_ready, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_laser_busy, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_laser_interlock, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_laser_error, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox12.SuspendLayout()
-        Me.GroupBox15.SuspendLayout()
-        Me.GroupBox11.SuspendLayout()
-        Me.GroupBox14.SuspendLayout()
-        CType(Me.ind_v401_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_v401_max, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.gb_ST5.SuspendLayout()
-        Me.GroupBox27.SuspendLayout()
-        CType(Me.ind_Rcam_ok, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_Rcam_ready, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_Rcam_run, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_Rcam_ng, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_Rcam_error, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox18.SuspendLayout()
-        CType(Me.ind_Lcam_ok, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_Lcam_ready, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_Lcam_run, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_Lcam_ng, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_Lcam_error, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox16.SuspendLayout()
-        Me.GroupBox26.SuspendLayout()
-        Me.GroupBox21.SuspendLayout()
-        Me.GroupBox19.SuspendLayout()
-        CType(Me.ind_v502_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_v502_max, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox20.SuspendLayout()
-        CType(Me.ind_v503_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_v503_max, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox17.SuspendLayout()
-        CType(Me.ind_v501_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_v501_max, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.gb_ST6.SuspendLayout()
-        Me.GroupBox22.SuspendLayout()
-        Me.GroupBox23.SuspendLayout()
-        CType(Me.ind_v602_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_v602_max, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox24.SuspendLayout()
-        CType(Me.ind_v603_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_v603_max, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox25.SuspendLayout()
-        CType(Me.ind_v601_min, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ind_v601_max, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v101_min, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_v101_max, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_stn_initialized_1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_stn_initialized_5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_stn_initialized_3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_stn_initialized_2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_stn_initialized_6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_stn_initialized_4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_safe_motor_4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_safe_motor_6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_safe_motor_2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_safe_motor_3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_safe_motor_5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ind_safe_motor_1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -581,30 +581,6 @@ Partial Class ManualForm
         Me.btn_v101_fw.Text = "FORWARD"
         Me.btn_v101_fw.UseVisualStyleBackColor = True
         '
-        'ind_v101_min
-        '
-        Me.ind_v101_min.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v101_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v101_min.Image = CType(resources.GetObject("ind_v101_min.Image"), System.Drawing.Image)
-        Me.ind_v101_min.Location = New System.Drawing.Point(128, 65)
-        Me.ind_v101_min.Name = "ind_v101_min"
-        Me.ind_v101_min.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v101_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v101_min.TabIndex = 110
-        Me.ind_v101_min.TabStop = False
-        '
-        'ind_v101_max
-        '
-        Me.ind_v101_max.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v101_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v101_max.Image = CType(resources.GetObject("ind_v101_max.Image"), System.Drawing.Image)
-        Me.ind_v101_max.Location = New System.Drawing.Point(128, 24)
-        Me.ind_v101_max.Name = "ind_v101_max"
-        Me.ind_v101_max.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v101_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v101_max.TabIndex = 111
-        Me.ind_v101_max.TabStop = False
-        '
         'GroupBox36
         '
         Me.GroupBox36.Controls.Add(Me.Label57)
@@ -636,18 +612,6 @@ Partial Class ManualForm
         Me.Label57.TabIndex = 121
         Me.Label57.Text = "Station 4"
         '
-        'ind_stn_initialized_1
-        '
-        Me.ind_stn_initialized_1.BackColor = System.Drawing.Color.Transparent
-        Me.ind_stn_initialized_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_stn_initialized_1.Image = Global.MASTER.My.Resources.Resources.led_green_on
-        Me.ind_stn_initialized_1.Location = New System.Drawing.Point(14, 30)
-        Me.ind_stn_initialized_1.Name = "ind_stn_initialized_1"
-        Me.ind_stn_initialized_1.Size = New System.Drawing.Size(30, 30)
-        Me.ind_stn_initialized_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_stn_initialized_1.TabIndex = 107
-        Me.ind_stn_initialized_1.TabStop = False
-        '
         'Label56
         '
         Me.Label56.AutoSize = True
@@ -657,18 +621,6 @@ Partial Class ManualForm
         Me.Label56.Size = New System.Drawing.Size(64, 20)
         Me.Label56.TabIndex = 120
         Me.Label56.Text = "Station 6"
-        '
-        'ind_stn_initialized_5
-        '
-        Me.ind_stn_initialized_5.BackColor = System.Drawing.Color.Transparent
-        Me.ind_stn_initialized_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_stn_initialized_5.Image = CType(resources.GetObject("ind_stn_initialized_5.Image"), System.Drawing.Image)
-        Me.ind_stn_initialized_5.Location = New System.Drawing.Point(14, 169)
-        Me.ind_stn_initialized_5.Name = "ind_stn_initialized_5"
-        Me.ind_stn_initialized_5.Size = New System.Drawing.Size(30, 30)
-        Me.ind_stn_initialized_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_stn_initialized_5.TabIndex = 110
-        Me.ind_stn_initialized_5.TabStop = False
         '
         'Label55
         '
@@ -680,18 +632,6 @@ Partial Class ManualForm
         Me.Label55.TabIndex = 119
         Me.Label55.Text = "Station 2"
         '
-        'ind_stn_initialized_3
-        '
-        Me.ind_stn_initialized_3.BackColor = System.Drawing.Color.Transparent
-        Me.ind_stn_initialized_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_stn_initialized_3.Image = CType(resources.GetObject("ind_stn_initialized_3.Image"), System.Drawing.Image)
-        Me.ind_stn_initialized_3.Location = New System.Drawing.Point(14, 100)
-        Me.ind_stn_initialized_3.Name = "ind_stn_initialized_3"
-        Me.ind_stn_initialized_3.Size = New System.Drawing.Size(30, 30)
-        Me.ind_stn_initialized_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_stn_initialized_3.TabIndex = 108
-        Me.ind_stn_initialized_3.TabStop = False
-        '
         'Label54
         '
         Me.Label54.AutoSize = True
@@ -701,18 +641,6 @@ Partial Class ManualForm
         Me.Label54.Size = New System.Drawing.Size(64, 20)
         Me.Label54.TabIndex = 116
         Me.Label54.Text = "Station 3"
-        '
-        'ind_stn_initialized_2
-        '
-        Me.ind_stn_initialized_2.BackColor = System.Drawing.Color.Transparent
-        Me.ind_stn_initialized_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_stn_initialized_2.Image = CType(resources.GetObject("ind_stn_initialized_2.Image"), System.Drawing.Image)
-        Me.ind_stn_initialized_2.Location = New System.Drawing.Point(14, 65)
-        Me.ind_stn_initialized_2.Name = "ind_stn_initialized_2"
-        Me.ind_stn_initialized_2.Size = New System.Drawing.Size(30, 30)
-        Me.ind_stn_initialized_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_stn_initialized_2.TabIndex = 111
-        Me.ind_stn_initialized_2.TabStop = False
         '
         'Label53
         '
@@ -724,18 +652,6 @@ Partial Class ManualForm
         Me.Label53.TabIndex = 118
         Me.Label53.Text = "Station 5"
         '
-        'ind_stn_initialized_6
-        '
-        Me.ind_stn_initialized_6.BackColor = System.Drawing.Color.Transparent
-        Me.ind_stn_initialized_6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_stn_initialized_6.Image = CType(resources.GetObject("ind_stn_initialized_6.Image"), System.Drawing.Image)
-        Me.ind_stn_initialized_6.Location = New System.Drawing.Point(14, 203)
-        Me.ind_stn_initialized_6.Name = "ind_stn_initialized_6"
-        Me.ind_stn_initialized_6.Size = New System.Drawing.Size(30, 30)
-        Me.ind_stn_initialized_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_stn_initialized_6.TabIndex = 112
-        Me.ind_stn_initialized_6.TabStop = False
-        '
         'Label52
         '
         Me.Label52.AutoSize = True
@@ -745,18 +661,6 @@ Partial Class ManualForm
         Me.Label52.Size = New System.Drawing.Size(64, 20)
         Me.Label52.TabIndex = 115
         Me.Label52.Text = "Station 1"
-        '
-        'ind_stn_initialized_4
-        '
-        Me.ind_stn_initialized_4.BackColor = System.Drawing.Color.Transparent
-        Me.ind_stn_initialized_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_stn_initialized_4.Image = CType(resources.GetObject("ind_stn_initialized_4.Image"), System.Drawing.Image)
-        Me.ind_stn_initialized_4.Location = New System.Drawing.Point(14, 135)
-        Me.ind_stn_initialized_4.Name = "ind_stn_initialized_4"
-        Me.ind_stn_initialized_4.Size = New System.Drawing.Size(30, 30)
-        Me.ind_stn_initialized_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_stn_initialized_4.TabIndex = 113
-        Me.ind_stn_initialized_4.TabStop = False
         '
         'GroupBox38
         '
@@ -1121,205 +1025,6 @@ Partial Class ManualForm
         Me.Label281.TabIndex = 115
         Me.Label281.Text = "Station 1"
         '
-        'ind_safe_motor_4
-        '
-        Me.ind_safe_motor_4.BackColor = System.Drawing.Color.Transparent
-        Me.ind_safe_motor_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_safe_motor_4.Image = CType(resources.GetObject("ind_safe_motor_4.Image"), System.Drawing.Image)
-        Me.ind_safe_motor_4.Location = New System.Drawing.Point(19, 135)
-        Me.ind_safe_motor_4.Name = "ind_safe_motor_4"
-        Me.ind_safe_motor_4.Size = New System.Drawing.Size(30, 30)
-        Me.ind_safe_motor_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_safe_motor_4.TabIndex = 113
-        Me.ind_safe_motor_4.TabStop = False
-        '
-        'ind_safe_motor_6
-        '
-        Me.ind_safe_motor_6.BackColor = System.Drawing.Color.Transparent
-        Me.ind_safe_motor_6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_safe_motor_6.Image = CType(resources.GetObject("ind_safe_motor_6.Image"), System.Drawing.Image)
-        Me.ind_safe_motor_6.Location = New System.Drawing.Point(19, 203)
-        Me.ind_safe_motor_6.Name = "ind_safe_motor_6"
-        Me.ind_safe_motor_6.Size = New System.Drawing.Size(30, 30)
-        Me.ind_safe_motor_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_safe_motor_6.TabIndex = 112
-        Me.ind_safe_motor_6.TabStop = False
-        '
-        'ind_safe_motor_2
-        '
-        Me.ind_safe_motor_2.BackColor = System.Drawing.Color.Transparent
-        Me.ind_safe_motor_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_safe_motor_2.Image = CType(resources.GetObject("ind_safe_motor_2.Image"), System.Drawing.Image)
-        Me.ind_safe_motor_2.Location = New System.Drawing.Point(19, 65)
-        Me.ind_safe_motor_2.Name = "ind_safe_motor_2"
-        Me.ind_safe_motor_2.Size = New System.Drawing.Size(30, 30)
-        Me.ind_safe_motor_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_safe_motor_2.TabIndex = 111
-        Me.ind_safe_motor_2.TabStop = False
-        '
-        'ind_safe_motor_3
-        '
-        Me.ind_safe_motor_3.BackColor = System.Drawing.Color.Transparent
-        Me.ind_safe_motor_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_safe_motor_3.Image = CType(resources.GetObject("ind_safe_motor_3.Image"), System.Drawing.Image)
-        Me.ind_safe_motor_3.Location = New System.Drawing.Point(19, 100)
-        Me.ind_safe_motor_3.Name = "ind_safe_motor_3"
-        Me.ind_safe_motor_3.Size = New System.Drawing.Size(30, 30)
-        Me.ind_safe_motor_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_safe_motor_3.TabIndex = 108
-        Me.ind_safe_motor_3.TabStop = False
-        '
-        'ind_safe_motor_5
-        '
-        Me.ind_safe_motor_5.BackColor = System.Drawing.Color.Transparent
-        Me.ind_safe_motor_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_safe_motor_5.Image = CType(resources.GetObject("ind_safe_motor_5.Image"), System.Drawing.Image)
-        Me.ind_safe_motor_5.Location = New System.Drawing.Point(19, 169)
-        Me.ind_safe_motor_5.Name = "ind_safe_motor_5"
-        Me.ind_safe_motor_5.Size = New System.Drawing.Size(30, 30)
-        Me.ind_safe_motor_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_safe_motor_5.TabIndex = 110
-        Me.ind_safe_motor_5.TabStop = False
-        '
-        'ind_safe_motor_1
-        '
-        Me.ind_safe_motor_1.BackColor = System.Drawing.Color.Transparent
-        Me.ind_safe_motor_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_safe_motor_1.Image = Global.MASTER.My.Resources.Resources.led_green_on
-        Me.ind_safe_motor_1.Location = New System.Drawing.Point(19, 30)
-        Me.ind_safe_motor_1.Name = "ind_safe_motor_1"
-        Me.ind_safe_motor_1.Size = New System.Drawing.Size(30, 30)
-        Me.ind_safe_motor_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_safe_motor_1.TabIndex = 107
-        Me.ind_safe_motor_1.TabStop = False
-        '
-        'btn_st6
-        '
-        Me.btn_st6.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_st6.Image = CType(resources.GetObject("btn_st6.Image"), System.Drawing.Image)
-        Me.btn_st6.Location = New System.Drawing.Point(1218, 624)
-        Me.btn_st6.Name = "btn_st6"
-        Me.btn_st6.Size = New System.Drawing.Size(120, 85)
-        Me.btn_st6.TabIndex = 24
-        Me.btn_st6.Text = "ST6"
-        Me.btn_st6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btn_st6.UseVisualStyleBackColor = True
-        '
-        'btn_st5
-        '
-        Me.btn_st5.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_st5.Image = CType(resources.GetObject("btn_st5.Image"), System.Drawing.Image)
-        Me.btn_st5.Location = New System.Drawing.Point(1218, 533)
-        Me.btn_st5.Name = "btn_st5"
-        Me.btn_st5.Size = New System.Drawing.Size(120, 85)
-        Me.btn_st5.TabIndex = 22
-        Me.btn_st5.Text = "ST5"
-        Me.btn_st5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btn_st5.UseVisualStyleBackColor = True
-        '
-        'btn_st4
-        '
-        Me.btn_st4.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_st4.Image = CType(resources.GetObject("btn_st4.Image"), System.Drawing.Image)
-        Me.btn_st4.Location = New System.Drawing.Point(1218, 442)
-        Me.btn_st4.Name = "btn_st4"
-        Me.btn_st4.Size = New System.Drawing.Size(120, 85)
-        Me.btn_st4.TabIndex = 20
-        Me.btn_st4.Text = "ST4"
-        Me.btn_st4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btn_st4.UseVisualStyleBackColor = True
-        '
-        'btn_st3
-        '
-        Me.btn_st3.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_st3.Image = CType(resources.GetObject("btn_st3.Image"), System.Drawing.Image)
-        Me.btn_st3.Location = New System.Drawing.Point(1218, 351)
-        Me.btn_st3.Name = "btn_st3"
-        Me.btn_st3.Size = New System.Drawing.Size(120, 85)
-        Me.btn_st3.TabIndex = 18
-        Me.btn_st3.Text = "ST3"
-        Me.btn_st3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btn_st3.UseVisualStyleBackColor = True
-        '
-        'btn_st2
-        '
-        Me.btn_st2.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_st2.Image = CType(resources.GetObject("btn_st2.Image"), System.Drawing.Image)
-        Me.btn_st2.Location = New System.Drawing.Point(1218, 260)
-        Me.btn_st2.Name = "btn_st2"
-        Me.btn_st2.Size = New System.Drawing.Size(120, 85)
-        Me.btn_st2.TabIndex = 16
-        Me.btn_st2.Text = "ST2"
-        Me.btn_st2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btn_st2.UseVisualStyleBackColor = True
-        '
-        'btn_st1
-        '
-        Me.btn_st1.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_st1.Image = CType(resources.GetObject("btn_st1.Image"), System.Drawing.Image)
-        Me.btn_st1.Location = New System.Drawing.Point(1218, 169)
-        Me.btn_st1.Name = "btn_st1"
-        Me.btn_st1.Size = New System.Drawing.Size(120, 85)
-        Me.btn_st1.TabIndex = 15
-        Me.btn_st1.Text = "ST1"
-        Me.btn_st1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btn_st1.UseVisualStyleBackColor = True
-        '
-        'btn_home
-        '
-        Me.btn_home.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_home.Image = Global.MASTER.My.Resources.Resources.icons8_home_50
-        Me.btn_home.Location = New System.Drawing.Point(12, 169)
-        Me.btn_home.Name = "btn_home"
-        Me.btn_home.Size = New System.Drawing.Size(120, 85)
-        Me.btn_home.TabIndex = 14
-        Me.btn_home.Text = "Home"
-        Me.btn_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btn_home.UseVisualStyleBackColor = True
-        '
-        'btn_login
-        '
-        Me.btn_login.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_login.Image = Global.MASTER.My.Resources.Resources.icons8_change_user_50
-        Me.btn_login.Location = New System.Drawing.Point(1101, 20)
-        Me.btn_login.Name = "btn_login"
-        Me.btn_login.Size = New System.Drawing.Size(85, 85)
-        Me.btn_login.TabIndex = 13
-        Me.btn_login.Text = "Login"
-        Me.btn_login.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.btn_login.UseVisualStyleBackColor = True
-        '
-        'pb_status_bar
-        '
-        Me.pb_status_bar.BackColor = System.Drawing.Color.LimeGreen
-        Me.pb_status_bar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pb_status_bar.Location = New System.Drawing.Point(425, 20)
-        Me.pb_status_bar.Name = "pb_status_bar"
-        Me.pb_status_bar.Size = New System.Drawing.Size(500, 85)
-        Me.pb_status_bar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pb_status_bar.TabIndex = 7
-        Me.pb_status_bar.TabStop = False
-        '
-        'pb_status_mc
-        '
-        Me.pb_status_mc.Image = Global.MASTER.My.Resources.Resources.mark_ok
-        Me.pb_status_mc.Location = New System.Drawing.Point(967, 20)
-        Me.pb_status_mc.Name = "pb_status_mc"
-        Me.pb_status_mc.Size = New System.Drawing.Size(85, 85)
-        Me.pb_status_mc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pb_status_mc.TabIndex = 6
-        Me.pb_status_mc.TabStop = False
-        '
-        'pb_logo
-        '
-        Me.pb_logo.Image = Global.MASTER.My.Resources.Resources.logo_sanindo_tekno_batam
-        Me.pb_logo.Location = New System.Drawing.Point(12, 20)
-        Me.pb_logo.Name = "pb_logo"
-        Me.pb_logo.Size = New System.Drawing.Size(250, 85)
-        Me.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pb_logo.TabIndex = 5
-        Me.pb_logo.TabStop = False
-        '
         'gb_ST2
         '
         Me.gb_ST2.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1398,30 +1103,6 @@ Partial Class ManualForm
         Me.btn_v302_fw.Text = "FORWARD"
         Me.btn_v302_fw.UseVisualStyleBackColor = True
         '
-        'ind_v302_min
-        '
-        Me.ind_v302_min.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v302_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v302_min.Image = CType(resources.GetObject("ind_v302_min.Image"), System.Drawing.Image)
-        Me.ind_v302_min.Location = New System.Drawing.Point(128, 65)
-        Me.ind_v302_min.Name = "ind_v302_min"
-        Me.ind_v302_min.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v302_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v302_min.TabIndex = 110
-        Me.ind_v302_min.TabStop = False
-        '
-        'ind_v302_max
-        '
-        Me.ind_v302_max.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v302_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v302_max.Image = CType(resources.GetObject("ind_v302_max.Image"), System.Drawing.Image)
-        Me.ind_v302_max.Location = New System.Drawing.Point(128, 24)
-        Me.ind_v302_max.Name = "ind_v302_max"
-        Me.ind_v302_max.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v302_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v302_max.TabIndex = 111
-        Me.ind_v302_max.TabStop = False
-        '
         'GroupBox10
         '
         Me.GroupBox10.Controls.Add(Me.btn_v304_bw)
@@ -1452,30 +1133,6 @@ Partial Class ManualForm
         Me.btn_v304_fw.TabIndex = 109
         Me.btn_v304_fw.Text = "FORWARD"
         Me.btn_v304_fw.UseVisualStyleBackColor = True
-        '
-        'ind_v304_min
-        '
-        Me.ind_v304_min.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v304_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v304_min.Image = CType(resources.GetObject("ind_v304_min.Image"), System.Drawing.Image)
-        Me.ind_v304_min.Location = New System.Drawing.Point(128, 65)
-        Me.ind_v304_min.Name = "ind_v304_min"
-        Me.ind_v304_min.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v304_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v304_min.TabIndex = 110
-        Me.ind_v304_min.TabStop = False
-        '
-        'ind_v304_max
-        '
-        Me.ind_v304_max.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v304_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v304_max.Image = CType(resources.GetObject("ind_v304_max.Image"), System.Drawing.Image)
-        Me.ind_v304_max.Location = New System.Drawing.Point(128, 24)
-        Me.ind_v304_max.Name = "ind_v304_max"
-        Me.ind_v304_max.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v304_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v304_max.TabIndex = 111
-        Me.ind_v304_max.TabStop = False
         '
         'GroupBox9
         '
@@ -1508,30 +1165,6 @@ Partial Class ManualForm
         Me.btn_v303_fw.Text = "FORWARD"
         Me.btn_v303_fw.UseVisualStyleBackColor = True
         '
-        'ind_v303_min
-        '
-        Me.ind_v303_min.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v303_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v303_min.Image = CType(resources.GetObject("ind_v303_min.Image"), System.Drawing.Image)
-        Me.ind_v303_min.Location = New System.Drawing.Point(128, 65)
-        Me.ind_v303_min.Name = "ind_v303_min"
-        Me.ind_v303_min.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v303_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v303_min.TabIndex = 110
-        Me.ind_v303_min.TabStop = False
-        '
-        'ind_v303_max
-        '
-        Me.ind_v303_max.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v303_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v303_max.Image = CType(resources.GetObject("ind_v303_max.Image"), System.Drawing.Image)
-        Me.ind_v303_max.Location = New System.Drawing.Point(128, 24)
-        Me.ind_v303_max.Name = "ind_v303_max"
-        Me.ind_v303_max.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v303_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v303_max.TabIndex = 111
-        Me.ind_v303_max.TabStop = False
-        '
         'GroupBox8
         '
         Me.GroupBox8.Controls.Add(Me.btn_v301_bw)
@@ -1562,30 +1195,6 @@ Partial Class ManualForm
         Me.btn_v301_fw.TabIndex = 109
         Me.btn_v301_fw.Text = "FORWARD"
         Me.btn_v301_fw.UseVisualStyleBackColor = True
-        '
-        'ind_v301_min
-        '
-        Me.ind_v301_min.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v301_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v301_min.Image = CType(resources.GetObject("ind_v301_min.Image"), System.Drawing.Image)
-        Me.ind_v301_min.Location = New System.Drawing.Point(128, 65)
-        Me.ind_v301_min.Name = "ind_v301_min"
-        Me.ind_v301_min.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v301_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v301_min.TabIndex = 110
-        Me.ind_v301_min.TabStop = False
-        '
-        'ind_v301_max
-        '
-        Me.ind_v301_max.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v301_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v301_max.Image = CType(resources.GetObject("ind_v301_max.Image"), System.Drawing.Image)
-        Me.ind_v301_max.Location = New System.Drawing.Point(128, 24)
-        Me.ind_v301_max.Name = "ind_v301_max"
-        Me.ind_v301_max.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v301_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v301_max.TabIndex = 111
-        Me.ind_v301_max.TabStop = False
         '
         'TabPage2
         '
@@ -1841,114 +1450,6 @@ Partial Class ManualForm
         Me.Label27.Size = New System.Drawing.Size(90, 20)
         Me.Label27.TabIndex = 115
         Me.Label27.Text = "Axis Enabled"
-        '
-        'ind_Lfesto_error
-        '
-        Me.ind_Lfesto_error.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Lfesto_error.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Lfesto_error.Image = CType(resources.GetObject("ind_Lfesto_error.Image"), System.Drawing.Image)
-        Me.ind_Lfesto_error.Location = New System.Drawing.Point(198, 86)
-        Me.ind_Lfesto_error.Name = "ind_Lfesto_error"
-        Me.ind_Lfesto_error.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Lfesto_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Lfesto_error.TabIndex = 114
-        Me.ind_Lfesto_error.TabStop = False
-        '
-        'ind_Lfesto_lock
-        '
-        Me.ind_Lfesto_lock.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Lfesto_lock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Lfesto_lock.Image = CType(resources.GetObject("ind_Lfesto_lock.Image"), System.Drawing.Image)
-        Me.ind_Lfesto_lock.Location = New System.Drawing.Point(198, 30)
-        Me.ind_Lfesto_lock.Name = "ind_Lfesto_lock"
-        Me.ind_Lfesto_lock.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Lfesto_lock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Lfesto_lock.TabIndex = 114
-        Me.ind_Lfesto_lock.TabStop = False
-        '
-        'ind_Lfesto_ax_ack
-        '
-        Me.ind_Lfesto_ax_ack.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Lfesto_ax_ack.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Lfesto_ax_ack.Image = CType(resources.GetObject("ind_Lfesto_ax_ack.Image"), System.Drawing.Image)
-        Me.ind_Lfesto_ax_ack.Location = New System.Drawing.Point(19, 198)
-        Me.ind_Lfesto_ax_ack.Name = "ind_Lfesto_ax_ack"
-        Me.ind_Lfesto_ax_ack.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Lfesto_ax_ack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Lfesto_ax_ack.TabIndex = 113
-        Me.ind_Lfesto_ax_ack.TabStop = False
-        '
-        'ind_Lfesto_ax_warn
-        '
-        Me.ind_Lfesto_ax_warn.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Lfesto_ax_warn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Lfesto_ax_warn.Image = CType(resources.GetObject("ind_Lfesto_ax_warn.Image"), System.Drawing.Image)
-        Me.ind_Lfesto_ax_warn.Location = New System.Drawing.Point(20, 311)
-        Me.ind_Lfesto_ax_warn.Name = "ind_Lfesto_ax_warn"
-        Me.ind_Lfesto_ax_warn.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Lfesto_ax_warn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Lfesto_ax_warn.TabIndex = 112
-        Me.ind_Lfesto_ax_warn.TabStop = False
-        '
-        'ind_Lfesto_ax_pos
-        '
-        Me.ind_Lfesto_ax_pos.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Lfesto_ax_pos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Lfesto_ax_pos.Image = CType(resources.GetObject("ind_Lfesto_ax_pos.Image"), System.Drawing.Image)
-        Me.ind_Lfesto_ax_pos.Location = New System.Drawing.Point(19, 86)
-        Me.ind_Lfesto_ax_pos.Name = "ind_Lfesto_ax_pos"
-        Me.ind_Lfesto_ax_pos.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Lfesto_ax_pos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Lfesto_ax_pos.TabIndex = 111
-        Me.ind_Lfesto_ax_pos.TabStop = False
-        '
-        'ind_Lfesto_ax_error
-        '
-        Me.ind_Lfesto_ax_error.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Lfesto_ax_error.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Lfesto_ax_error.Image = CType(resources.GetObject("ind_Lfesto_ax_error.Image"), System.Drawing.Image)
-        Me.ind_Lfesto_ax_error.Location = New System.Drawing.Point(20, 367)
-        Me.ind_Lfesto_ax_error.Name = "ind_Lfesto_ax_error"
-        Me.ind_Lfesto_ax_error.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Lfesto_ax_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Lfesto_ax_error.TabIndex = 109
-        Me.ind_Lfesto_ax_error.TabStop = False
-        '
-        'ind_Lfesto_ax_sp
-        '
-        Me.ind_Lfesto_ax_sp.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Lfesto_ax_sp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Lfesto_ax_sp.Image = CType(resources.GetObject("ind_Lfesto_ax_sp.Image"), System.Drawing.Image)
-        Me.ind_Lfesto_ax_sp.Location = New System.Drawing.Point(19, 142)
-        Me.ind_Lfesto_ax_sp.Name = "ind_Lfesto_ax_sp"
-        Me.ind_Lfesto_ax_sp.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Lfesto_ax_sp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Lfesto_ax_sp.TabIndex = 108
-        Me.ind_Lfesto_ax_sp.TabStop = False
-        '
-        'ind_Lfesto_ax_ref
-        '
-        Me.ind_Lfesto_ax_ref.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Lfesto_ax_ref.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Lfesto_ax_ref.Image = CType(resources.GetObject("ind_Lfesto_ax_ref.Image"), System.Drawing.Image)
-        Me.ind_Lfesto_ax_ref.Location = New System.Drawing.Point(20, 255)
-        Me.ind_Lfesto_ax_ref.Name = "ind_Lfesto_ax_ref"
-        Me.ind_Lfesto_ax_ref.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Lfesto_ax_ref.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Lfesto_ax_ref.TabIndex = 110
-        Me.ind_Lfesto_ax_ref.TabStop = False
-        '
-        'ind_Lfesto_ax_enabled
-        '
-        Me.ind_Lfesto_ax_enabled.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Lfesto_ax_enabled.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Lfesto_ax_enabled.Image = Global.MASTER.My.Resources.Resources.led_green_on
-        Me.ind_Lfesto_ax_enabled.Location = New System.Drawing.Point(19, 30)
-        Me.ind_Lfesto_ax_enabled.Name = "ind_Lfesto_ax_enabled"
-        Me.ind_Lfesto_ax_enabled.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Lfesto_ax_enabled.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Lfesto_ax_enabled.TabIndex = 107
-        Me.ind_Lfesto_ax_enabled.TabStop = False
         '
         'GroupBox29
         '
@@ -2361,114 +1862,6 @@ Partial Class ManualForm
         Me.Label51.TabIndex = 115
         Me.Label51.Text = "Axis Enabled"
         '
-        'ind_Rfesto_error
-        '
-        Me.ind_Rfesto_error.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Rfesto_error.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Rfesto_error.Image = CType(resources.GetObject("ind_Rfesto_error.Image"), System.Drawing.Image)
-        Me.ind_Rfesto_error.Location = New System.Drawing.Point(198, 86)
-        Me.ind_Rfesto_error.Name = "ind_Rfesto_error"
-        Me.ind_Rfesto_error.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Rfesto_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Rfesto_error.TabIndex = 114
-        Me.ind_Rfesto_error.TabStop = False
-        '
-        'ind_Rfesto_lock
-        '
-        Me.ind_Rfesto_lock.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Rfesto_lock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Rfesto_lock.Image = CType(resources.GetObject("ind_Rfesto_lock.Image"), System.Drawing.Image)
-        Me.ind_Rfesto_lock.Location = New System.Drawing.Point(198, 30)
-        Me.ind_Rfesto_lock.Name = "ind_Rfesto_lock"
-        Me.ind_Rfesto_lock.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Rfesto_lock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Rfesto_lock.TabIndex = 114
-        Me.ind_Rfesto_lock.TabStop = False
-        '
-        'ind_Rfesto_ax_ack
-        '
-        Me.ind_Rfesto_ax_ack.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Rfesto_ax_ack.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Rfesto_ax_ack.Image = CType(resources.GetObject("ind_Rfesto_ax_ack.Image"), System.Drawing.Image)
-        Me.ind_Rfesto_ax_ack.Location = New System.Drawing.Point(19, 198)
-        Me.ind_Rfesto_ax_ack.Name = "ind_Rfesto_ax_ack"
-        Me.ind_Rfesto_ax_ack.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Rfesto_ax_ack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Rfesto_ax_ack.TabIndex = 113
-        Me.ind_Rfesto_ax_ack.TabStop = False
-        '
-        'ind_Rfesto_ax_warn
-        '
-        Me.ind_Rfesto_ax_warn.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Rfesto_ax_warn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Rfesto_ax_warn.Image = CType(resources.GetObject("ind_Rfesto_ax_warn.Image"), System.Drawing.Image)
-        Me.ind_Rfesto_ax_warn.Location = New System.Drawing.Point(20, 311)
-        Me.ind_Rfesto_ax_warn.Name = "ind_Rfesto_ax_warn"
-        Me.ind_Rfesto_ax_warn.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Rfesto_ax_warn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Rfesto_ax_warn.TabIndex = 112
-        Me.ind_Rfesto_ax_warn.TabStop = False
-        '
-        'ind_Rfesto_ax_pos
-        '
-        Me.ind_Rfesto_ax_pos.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Rfesto_ax_pos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Rfesto_ax_pos.Image = CType(resources.GetObject("ind_Rfesto_ax_pos.Image"), System.Drawing.Image)
-        Me.ind_Rfesto_ax_pos.Location = New System.Drawing.Point(19, 86)
-        Me.ind_Rfesto_ax_pos.Name = "ind_Rfesto_ax_pos"
-        Me.ind_Rfesto_ax_pos.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Rfesto_ax_pos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Rfesto_ax_pos.TabIndex = 111
-        Me.ind_Rfesto_ax_pos.TabStop = False
-        '
-        'ind_Rfesto_ax_error
-        '
-        Me.ind_Rfesto_ax_error.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Rfesto_ax_error.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Rfesto_ax_error.Image = CType(resources.GetObject("ind_Rfesto_ax_error.Image"), System.Drawing.Image)
-        Me.ind_Rfesto_ax_error.Location = New System.Drawing.Point(20, 367)
-        Me.ind_Rfesto_ax_error.Name = "ind_Rfesto_ax_error"
-        Me.ind_Rfesto_ax_error.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Rfesto_ax_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Rfesto_ax_error.TabIndex = 109
-        Me.ind_Rfesto_ax_error.TabStop = False
-        '
-        'ind_Rfesto_ax_sp
-        '
-        Me.ind_Rfesto_ax_sp.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Rfesto_ax_sp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Rfesto_ax_sp.Image = CType(resources.GetObject("ind_Rfesto_ax_sp.Image"), System.Drawing.Image)
-        Me.ind_Rfesto_ax_sp.Location = New System.Drawing.Point(19, 142)
-        Me.ind_Rfesto_ax_sp.Name = "ind_Rfesto_ax_sp"
-        Me.ind_Rfesto_ax_sp.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Rfesto_ax_sp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Rfesto_ax_sp.TabIndex = 108
-        Me.ind_Rfesto_ax_sp.TabStop = False
-        '
-        'ind_Rfesto_ax_ref
-        '
-        Me.ind_Rfesto_ax_ref.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Rfesto_ax_ref.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Rfesto_ax_ref.Image = CType(resources.GetObject("ind_Rfesto_ax_ref.Image"), System.Drawing.Image)
-        Me.ind_Rfesto_ax_ref.Location = New System.Drawing.Point(20, 255)
-        Me.ind_Rfesto_ax_ref.Name = "ind_Rfesto_ax_ref"
-        Me.ind_Rfesto_ax_ref.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Rfesto_ax_ref.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Rfesto_ax_ref.TabIndex = 110
-        Me.ind_Rfesto_ax_ref.TabStop = False
-        '
-        'ind_Rfesto_ax_enabled
-        '
-        Me.ind_Rfesto_ax_enabled.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Rfesto_ax_enabled.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Rfesto_ax_enabled.Image = Global.MASTER.My.Resources.Resources.led_green_on
-        Me.ind_Rfesto_ax_enabled.Location = New System.Drawing.Point(19, 30)
-        Me.ind_Rfesto_ax_enabled.Name = "ind_Rfesto_ax_enabled"
-        Me.ind_Rfesto_ax_enabled.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Rfesto_ax_enabled.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Rfesto_ax_enabled.TabIndex = 107
-        Me.ind_Rfesto_ax_enabled.TabStop = False
-        '
         'GroupBox34
         '
         Me.GroupBox34.Controls.Add(Me.btn_Rfesto_jogplus)
@@ -2658,18 +2051,6 @@ Partial Class ManualForm
         Me.Label7.TabIndex = 119
         Me.Label7.Text = "Ready"
         '
-        'ind_laser_command
-        '
-        Me.ind_laser_command.BackColor = System.Drawing.Color.Transparent
-        Me.ind_laser_command.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_laser_command.Image = Global.MASTER.My.Resources.Resources.led_green_on
-        Me.ind_laser_command.Location = New System.Drawing.Point(19, 313)
-        Me.ind_laser_command.Name = "ind_laser_command"
-        Me.ind_laser_command.Size = New System.Drawing.Size(30, 30)
-        Me.ind_laser_command.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_laser_command.TabIndex = 107
-        Me.ind_laser_command.TabStop = False
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
@@ -2709,66 +2090,6 @@ Partial Class ManualForm
         Me.Label11.Size = New System.Drawing.Size(41, 20)
         Me.Label11.TabIndex = 115
         Me.Label11.Text = "Error"
-        '
-        'ind_laser_shutter
-        '
-        Me.ind_laser_shutter.BackColor = System.Drawing.Color.Transparent
-        Me.ind_laser_shutter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_laser_shutter.Image = CType(resources.GetObject("ind_laser_shutter.Image"), System.Drawing.Image)
-        Me.ind_laser_shutter.Location = New System.Drawing.Point(19, 198)
-        Me.ind_laser_shutter.Name = "ind_laser_shutter"
-        Me.ind_laser_shutter.Size = New System.Drawing.Size(30, 30)
-        Me.ind_laser_shutter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_laser_shutter.TabIndex = 113
-        Me.ind_laser_shutter.TabStop = False
-        '
-        'ind_laser_ready
-        '
-        Me.ind_laser_ready.BackColor = System.Drawing.Color.Transparent
-        Me.ind_laser_ready.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_laser_ready.Image = CType(resources.GetObject("ind_laser_ready.Image"), System.Drawing.Image)
-        Me.ind_laser_ready.Location = New System.Drawing.Point(19, 86)
-        Me.ind_laser_ready.Name = "ind_laser_ready"
-        Me.ind_laser_ready.Size = New System.Drawing.Size(30, 30)
-        Me.ind_laser_ready.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_laser_ready.TabIndex = 111
-        Me.ind_laser_ready.TabStop = False
-        '
-        'ind_laser_busy
-        '
-        Me.ind_laser_busy.BackColor = System.Drawing.Color.Transparent
-        Me.ind_laser_busy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_laser_busy.Image = CType(resources.GetObject("ind_laser_busy.Image"), System.Drawing.Image)
-        Me.ind_laser_busy.Location = New System.Drawing.Point(19, 142)
-        Me.ind_laser_busy.Name = "ind_laser_busy"
-        Me.ind_laser_busy.Size = New System.Drawing.Size(30, 30)
-        Me.ind_laser_busy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_laser_busy.TabIndex = 108
-        Me.ind_laser_busy.TabStop = False
-        '
-        'ind_laser_interlock
-        '
-        Me.ind_laser_interlock.BackColor = System.Drawing.Color.Transparent
-        Me.ind_laser_interlock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_laser_interlock.Image = CType(resources.GetObject("ind_laser_interlock.Image"), System.Drawing.Image)
-        Me.ind_laser_interlock.Location = New System.Drawing.Point(19, 255)
-        Me.ind_laser_interlock.Name = "ind_laser_interlock"
-        Me.ind_laser_interlock.Size = New System.Drawing.Size(30, 30)
-        Me.ind_laser_interlock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_laser_interlock.TabIndex = 110
-        Me.ind_laser_interlock.TabStop = False
-        '
-        'ind_laser_error
-        '
-        Me.ind_laser_error.BackColor = System.Drawing.Color.Transparent
-        Me.ind_laser_error.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_laser_error.Image = Global.MASTER.My.Resources.Resources.led_green_on
-        Me.ind_laser_error.Location = New System.Drawing.Point(19, 30)
-        Me.ind_laser_error.Name = "ind_laser_error"
-        Me.ind_laser_error.Size = New System.Drawing.Size(30, 30)
-        Me.ind_laser_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_laser_error.TabIndex = 107
-        Me.ind_laser_error.TabStop = False
         '
         'GroupBox12
         '
@@ -2869,30 +2190,6 @@ Partial Class ManualForm
         Me.btn_v401_fw.Text = "FORWARD"
         Me.btn_v401_fw.UseVisualStyleBackColor = True
         '
-        'ind_v401_min
-        '
-        Me.ind_v401_min.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v401_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v401_min.Image = CType(resources.GetObject("ind_v401_min.Image"), System.Drawing.Image)
-        Me.ind_v401_min.Location = New System.Drawing.Point(128, 65)
-        Me.ind_v401_min.Name = "ind_v401_min"
-        Me.ind_v401_min.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v401_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v401_min.TabIndex = 110
-        Me.ind_v401_min.TabStop = False
-        '
-        'ind_v401_max
-        '
-        Me.ind_v401_max.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v401_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v401_max.Image = CType(resources.GetObject("ind_v401_max.Image"), System.Drawing.Image)
-        Me.ind_v401_max.Location = New System.Drawing.Point(128, 24)
-        Me.ind_v401_max.Name = "ind_v401_max"
-        Me.ind_v401_max.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v401_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v401_max.TabIndex = 111
-        Me.ind_v401_max.TabStop = False
-        '
         'gb_ST5
         '
         Me.gb_ST5.Controls.Add(Me.GroupBox27)
@@ -2976,66 +2273,6 @@ Partial Class ManualForm
         Me.Label21.TabIndex = 115
         Me.Label21.Text = "Error"
         '
-        'ind_Rcam_ok
-        '
-        Me.ind_Rcam_ok.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Rcam_ok.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Rcam_ok.Image = CType(resources.GetObject("ind_Rcam_ok.Image"), System.Drawing.Image)
-        Me.ind_Rcam_ok.Location = New System.Drawing.Point(19, 198)
-        Me.ind_Rcam_ok.Name = "ind_Rcam_ok"
-        Me.ind_Rcam_ok.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Rcam_ok.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Rcam_ok.TabIndex = 113
-        Me.ind_Rcam_ok.TabStop = False
-        '
-        'ind_Rcam_ready
-        '
-        Me.ind_Rcam_ready.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Rcam_ready.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Rcam_ready.Image = CType(resources.GetObject("ind_Rcam_ready.Image"), System.Drawing.Image)
-        Me.ind_Rcam_ready.Location = New System.Drawing.Point(19, 86)
-        Me.ind_Rcam_ready.Name = "ind_Rcam_ready"
-        Me.ind_Rcam_ready.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Rcam_ready.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Rcam_ready.TabIndex = 111
-        Me.ind_Rcam_ready.TabStop = False
-        '
-        'ind_Rcam_run
-        '
-        Me.ind_Rcam_run.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Rcam_run.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Rcam_run.Image = CType(resources.GetObject("ind_Rcam_run.Image"), System.Drawing.Image)
-        Me.ind_Rcam_run.Location = New System.Drawing.Point(19, 142)
-        Me.ind_Rcam_run.Name = "ind_Rcam_run"
-        Me.ind_Rcam_run.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Rcam_run.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Rcam_run.TabIndex = 108
-        Me.ind_Rcam_run.TabStop = False
-        '
-        'ind_Rcam_ng
-        '
-        Me.ind_Rcam_ng.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Rcam_ng.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Rcam_ng.Image = CType(resources.GetObject("ind_Rcam_ng.Image"), System.Drawing.Image)
-        Me.ind_Rcam_ng.Location = New System.Drawing.Point(19, 255)
-        Me.ind_Rcam_ng.Name = "ind_Rcam_ng"
-        Me.ind_Rcam_ng.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Rcam_ng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Rcam_ng.TabIndex = 110
-        Me.ind_Rcam_ng.TabStop = False
-        '
-        'ind_Rcam_error
-        '
-        Me.ind_Rcam_error.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Rcam_error.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Rcam_error.Image = Global.MASTER.My.Resources.Resources.led_green_on
-        Me.ind_Rcam_error.Location = New System.Drawing.Point(19, 30)
-        Me.ind_Rcam_error.Name = "ind_Rcam_error"
-        Me.ind_Rcam_error.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Rcam_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Rcam_error.TabIndex = 107
-        Me.ind_Rcam_error.TabStop = False
-        '
         'GroupBox18
         '
         Me.GroupBox18.Controls.Add(Me.Label6)
@@ -3105,66 +2342,6 @@ Partial Class ManualForm
         Me.Label15.Size = New System.Drawing.Size(41, 20)
         Me.Label15.TabIndex = 115
         Me.Label15.Text = "Error"
-        '
-        'ind_Lcam_ok
-        '
-        Me.ind_Lcam_ok.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Lcam_ok.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Lcam_ok.Image = CType(resources.GetObject("ind_Lcam_ok.Image"), System.Drawing.Image)
-        Me.ind_Lcam_ok.Location = New System.Drawing.Point(19, 198)
-        Me.ind_Lcam_ok.Name = "ind_Lcam_ok"
-        Me.ind_Lcam_ok.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Lcam_ok.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Lcam_ok.TabIndex = 113
-        Me.ind_Lcam_ok.TabStop = False
-        '
-        'ind_Lcam_ready
-        '
-        Me.ind_Lcam_ready.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Lcam_ready.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Lcam_ready.Image = CType(resources.GetObject("ind_Lcam_ready.Image"), System.Drawing.Image)
-        Me.ind_Lcam_ready.Location = New System.Drawing.Point(19, 86)
-        Me.ind_Lcam_ready.Name = "ind_Lcam_ready"
-        Me.ind_Lcam_ready.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Lcam_ready.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Lcam_ready.TabIndex = 111
-        Me.ind_Lcam_ready.TabStop = False
-        '
-        'ind_Lcam_run
-        '
-        Me.ind_Lcam_run.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Lcam_run.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Lcam_run.Image = CType(resources.GetObject("ind_Lcam_run.Image"), System.Drawing.Image)
-        Me.ind_Lcam_run.Location = New System.Drawing.Point(19, 142)
-        Me.ind_Lcam_run.Name = "ind_Lcam_run"
-        Me.ind_Lcam_run.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Lcam_run.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Lcam_run.TabIndex = 108
-        Me.ind_Lcam_run.TabStop = False
-        '
-        'ind_Lcam_ng
-        '
-        Me.ind_Lcam_ng.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Lcam_ng.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Lcam_ng.Image = CType(resources.GetObject("ind_Lcam_ng.Image"), System.Drawing.Image)
-        Me.ind_Lcam_ng.Location = New System.Drawing.Point(19, 255)
-        Me.ind_Lcam_ng.Name = "ind_Lcam_ng"
-        Me.ind_Lcam_ng.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Lcam_ng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Lcam_ng.TabIndex = 110
-        Me.ind_Lcam_ng.TabStop = False
-        '
-        'ind_Lcam_error
-        '
-        Me.ind_Lcam_error.BackColor = System.Drawing.Color.Transparent
-        Me.ind_Lcam_error.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_Lcam_error.Image = Global.MASTER.My.Resources.Resources.led_green_on
-        Me.ind_Lcam_error.Location = New System.Drawing.Point(19, 30)
-        Me.ind_Lcam_error.Name = "ind_Lcam_error"
-        Me.ind_Lcam_error.Size = New System.Drawing.Size(30, 30)
-        Me.ind_Lcam_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_Lcam_error.TabIndex = 107
-        Me.ind_Lcam_error.TabStop = False
         '
         'GroupBox16
         '
@@ -3269,30 +2446,6 @@ Partial Class ManualForm
         Me.btn_v502_fw.Text = "FORWARD"
         Me.btn_v502_fw.UseVisualStyleBackColor = True
         '
-        'ind_v502_min
-        '
-        Me.ind_v502_min.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v502_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v502_min.Image = CType(resources.GetObject("ind_v502_min.Image"), System.Drawing.Image)
-        Me.ind_v502_min.Location = New System.Drawing.Point(128, 65)
-        Me.ind_v502_min.Name = "ind_v502_min"
-        Me.ind_v502_min.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v502_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v502_min.TabIndex = 110
-        Me.ind_v502_min.TabStop = False
-        '
-        'ind_v502_max
-        '
-        Me.ind_v502_max.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v502_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v502_max.Image = CType(resources.GetObject("ind_v502_max.Image"), System.Drawing.Image)
-        Me.ind_v502_max.Location = New System.Drawing.Point(128, 24)
-        Me.ind_v502_max.Name = "ind_v502_max"
-        Me.ind_v502_max.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v502_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v502_max.TabIndex = 111
-        Me.ind_v502_max.TabStop = False
-        '
         'GroupBox20
         '
         Me.GroupBox20.Controls.Add(Me.btn_v503_bw)
@@ -3324,30 +2477,6 @@ Partial Class ManualForm
         Me.btn_v503_fw.Text = "FORWARD"
         Me.btn_v503_fw.UseVisualStyleBackColor = True
         '
-        'ind_v503_min
-        '
-        Me.ind_v503_min.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v503_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v503_min.Image = CType(resources.GetObject("ind_v503_min.Image"), System.Drawing.Image)
-        Me.ind_v503_min.Location = New System.Drawing.Point(128, 65)
-        Me.ind_v503_min.Name = "ind_v503_min"
-        Me.ind_v503_min.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v503_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v503_min.TabIndex = 110
-        Me.ind_v503_min.TabStop = False
-        '
-        'ind_v503_max
-        '
-        Me.ind_v503_max.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v503_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v503_max.Image = CType(resources.GetObject("ind_v503_max.Image"), System.Drawing.Image)
-        Me.ind_v503_max.Location = New System.Drawing.Point(128, 24)
-        Me.ind_v503_max.Name = "ind_v503_max"
-        Me.ind_v503_max.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v503_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v503_max.TabIndex = 111
-        Me.ind_v503_max.TabStop = False
-        '
         'GroupBox17
         '
         Me.GroupBox17.Controls.Add(Me.btn_v501_bw)
@@ -3378,30 +2507,6 @@ Partial Class ManualForm
         Me.btn_v501_fw.TabIndex = 109
         Me.btn_v501_fw.Text = "FORWARD"
         Me.btn_v501_fw.UseVisualStyleBackColor = True
-        '
-        'ind_v501_min
-        '
-        Me.ind_v501_min.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v501_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v501_min.Image = CType(resources.GetObject("ind_v501_min.Image"), System.Drawing.Image)
-        Me.ind_v501_min.Location = New System.Drawing.Point(128, 65)
-        Me.ind_v501_min.Name = "ind_v501_min"
-        Me.ind_v501_min.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v501_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v501_min.TabIndex = 110
-        Me.ind_v501_min.TabStop = False
-        '
-        'ind_v501_max
-        '
-        Me.ind_v501_max.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v501_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v501_max.Image = CType(resources.GetObject("ind_v501_max.Image"), System.Drawing.Image)
-        Me.ind_v501_max.Location = New System.Drawing.Point(128, 24)
-        Me.ind_v501_max.Name = "ind_v501_max"
-        Me.ind_v501_max.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v501_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v501_max.TabIndex = 111
-        Me.ind_v501_max.TabStop = False
         '
         'gb_ST6
         '
@@ -3457,30 +2562,6 @@ Partial Class ManualForm
         Me.btn_v602_fw.Text = "FORWARD"
         Me.btn_v602_fw.UseVisualStyleBackColor = True
         '
-        'ind_v602_min
-        '
-        Me.ind_v602_min.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v602_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v602_min.Image = CType(resources.GetObject("ind_v602_min.Image"), System.Drawing.Image)
-        Me.ind_v602_min.Location = New System.Drawing.Point(128, 65)
-        Me.ind_v602_min.Name = "ind_v602_min"
-        Me.ind_v602_min.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v602_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v602_min.TabIndex = 110
-        Me.ind_v602_min.TabStop = False
-        '
-        'ind_v602_max
-        '
-        Me.ind_v602_max.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v602_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v602_max.Image = CType(resources.GetObject("ind_v602_max.Image"), System.Drawing.Image)
-        Me.ind_v602_max.Location = New System.Drawing.Point(128, 24)
-        Me.ind_v602_max.Name = "ind_v602_max"
-        Me.ind_v602_max.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v602_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v602_max.TabIndex = 111
-        Me.ind_v602_max.TabStop = False
-        '
         'GroupBox24
         '
         Me.GroupBox24.Controls.Add(Me.btn_v603_bw)
@@ -3511,30 +2592,6 @@ Partial Class ManualForm
         Me.btn_v603_fw.TabIndex = 109
         Me.btn_v603_fw.Text = "FORWARD"
         Me.btn_v603_fw.UseVisualStyleBackColor = True
-        '
-        'ind_v603_min
-        '
-        Me.ind_v603_min.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v603_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v603_min.Image = CType(resources.GetObject("ind_v603_min.Image"), System.Drawing.Image)
-        Me.ind_v603_min.Location = New System.Drawing.Point(128, 65)
-        Me.ind_v603_min.Name = "ind_v603_min"
-        Me.ind_v603_min.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v603_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v603_min.TabIndex = 110
-        Me.ind_v603_min.TabStop = False
-        '
-        'ind_v603_max
-        '
-        Me.ind_v603_max.BackColor = System.Drawing.Color.Transparent
-        Me.ind_v603_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_v603_max.Image = CType(resources.GetObject("ind_v603_max.Image"), System.Drawing.Image)
-        Me.ind_v603_max.Location = New System.Drawing.Point(128, 24)
-        Me.ind_v603_max.Name = "ind_v603_max"
-        Me.ind_v603_max.Size = New System.Drawing.Size(35, 35)
-        Me.ind_v603_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_v603_max.TabIndex = 111
-        Me.ind_v603_max.TabStop = False
         '
         'GroupBox25
         '
@@ -3567,6 +2624,54 @@ Partial Class ManualForm
         Me.btn_v601_fw.Text = "FORWARD"
         Me.btn_v601_fw.UseVisualStyleBackColor = True
         '
+        'ind_v602_min
+        '
+        Me.ind_v602_min.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v602_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v602_min.Image = CType(resources.GetObject("ind_v602_min.Image"), System.Drawing.Image)
+        Me.ind_v602_min.Location = New System.Drawing.Point(128, 65)
+        Me.ind_v602_min.Name = "ind_v602_min"
+        Me.ind_v602_min.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v602_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v602_min.TabIndex = 110
+        Me.ind_v602_min.TabStop = False
+        '
+        'ind_v602_max
+        '
+        Me.ind_v602_max.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v602_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v602_max.Image = CType(resources.GetObject("ind_v602_max.Image"), System.Drawing.Image)
+        Me.ind_v602_max.Location = New System.Drawing.Point(128, 24)
+        Me.ind_v602_max.Name = "ind_v602_max"
+        Me.ind_v602_max.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v602_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v602_max.TabIndex = 111
+        Me.ind_v602_max.TabStop = False
+        '
+        'ind_v603_min
+        '
+        Me.ind_v603_min.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v603_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v603_min.Image = CType(resources.GetObject("ind_v603_min.Image"), System.Drawing.Image)
+        Me.ind_v603_min.Location = New System.Drawing.Point(128, 65)
+        Me.ind_v603_min.Name = "ind_v603_min"
+        Me.ind_v603_min.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v603_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v603_min.TabIndex = 110
+        Me.ind_v603_min.TabStop = False
+        '
+        'ind_v603_max
+        '
+        Me.ind_v603_max.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v603_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v603_max.Image = CType(resources.GetObject("ind_v603_max.Image"), System.Drawing.Image)
+        Me.ind_v603_max.Location = New System.Drawing.Point(128, 24)
+        Me.ind_v603_max.Name = "ind_v603_max"
+        Me.ind_v603_max.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v603_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v603_max.TabIndex = 111
+        Me.ind_v603_max.TabStop = False
+        '
         'ind_v601_min
         '
         Me.ind_v601_min.BackColor = System.Drawing.Color.Transparent
@@ -3590,6 +2695,901 @@ Partial Class ManualForm
         Me.ind_v601_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.ind_v601_max.TabIndex = 111
         Me.ind_v601_max.TabStop = False
+        '
+        'ind_Rcam_ok
+        '
+        Me.ind_Rcam_ok.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Rcam_ok.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Rcam_ok.Image = CType(resources.GetObject("ind_Rcam_ok.Image"), System.Drawing.Image)
+        Me.ind_Rcam_ok.Location = New System.Drawing.Point(19, 198)
+        Me.ind_Rcam_ok.Name = "ind_Rcam_ok"
+        Me.ind_Rcam_ok.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Rcam_ok.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Rcam_ok.TabIndex = 113
+        Me.ind_Rcam_ok.TabStop = False
+        '
+        'ind_Rcam_ready
+        '
+        Me.ind_Rcam_ready.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Rcam_ready.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Rcam_ready.Image = CType(resources.GetObject("ind_Rcam_ready.Image"), System.Drawing.Image)
+        Me.ind_Rcam_ready.Location = New System.Drawing.Point(19, 86)
+        Me.ind_Rcam_ready.Name = "ind_Rcam_ready"
+        Me.ind_Rcam_ready.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Rcam_ready.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Rcam_ready.TabIndex = 111
+        Me.ind_Rcam_ready.TabStop = False
+        '
+        'ind_Rcam_run
+        '
+        Me.ind_Rcam_run.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Rcam_run.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Rcam_run.Image = CType(resources.GetObject("ind_Rcam_run.Image"), System.Drawing.Image)
+        Me.ind_Rcam_run.Location = New System.Drawing.Point(19, 142)
+        Me.ind_Rcam_run.Name = "ind_Rcam_run"
+        Me.ind_Rcam_run.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Rcam_run.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Rcam_run.TabIndex = 108
+        Me.ind_Rcam_run.TabStop = False
+        '
+        'ind_Rcam_ng
+        '
+        Me.ind_Rcam_ng.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Rcam_ng.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Rcam_ng.Image = CType(resources.GetObject("ind_Rcam_ng.Image"), System.Drawing.Image)
+        Me.ind_Rcam_ng.Location = New System.Drawing.Point(19, 255)
+        Me.ind_Rcam_ng.Name = "ind_Rcam_ng"
+        Me.ind_Rcam_ng.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Rcam_ng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Rcam_ng.TabIndex = 110
+        Me.ind_Rcam_ng.TabStop = False
+        '
+        'ind_Rcam_error
+        '
+        Me.ind_Rcam_error.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Rcam_error.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Rcam_error.Image = Global.MASTER.My.Resources.Resources.led_green_on
+        Me.ind_Rcam_error.Location = New System.Drawing.Point(19, 30)
+        Me.ind_Rcam_error.Name = "ind_Rcam_error"
+        Me.ind_Rcam_error.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Rcam_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Rcam_error.TabIndex = 107
+        Me.ind_Rcam_error.TabStop = False
+        '
+        'ind_Lcam_ok
+        '
+        Me.ind_Lcam_ok.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Lcam_ok.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Lcam_ok.Image = CType(resources.GetObject("ind_Lcam_ok.Image"), System.Drawing.Image)
+        Me.ind_Lcam_ok.Location = New System.Drawing.Point(19, 198)
+        Me.ind_Lcam_ok.Name = "ind_Lcam_ok"
+        Me.ind_Lcam_ok.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Lcam_ok.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Lcam_ok.TabIndex = 113
+        Me.ind_Lcam_ok.TabStop = False
+        '
+        'ind_Lcam_ready
+        '
+        Me.ind_Lcam_ready.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Lcam_ready.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Lcam_ready.Image = CType(resources.GetObject("ind_Lcam_ready.Image"), System.Drawing.Image)
+        Me.ind_Lcam_ready.Location = New System.Drawing.Point(19, 86)
+        Me.ind_Lcam_ready.Name = "ind_Lcam_ready"
+        Me.ind_Lcam_ready.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Lcam_ready.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Lcam_ready.TabIndex = 111
+        Me.ind_Lcam_ready.TabStop = False
+        '
+        'ind_Lcam_run
+        '
+        Me.ind_Lcam_run.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Lcam_run.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Lcam_run.Image = CType(resources.GetObject("ind_Lcam_run.Image"), System.Drawing.Image)
+        Me.ind_Lcam_run.Location = New System.Drawing.Point(19, 142)
+        Me.ind_Lcam_run.Name = "ind_Lcam_run"
+        Me.ind_Lcam_run.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Lcam_run.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Lcam_run.TabIndex = 108
+        Me.ind_Lcam_run.TabStop = False
+        '
+        'ind_Lcam_ng
+        '
+        Me.ind_Lcam_ng.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Lcam_ng.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Lcam_ng.Image = CType(resources.GetObject("ind_Lcam_ng.Image"), System.Drawing.Image)
+        Me.ind_Lcam_ng.Location = New System.Drawing.Point(19, 255)
+        Me.ind_Lcam_ng.Name = "ind_Lcam_ng"
+        Me.ind_Lcam_ng.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Lcam_ng.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Lcam_ng.TabIndex = 110
+        Me.ind_Lcam_ng.TabStop = False
+        '
+        'ind_Lcam_error
+        '
+        Me.ind_Lcam_error.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Lcam_error.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Lcam_error.Image = Global.MASTER.My.Resources.Resources.led_green_on
+        Me.ind_Lcam_error.Location = New System.Drawing.Point(19, 30)
+        Me.ind_Lcam_error.Name = "ind_Lcam_error"
+        Me.ind_Lcam_error.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Lcam_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Lcam_error.TabIndex = 107
+        Me.ind_Lcam_error.TabStop = False
+        '
+        'ind_v502_min
+        '
+        Me.ind_v502_min.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v502_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v502_min.Image = CType(resources.GetObject("ind_v502_min.Image"), System.Drawing.Image)
+        Me.ind_v502_min.Location = New System.Drawing.Point(128, 65)
+        Me.ind_v502_min.Name = "ind_v502_min"
+        Me.ind_v502_min.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v502_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v502_min.TabIndex = 110
+        Me.ind_v502_min.TabStop = False
+        '
+        'ind_v502_max
+        '
+        Me.ind_v502_max.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v502_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v502_max.Image = CType(resources.GetObject("ind_v502_max.Image"), System.Drawing.Image)
+        Me.ind_v502_max.Location = New System.Drawing.Point(128, 24)
+        Me.ind_v502_max.Name = "ind_v502_max"
+        Me.ind_v502_max.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v502_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v502_max.TabIndex = 111
+        Me.ind_v502_max.TabStop = False
+        '
+        'ind_v503_min
+        '
+        Me.ind_v503_min.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v503_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v503_min.Image = CType(resources.GetObject("ind_v503_min.Image"), System.Drawing.Image)
+        Me.ind_v503_min.Location = New System.Drawing.Point(128, 65)
+        Me.ind_v503_min.Name = "ind_v503_min"
+        Me.ind_v503_min.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v503_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v503_min.TabIndex = 110
+        Me.ind_v503_min.TabStop = False
+        '
+        'ind_v503_max
+        '
+        Me.ind_v503_max.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v503_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v503_max.Image = CType(resources.GetObject("ind_v503_max.Image"), System.Drawing.Image)
+        Me.ind_v503_max.Location = New System.Drawing.Point(128, 24)
+        Me.ind_v503_max.Name = "ind_v503_max"
+        Me.ind_v503_max.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v503_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v503_max.TabIndex = 111
+        Me.ind_v503_max.TabStop = False
+        '
+        'ind_v501_min
+        '
+        Me.ind_v501_min.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v501_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v501_min.Image = CType(resources.GetObject("ind_v501_min.Image"), System.Drawing.Image)
+        Me.ind_v501_min.Location = New System.Drawing.Point(128, 65)
+        Me.ind_v501_min.Name = "ind_v501_min"
+        Me.ind_v501_min.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v501_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v501_min.TabIndex = 110
+        Me.ind_v501_min.TabStop = False
+        '
+        'ind_v501_max
+        '
+        Me.ind_v501_max.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v501_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v501_max.Image = CType(resources.GetObject("ind_v501_max.Image"), System.Drawing.Image)
+        Me.ind_v501_max.Location = New System.Drawing.Point(128, 24)
+        Me.ind_v501_max.Name = "ind_v501_max"
+        Me.ind_v501_max.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v501_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v501_max.TabIndex = 111
+        Me.ind_v501_max.TabStop = False
+        '
+        'ind_laser_command
+        '
+        Me.ind_laser_command.BackColor = System.Drawing.Color.Transparent
+        Me.ind_laser_command.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_laser_command.Image = Global.MASTER.My.Resources.Resources.led_green_on
+        Me.ind_laser_command.Location = New System.Drawing.Point(19, 313)
+        Me.ind_laser_command.Name = "ind_laser_command"
+        Me.ind_laser_command.Size = New System.Drawing.Size(30, 30)
+        Me.ind_laser_command.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_laser_command.TabIndex = 107
+        Me.ind_laser_command.TabStop = False
+        '
+        'ind_laser_shutter
+        '
+        Me.ind_laser_shutter.BackColor = System.Drawing.Color.Transparent
+        Me.ind_laser_shutter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_laser_shutter.Image = CType(resources.GetObject("ind_laser_shutter.Image"), System.Drawing.Image)
+        Me.ind_laser_shutter.Location = New System.Drawing.Point(19, 198)
+        Me.ind_laser_shutter.Name = "ind_laser_shutter"
+        Me.ind_laser_shutter.Size = New System.Drawing.Size(30, 30)
+        Me.ind_laser_shutter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_laser_shutter.TabIndex = 113
+        Me.ind_laser_shutter.TabStop = False
+        '
+        'ind_laser_ready
+        '
+        Me.ind_laser_ready.BackColor = System.Drawing.Color.Transparent
+        Me.ind_laser_ready.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_laser_ready.Image = CType(resources.GetObject("ind_laser_ready.Image"), System.Drawing.Image)
+        Me.ind_laser_ready.Location = New System.Drawing.Point(19, 86)
+        Me.ind_laser_ready.Name = "ind_laser_ready"
+        Me.ind_laser_ready.Size = New System.Drawing.Size(30, 30)
+        Me.ind_laser_ready.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_laser_ready.TabIndex = 111
+        Me.ind_laser_ready.TabStop = False
+        '
+        'ind_laser_busy
+        '
+        Me.ind_laser_busy.BackColor = System.Drawing.Color.Transparent
+        Me.ind_laser_busy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_laser_busy.Image = CType(resources.GetObject("ind_laser_busy.Image"), System.Drawing.Image)
+        Me.ind_laser_busy.Location = New System.Drawing.Point(19, 142)
+        Me.ind_laser_busy.Name = "ind_laser_busy"
+        Me.ind_laser_busy.Size = New System.Drawing.Size(30, 30)
+        Me.ind_laser_busy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_laser_busy.TabIndex = 108
+        Me.ind_laser_busy.TabStop = False
+        '
+        'ind_laser_interlock
+        '
+        Me.ind_laser_interlock.BackColor = System.Drawing.Color.Transparent
+        Me.ind_laser_interlock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_laser_interlock.Image = CType(resources.GetObject("ind_laser_interlock.Image"), System.Drawing.Image)
+        Me.ind_laser_interlock.Location = New System.Drawing.Point(19, 255)
+        Me.ind_laser_interlock.Name = "ind_laser_interlock"
+        Me.ind_laser_interlock.Size = New System.Drawing.Size(30, 30)
+        Me.ind_laser_interlock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_laser_interlock.TabIndex = 110
+        Me.ind_laser_interlock.TabStop = False
+        '
+        'ind_laser_error
+        '
+        Me.ind_laser_error.BackColor = System.Drawing.Color.Transparent
+        Me.ind_laser_error.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_laser_error.Image = Global.MASTER.My.Resources.Resources.led_green_on
+        Me.ind_laser_error.Location = New System.Drawing.Point(19, 30)
+        Me.ind_laser_error.Name = "ind_laser_error"
+        Me.ind_laser_error.Size = New System.Drawing.Size(30, 30)
+        Me.ind_laser_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_laser_error.TabIndex = 107
+        Me.ind_laser_error.TabStop = False
+        '
+        'ind_v401_min
+        '
+        Me.ind_v401_min.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v401_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v401_min.Image = CType(resources.GetObject("ind_v401_min.Image"), System.Drawing.Image)
+        Me.ind_v401_min.Location = New System.Drawing.Point(128, 65)
+        Me.ind_v401_min.Name = "ind_v401_min"
+        Me.ind_v401_min.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v401_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v401_min.TabIndex = 110
+        Me.ind_v401_min.TabStop = False
+        '
+        'ind_v401_max
+        '
+        Me.ind_v401_max.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v401_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v401_max.Image = CType(resources.GetObject("ind_v401_max.Image"), System.Drawing.Image)
+        Me.ind_v401_max.Location = New System.Drawing.Point(128, 24)
+        Me.ind_v401_max.Name = "ind_v401_max"
+        Me.ind_v401_max.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v401_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v401_max.TabIndex = 111
+        Me.ind_v401_max.TabStop = False
+        '
+        'ind_v302_min
+        '
+        Me.ind_v302_min.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v302_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v302_min.Image = CType(resources.GetObject("ind_v302_min.Image"), System.Drawing.Image)
+        Me.ind_v302_min.Location = New System.Drawing.Point(128, 65)
+        Me.ind_v302_min.Name = "ind_v302_min"
+        Me.ind_v302_min.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v302_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v302_min.TabIndex = 110
+        Me.ind_v302_min.TabStop = False
+        '
+        'ind_v302_max
+        '
+        Me.ind_v302_max.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v302_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v302_max.Image = CType(resources.GetObject("ind_v302_max.Image"), System.Drawing.Image)
+        Me.ind_v302_max.Location = New System.Drawing.Point(128, 24)
+        Me.ind_v302_max.Name = "ind_v302_max"
+        Me.ind_v302_max.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v302_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v302_max.TabIndex = 111
+        Me.ind_v302_max.TabStop = False
+        '
+        'ind_v304_min
+        '
+        Me.ind_v304_min.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v304_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v304_min.Image = CType(resources.GetObject("ind_v304_min.Image"), System.Drawing.Image)
+        Me.ind_v304_min.Location = New System.Drawing.Point(128, 65)
+        Me.ind_v304_min.Name = "ind_v304_min"
+        Me.ind_v304_min.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v304_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v304_min.TabIndex = 110
+        Me.ind_v304_min.TabStop = False
+        '
+        'ind_v304_max
+        '
+        Me.ind_v304_max.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v304_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v304_max.Image = CType(resources.GetObject("ind_v304_max.Image"), System.Drawing.Image)
+        Me.ind_v304_max.Location = New System.Drawing.Point(128, 24)
+        Me.ind_v304_max.Name = "ind_v304_max"
+        Me.ind_v304_max.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v304_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v304_max.TabIndex = 111
+        Me.ind_v304_max.TabStop = False
+        '
+        'ind_v303_min
+        '
+        Me.ind_v303_min.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v303_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v303_min.Image = CType(resources.GetObject("ind_v303_min.Image"), System.Drawing.Image)
+        Me.ind_v303_min.Location = New System.Drawing.Point(128, 65)
+        Me.ind_v303_min.Name = "ind_v303_min"
+        Me.ind_v303_min.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v303_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v303_min.TabIndex = 110
+        Me.ind_v303_min.TabStop = False
+        '
+        'ind_v303_max
+        '
+        Me.ind_v303_max.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v303_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v303_max.Image = CType(resources.GetObject("ind_v303_max.Image"), System.Drawing.Image)
+        Me.ind_v303_max.Location = New System.Drawing.Point(128, 24)
+        Me.ind_v303_max.Name = "ind_v303_max"
+        Me.ind_v303_max.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v303_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v303_max.TabIndex = 111
+        Me.ind_v303_max.TabStop = False
+        '
+        'ind_v301_min
+        '
+        Me.ind_v301_min.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v301_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v301_min.Image = CType(resources.GetObject("ind_v301_min.Image"), System.Drawing.Image)
+        Me.ind_v301_min.Location = New System.Drawing.Point(128, 65)
+        Me.ind_v301_min.Name = "ind_v301_min"
+        Me.ind_v301_min.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v301_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v301_min.TabIndex = 110
+        Me.ind_v301_min.TabStop = False
+        '
+        'ind_v301_max
+        '
+        Me.ind_v301_max.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v301_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v301_max.Image = CType(resources.GetObject("ind_v301_max.Image"), System.Drawing.Image)
+        Me.ind_v301_max.Location = New System.Drawing.Point(128, 24)
+        Me.ind_v301_max.Name = "ind_v301_max"
+        Me.ind_v301_max.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v301_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v301_max.TabIndex = 111
+        Me.ind_v301_max.TabStop = False
+        '
+        'ind_Lfesto_error
+        '
+        Me.ind_Lfesto_error.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Lfesto_error.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Lfesto_error.Image = CType(resources.GetObject("ind_Lfesto_error.Image"), System.Drawing.Image)
+        Me.ind_Lfesto_error.Location = New System.Drawing.Point(198, 86)
+        Me.ind_Lfesto_error.Name = "ind_Lfesto_error"
+        Me.ind_Lfesto_error.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Lfesto_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Lfesto_error.TabIndex = 114
+        Me.ind_Lfesto_error.TabStop = False
+        '
+        'ind_Lfesto_lock
+        '
+        Me.ind_Lfesto_lock.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Lfesto_lock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Lfesto_lock.Image = CType(resources.GetObject("ind_Lfesto_lock.Image"), System.Drawing.Image)
+        Me.ind_Lfesto_lock.Location = New System.Drawing.Point(198, 30)
+        Me.ind_Lfesto_lock.Name = "ind_Lfesto_lock"
+        Me.ind_Lfesto_lock.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Lfesto_lock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Lfesto_lock.TabIndex = 114
+        Me.ind_Lfesto_lock.TabStop = False
+        '
+        'ind_Lfesto_ax_ack
+        '
+        Me.ind_Lfesto_ax_ack.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Lfesto_ax_ack.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Lfesto_ax_ack.Image = CType(resources.GetObject("ind_Lfesto_ax_ack.Image"), System.Drawing.Image)
+        Me.ind_Lfesto_ax_ack.Location = New System.Drawing.Point(19, 198)
+        Me.ind_Lfesto_ax_ack.Name = "ind_Lfesto_ax_ack"
+        Me.ind_Lfesto_ax_ack.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Lfesto_ax_ack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Lfesto_ax_ack.TabIndex = 113
+        Me.ind_Lfesto_ax_ack.TabStop = False
+        '
+        'ind_Lfesto_ax_warn
+        '
+        Me.ind_Lfesto_ax_warn.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Lfesto_ax_warn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Lfesto_ax_warn.Image = CType(resources.GetObject("ind_Lfesto_ax_warn.Image"), System.Drawing.Image)
+        Me.ind_Lfesto_ax_warn.Location = New System.Drawing.Point(20, 311)
+        Me.ind_Lfesto_ax_warn.Name = "ind_Lfesto_ax_warn"
+        Me.ind_Lfesto_ax_warn.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Lfesto_ax_warn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Lfesto_ax_warn.TabIndex = 112
+        Me.ind_Lfesto_ax_warn.TabStop = False
+        '
+        'ind_Lfesto_ax_pos
+        '
+        Me.ind_Lfesto_ax_pos.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Lfesto_ax_pos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Lfesto_ax_pos.Image = CType(resources.GetObject("ind_Lfesto_ax_pos.Image"), System.Drawing.Image)
+        Me.ind_Lfesto_ax_pos.Location = New System.Drawing.Point(19, 86)
+        Me.ind_Lfesto_ax_pos.Name = "ind_Lfesto_ax_pos"
+        Me.ind_Lfesto_ax_pos.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Lfesto_ax_pos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Lfesto_ax_pos.TabIndex = 111
+        Me.ind_Lfesto_ax_pos.TabStop = False
+        '
+        'ind_Lfesto_ax_error
+        '
+        Me.ind_Lfesto_ax_error.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Lfesto_ax_error.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Lfesto_ax_error.Image = CType(resources.GetObject("ind_Lfesto_ax_error.Image"), System.Drawing.Image)
+        Me.ind_Lfesto_ax_error.Location = New System.Drawing.Point(20, 367)
+        Me.ind_Lfesto_ax_error.Name = "ind_Lfesto_ax_error"
+        Me.ind_Lfesto_ax_error.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Lfesto_ax_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Lfesto_ax_error.TabIndex = 109
+        Me.ind_Lfesto_ax_error.TabStop = False
+        '
+        'ind_Lfesto_ax_sp
+        '
+        Me.ind_Lfesto_ax_sp.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Lfesto_ax_sp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Lfesto_ax_sp.Image = CType(resources.GetObject("ind_Lfesto_ax_sp.Image"), System.Drawing.Image)
+        Me.ind_Lfesto_ax_sp.Location = New System.Drawing.Point(19, 142)
+        Me.ind_Lfesto_ax_sp.Name = "ind_Lfesto_ax_sp"
+        Me.ind_Lfesto_ax_sp.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Lfesto_ax_sp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Lfesto_ax_sp.TabIndex = 108
+        Me.ind_Lfesto_ax_sp.TabStop = False
+        '
+        'ind_Lfesto_ax_ref
+        '
+        Me.ind_Lfesto_ax_ref.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Lfesto_ax_ref.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Lfesto_ax_ref.Image = CType(resources.GetObject("ind_Lfesto_ax_ref.Image"), System.Drawing.Image)
+        Me.ind_Lfesto_ax_ref.Location = New System.Drawing.Point(20, 255)
+        Me.ind_Lfesto_ax_ref.Name = "ind_Lfesto_ax_ref"
+        Me.ind_Lfesto_ax_ref.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Lfesto_ax_ref.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Lfesto_ax_ref.TabIndex = 110
+        Me.ind_Lfesto_ax_ref.TabStop = False
+        '
+        'ind_Lfesto_ax_enabled
+        '
+        Me.ind_Lfesto_ax_enabled.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Lfesto_ax_enabled.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Lfesto_ax_enabled.Image = Global.MASTER.My.Resources.Resources.led_green_on
+        Me.ind_Lfesto_ax_enabled.Location = New System.Drawing.Point(19, 30)
+        Me.ind_Lfesto_ax_enabled.Name = "ind_Lfesto_ax_enabled"
+        Me.ind_Lfesto_ax_enabled.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Lfesto_ax_enabled.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Lfesto_ax_enabled.TabIndex = 107
+        Me.ind_Lfesto_ax_enabled.TabStop = False
+        '
+        'ind_Rfesto_error
+        '
+        Me.ind_Rfesto_error.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Rfesto_error.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Rfesto_error.Image = CType(resources.GetObject("ind_Rfesto_error.Image"), System.Drawing.Image)
+        Me.ind_Rfesto_error.Location = New System.Drawing.Point(198, 86)
+        Me.ind_Rfesto_error.Name = "ind_Rfesto_error"
+        Me.ind_Rfesto_error.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Rfesto_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Rfesto_error.TabIndex = 114
+        Me.ind_Rfesto_error.TabStop = False
+        '
+        'ind_Rfesto_lock
+        '
+        Me.ind_Rfesto_lock.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Rfesto_lock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Rfesto_lock.Image = CType(resources.GetObject("ind_Rfesto_lock.Image"), System.Drawing.Image)
+        Me.ind_Rfesto_lock.Location = New System.Drawing.Point(198, 30)
+        Me.ind_Rfesto_lock.Name = "ind_Rfesto_lock"
+        Me.ind_Rfesto_lock.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Rfesto_lock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Rfesto_lock.TabIndex = 114
+        Me.ind_Rfesto_lock.TabStop = False
+        '
+        'ind_Rfesto_ax_ack
+        '
+        Me.ind_Rfesto_ax_ack.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Rfesto_ax_ack.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Rfesto_ax_ack.Image = CType(resources.GetObject("ind_Rfesto_ax_ack.Image"), System.Drawing.Image)
+        Me.ind_Rfesto_ax_ack.Location = New System.Drawing.Point(19, 198)
+        Me.ind_Rfesto_ax_ack.Name = "ind_Rfesto_ax_ack"
+        Me.ind_Rfesto_ax_ack.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Rfesto_ax_ack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Rfesto_ax_ack.TabIndex = 113
+        Me.ind_Rfesto_ax_ack.TabStop = False
+        '
+        'ind_Rfesto_ax_warn
+        '
+        Me.ind_Rfesto_ax_warn.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Rfesto_ax_warn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Rfesto_ax_warn.Image = CType(resources.GetObject("ind_Rfesto_ax_warn.Image"), System.Drawing.Image)
+        Me.ind_Rfesto_ax_warn.Location = New System.Drawing.Point(20, 311)
+        Me.ind_Rfesto_ax_warn.Name = "ind_Rfesto_ax_warn"
+        Me.ind_Rfesto_ax_warn.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Rfesto_ax_warn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Rfesto_ax_warn.TabIndex = 112
+        Me.ind_Rfesto_ax_warn.TabStop = False
+        '
+        'ind_Rfesto_ax_pos
+        '
+        Me.ind_Rfesto_ax_pos.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Rfesto_ax_pos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Rfesto_ax_pos.Image = CType(resources.GetObject("ind_Rfesto_ax_pos.Image"), System.Drawing.Image)
+        Me.ind_Rfesto_ax_pos.Location = New System.Drawing.Point(19, 86)
+        Me.ind_Rfesto_ax_pos.Name = "ind_Rfesto_ax_pos"
+        Me.ind_Rfesto_ax_pos.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Rfesto_ax_pos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Rfesto_ax_pos.TabIndex = 111
+        Me.ind_Rfesto_ax_pos.TabStop = False
+        '
+        'ind_Rfesto_ax_error
+        '
+        Me.ind_Rfesto_ax_error.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Rfesto_ax_error.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Rfesto_ax_error.Image = CType(resources.GetObject("ind_Rfesto_ax_error.Image"), System.Drawing.Image)
+        Me.ind_Rfesto_ax_error.Location = New System.Drawing.Point(20, 367)
+        Me.ind_Rfesto_ax_error.Name = "ind_Rfesto_ax_error"
+        Me.ind_Rfesto_ax_error.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Rfesto_ax_error.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Rfesto_ax_error.TabIndex = 109
+        Me.ind_Rfesto_ax_error.TabStop = False
+        '
+        'ind_Rfesto_ax_sp
+        '
+        Me.ind_Rfesto_ax_sp.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Rfesto_ax_sp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Rfesto_ax_sp.Image = CType(resources.GetObject("ind_Rfesto_ax_sp.Image"), System.Drawing.Image)
+        Me.ind_Rfesto_ax_sp.Location = New System.Drawing.Point(19, 142)
+        Me.ind_Rfesto_ax_sp.Name = "ind_Rfesto_ax_sp"
+        Me.ind_Rfesto_ax_sp.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Rfesto_ax_sp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Rfesto_ax_sp.TabIndex = 108
+        Me.ind_Rfesto_ax_sp.TabStop = False
+        '
+        'ind_Rfesto_ax_ref
+        '
+        Me.ind_Rfesto_ax_ref.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Rfesto_ax_ref.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Rfesto_ax_ref.Image = CType(resources.GetObject("ind_Rfesto_ax_ref.Image"), System.Drawing.Image)
+        Me.ind_Rfesto_ax_ref.Location = New System.Drawing.Point(20, 255)
+        Me.ind_Rfesto_ax_ref.Name = "ind_Rfesto_ax_ref"
+        Me.ind_Rfesto_ax_ref.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Rfesto_ax_ref.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Rfesto_ax_ref.TabIndex = 110
+        Me.ind_Rfesto_ax_ref.TabStop = False
+        '
+        'ind_Rfesto_ax_enabled
+        '
+        Me.ind_Rfesto_ax_enabled.BackColor = System.Drawing.Color.Transparent
+        Me.ind_Rfesto_ax_enabled.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_Rfesto_ax_enabled.Image = Global.MASTER.My.Resources.Resources.led_green_on
+        Me.ind_Rfesto_ax_enabled.Location = New System.Drawing.Point(19, 30)
+        Me.ind_Rfesto_ax_enabled.Name = "ind_Rfesto_ax_enabled"
+        Me.ind_Rfesto_ax_enabled.Size = New System.Drawing.Size(30, 30)
+        Me.ind_Rfesto_ax_enabled.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_Rfesto_ax_enabled.TabIndex = 107
+        Me.ind_Rfesto_ax_enabled.TabStop = False
+        '
+        'ind_v101_min
+        '
+        Me.ind_v101_min.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v101_min.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v101_min.Image = CType(resources.GetObject("ind_v101_min.Image"), System.Drawing.Image)
+        Me.ind_v101_min.Location = New System.Drawing.Point(128, 65)
+        Me.ind_v101_min.Name = "ind_v101_min"
+        Me.ind_v101_min.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v101_min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v101_min.TabIndex = 110
+        Me.ind_v101_min.TabStop = False
+        '
+        'ind_v101_max
+        '
+        Me.ind_v101_max.BackColor = System.Drawing.Color.Transparent
+        Me.ind_v101_max.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_v101_max.Image = CType(resources.GetObject("ind_v101_max.Image"), System.Drawing.Image)
+        Me.ind_v101_max.Location = New System.Drawing.Point(128, 24)
+        Me.ind_v101_max.Name = "ind_v101_max"
+        Me.ind_v101_max.Size = New System.Drawing.Size(35, 35)
+        Me.ind_v101_max.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_v101_max.TabIndex = 111
+        Me.ind_v101_max.TabStop = False
+        '
+        'ind_stn_initialized_1
+        '
+        Me.ind_stn_initialized_1.BackColor = System.Drawing.Color.Transparent
+        Me.ind_stn_initialized_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_stn_initialized_1.Image = Global.MASTER.My.Resources.Resources.led_green_on
+        Me.ind_stn_initialized_1.Location = New System.Drawing.Point(14, 30)
+        Me.ind_stn_initialized_1.Name = "ind_stn_initialized_1"
+        Me.ind_stn_initialized_1.Size = New System.Drawing.Size(30, 30)
+        Me.ind_stn_initialized_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_stn_initialized_1.TabIndex = 107
+        Me.ind_stn_initialized_1.TabStop = False
+        '
+        'ind_stn_initialized_5
+        '
+        Me.ind_stn_initialized_5.BackColor = System.Drawing.Color.Transparent
+        Me.ind_stn_initialized_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_stn_initialized_5.Image = CType(resources.GetObject("ind_stn_initialized_5.Image"), System.Drawing.Image)
+        Me.ind_stn_initialized_5.Location = New System.Drawing.Point(14, 169)
+        Me.ind_stn_initialized_5.Name = "ind_stn_initialized_5"
+        Me.ind_stn_initialized_5.Size = New System.Drawing.Size(30, 30)
+        Me.ind_stn_initialized_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_stn_initialized_5.TabIndex = 110
+        Me.ind_stn_initialized_5.TabStop = False
+        '
+        'ind_stn_initialized_3
+        '
+        Me.ind_stn_initialized_3.BackColor = System.Drawing.Color.Transparent
+        Me.ind_stn_initialized_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_stn_initialized_3.Image = CType(resources.GetObject("ind_stn_initialized_3.Image"), System.Drawing.Image)
+        Me.ind_stn_initialized_3.Location = New System.Drawing.Point(14, 100)
+        Me.ind_stn_initialized_3.Name = "ind_stn_initialized_3"
+        Me.ind_stn_initialized_3.Size = New System.Drawing.Size(30, 30)
+        Me.ind_stn_initialized_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_stn_initialized_3.TabIndex = 108
+        Me.ind_stn_initialized_3.TabStop = False
+        '
+        'ind_stn_initialized_2
+        '
+        Me.ind_stn_initialized_2.BackColor = System.Drawing.Color.Transparent
+        Me.ind_stn_initialized_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_stn_initialized_2.Image = CType(resources.GetObject("ind_stn_initialized_2.Image"), System.Drawing.Image)
+        Me.ind_stn_initialized_2.Location = New System.Drawing.Point(14, 65)
+        Me.ind_stn_initialized_2.Name = "ind_stn_initialized_2"
+        Me.ind_stn_initialized_2.Size = New System.Drawing.Size(30, 30)
+        Me.ind_stn_initialized_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_stn_initialized_2.TabIndex = 111
+        Me.ind_stn_initialized_2.TabStop = False
+        '
+        'ind_stn_initialized_6
+        '
+        Me.ind_stn_initialized_6.BackColor = System.Drawing.Color.Transparent
+        Me.ind_stn_initialized_6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_stn_initialized_6.Image = CType(resources.GetObject("ind_stn_initialized_6.Image"), System.Drawing.Image)
+        Me.ind_stn_initialized_6.Location = New System.Drawing.Point(14, 203)
+        Me.ind_stn_initialized_6.Name = "ind_stn_initialized_6"
+        Me.ind_stn_initialized_6.Size = New System.Drawing.Size(30, 30)
+        Me.ind_stn_initialized_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_stn_initialized_6.TabIndex = 112
+        Me.ind_stn_initialized_6.TabStop = False
+        '
+        'ind_stn_initialized_4
+        '
+        Me.ind_stn_initialized_4.BackColor = System.Drawing.Color.Transparent
+        Me.ind_stn_initialized_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_stn_initialized_4.Image = CType(resources.GetObject("ind_stn_initialized_4.Image"), System.Drawing.Image)
+        Me.ind_stn_initialized_4.Location = New System.Drawing.Point(14, 135)
+        Me.ind_stn_initialized_4.Name = "ind_stn_initialized_4"
+        Me.ind_stn_initialized_4.Size = New System.Drawing.Size(30, 30)
+        Me.ind_stn_initialized_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_stn_initialized_4.TabIndex = 113
+        Me.ind_stn_initialized_4.TabStop = False
+        '
+        'ind_safe_motor_4
+        '
+        Me.ind_safe_motor_4.BackColor = System.Drawing.Color.Transparent
+        Me.ind_safe_motor_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_safe_motor_4.Image = CType(resources.GetObject("ind_safe_motor_4.Image"), System.Drawing.Image)
+        Me.ind_safe_motor_4.Location = New System.Drawing.Point(19, 135)
+        Me.ind_safe_motor_4.Name = "ind_safe_motor_4"
+        Me.ind_safe_motor_4.Size = New System.Drawing.Size(30, 30)
+        Me.ind_safe_motor_4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_safe_motor_4.TabIndex = 113
+        Me.ind_safe_motor_4.TabStop = False
+        '
+        'ind_safe_motor_6
+        '
+        Me.ind_safe_motor_6.BackColor = System.Drawing.Color.Transparent
+        Me.ind_safe_motor_6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_safe_motor_6.Image = CType(resources.GetObject("ind_safe_motor_6.Image"), System.Drawing.Image)
+        Me.ind_safe_motor_6.Location = New System.Drawing.Point(19, 203)
+        Me.ind_safe_motor_6.Name = "ind_safe_motor_6"
+        Me.ind_safe_motor_6.Size = New System.Drawing.Size(30, 30)
+        Me.ind_safe_motor_6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_safe_motor_6.TabIndex = 112
+        Me.ind_safe_motor_6.TabStop = False
+        '
+        'ind_safe_motor_2
+        '
+        Me.ind_safe_motor_2.BackColor = System.Drawing.Color.Transparent
+        Me.ind_safe_motor_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_safe_motor_2.Image = CType(resources.GetObject("ind_safe_motor_2.Image"), System.Drawing.Image)
+        Me.ind_safe_motor_2.Location = New System.Drawing.Point(19, 65)
+        Me.ind_safe_motor_2.Name = "ind_safe_motor_2"
+        Me.ind_safe_motor_2.Size = New System.Drawing.Size(30, 30)
+        Me.ind_safe_motor_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_safe_motor_2.TabIndex = 111
+        Me.ind_safe_motor_2.TabStop = False
+        '
+        'ind_safe_motor_3
+        '
+        Me.ind_safe_motor_3.BackColor = System.Drawing.Color.Transparent
+        Me.ind_safe_motor_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_safe_motor_3.Image = CType(resources.GetObject("ind_safe_motor_3.Image"), System.Drawing.Image)
+        Me.ind_safe_motor_3.Location = New System.Drawing.Point(19, 100)
+        Me.ind_safe_motor_3.Name = "ind_safe_motor_3"
+        Me.ind_safe_motor_3.Size = New System.Drawing.Size(30, 30)
+        Me.ind_safe_motor_3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_safe_motor_3.TabIndex = 108
+        Me.ind_safe_motor_3.TabStop = False
+        '
+        'ind_safe_motor_5
+        '
+        Me.ind_safe_motor_5.BackColor = System.Drawing.Color.Transparent
+        Me.ind_safe_motor_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_safe_motor_5.Image = CType(resources.GetObject("ind_safe_motor_5.Image"), System.Drawing.Image)
+        Me.ind_safe_motor_5.Location = New System.Drawing.Point(19, 169)
+        Me.ind_safe_motor_5.Name = "ind_safe_motor_5"
+        Me.ind_safe_motor_5.Size = New System.Drawing.Size(30, 30)
+        Me.ind_safe_motor_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_safe_motor_5.TabIndex = 110
+        Me.ind_safe_motor_5.TabStop = False
+        '
+        'ind_safe_motor_1
+        '
+        Me.ind_safe_motor_1.BackColor = System.Drawing.Color.Transparent
+        Me.ind_safe_motor_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_safe_motor_1.Image = Global.MASTER.My.Resources.Resources.led_green_on
+        Me.ind_safe_motor_1.Location = New System.Drawing.Point(19, 30)
+        Me.ind_safe_motor_1.Name = "ind_safe_motor_1"
+        Me.ind_safe_motor_1.Size = New System.Drawing.Size(30, 30)
+        Me.ind_safe_motor_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_safe_motor_1.TabIndex = 107
+        Me.ind_safe_motor_1.TabStop = False
+        '
+        'btn_st6
+        '
+        Me.btn_st6.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_st6.Image = CType(resources.GetObject("btn_st6.Image"), System.Drawing.Image)
+        Me.btn_st6.Location = New System.Drawing.Point(1218, 624)
+        Me.btn_st6.Name = "btn_st6"
+        Me.btn_st6.Size = New System.Drawing.Size(120, 85)
+        Me.btn_st6.TabIndex = 24
+        Me.btn_st6.Text = "ST6"
+        Me.btn_st6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btn_st6.UseVisualStyleBackColor = True
+        '
+        'btn_st5
+        '
+        Me.btn_st5.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_st5.Image = CType(resources.GetObject("btn_st5.Image"), System.Drawing.Image)
+        Me.btn_st5.Location = New System.Drawing.Point(1218, 533)
+        Me.btn_st5.Name = "btn_st5"
+        Me.btn_st5.Size = New System.Drawing.Size(120, 85)
+        Me.btn_st5.TabIndex = 22
+        Me.btn_st5.Text = "ST5"
+        Me.btn_st5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btn_st5.UseVisualStyleBackColor = True
+        '
+        'btn_st4
+        '
+        Me.btn_st4.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_st4.Image = CType(resources.GetObject("btn_st4.Image"), System.Drawing.Image)
+        Me.btn_st4.Location = New System.Drawing.Point(1218, 442)
+        Me.btn_st4.Name = "btn_st4"
+        Me.btn_st4.Size = New System.Drawing.Size(120, 85)
+        Me.btn_st4.TabIndex = 20
+        Me.btn_st4.Text = "ST4"
+        Me.btn_st4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btn_st4.UseVisualStyleBackColor = True
+        '
+        'btn_st3
+        '
+        Me.btn_st3.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_st3.Image = CType(resources.GetObject("btn_st3.Image"), System.Drawing.Image)
+        Me.btn_st3.Location = New System.Drawing.Point(1218, 351)
+        Me.btn_st3.Name = "btn_st3"
+        Me.btn_st3.Size = New System.Drawing.Size(120, 85)
+        Me.btn_st3.TabIndex = 18
+        Me.btn_st3.Text = "ST3"
+        Me.btn_st3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btn_st3.UseVisualStyleBackColor = True
+        '
+        'btn_st2
+        '
+        Me.btn_st2.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_st2.Image = CType(resources.GetObject("btn_st2.Image"), System.Drawing.Image)
+        Me.btn_st2.Location = New System.Drawing.Point(1218, 260)
+        Me.btn_st2.Name = "btn_st2"
+        Me.btn_st2.Size = New System.Drawing.Size(120, 85)
+        Me.btn_st2.TabIndex = 16
+        Me.btn_st2.Text = "ST2"
+        Me.btn_st2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btn_st2.UseVisualStyleBackColor = True
+        '
+        'btn_st1
+        '
+        Me.btn_st1.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_st1.Image = CType(resources.GetObject("btn_st1.Image"), System.Drawing.Image)
+        Me.btn_st1.Location = New System.Drawing.Point(1218, 169)
+        Me.btn_st1.Name = "btn_st1"
+        Me.btn_st1.Size = New System.Drawing.Size(120, 85)
+        Me.btn_st1.TabIndex = 15
+        Me.btn_st1.Text = "ST1"
+        Me.btn_st1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btn_st1.UseVisualStyleBackColor = True
+        '
+        'btn_home
+        '
+        Me.btn_home.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_home.Image = Global.MASTER.My.Resources.Resources.icons8_home_50
+        Me.btn_home.Location = New System.Drawing.Point(12, 169)
+        Me.btn_home.Name = "btn_home"
+        Me.btn_home.Size = New System.Drawing.Size(120, 85)
+        Me.btn_home.TabIndex = 14
+        Me.btn_home.Text = "Home"
+        Me.btn_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btn_home.UseVisualStyleBackColor = True
+        '
+        'btn_login
+        '
+        Me.btn_login.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_login.Image = Global.MASTER.My.Resources.Resources.icons8_change_user_50
+        Me.btn_login.Location = New System.Drawing.Point(1101, 20)
+        Me.btn_login.Name = "btn_login"
+        Me.btn_login.Size = New System.Drawing.Size(85, 85)
+        Me.btn_login.TabIndex = 13
+        Me.btn_login.Text = "Login"
+        Me.btn_login.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btn_login.UseVisualStyleBackColor = True
+        '
+        'pb_status_bar
+        '
+        Me.pb_status_bar.BackColor = System.Drawing.Color.LimeGreen
+        Me.pb_status_bar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pb_status_bar.Location = New System.Drawing.Point(425, 20)
+        Me.pb_status_bar.Name = "pb_status_bar"
+        Me.pb_status_bar.Size = New System.Drawing.Size(500, 85)
+        Me.pb_status_bar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pb_status_bar.TabIndex = 7
+        Me.pb_status_bar.TabStop = False
+        '
+        'pb_status_mc
+        '
+        Me.pb_status_mc.Image = Global.MASTER.My.Resources.Resources.mark_ok
+        Me.pb_status_mc.Location = New System.Drawing.Point(967, 20)
+        Me.pb_status_mc.Name = "pb_status_mc"
+        Me.pb_status_mc.Size = New System.Drawing.Size(85, 85)
+        Me.pb_status_mc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pb_status_mc.TabIndex = 6
+        Me.pb_status_mc.TabStop = False
+        '
+        'pb_logo
+        '
+        Me.pb_logo.Image = Global.MASTER.My.Resources.Resources.telemecanique_sensors_logo_transparent
+        Me.pb_logo.Location = New System.Drawing.Point(12, 20)
+        Me.pb_logo.Name = "pb_logo"
+        Me.pb_logo.Size = New System.Drawing.Size(250, 85)
+        Me.pb_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pb_logo.TabIndex = 5
+        Me.pb_logo.TabStop = False
         '
         'ManualForm
         '
@@ -3627,61 +3627,27 @@ Partial Class ManualForm
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
-        CType(Me.ind_v101_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_v101_max, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox36.ResumeLayout(False)
         Me.GroupBox36.PerformLayout()
-        CType(Me.ind_stn_initialized_1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_stn_initialized_5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_stn_initialized_3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_stn_initialized_2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_stn_initialized_6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_stn_initialized_4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox38.ResumeLayout(False)
         Me.GroupBox38.PerformLayout()
         Me.GroupBox37.ResumeLayout(False)
         Me.GroupBox37.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
-        CType(Me.ind_safe_motor_4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_safe_motor_6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_safe_motor_2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_safe_motor_3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_safe_motor_5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_safe_motor_1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gb_ST3.ResumeLayout(False)
         Me.tab_ST3.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.GroupBox7.ResumeLayout(False)
-        CType(Me.ind_v302_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_v302_max, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox10.ResumeLayout(False)
-        CType(Me.ind_v304_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_v304_max, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox9.ResumeLayout(False)
-        CType(Me.ind_v303_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_v303_max, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox8.ResumeLayout(False)
-        CType(Me.ind_v301_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_v301_max, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         Me.GroupBox30.ResumeLayout(False)
         Me.GroupBox30.PerformLayout()
         Me.GroupBox31.ResumeLayout(False)
         Me.GroupBox31.PerformLayout()
-        CType(Me.ind_Lfesto_error, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_Lfesto_lock, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_Lfesto_ax_ack, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_Lfesto_ax_warn, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_Lfesto_ax_pos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_Lfesto_ax_error, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_Lfesto_ax_sp, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_Lfesto_ax_ref, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_Lfesto_ax_enabled, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox29.ResumeLayout(False)
         Me.GroupBox28.ResumeLayout(False)
         Me.GroupBox28.PerformLayout()
@@ -3691,6 +3657,80 @@ Partial Class ManualForm
         Me.GroupBox32.PerformLayout()
         Me.GroupBox33.ResumeLayout(False)
         Me.GroupBox33.PerformLayout()
+        Me.GroupBox34.ResumeLayout(False)
+        Me.GroupBox35.ResumeLayout(False)
+        Me.GroupBox35.PerformLayout()
+        Me.gb_ST4.ResumeLayout(False)
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        Me.GroupBox12.ResumeLayout(False)
+        Me.GroupBox15.ResumeLayout(False)
+        Me.GroupBox15.PerformLayout()
+        Me.GroupBox11.ResumeLayout(False)
+        Me.GroupBox14.ResumeLayout(False)
+        Me.gb_ST5.ResumeLayout(False)
+        Me.GroupBox27.ResumeLayout(False)
+        Me.GroupBox27.PerformLayout()
+        Me.GroupBox18.ResumeLayout(False)
+        Me.GroupBox18.PerformLayout()
+        Me.GroupBox16.ResumeLayout(False)
+        Me.GroupBox26.ResumeLayout(False)
+        Me.GroupBox21.ResumeLayout(False)
+        Me.GroupBox19.ResumeLayout(False)
+        Me.GroupBox20.ResumeLayout(False)
+        Me.GroupBox17.ResumeLayout(False)
+        Me.gb_ST6.ResumeLayout(False)
+        Me.GroupBox22.ResumeLayout(False)
+        Me.GroupBox23.ResumeLayout(False)
+        Me.GroupBox24.ResumeLayout(False)
+        Me.GroupBox25.ResumeLayout(False)
+        CType(Me.ind_v602_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v602_max, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v603_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v603_max, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v601_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v601_max, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Rcam_ok, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Rcam_ready, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Rcam_run, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Rcam_ng, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Rcam_error, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Lcam_ok, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Lcam_ready, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Lcam_run, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Lcam_ng, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Lcam_error, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v502_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v502_max, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v503_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v503_max, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v501_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v501_max, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_laser_command, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_laser_shutter, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_laser_ready, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_laser_busy, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_laser_interlock, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_laser_error, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v401_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v401_max, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v302_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v302_max, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v304_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v304_max, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v303_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v303_max, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v301_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v301_max, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Lfesto_error, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Lfesto_lock, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Lfesto_ax_ack, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Lfesto_ax_warn, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Lfesto_ax_pos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Lfesto_ax_error, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Lfesto_ax_sp, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Lfesto_ax_ref, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_Lfesto_ax_enabled, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ind_Rfesto_error, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ind_Rfesto_lock, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ind_Rfesto_ax_ack, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3700,63 +3740,23 @@ Partial Class ManualForm
         CType(Me.ind_Rfesto_ax_sp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ind_Rfesto_ax_ref, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ind_Rfesto_ax_enabled, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox34.ResumeLayout(False)
-        Me.GroupBox35.ResumeLayout(False)
-        Me.GroupBox35.PerformLayout()
-        Me.gb_ST4.ResumeLayout(False)
-        Me.GroupBox6.ResumeLayout(False)
-        Me.GroupBox6.PerformLayout()
-        CType(Me.ind_laser_command, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_laser_shutter, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_laser_ready, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_laser_busy, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_laser_interlock, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_laser_error, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox12.ResumeLayout(False)
-        Me.GroupBox15.ResumeLayout(False)
-        Me.GroupBox15.PerformLayout()
-        Me.GroupBox11.ResumeLayout(False)
-        Me.GroupBox14.ResumeLayout(False)
-        CType(Me.ind_v401_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_v401_max, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.gb_ST5.ResumeLayout(False)
-        Me.GroupBox27.ResumeLayout(False)
-        Me.GroupBox27.PerformLayout()
-        CType(Me.ind_Rcam_ok, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_Rcam_ready, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_Rcam_run, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_Rcam_ng, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_Rcam_error, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox18.ResumeLayout(False)
-        Me.GroupBox18.PerformLayout()
-        CType(Me.ind_Lcam_ok, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_Lcam_ready, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_Lcam_run, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_Lcam_ng, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_Lcam_error, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox16.ResumeLayout(False)
-        Me.GroupBox26.ResumeLayout(False)
-        Me.GroupBox21.ResumeLayout(False)
-        Me.GroupBox19.ResumeLayout(False)
-        CType(Me.ind_v502_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_v502_max, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox20.ResumeLayout(False)
-        CType(Me.ind_v503_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_v503_max, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox17.ResumeLayout(False)
-        CType(Me.ind_v501_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_v501_max, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.gb_ST6.ResumeLayout(False)
-        Me.GroupBox22.ResumeLayout(False)
-        Me.GroupBox23.ResumeLayout(False)
-        CType(Me.ind_v602_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_v602_max, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox24.ResumeLayout(False)
-        CType(Me.ind_v603_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_v603_max, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox25.ResumeLayout(False)
-        CType(Me.ind_v601_min, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ind_v601_max, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v101_min, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_v101_max, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_stn_initialized_1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_stn_initialized_5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_stn_initialized_3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_stn_initialized_2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_stn_initialized_6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_stn_initialized_4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_safe_motor_4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_safe_motor_6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_safe_motor_2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_safe_motor_3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_safe_motor_5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ind_safe_motor_1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

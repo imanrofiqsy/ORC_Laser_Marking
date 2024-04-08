@@ -97,7 +97,7 @@ Partial Class LoginForm
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox1.Image = Global.MASTER.My.Resources.Resources.logo_sanindo_tekno_batam
+        Me.PictureBox1.Image = Global.MASTER.My.Resources.Resources.telemecanique_sensors_logo_transparent
         Me.PictureBox1.Location = New System.Drawing.Point(117, 4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(201, 76)

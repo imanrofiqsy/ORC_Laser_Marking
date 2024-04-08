@@ -429,7 +429,7 @@ Partial Class LogForm
         '
         'pb_logo
         '
-        Me.pb_logo.Image = Global.MASTER.My.Resources.Resources.logo_sanindo_tekno_batam
+        Me.pb_logo.Image = Global.MASTER.My.Resources.Resources.telemecanique_sensors_logo_transparent
         Me.pb_logo.Location = New System.Drawing.Point(12, 20)
         Me.pb_logo.Name = "pb_logo"
         Me.pb_logo.Size = New System.Drawing.Size(250, 85)

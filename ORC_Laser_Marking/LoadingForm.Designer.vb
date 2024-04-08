@@ -33,7 +33,7 @@ Partial Class LoadingForm
         'PictureBox1
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Image = Global.MASTER.My.Resources.Resources.logo_sanindo_tekno_batam
+        Me.PictureBox1.Image = Global.MASTER.My.Resources.Resources.telemecanique_sensors_logo_transparent
         Me.PictureBox1.Location = New System.Drawing.Point(86, 9)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(267, 79)

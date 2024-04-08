@@ -88,7 +88,7 @@ Public Class MainForm
                 Label1.Text = "MANUAL"
             End If
         End With
-        lbl_curr_time.Text = Date.Now.ToString("dd-MM-yyyy")
+        lbl_date.Text = Date.Now.ToString("dd-MM-yyyy")
         lbl_curr_time.Text = Date.Now.ToString("hh:mm:ss")
     End Sub
 
