@@ -111,6 +111,9 @@
         'Camera
         Dim MW5104_ As Boolean
         Dim MW5105_ As Boolean
+
+        'Empty
+        Dim Empty As Boolean
     End Structure
     Public Enum MainSequence
         ScanRef

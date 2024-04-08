@@ -820,9 +820,15 @@ Public Class MainForm
                         ' load data finish 
                         If MachineStatus.LoadDataFinish Then
                             Invoke(Sub()
-                                       lbl_op_ins.Text = "Load data finish, please start process..."
+                                       If MachineStatus.EmptyBusy = 1 Then
+                                           lbl_op_ins.Text = "Load data finish, please start process..." + vbCrLf + "Empty busy..."
+                                       ElseIf MachineStatus.EmptyFinish = 1 Then
+                                           lbl_op_ins.Text = "Load data finish, please start process..." + vbCrLf + "Empty finish..."
+                                       Else
+                                           lbl_op_ins.Text = "Load data finish, please start process..."
+                                       End If
                                    End Sub)
-                            SequenceIndex = MainSequence.GetData
+                            'SequenceIndex = MainSequence.GetData
                         Else
                             If MachineStatus.LoadDataFail Then
                                 Invoke(Sub()
@@ -926,6 +932,10 @@ Public Class MainForm
             If PlcTrigger.TrigLoadData Then
                 PlcTrigger.TrigLoadData = False
                 Modbus.WriteInteger(11, .TrigLoadData)
+            End If
+            If PlcTrigger.Empty Then
+                PlcTrigger.Empty = False
+                Modbus.WriteInteger(9, .EmptyRequest)
             End If
         End With
 
@@ -1220,5 +1230,21 @@ Public Class MainForm
         txt_po_num.Text = ""
         txt_qty.Text = ""
         SequenceIndex = MainSequence.ScanRef
+    End Sub
+
+    Private Sub btn_empty_MouseDown(sender As Object, e As MouseEventArgs) Handles btn_empty.MouseDown
+        With MachineStatus
+            .EmptyRequest = Modbus.WriteBit(.EmptyRequest, 0, 1)
+            PlcTrigger.Empty = True
+            PlcWriteState = True
+        End With
+    End Sub
+
+    Private Sub btn_empty_MouseUp(sender As Object, e As MouseEventArgs) Handles btn_empty.MouseUp
+        With MachineStatus
+            .EmptyRequest = Modbus.WriteBit(.EmptyRequest, 0, 0)
+            PlcTrigger.Empty = True
+            PlcWriteState = True
+        End With
     End Sub
 End Class
