@@ -5,7 +5,7 @@ Public Class DatabaseConnection
         Try
             Dim database As String
             With Config
-                database = "Data Source=" & .dbHostName & "\SQLEXPRESS01;
+                database = "Data Source=" & .dbHostName & "\SQLEXPRESS;
                 initial catalog=" & .dbDatabase & ";
                 User ID=" & .dbUsername & ";
                 Password=" & .dbPassword & ";

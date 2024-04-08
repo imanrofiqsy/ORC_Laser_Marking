@@ -5,6 +5,48 @@
     Public SequenceIndex As Integer
     Public LaserTrigger As Boolean
     Public PlcWriteState As Boolean
+    Public Fest As Festo
+    Public Structure Festo
+        'Festo Left
+        Dim MW370_ As Integer
+
+        Dim ModPosL As Integer
+        Dim TextTpositionL As Int32
+        Dim TextTvelocityL As Integer
+        Dim TextAPositionL As Integer
+        Dim TextFaultL As Integer
+
+        Dim IndicatorLeft As Integer
+        Dim IndAxEnabledL As Integer
+        Dim IndAxPosL As Integer
+        Dim IndAxSpL As Integer
+        Dim IndAxAckL As Integer
+        Dim IndAxRefL As Integer
+        Dim IndAxWarnL As Integer
+        Dim IndAxErrorL As Integer
+        Dim IndLockL As Integer
+        Dim IndErrorL As Integer
+
+        'Festo Right
+        Dim MW380_ As Integer
+
+        Dim ModPosR As Integer
+        Dim TextTpositionR As Int32
+        Dim TextTvelocityR As Integer
+        Dim TextAPositionR As Integer
+        Dim TextFaultR As Integer
+
+        Dim IndicatorRight As Integer
+        Dim IndAxEnabledR As Integer
+        Dim IndAxPosR As Integer
+        Dim IndAxSpR As Integer
+        Dim IndAxAckR As Integer
+        Dim IndAxRefR As Integer
+        Dim IndAxWarnR As Integer
+        Dim IndAxErrorR As Integer
+        Dim IndLockR As Integer
+        Dim IndErrorR As Integer
+    End Structure
     Public ProductResult As Result
     Public Structure Result
         Dim MeasurementLeft As String
@@ -37,12 +79,38 @@
         'References
         Dim TrigLoadData As Boolean
 
+        Dim LaserTrigger As Boolean
         Dim TurnTable As Boolean
         Dim V101 As Boolean
+        Dim V301 As Boolean
+        Dim V302 As Boolean
+        Dim V303 As Boolean
+        Dim V304 As Boolean
+        'Dim V401 As Boolean
 
+        Dim MW4101_ As Boolean
+
+        Dim V501 As Boolean
+        Dim V502 As Boolean
+        Dim V503 As Boolean
+        Dim V601 As Boolean
+        Dim V602 As Boolean
+        Dim V603 As Boolean
         Dim MW11100_ As Boolean
         Dim References As Boolean
         Dim HeidenResult As Boolean
+
+        'Festo
+        Dim MW370_ As Boolean
+        Dim MW380_ As Boolean
+        Dim ModPosL As Boolean
+        Dim ModPosR As Boolean
+        Dim TargetPosVelL As Boolean
+        Dim TargetPosVelR As Boolean
+
+        'Camera
+        Dim MW5104_ As Boolean
+        Dim MW5105_ As Boolean
     End Structure
     Public Enum MainSequence
         ScanRef
@@ -96,6 +164,36 @@
         'Current Cav number for each station
         Dim CavityST3 As Integer
         Dim CavityST5 As Integer
+
+        'Laser
+        Dim Laser As integer
+        Dim LaserTrigger As Integer
+        Dim LaserReset As Integer
+        Dim LaserError As Integer
+        Dim LaserReady As Integer
+        Dim LaserBusy As Integer
+        Dim LaserShutter As Integer
+        Dim LaserInterlock As Integer
+        Dim LaserCommandOK As Integer
+
+        'Camera
+        Dim LeftCamera As Integer
+        Dim LCamReset As Integer
+        Dim LCamTrigger As Integer
+        Dim LCamRun As Integer
+        Dim LCamReady As Integer
+        Dim LCamError As Integer
+        Dim LCamOK As Integer
+        Dim LCamNG As Integer
+
+        Dim RightCamera As Integer
+        Dim RCamReset As Integer
+        Dim RCamTrigger As Integer
+        Dim RCamRun As Integer
+        Dim RCamReady As Integer
+        Dim RCamError As Integer
+        Dim RCamOK As Integer
+        Dim RCamNG As Integer
     End Structure
     Public SetCylinder As Cylinder
     Public GetCylinder As Cylinder
@@ -103,6 +201,41 @@
         Dim TurnTable As Integer
         Dim V101 As Integer
         Dim V102 As Integer
+        Dim V301 As Integer
+        Dim V302 As Integer
+        Dim V303 As Integer
+        Dim V304 As Integer
+
+        Dim V401 As Integer
+        Dim MW4101_ As Integer
+
+        Dim MW5104_ As Integer
+        Dim MW5105_ As Integer
+
+        Dim V501 As Integer
+        Dim V502 As Integer
+        Dim V503 As Integer
+        Dim V601 As Integer
+        Dim V602 As Integer
+        Dim V603 As Integer
+        Dim MW1900_ As Integer
+        Dim MW1900_0 As Integer
+        Dim MW1900_1 As Integer
+        Dim MW2900_ As Integer
+        Dim MW2900_0 As Integer
+        Dim MW2900_1 As Integer
+        Dim MW3900_ As Integer
+        Dim MW3900_0 As Integer
+        Dim MW3900_1 As Integer
+        Dim MW4900_ As Integer
+        Dim MW4900_0 As Integer
+        Dim MW4900_1 As Integer
+        Dim MW5900_ As Integer
+        Dim MW5900_0 As Integer
+        Dim MW5900_1 As Integer
+        Dim MW6900_ As Integer
+        Dim MW6900_0 As Integer
+        Dim MW6900_1 As Integer
     End Structure
     Public Config As MachineConfig
     Public Structure MachineConfig
