@@ -162,8 +162,20 @@
         Dim MachineInitialized As Integer
 
         'Current Cav number for each station
+        Dim CavityST1 As Integer
+        Dim CavityST2 As Integer
         Dim CavityST3 As Integer
+        Dim CavityST4 As Integer
         Dim CavityST5 As Integer
+        Dim CavityST6 As Integer
+
+        'Cycle Time
+        Dim CycleST1 As Double
+        Dim CycleST2 As Double
+        Dim CycleST3 As Double
+        Dim CycleST4 As Double
+        Dim CycleST5 As Double
+        Dim CycleST6 As Double
 
         'Laser
         Dim Laser As integer

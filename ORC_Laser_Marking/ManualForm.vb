@@ -434,18 +434,21 @@ Public Class ManualForm
                 ' Access controls using Invoke or BeginInvoke
                 Invoke(Sub()
                            txt_Lfesto_aposition.Text = Fest.TextAPositionL
-                       End Sub)
-
-                Invoke(Sub()
                            txt_Rfesto_aposition.Text = Fest.TextAPositionR
-                       End Sub)
-
-                Invoke(Sub()
                            txt_Lfesto_fault.Text = Fest.TextFaultL
-                       End Sub)
-
-                Invoke(Sub()
                            txt_Rfesto_fault.Text = Fest.TextFaultR
+                           lbl_cav_1.Text = MachineStatus.CavityST1
+                           lbl_cav_2.Text = MachineStatus.CavityST2
+                           lbl_cav_3.Text = MachineStatus.CavityST3
+                           lbl_cav_4.Text = MachineStatus.CavityST4
+                           lbl_cav_5.Text = MachineStatus.CavityST5
+                           lbl_cav_6.Text = MachineStatus.CavityST6
+                           lbl_cyc_1.Text = MachineStatus.CycleST1
+                           lbl_cyc_2.Text = MachineStatus.CycleST2
+                           lbl_cyc_3.Text = MachineStatus.CycleST3
+                           lbl_cyc_4.Text = MachineStatus.CycleST4
+                           lbl_cyc_5.Text = MachineStatus.CycleST5
+                           lbl_cyc_6.Text = MachineStatus.CycleST6
                        End Sub)
             Else
                 ' Handle the case where the handle is not created yet

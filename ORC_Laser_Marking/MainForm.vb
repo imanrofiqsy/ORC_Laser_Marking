@@ -125,7 +125,9 @@ Public Class MainForm
         Try
             With Config
                 UpdateLoadingBar(20, "Establishing connection to PLC...")
-                Modbus.OpenPort("127.0.0.1", "502")
+                .IP = ReadINI(iniPath, "PLC", "IP")
+                .Port = ReadINI(iniPath, "PLC", "Port")
+                Modbus.OpenPort(.IP, .Port)
                 Thread.Sleep(500)
 
                 UpdateLoadingBar(40, "Loading?? 2...")
@@ -1038,8 +1040,19 @@ Public Class MainForm
             .EmptyBusy = Modbus.ReadBit(.EmptyRequest, 1)
             .EmptyFinish = Modbus.ReadBit(.EmptyRequest, 2)
 
+            .CavityST1 = Modbus.ReadInteger(1952)
+            .CavityST2 = Modbus.ReadInteger(2952)
             .CavityST3 = Modbus.ReadInteger(3952)
+            .CavityST4 = Modbus.ReadInteger(4952)
             .CavityST5 = Modbus.ReadInteger(5952)
+            .CavityST6 = Modbus.ReadInteger(6952)
+
+            .CycleST1 = Modbus.ReadFloat(1950)
+            .CycleST2 = Modbus.ReadFloat(2950)
+            .CycleST3 = Modbus.ReadFloat(3950)
+            .CycleST4 = Modbus.ReadFloat(4950)
+            .CycleST5 = Modbus.ReadFloat(5950)
+            .CycleST6 = Modbus.ReadFloat(6950)
 
             .OutputFail = Modbus.ReadInteger(4)
             .OutputPass = Modbus.ReadInteger(3)
