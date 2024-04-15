@@ -23,6 +23,8 @@ Partial Class AlarmForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.lbl_date = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -35,8 +37,9 @@ Partial Class AlarmForm
         Me.btn_login = New System.Windows.Forms.Button()
         Me.pb_status_mc = New System.Windows.Forms.PictureBox()
         Me.pb_logo = New System.Windows.Forms.PictureBox()
-        Me.pb_status_bar = New System.Windows.Forms.PictureBox()
+        Me.btn_refresh = New System.Windows.Forms.Button()
         Me.btn_home = New System.Windows.Forms.Button()
+        Me.pb_status_bar = New System.Windows.Forms.PictureBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,7 +120,25 @@ Partial Class AlarmForm
         '
         'DataGridView1
         '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.Location = New System.Drawing.Point(6, 19)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(1188, 521)
@@ -168,16 +189,17 @@ Partial Class AlarmForm
         Me.pb_logo.TabIndex = 51
         Me.pb_logo.TabStop = False
         '
-        'pb_status_bar
+        'btn_refresh
         '
-        Me.pb_status_bar.BackColor = System.Drawing.Color.LimeGreen
-        Me.pb_status_bar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pb_status_bar.Location = New System.Drawing.Point(425, 20)
-        Me.pb_status_bar.Name = "pb_status_bar"
-        Me.pb_status_bar.Size = New System.Drawing.Size(500, 85)
-        Me.pb_status_bar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.pb_status_bar.TabIndex = 53
-        Me.pb_status_bar.TabStop = False
+        Me.btn_refresh.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_refresh.Image = Global.MASTER.My.Resources.Resources.icons8_refresh_50
+        Me.btn_refresh.Location = New System.Drawing.Point(12, 260)
+        Me.btn_refresh.Name = "btn_refresh"
+        Me.btn_refresh.Size = New System.Drawing.Size(120, 85)
+        Me.btn_refresh.TabIndex = 60
+        Me.btn_refresh.Text = "Refresh"
+        Me.btn_refresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.btn_refresh.UseVisualStyleBackColor = True
         '
         'btn_home
         '
@@ -190,6 +212,17 @@ Partial Class AlarmForm
         Me.btn_home.Text = "Home"
         Me.btn_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.btn_home.UseVisualStyleBackColor = True
+        '
+        'pb_status_bar
+        '
+        Me.pb_status_bar.BackColor = System.Drawing.Color.LimeGreen
+        Me.pb_status_bar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pb_status_bar.Location = New System.Drawing.Point(425, 20)
+        Me.pb_status_bar.Name = "pb_status_bar"
+        Me.pb_status_bar.Size = New System.Drawing.Size(500, 85)
+        Me.pb_status_bar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pb_status_bar.TabIndex = 53
+        Me.pb_status_bar.TabStop = False
         '
         'AlarmForm
         '
@@ -207,6 +240,7 @@ Partial Class AlarmForm
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lbl_user)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.btn_refresh)
         Me.Controls.Add(Me.btn_home)
         Me.Controls.Add(Me.pb_status_bar)
         Me.Name = "AlarmForm"
@@ -236,4 +270,5 @@ Partial Class AlarmForm
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btn_home As Button
     Friend WithEvents DateTime As Timer
+    Friend WithEvents btn_refresh As Button
 End Class

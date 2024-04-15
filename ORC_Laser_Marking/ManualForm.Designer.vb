@@ -96,12 +96,44 @@ Partial Class ManualForm
         Me.gb_ST3 = New System.Windows.Forms.GroupBox()
         Me.tab_ST3 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.GroupBox40 = New System.Windows.Forms.GroupBox()
+        Me.ind_calibration_busy = New System.Windows.Forms.PictureBox()
+        Me.Label92 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btn_start_calibration = New System.Windows.Forms.Button()
+        Me.GroupBox39 = New System.Windows.Forms.GroupBox()
+        Me.lbl_cal_st3_r_6 = New System.Windows.Forms.Label()
+        Me.lbl_cal_st3_r_4 = New System.Windows.Forms.Label()
+        Me.lbl_cal_st3_r_2 = New System.Windows.Forms.Label()
+        Me.lbl_cal_st3_r_5 = New System.Windows.Forms.Label()
+        Me.Label84 = New System.Windows.Forms.Label()
+        Me.Label85 = New System.Windows.Forms.Label()
+        Me.Label86 = New System.Windows.Forms.Label()
+        Me.Label87 = New System.Windows.Forms.Label()
+        Me.lbl_cal_st3_r_3 = New System.Windows.Forms.Label()
+        Me.Label89 = New System.Windows.Forms.Label()
+        Me.lbl_cal_st3_r_1 = New System.Windows.Forms.Label()
+        Me.Label91 = New System.Windows.Forms.Label()
+        Me.GroupBox13 = New System.Windows.Forms.GroupBox()
+        Me.lbl_cal_st3_l_6 = New System.Windows.Forms.Label()
+        Me.lbl_cal_st3_l_4 = New System.Windows.Forms.Label()
+        Me.lbl_cal_st3_l_2 = New System.Windows.Forms.Label()
+        Me.lbl_cal_st3_l_5 = New System.Windows.Forms.Label()
+        Me.Label69 = New System.Windows.Forms.Label()
+        Me.Label83 = New System.Windows.Forms.Label()
+        Me.Label65 = New System.Windows.Forms.Label()
+        Me.Label79 = New System.Windows.Forms.Label()
+        Me.lbl_cal_st3_l_3 = New System.Windows.Forms.Label()
+        Me.Label67 = New System.Windows.Forms.Label()
+        Me.lbl_cal_st3_l_1 = New System.Windows.Forms.Label()
+        Me.Label64 = New System.Windows.Forms.Label()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.btn_v302_bw = New System.Windows.Forms.Button()
         Me.btn_v302_fw = New System.Windows.Forms.Button()
         Me.ind_v302_min = New System.Windows.Forms.PictureBox()
         Me.ind_v302_max = New System.Windows.Forms.PictureBox()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
+        Me.btn_v304_bw = New System.Windows.Forms.Button()
         Me.btn_v304_fw = New System.Windows.Forms.Button()
         Me.ind_v304_min = New System.Windows.Forms.PictureBox()
         Me.ind_v304_max = New System.Windows.Forms.PictureBox()
@@ -227,6 +259,8 @@ Partial Class ManualForm
         Me.GroupBox15 = New System.Windows.Forms.GroupBox()
         Me.btn_send_laser = New System.Windows.Forms.Button()
         Me.txt_laser_char = New System.Windows.Forms.TextBox()
+        Me.Label75 = New System.Windows.Forms.Label()
+        Me.Label72 = New System.Windows.Forms.Label()
         Me.GroupBox11 = New System.Windows.Forms.GroupBox()
         Me.btn_laser_reset = New System.Windows.Forms.Button()
         Me.btn_laser_trigger = New System.Windows.Forms.Button()
@@ -308,42 +342,6 @@ Partial Class ManualForm
         Me.pb_status_bar = New System.Windows.Forms.PictureBox()
         Me.pb_status_mc = New System.Windows.Forms.PictureBox()
         Me.pb_logo = New System.Windows.Forms.PictureBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox13 = New System.Windows.Forms.GroupBox()
-        Me.Label64 = New System.Windows.Forms.Label()
-        Me.lbl_cal_l_1 = New System.Windows.Forms.Label()
-        Me.Label65 = New System.Windows.Forms.Label()
-        Me.lbl_cal_l_2 = New System.Windows.Forms.Label()
-        Me.Label67 = New System.Windows.Forms.Label()
-        Me.lbl_cal_l_3 = New System.Windows.Forms.Label()
-        Me.Label69 = New System.Windows.Forms.Label()
-        Me.lbl_cal_l_4 = New System.Windows.Forms.Label()
-        Me.Label72 = New System.Windows.Forms.Label()
-        Me.Label73 = New System.Windows.Forms.Label()
-        Me.Label75 = New System.Windows.Forms.Label()
-        Me.Label77 = New System.Windows.Forms.Label()
-        Me.Label79 = New System.Windows.Forms.Label()
-        Me.lbl_cal_l_5 = New System.Windows.Forms.Label()
-        Me.Label83 = New System.Windows.Forms.Label()
-        Me.lbl_cal_l_6 = New System.Windows.Forms.Label()
-        Me.btn_v304_bw = New System.Windows.Forms.Button()
-        Me.GroupBox39 = New System.Windows.Forms.GroupBox()
-        Me.lbl_cal_r_6 = New System.Windows.Forms.Label()
-        Me.lbl_cal_r_4 = New System.Windows.Forms.Label()
-        Me.lbl_cal_r_2 = New System.Windows.Forms.Label()
-        Me.lbl_cal_r_5 = New System.Windows.Forms.Label()
-        Me.Label84 = New System.Windows.Forms.Label()
-        Me.Label85 = New System.Windows.Forms.Label()
-        Me.Label86 = New System.Windows.Forms.Label()
-        Me.Label87 = New System.Windows.Forms.Label()
-        Me.lbl_cal_r_3 = New System.Windows.Forms.Label()
-        Me.Label89 = New System.Windows.Forms.Label()
-        Me.lbl_cal_r_1 = New System.Windows.Forms.Label()
-        Me.Label91 = New System.Windows.Forms.Label()
-        Me.btn_start_calibration = New System.Windows.Forms.Button()
-        Me.GroupBox40 = New System.Windows.Forms.GroupBox()
-        Me.ind_calibration_busy = New System.Windows.Forms.PictureBox()
-        Me.Label92 = New System.Windows.Forms.Label()
         Me.gb_ST1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
@@ -369,6 +367,11 @@ Partial Class ManualForm
         Me.gb_ST3.SuspendLayout()
         Me.tab_ST3.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.GroupBox40.SuspendLayout()
+        CType(Me.ind_calibration_busy, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox39.SuspendLayout()
+        Me.GroupBox13.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
         CType(Me.ind_v302_min, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ind_v302_max, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -462,11 +465,6 @@ Partial Class ManualForm
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox13.SuspendLayout()
-        Me.GroupBox39.SuspendLayout()
-        Me.GroupBox40.SuspendLayout()
-        CType(Me.ind_calibration_busy, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -1247,9 +1245,9 @@ Partial Class ManualForm
         '
         Me.gb_ST3.Controls.Add(Me.tab_ST3)
         Me.gb_ST3.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gb_ST3.Location = New System.Drawing.Point(138, 169)
+        Me.gb_ST3.Location = New System.Drawing.Point(12, 315)
         Me.gb_ST3.Name = "gb_ST3"
-        Me.gb_ST3.Size = New System.Drawing.Size(1074, 540)
+        Me.gb_ST3.Size = New System.Drawing.Size(120, 25)
         Me.gb_ST3.TabIndex = 31
         Me.gb_ST3.TabStop = False
         Me.gb_ST3.Text = "STATION 3"
@@ -1281,6 +1279,317 @@ Partial Class ManualForm
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "OPERATION"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'GroupBox40
+        '
+        Me.GroupBox40.Controls.Add(Me.ind_calibration_busy)
+        Me.GroupBox40.Controls.Add(Me.Label92)
+        Me.GroupBox40.Location = New System.Drawing.Point(770, 6)
+        Me.GroupBox40.Name = "GroupBox40"
+        Me.GroupBox40.Size = New System.Drawing.Size(274, 76)
+        Me.GroupBox40.TabIndex = 121
+        Me.GroupBox40.TabStop = False
+        Me.GroupBox40.Text = "STATUS INDICATOR"
+        '
+        'ind_calibration_busy
+        '
+        Me.ind_calibration_busy.BackColor = System.Drawing.Color.Transparent
+        Me.ind_calibration_busy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ind_calibration_busy.Image = CType(resources.GetObject("ind_calibration_busy.Image"), System.Drawing.Image)
+        Me.ind_calibration_busy.Location = New System.Drawing.Point(6, 29)
+        Me.ind_calibration_busy.Name = "ind_calibration_busy"
+        Me.ind_calibration_busy.Size = New System.Drawing.Size(35, 35)
+        Me.ind_calibration_busy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ind_calibration_busy.TabIndex = 111
+        Me.ind_calibration_busy.TabStop = False
+        '
+        'Label92
+        '
+        Me.Label92.AutoSize = True
+        Me.Label92.Location = New System.Drawing.Point(47, 34)
+        Me.Label92.Name = "Label92"
+        Me.Label92.Size = New System.Drawing.Size(135, 23)
+        Me.Label92.TabIndex = 0
+        Me.Label92.Text = "Calibration Busy"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.btn_start_calibration)
+        Me.GroupBox1.Controls.Add(Me.GroupBox39)
+        Me.GroupBox1.Controls.Add(Me.GroupBox13)
+        Me.GroupBox1.Location = New System.Drawing.Point(373, 6)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(391, 271)
+        Me.GroupBox1.TabIndex = 120
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "CALIBRATION"
+        '
+        'btn_start_calibration
+        '
+        Me.btn_start_calibration.Location = New System.Drawing.Point(6, 232)
+        Me.btn_start_calibration.Name = "btn_start_calibration"
+        Me.btn_start_calibration.Size = New System.Drawing.Size(382, 33)
+        Me.btn_start_calibration.TabIndex = 108
+        Me.btn_start_calibration.Text = "START CALIBRATION"
+        Me.btn_start_calibration.UseVisualStyleBackColor = True
+        '
+        'GroupBox39
+        '
+        Me.GroupBox39.Controls.Add(Me.lbl_cal_st3_r_6)
+        Me.GroupBox39.Controls.Add(Me.lbl_cal_st3_r_4)
+        Me.GroupBox39.Controls.Add(Me.lbl_cal_st3_r_2)
+        Me.GroupBox39.Controls.Add(Me.lbl_cal_st3_r_5)
+        Me.GroupBox39.Controls.Add(Me.Label84)
+        Me.GroupBox39.Controls.Add(Me.Label85)
+        Me.GroupBox39.Controls.Add(Me.Label86)
+        Me.GroupBox39.Controls.Add(Me.Label87)
+        Me.GroupBox39.Controls.Add(Me.lbl_cal_st3_r_3)
+        Me.GroupBox39.Controls.Add(Me.Label89)
+        Me.GroupBox39.Controls.Add(Me.lbl_cal_st3_r_1)
+        Me.GroupBox39.Controls.Add(Me.Label91)
+        Me.GroupBox39.Location = New System.Drawing.Point(200, 25)
+        Me.GroupBox39.Name = "GroupBox39"
+        Me.GroupBox39.Size = New System.Drawing.Size(188, 201)
+        Me.GroupBox39.TabIndex = 0
+        Me.GroupBox39.TabStop = False
+        Me.GroupBox39.Text = "RIGHT"
+        '
+        'lbl_cal_st3_r_6
+        '
+        Me.lbl_cal_st3_r_6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cal_st3_r_6.Location = New System.Drawing.Point(85, 163)
+        Me.lbl_cal_st3_r_6.Name = "lbl_cal_st3_r_6"
+        Me.lbl_cal_st3_r_6.Size = New System.Drawing.Size(95, 23)
+        Me.lbl_cal_st3_r_6.TabIndex = 0
+        Me.lbl_cal_st3_r_6.Text = "..."
+        '
+        'lbl_cal_st3_r_4
+        '
+        Me.lbl_cal_st3_r_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cal_st3_r_4.Location = New System.Drawing.Point(85, 108)
+        Me.lbl_cal_st3_r_4.Name = "lbl_cal_st3_r_4"
+        Me.lbl_cal_st3_r_4.Size = New System.Drawing.Size(95, 23)
+        Me.lbl_cal_st3_r_4.TabIndex = 0
+        Me.lbl_cal_st3_r_4.Text = "..."
+        '
+        'lbl_cal_st3_r_2
+        '
+        Me.lbl_cal_st3_r_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cal_st3_r_2.Location = New System.Drawing.Point(85, 53)
+        Me.lbl_cal_st3_r_2.Name = "lbl_cal_st3_r_2"
+        Me.lbl_cal_st3_r_2.Size = New System.Drawing.Size(95, 23)
+        Me.lbl_cal_st3_r_2.TabIndex = 0
+        Me.lbl_cal_st3_r_2.Text = "..."
+        '
+        'lbl_cal_st3_r_5
+        '
+        Me.lbl_cal_st3_r_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cal_st3_r_5.Location = New System.Drawing.Point(85, 135)
+        Me.lbl_cal_st3_r_5.Name = "lbl_cal_st3_r_5"
+        Me.lbl_cal_st3_r_5.Size = New System.Drawing.Size(95, 23)
+        Me.lbl_cal_st3_r_5.TabIndex = 0
+        Me.lbl_cal_st3_r_5.Text = "..."
+        '
+        'Label84
+        '
+        Me.Label84.AutoSize = True
+        Me.Label84.Location = New System.Drawing.Point(6, 108)
+        Me.Label84.Name = "Label84"
+        Me.Label84.Size = New System.Drawing.Size(70, 23)
+        Me.Label84.TabIndex = 0
+        Me.Label84.Text = "Cavity 4"
+        '
+        'Label85
+        '
+        Me.Label85.AutoSize = True
+        Me.Label85.Location = New System.Drawing.Point(6, 163)
+        Me.Label85.Name = "Label85"
+        Me.Label85.Size = New System.Drawing.Size(70, 23)
+        Me.Label85.TabIndex = 0
+        Me.Label85.Text = "Cavity 6"
+        '
+        'Label86
+        '
+        Me.Label86.AutoSize = True
+        Me.Label86.Location = New System.Drawing.Point(6, 53)
+        Me.Label86.Name = "Label86"
+        Me.Label86.Size = New System.Drawing.Size(70, 23)
+        Me.Label86.TabIndex = 0
+        Me.Label86.Text = "Cavity 2"
+        '
+        'Label87
+        '
+        Me.Label87.AutoSize = True
+        Me.Label87.Location = New System.Drawing.Point(6, 135)
+        Me.Label87.Name = "Label87"
+        Me.Label87.Size = New System.Drawing.Size(70, 23)
+        Me.Label87.TabIndex = 0
+        Me.Label87.Text = "Cavity 5"
+        '
+        'lbl_cal_st3_r_3
+        '
+        Me.lbl_cal_st3_r_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cal_st3_r_3.Location = New System.Drawing.Point(85, 80)
+        Me.lbl_cal_st3_r_3.Name = "lbl_cal_st3_r_3"
+        Me.lbl_cal_st3_r_3.Size = New System.Drawing.Size(95, 23)
+        Me.lbl_cal_st3_r_3.TabIndex = 0
+        Me.lbl_cal_st3_r_3.Text = "..."
+        '
+        'Label89
+        '
+        Me.Label89.AutoSize = True
+        Me.Label89.Location = New System.Drawing.Point(6, 80)
+        Me.Label89.Name = "Label89"
+        Me.Label89.Size = New System.Drawing.Size(70, 23)
+        Me.Label89.TabIndex = 0
+        Me.Label89.Text = "Cavity 3"
+        '
+        'lbl_cal_st3_r_1
+        '
+        Me.lbl_cal_st3_r_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cal_st3_r_1.Location = New System.Drawing.Point(85, 25)
+        Me.lbl_cal_st3_r_1.Name = "lbl_cal_st3_r_1"
+        Me.lbl_cal_st3_r_1.Size = New System.Drawing.Size(95, 23)
+        Me.lbl_cal_st3_r_1.TabIndex = 0
+        Me.lbl_cal_st3_r_1.Text = "..."
+        '
+        'Label91
+        '
+        Me.Label91.AutoSize = True
+        Me.Label91.Location = New System.Drawing.Point(6, 25)
+        Me.Label91.Name = "Label91"
+        Me.Label91.Size = New System.Drawing.Size(70, 23)
+        Me.Label91.TabIndex = 0
+        Me.Label91.Text = "Cavity 1"
+        '
+        'GroupBox13
+        '
+        Me.GroupBox13.Controls.Add(Me.lbl_cal_st3_l_6)
+        Me.GroupBox13.Controls.Add(Me.lbl_cal_st3_l_4)
+        Me.GroupBox13.Controls.Add(Me.lbl_cal_st3_l_2)
+        Me.GroupBox13.Controls.Add(Me.lbl_cal_st3_l_5)
+        Me.GroupBox13.Controls.Add(Me.Label69)
+        Me.GroupBox13.Controls.Add(Me.Label83)
+        Me.GroupBox13.Controls.Add(Me.Label65)
+        Me.GroupBox13.Controls.Add(Me.Label79)
+        Me.GroupBox13.Controls.Add(Me.lbl_cal_st3_l_3)
+        Me.GroupBox13.Controls.Add(Me.Label67)
+        Me.GroupBox13.Controls.Add(Me.lbl_cal_st3_l_1)
+        Me.GroupBox13.Controls.Add(Me.Label64)
+        Me.GroupBox13.Location = New System.Drawing.Point(6, 25)
+        Me.GroupBox13.Name = "GroupBox13"
+        Me.GroupBox13.Size = New System.Drawing.Size(188, 201)
+        Me.GroupBox13.TabIndex = 0
+        Me.GroupBox13.TabStop = False
+        Me.GroupBox13.Text = "LEFT"
+        '
+        'lbl_cal_st3_l_6
+        '
+        Me.lbl_cal_st3_l_6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cal_st3_l_6.Location = New System.Drawing.Point(85, 163)
+        Me.lbl_cal_st3_l_6.Name = "lbl_cal_st3_l_6"
+        Me.lbl_cal_st3_l_6.Size = New System.Drawing.Size(95, 23)
+        Me.lbl_cal_st3_l_6.TabIndex = 0
+        Me.lbl_cal_st3_l_6.Text = "..."
+        '
+        'lbl_cal_st3_l_4
+        '
+        Me.lbl_cal_st3_l_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cal_st3_l_4.Location = New System.Drawing.Point(85, 108)
+        Me.lbl_cal_st3_l_4.Name = "lbl_cal_st3_l_4"
+        Me.lbl_cal_st3_l_4.Size = New System.Drawing.Size(95, 23)
+        Me.lbl_cal_st3_l_4.TabIndex = 0
+        Me.lbl_cal_st3_l_4.Text = "..."
+        '
+        'lbl_cal_st3_l_2
+        '
+        Me.lbl_cal_st3_l_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cal_st3_l_2.Location = New System.Drawing.Point(85, 53)
+        Me.lbl_cal_st3_l_2.Name = "lbl_cal_st3_l_2"
+        Me.lbl_cal_st3_l_2.Size = New System.Drawing.Size(95, 23)
+        Me.lbl_cal_st3_l_2.TabIndex = 0
+        Me.lbl_cal_st3_l_2.Text = "..."
+        '
+        'lbl_cal_st3_l_5
+        '
+        Me.lbl_cal_st3_l_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cal_st3_l_5.Location = New System.Drawing.Point(85, 135)
+        Me.lbl_cal_st3_l_5.Name = "lbl_cal_st3_l_5"
+        Me.lbl_cal_st3_l_5.Size = New System.Drawing.Size(95, 23)
+        Me.lbl_cal_st3_l_5.TabIndex = 0
+        Me.lbl_cal_st3_l_5.Text = "..."
+        '
+        'Label69
+        '
+        Me.Label69.AutoSize = True
+        Me.Label69.Location = New System.Drawing.Point(6, 108)
+        Me.Label69.Name = "Label69"
+        Me.Label69.Size = New System.Drawing.Size(70, 23)
+        Me.Label69.TabIndex = 0
+        Me.Label69.Text = "Cavity 4"
+        '
+        'Label83
+        '
+        Me.Label83.AutoSize = True
+        Me.Label83.Location = New System.Drawing.Point(6, 163)
+        Me.Label83.Name = "Label83"
+        Me.Label83.Size = New System.Drawing.Size(70, 23)
+        Me.Label83.TabIndex = 0
+        Me.Label83.Text = "Cavity 6"
+        '
+        'Label65
+        '
+        Me.Label65.AutoSize = True
+        Me.Label65.Location = New System.Drawing.Point(6, 53)
+        Me.Label65.Name = "Label65"
+        Me.Label65.Size = New System.Drawing.Size(70, 23)
+        Me.Label65.TabIndex = 0
+        Me.Label65.Text = "Cavity 2"
+        '
+        'Label79
+        '
+        Me.Label79.AutoSize = True
+        Me.Label79.Location = New System.Drawing.Point(6, 135)
+        Me.Label79.Name = "Label79"
+        Me.Label79.Size = New System.Drawing.Size(70, 23)
+        Me.Label79.TabIndex = 0
+        Me.Label79.Text = "Cavity 5"
+        '
+        'lbl_cal_st3_l_3
+        '
+        Me.lbl_cal_st3_l_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cal_st3_l_3.Location = New System.Drawing.Point(85, 80)
+        Me.lbl_cal_st3_l_3.Name = "lbl_cal_st3_l_3"
+        Me.lbl_cal_st3_l_3.Size = New System.Drawing.Size(95, 23)
+        Me.lbl_cal_st3_l_3.TabIndex = 0
+        Me.lbl_cal_st3_l_3.Text = "..."
+        '
+        'Label67
+        '
+        Me.Label67.AutoSize = True
+        Me.Label67.Location = New System.Drawing.Point(6, 80)
+        Me.Label67.Name = "Label67"
+        Me.Label67.Size = New System.Drawing.Size(70, 23)
+        Me.Label67.TabIndex = 0
+        Me.Label67.Text = "Cavity 3"
+        '
+        'lbl_cal_st3_l_1
+        '
+        Me.lbl_cal_st3_l_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cal_st3_l_1.Location = New System.Drawing.Point(85, 25)
+        Me.lbl_cal_st3_l_1.Name = "lbl_cal_st3_l_1"
+        Me.lbl_cal_st3_l_1.Size = New System.Drawing.Size(95, 23)
+        Me.lbl_cal_st3_l_1.TabIndex = 0
+        Me.lbl_cal_st3_l_1.Text = "..."
+        '
+        'Label64
+        '
+        Me.Label64.AutoSize = True
+        Me.Label64.Location = New System.Drawing.Point(6, 25)
+        Me.Label64.Name = "Label64"
+        Me.Label64.Size = New System.Drawing.Size(70, 23)
+        Me.Label64.TabIndex = 0
+        Me.Label64.Text = "Cavity 1"
         '
         'GroupBox7
         '
@@ -1349,6 +1658,15 @@ Partial Class ManualForm
         Me.GroupBox10.TabIndex = 117
         Me.GroupBox10.TabStop = False
         Me.GroupBox10.Text = "CYL V304"
+        '
+        'btn_v304_bw
+        '
+        Me.btn_v304_bw.Location = New System.Drawing.Point(12, 67)
+        Me.btn_v304_bw.Name = "btn_v304_bw"
+        Me.btn_v304_bw.Size = New System.Drawing.Size(110, 33)
+        Me.btn_v304_bw.TabIndex = 108
+        Me.btn_v304_bw.Text = "BACKWARD"
+        Me.btn_v304_bw.UseVisualStyleBackColor = True
         '
         'btn_v304_fw
         '
@@ -2516,9 +2834,9 @@ Partial Class ManualForm
         Me.gb_ST4.Controls.Add(Me.GroupBox6)
         Me.gb_ST4.Controls.Add(Me.GroupBox12)
         Me.gb_ST4.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.gb_ST4.Location = New System.Drawing.Point(12, 342)
+        Me.gb_ST4.Location = New System.Drawing.Point(12, 345)
         Me.gb_ST4.Name = "gb_ST4"
-        Me.gb_ST4.Size = New System.Drawing.Size(120, 20)
+        Me.gb_ST4.Size = New System.Drawing.Size(120, 24)
         Me.gb_ST4.TabIndex = 31
         Me.gb_ST4.TabStop = False
         Me.gb_ST4.Text = "STATION 4"
@@ -2690,11 +3008,9 @@ Partial Class ManualForm
         '
         'GroupBox15
         '
-        Me.GroupBox15.Controls.Add(Me.Label77)
         Me.GroupBox15.Controls.Add(Me.btn_send_laser)
         Me.GroupBox15.Controls.Add(Me.txt_laser_char)
         Me.GroupBox15.Controls.Add(Me.Label75)
-        Me.GroupBox15.Controls.Add(Me.Label73)
         Me.GroupBox15.Controls.Add(Me.Label72)
         Me.GroupBox15.Location = New System.Drawing.Point(197, 25)
         Me.GroupBox15.Name = "GroupBox15"
@@ -2718,6 +3034,24 @@ Partial Class ManualForm
         Me.txt_laser_char.Name = "txt_laser_char"
         Me.txt_laser_char.Size = New System.Drawing.Size(271, 29)
         Me.txt_laser_char.TabIndex = 113
+        '
+        'Label75
+        '
+        Me.Label75.AutoSize = True
+        Me.Label75.Location = New System.Drawing.Point(134, 33)
+        Me.Label75.Name = "Label75"
+        Me.Label75.Size = New System.Drawing.Size(70, 23)
+        Me.Label75.TabIndex = 0
+        Me.Label75.Text = "Cavity 1"
+        '
+        'Label72
+        '
+        Me.Label72.AutoSize = True
+        Me.Label72.Location = New System.Drawing.Point(134, 5)
+        Me.Label72.Name = "Label72"
+        Me.Label72.Size = New System.Drawing.Size(70, 23)
+        Me.Label72.TabIndex = 0
+        Me.Label72.Text = "Cavity 1"
         '
         'GroupBox11
         '
@@ -3628,362 +3962,6 @@ Partial Class ManualForm
         Me.pb_logo.TabIndex = 5
         Me.pb_logo.TabStop = False
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.btn_start_calibration)
-        Me.GroupBox1.Controls.Add(Me.GroupBox39)
-        Me.GroupBox1.Controls.Add(Me.GroupBox13)
-        Me.GroupBox1.Location = New System.Drawing.Point(373, 6)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(391, 271)
-        Me.GroupBox1.TabIndex = 120
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "CALIBRATION"
-        '
-        'GroupBox13
-        '
-        Me.GroupBox13.Controls.Add(Me.lbl_cal_l_6)
-        Me.GroupBox13.Controls.Add(Me.lbl_cal_l_4)
-        Me.GroupBox13.Controls.Add(Me.lbl_cal_l_2)
-        Me.GroupBox13.Controls.Add(Me.lbl_cal_l_5)
-        Me.GroupBox13.Controls.Add(Me.Label69)
-        Me.GroupBox13.Controls.Add(Me.Label83)
-        Me.GroupBox13.Controls.Add(Me.Label65)
-        Me.GroupBox13.Controls.Add(Me.Label79)
-        Me.GroupBox13.Controls.Add(Me.lbl_cal_l_3)
-        Me.GroupBox13.Controls.Add(Me.Label67)
-        Me.GroupBox13.Controls.Add(Me.lbl_cal_l_1)
-        Me.GroupBox13.Controls.Add(Me.Label64)
-        Me.GroupBox13.Location = New System.Drawing.Point(6, 25)
-        Me.GroupBox13.Name = "GroupBox13"
-        Me.GroupBox13.Size = New System.Drawing.Size(188, 201)
-        Me.GroupBox13.TabIndex = 0
-        Me.GroupBox13.TabStop = False
-        Me.GroupBox13.Text = "LEFT"
-        '
-        'Label64
-        '
-        Me.Label64.AutoSize = True
-        Me.Label64.Location = New System.Drawing.Point(6, 25)
-        Me.Label64.Name = "Label64"
-        Me.Label64.Size = New System.Drawing.Size(70, 23)
-        Me.Label64.TabIndex = 0
-        Me.Label64.Text = "Cavity 1"
-        '
-        'lbl_cal_l_1
-        '
-        Me.lbl_cal_l_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_cal_l_1.Location = New System.Drawing.Point(85, 25)
-        Me.lbl_cal_l_1.Name = "lbl_cal_l_1"
-        Me.lbl_cal_l_1.Size = New System.Drawing.Size(95, 23)
-        Me.lbl_cal_l_1.TabIndex = 0
-        Me.lbl_cal_l_1.Text = "..."
-        '
-        'Label65
-        '
-        Me.Label65.AutoSize = True
-        Me.Label65.Location = New System.Drawing.Point(6, 53)
-        Me.Label65.Name = "Label65"
-        Me.Label65.Size = New System.Drawing.Size(70, 23)
-        Me.Label65.TabIndex = 0
-        Me.Label65.Text = "Cavity 2"
-        '
-        'lbl_cal_l_2
-        '
-        Me.lbl_cal_l_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_cal_l_2.Location = New System.Drawing.Point(85, 53)
-        Me.lbl_cal_l_2.Name = "lbl_cal_l_2"
-        Me.lbl_cal_l_2.Size = New System.Drawing.Size(95, 23)
-        Me.lbl_cal_l_2.TabIndex = 0
-        Me.lbl_cal_l_2.Text = "..."
-        '
-        'Label67
-        '
-        Me.Label67.AutoSize = True
-        Me.Label67.Location = New System.Drawing.Point(6, 80)
-        Me.Label67.Name = "Label67"
-        Me.Label67.Size = New System.Drawing.Size(70, 23)
-        Me.Label67.TabIndex = 0
-        Me.Label67.Text = "Cavity 3"
-        '
-        'lbl_cal_l_3
-        '
-        Me.lbl_cal_l_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_cal_l_3.Location = New System.Drawing.Point(85, 80)
-        Me.lbl_cal_l_3.Name = "lbl_cal_l_3"
-        Me.lbl_cal_l_3.Size = New System.Drawing.Size(95, 23)
-        Me.lbl_cal_l_3.TabIndex = 0
-        Me.lbl_cal_l_3.Text = "..."
-        '
-        'Label69
-        '
-        Me.Label69.AutoSize = True
-        Me.Label69.Location = New System.Drawing.Point(6, 108)
-        Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(70, 23)
-        Me.Label69.TabIndex = 0
-        Me.Label69.Text = "Cavity 4"
-        '
-        'lbl_cal_l_4
-        '
-        Me.lbl_cal_l_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_cal_l_4.Location = New System.Drawing.Point(85, 108)
-        Me.lbl_cal_l_4.Name = "lbl_cal_l_4"
-        Me.lbl_cal_l_4.Size = New System.Drawing.Size(95, 23)
-        Me.lbl_cal_l_4.TabIndex = 0
-        Me.lbl_cal_l_4.Text = "..."
-        '
-        'Label72
-        '
-        Me.Label72.AutoSize = True
-        Me.Label72.Location = New System.Drawing.Point(134, 5)
-        Me.Label72.Name = "Label72"
-        Me.Label72.Size = New System.Drawing.Size(70, 23)
-        Me.Label72.TabIndex = 0
-        Me.Label72.Text = "Cavity 1"
-        '
-        'Label73
-        '
-        Me.Label73.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label73.Location = New System.Drawing.Point(213, 5)
-        Me.Label73.Name = "Label73"
-        Me.Label73.Size = New System.Drawing.Size(95, 23)
-        Me.Label73.TabIndex = 0
-        Me.Label73.Text = "..."
-        '
-        'Label75
-        '
-        Me.Label75.AutoSize = True
-        Me.Label75.Location = New System.Drawing.Point(134, 33)
-        Me.Label75.Name = "Label75"
-        Me.Label75.Size = New System.Drawing.Size(70, 23)
-        Me.Label75.TabIndex = 0
-        Me.Label75.Text = "Cavity 1"
-        '
-        'Label77
-        '
-        Me.Label77.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label77.Location = New System.Drawing.Point(213, 33)
-        Me.Label77.Name = "Label77"
-        Me.Label77.Size = New System.Drawing.Size(95, 23)
-        Me.Label77.TabIndex = 0
-        Me.Label77.Text = "..."
-        '
-        'Label79
-        '
-        Me.Label79.AutoSize = True
-        Me.Label79.Location = New System.Drawing.Point(6, 135)
-        Me.Label79.Name = "Label79"
-        Me.Label79.Size = New System.Drawing.Size(70, 23)
-        Me.Label79.TabIndex = 0
-        Me.Label79.Text = "Cavity 5"
-        '
-        'lbl_cal_l_5
-        '
-        Me.lbl_cal_l_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_cal_l_5.Location = New System.Drawing.Point(85, 135)
-        Me.lbl_cal_l_5.Name = "lbl_cal_l_5"
-        Me.lbl_cal_l_5.Size = New System.Drawing.Size(95, 23)
-        Me.lbl_cal_l_5.TabIndex = 0
-        Me.lbl_cal_l_5.Text = "..."
-        '
-        'Label83
-        '
-        Me.Label83.AutoSize = True
-        Me.Label83.Location = New System.Drawing.Point(6, 163)
-        Me.Label83.Name = "Label83"
-        Me.Label83.Size = New System.Drawing.Size(70, 23)
-        Me.Label83.TabIndex = 0
-        Me.Label83.Text = "Cavity 6"
-        '
-        'lbl_cal_l_6
-        '
-        Me.lbl_cal_l_6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_cal_l_6.Location = New System.Drawing.Point(85, 163)
-        Me.lbl_cal_l_6.Name = "lbl_cal_l_6"
-        Me.lbl_cal_l_6.Size = New System.Drawing.Size(95, 23)
-        Me.lbl_cal_l_6.TabIndex = 0
-        Me.lbl_cal_l_6.Text = "..."
-        '
-        'btn_v304_bw
-        '
-        Me.btn_v304_bw.Location = New System.Drawing.Point(12, 67)
-        Me.btn_v304_bw.Name = "btn_v304_bw"
-        Me.btn_v304_bw.Size = New System.Drawing.Size(110, 33)
-        Me.btn_v304_bw.TabIndex = 108
-        Me.btn_v304_bw.Text = "BACKWARD"
-        Me.btn_v304_bw.UseVisualStyleBackColor = True
-        '
-        'GroupBox39
-        '
-        Me.GroupBox39.Controls.Add(Me.lbl_cal_r_6)
-        Me.GroupBox39.Controls.Add(Me.lbl_cal_r_4)
-        Me.GroupBox39.Controls.Add(Me.lbl_cal_r_2)
-        Me.GroupBox39.Controls.Add(Me.lbl_cal_r_5)
-        Me.GroupBox39.Controls.Add(Me.Label84)
-        Me.GroupBox39.Controls.Add(Me.Label85)
-        Me.GroupBox39.Controls.Add(Me.Label86)
-        Me.GroupBox39.Controls.Add(Me.Label87)
-        Me.GroupBox39.Controls.Add(Me.lbl_cal_r_3)
-        Me.GroupBox39.Controls.Add(Me.Label89)
-        Me.GroupBox39.Controls.Add(Me.lbl_cal_r_1)
-        Me.GroupBox39.Controls.Add(Me.Label91)
-        Me.GroupBox39.Location = New System.Drawing.Point(200, 25)
-        Me.GroupBox39.Name = "GroupBox39"
-        Me.GroupBox39.Size = New System.Drawing.Size(188, 201)
-        Me.GroupBox39.TabIndex = 0
-        Me.GroupBox39.TabStop = False
-        Me.GroupBox39.Text = "RIGHT"
-        '
-        'lbl_cal_r_6
-        '
-        Me.lbl_cal_r_6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_cal_r_6.Location = New System.Drawing.Point(85, 163)
-        Me.lbl_cal_r_6.Name = "lbl_cal_r_6"
-        Me.lbl_cal_r_6.Size = New System.Drawing.Size(95, 23)
-        Me.lbl_cal_r_6.TabIndex = 0
-        Me.lbl_cal_r_6.Text = "..."
-        '
-        'lbl_cal_r_4
-        '
-        Me.lbl_cal_r_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_cal_r_4.Location = New System.Drawing.Point(85, 108)
-        Me.lbl_cal_r_4.Name = "lbl_cal_r_4"
-        Me.lbl_cal_r_4.Size = New System.Drawing.Size(95, 23)
-        Me.lbl_cal_r_4.TabIndex = 0
-        Me.lbl_cal_r_4.Text = "..."
-        '
-        'lbl_cal_r_2
-        '
-        Me.lbl_cal_r_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_cal_r_2.Location = New System.Drawing.Point(85, 53)
-        Me.lbl_cal_r_2.Name = "lbl_cal_r_2"
-        Me.lbl_cal_r_2.Size = New System.Drawing.Size(95, 23)
-        Me.lbl_cal_r_2.TabIndex = 0
-        Me.lbl_cal_r_2.Text = "..."
-        '
-        'lbl_cal_r_5
-        '
-        Me.lbl_cal_r_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_cal_r_5.Location = New System.Drawing.Point(85, 135)
-        Me.lbl_cal_r_5.Name = "lbl_cal_r_5"
-        Me.lbl_cal_r_5.Size = New System.Drawing.Size(95, 23)
-        Me.lbl_cal_r_5.TabIndex = 0
-        Me.lbl_cal_r_5.Text = "..."
-        '
-        'Label84
-        '
-        Me.Label84.AutoSize = True
-        Me.Label84.Location = New System.Drawing.Point(6, 108)
-        Me.Label84.Name = "Label84"
-        Me.Label84.Size = New System.Drawing.Size(70, 23)
-        Me.Label84.TabIndex = 0
-        Me.Label84.Text = "Cavity 4"
-        '
-        'Label85
-        '
-        Me.Label85.AutoSize = True
-        Me.Label85.Location = New System.Drawing.Point(6, 163)
-        Me.Label85.Name = "Label85"
-        Me.Label85.Size = New System.Drawing.Size(70, 23)
-        Me.Label85.TabIndex = 0
-        Me.Label85.Text = "Cavity 6"
-        '
-        'Label86
-        '
-        Me.Label86.AutoSize = True
-        Me.Label86.Location = New System.Drawing.Point(6, 53)
-        Me.Label86.Name = "Label86"
-        Me.Label86.Size = New System.Drawing.Size(70, 23)
-        Me.Label86.TabIndex = 0
-        Me.Label86.Text = "Cavity 2"
-        '
-        'Label87
-        '
-        Me.Label87.AutoSize = True
-        Me.Label87.Location = New System.Drawing.Point(6, 135)
-        Me.Label87.Name = "Label87"
-        Me.Label87.Size = New System.Drawing.Size(70, 23)
-        Me.Label87.TabIndex = 0
-        Me.Label87.Text = "Cavity 5"
-        '
-        'lbl_cal_r_3
-        '
-        Me.lbl_cal_r_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_cal_r_3.Location = New System.Drawing.Point(85, 80)
-        Me.lbl_cal_r_3.Name = "lbl_cal_r_3"
-        Me.lbl_cal_r_3.Size = New System.Drawing.Size(95, 23)
-        Me.lbl_cal_r_3.TabIndex = 0
-        Me.lbl_cal_r_3.Text = "..."
-        '
-        'Label89
-        '
-        Me.Label89.AutoSize = True
-        Me.Label89.Location = New System.Drawing.Point(6, 80)
-        Me.Label89.Name = "Label89"
-        Me.Label89.Size = New System.Drawing.Size(70, 23)
-        Me.Label89.TabIndex = 0
-        Me.Label89.Text = "Cavity 3"
-        '
-        'lbl_cal_r_1
-        '
-        Me.lbl_cal_r_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lbl_cal_r_1.Location = New System.Drawing.Point(85, 25)
-        Me.lbl_cal_r_1.Name = "lbl_cal_r_1"
-        Me.lbl_cal_r_1.Size = New System.Drawing.Size(95, 23)
-        Me.lbl_cal_r_1.TabIndex = 0
-        Me.lbl_cal_r_1.Text = "..."
-        '
-        'Label91
-        '
-        Me.Label91.AutoSize = True
-        Me.Label91.Location = New System.Drawing.Point(6, 25)
-        Me.Label91.Name = "Label91"
-        Me.Label91.Size = New System.Drawing.Size(70, 23)
-        Me.Label91.TabIndex = 0
-        Me.Label91.Text = "Cavity 1"
-        '
-        'btn_start_calibration
-        '
-        Me.btn_start_calibration.Location = New System.Drawing.Point(6, 232)
-        Me.btn_start_calibration.Name = "btn_start_calibration"
-        Me.btn_start_calibration.Size = New System.Drawing.Size(382, 33)
-        Me.btn_start_calibration.TabIndex = 108
-        Me.btn_start_calibration.Text = "START CALIBRATION"
-        Me.btn_start_calibration.UseVisualStyleBackColor = True
-        '
-        'GroupBox40
-        '
-        Me.GroupBox40.Controls.Add(Me.ind_calibration_busy)
-        Me.GroupBox40.Controls.Add(Me.Label92)
-        Me.GroupBox40.Location = New System.Drawing.Point(770, 6)
-        Me.GroupBox40.Name = "GroupBox40"
-        Me.GroupBox40.Size = New System.Drawing.Size(274, 76)
-        Me.GroupBox40.TabIndex = 121
-        Me.GroupBox40.TabStop = False
-        Me.GroupBox40.Text = "STATUS INDICATOR"
-        '
-        'ind_calibration_busy
-        '
-        Me.ind_calibration_busy.BackColor = System.Drawing.Color.Transparent
-        Me.ind_calibration_busy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.ind_calibration_busy.Image = CType(resources.GetObject("ind_calibration_busy.Image"), System.Drawing.Image)
-        Me.ind_calibration_busy.Location = New System.Drawing.Point(6, 29)
-        Me.ind_calibration_busy.Name = "ind_calibration_busy"
-        Me.ind_calibration_busy.Size = New System.Drawing.Size(35, 35)
-        Me.ind_calibration_busy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ind_calibration_busy.TabIndex = 111
-        Me.ind_calibration_busy.TabStop = False
-        '
-        'Label92
-        '
-        Me.Label92.AutoSize = True
-        Me.Label92.Location = New System.Drawing.Point(47, 34)
-        Me.Label92.Name = "Label92"
-        Me.Label92.Size = New System.Drawing.Size(135, 23)
-        Me.Label92.TabIndex = 0
-        Me.Label92.Text = "Calibration Busy"
-        '
         'ManualForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -4045,6 +4023,14 @@ Partial Class ManualForm
         Me.gb_ST3.ResumeLayout(False)
         Me.tab_ST3.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
+        Me.GroupBox40.ResumeLayout(False)
+        Me.GroupBox40.PerformLayout()
+        CType(Me.ind_calibration_busy, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox39.ResumeLayout(False)
+        Me.GroupBox39.PerformLayout()
+        Me.GroupBox13.ResumeLayout(False)
+        Me.GroupBox13.PerformLayout()
         Me.GroupBox7.ResumeLayout(False)
         CType(Me.ind_v302_min, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ind_v302_max, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4150,14 +4136,6 @@ Partial Class ManualForm
         CType(Me.pb_status_bar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_status_mc, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox13.ResumeLayout(False)
-        Me.GroupBox13.PerformLayout()
-        Me.GroupBox39.ResumeLayout(False)
-        Me.GroupBox39.PerformLayout()
-        Me.GroupBox40.ResumeLayout(False)
-        Me.GroupBox40.PerformLayout()
-        CType(Me.ind_calibration_busy, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -4453,34 +4431,32 @@ Partial Class ManualForm
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btn_start_calibration As Button
     Friend WithEvents GroupBox39 As GroupBox
-    Friend WithEvents lbl_cal_r_6 As Label
-    Friend WithEvents lbl_cal_r_4 As Label
-    Friend WithEvents lbl_cal_r_2 As Label
-    Friend WithEvents lbl_cal_r_5 As Label
+    Friend WithEvents lbl_cal_st3_r_6 As Label
+    Friend WithEvents lbl_cal_st3_r_4 As Label
+    Friend WithEvents lbl_cal_st3_r_2 As Label
+    Friend WithEvents lbl_cal_st3_r_5 As Label
     Friend WithEvents Label84 As Label
     Friend WithEvents Label85 As Label
     Friend WithEvents Label86 As Label
     Friend WithEvents Label87 As Label
-    Friend WithEvents lbl_cal_r_3 As Label
+    Friend WithEvents lbl_cal_st3_r_3 As Label
     Friend WithEvents Label89 As Label
-    Friend WithEvents lbl_cal_r_1 As Label
+    Friend WithEvents lbl_cal_st3_r_1 As Label
     Friend WithEvents Label91 As Label
     Friend WithEvents GroupBox13 As GroupBox
-    Friend WithEvents lbl_cal_l_6 As Label
-    Friend WithEvents lbl_cal_l_4 As Label
-    Friend WithEvents lbl_cal_l_2 As Label
-    Friend WithEvents lbl_cal_l_5 As Label
+    Friend WithEvents lbl_cal_st3_l_6 As Label
+    Friend WithEvents lbl_cal_st3_l_4 As Label
+    Friend WithEvents lbl_cal_st3_l_2 As Label
+    Friend WithEvents lbl_cal_st3_l_5 As Label
     Friend WithEvents Label69 As Label
     Friend WithEvents Label83 As Label
     Friend WithEvents Label65 As Label
     Friend WithEvents Label79 As Label
-    Friend WithEvents lbl_cal_l_3 As Label
+    Friend WithEvents lbl_cal_st3_l_3 As Label
     Friend WithEvents Label67 As Label
-    Friend WithEvents lbl_cal_l_1 As Label
+    Friend WithEvents lbl_cal_st3_l_1 As Label
     Friend WithEvents Label64 As Label
     Friend WithEvents btn_v304_bw As Button
-    Friend WithEvents Label77 As Label
     Friend WithEvents Label75 As Label
-    Friend WithEvents Label73 As Label
     Friend WithEvents Label72 As Label
 End Class

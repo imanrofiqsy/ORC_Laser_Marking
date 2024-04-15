@@ -24,7 +24,7 @@ Partial Class MainForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txt_alarm = New System.Windows.Forms.TextBox()
         Me.lbl_date = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lbl_curr_time = New System.Windows.Forms.Label()
@@ -217,18 +217,18 @@ Partial Class MainForm
         CType(Me.pb_logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'txt_alarm
         '
-        Me.TextBox1.BackColor = System.Drawing.Color.DarkRed
-        Me.TextBox1.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.ForeColor = System.Drawing.SystemColors.Window
-        Me.TextBox1.Location = New System.Drawing.Point(12, 121)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(1326, 30)
-        Me.TextBox1.TabIndex = 26
-        Me.TextBox1.Text = "ALARM : . . . . . . . . "
+        Me.txt_alarm.BackColor = System.Drawing.Color.DarkRed
+        Me.txt_alarm.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_alarm.ForeColor = System.Drawing.SystemColors.Window
+        Me.txt_alarm.Location = New System.Drawing.Point(12, 121)
+        Me.txt_alarm.Multiline = True
+        Me.txt_alarm.Name = "txt_alarm"
+        Me.txt_alarm.ReadOnly = True
+        Me.txt_alarm.Size = New System.Drawing.Size(1326, 30)
+        Me.txt_alarm.TabIndex = 26
+        Me.txt_alarm.Text = "ALARM : . . . . . . . . "
         '
         'lbl_date
         '
@@ -2048,6 +2048,7 @@ Partial Class MainForm
         '
         'btn_st6
         '
+        Me.btn_st6.Enabled = False
         Me.btn_st6.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st6.Image = CType(resources.GetObject("btn_st6.Image"), System.Drawing.Image)
         Me.btn_st6.Location = New System.Drawing.Point(1218, 624)
@@ -2072,6 +2073,7 @@ Partial Class MainForm
         '
         'btn_st5
         '
+        Me.btn_st5.Enabled = False
         Me.btn_st5.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st5.Image = CType(resources.GetObject("btn_st5.Image"), System.Drawing.Image)
         Me.btn_st5.Location = New System.Drawing.Point(1218, 533)
@@ -2096,6 +2098,7 @@ Partial Class MainForm
         '
         'btn_st4
         '
+        Me.btn_st4.Enabled = False
         Me.btn_st4.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st4.Image = CType(resources.GetObject("btn_st4.Image"), System.Drawing.Image)
         Me.btn_st4.Location = New System.Drawing.Point(1218, 442)
@@ -2120,6 +2123,7 @@ Partial Class MainForm
         '
         'btn_st3
         '
+        Me.btn_st3.Enabled = False
         Me.btn_st3.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st3.Image = CType(resources.GetObject("btn_st3.Image"), System.Drawing.Image)
         Me.btn_st3.Location = New System.Drawing.Point(1218, 351)
@@ -2144,6 +2148,7 @@ Partial Class MainForm
         '
         'btn_st2
         '
+        Me.btn_st2.Enabled = False
         Me.btn_st2.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st2.Image = CType(resources.GetObject("btn_st2.Image"), System.Drawing.Image)
         Me.btn_st2.Location = New System.Drawing.Point(1218, 260)
@@ -2168,6 +2173,7 @@ Partial Class MainForm
         '
         'btn_st1
         '
+        Me.btn_st1.Enabled = False
         Me.btn_st1.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_st1.Image = CType(resources.GetObject("btn_st1.Image"), System.Drawing.Image)
         Me.btn_st1.Location = New System.Drawing.Point(1218, 169)
@@ -2243,7 +2249,7 @@ Partial Class MainForm
         Me.Controls.Add(Me.StartDate)
         Me.Controls.Add(Me.dgv_temp)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txt_alarm)
         Me.Controls.Add(Me.btn_st6)
         Me.Controls.Add(Me.btn_setting)
         Me.Controls.Add(Me.btn_st5)
@@ -2298,7 +2304,7 @@ Partial Class MainForm
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txt_alarm As TextBox
     Friend WithEvents btn_st6 As Button
     Friend WithEvents btn_setting As Button
     Friend WithEvents btn_st5 As Button

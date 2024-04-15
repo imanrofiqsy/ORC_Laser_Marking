@@ -9,7 +9,8 @@ Public Class MainForm
     Dim ThreadLoadData As Thread
     Dim ThreadST3 As Thread
     Dim ThreadST5 As Thread
-    Dim ThreadProductResult As Thread
+    Dim ThreadST6 As Thread
+    Dim ThreadAlarm As Thread
     Dim Modbus = New Modbus
     Dim Database = New DatabaseConnection
 
@@ -149,8 +150,10 @@ Public Class MainForm
                 ThreadST3.Start()
                 ThreadST5 = New Thread(AddressOf MainST5)
                 ThreadST5.Start()
-                ThreadProductResult = New Thread(AddressOf MainProductResult)
-                ThreadProductResult.Start()
+                ThreadST6 = New Thread(AddressOf MainST6)
+                ThreadST6.Start()
+                ThreadAlarm = New Thread(AddressOf MainAlarm)
+                ThreadAlarm.Start()
                 Thread.Sleep(500)
 
                 UpdateLoadingBar(100, "Loading?? 6...")
@@ -175,6 +178,63 @@ Public Class MainForm
         PlcWriteState = True
         ind_software_open.BackColor = Color.Lime
         SequenceIndex = MainSequence.ScanRef
+    End Sub
+    Private Sub MainAlarm()
+        Do
+            With MachineAlarm
+                If .DoorLock1 Then
+                    AlarmMessage = "Door Lock 1 Open"
+                ElseIf .DoorLock2 Then
+                    AlarmMessage = "Door Lock 2 Open"
+                ElseIf .DoorLock3 Then
+                    AlarmMessage = "Door Lock 3 Open"
+                ElseIf .DoorLock4 Then
+                    AlarmMessage = "Door Lock 4 Open"
+                ElseIf .Curtain Then
+                    AlarmMessage = "Curtain Sensor Discrepancy"
+                ElseIf .V101 Then
+                    AlarmMessage = "V101 Discrepancy"
+                ElseIf .V301 Then
+                    AlarmMessage = "V301 Discrepancy"
+                ElseIf .V302 Then
+                    AlarmMessage = "V302 Discrepancy"
+                ElseIf .V303 Then
+                    AlarmMessage = "V303 Discrepancy"
+                ElseIf .V304 Then
+                    AlarmMessage = "V304 Discrepancy"
+                ElseIf .V401 Then
+                    AlarmMessage = "V401 Discrepancy"
+                ElseIf .LaserError Then
+                    AlarmMessage = "ST4 Laser Error please check the laser"
+                ElseIf .ShutterLaserError Then
+                    AlarmMessage = "ST4 Shutter Laser Error please check or reset"
+                ElseIf .InterlockLaserError Then
+                    AlarmMessage = "ST4 Interlock Laser Error please check or reset"
+                ElseIf .V501 Then
+                    AlarmMessage = "V501 Discrepancy"
+                ElseIf .V502 Then
+                    AlarmMessage = "V502 Discrepancy"
+                ElseIf .V503 Then
+                    AlarmMessage = "V503 Discrepancy"
+                ElseIf .CamLeftError Then
+                    AlarmMessage = "ST5 Left Camera Error please reset the camera"
+                ElseIf .CamRightError Then
+                    AlarmMessage = "ST5 Right Camera Error please reset the camera"
+                ElseIf .V601 Then
+                    AlarmMessage = "V601 Discrepancy"
+                ElseIf .V602 Then
+                    AlarmMessage = "V602 Discrepancy"
+                ElseIf .V603 Then
+                    AlarmMessage = "V603 Discrepancy"
+                Else
+                    AlarmMessage = ". . . . . . . . "
+                End If
+                Invoke(Sub()
+                           txt_alarm.Text = "ALARM : " + AlarmMessage
+                       End Sub)
+            End With
+            Thread.Sleep(150)
+        Loop
     End Sub
     Private Sub SaveDataLog()
         StartDate.Value = Date.Today
@@ -236,7 +296,7 @@ Public Class MainForm
             Console.WriteLine("Error Save Datalog" + ex.Message)
         End Try
     End Sub
-    Private Sub MainProductResult()
+    Private Sub MainST6()
         Do
             With PlcSave
                 If .MW11100_10 = 1 Then
@@ -937,53 +997,57 @@ Public Class MainForm
                 PlcTrigger.Empty = False
                 Modbus.WriteInteger(9, .EmptyRequest)
             End If
+            If PlcTrigger.StartCali Then
+                PlcTrigger.StartCali = False
+                Modbus.WriteInteger(3105, .StartCali)
+            End If
             If PlcTrigger.Left1 Then
                 PlcTrigger.Left1 = False
-                Modbus.WriteInteger(2020, .Left1)
+                Modbus.WriteInteger(3020, .Left1)
             End If
             If PlcTrigger.Left2 Then
                 PlcTrigger.Left2 = False
-                Modbus.WriteInteger(2022, .Left2)
+                Modbus.WriteInteger(3022, .Left2)
             End If
             If PlcTrigger.Left3 Then
                 PlcTrigger.Left3 = False
-                Modbus.WriteInteger(2024, .Left3)
+                Modbus.WriteInteger(3024, .Left3)
             End If
             If PlcTrigger.Left4 Then
                 PlcTrigger.Left4 = False
-                Modbus.WriteInteger(2026, .Left4)
+                Modbus.WriteInteger(3026, .Left4)
             End If
             If PlcTrigger.Left5 Then
                 PlcTrigger.Left5 = False
-                Modbus.WriteInteger(2028, .Left5)
+                Modbus.WriteInteger(3028, .Left5)
             End If
             If PlcTrigger.Left6 Then
                 PlcTrigger.Left6 = False
-                Modbus.WriteInteger(2030, .Left6)
+                Modbus.WriteInteger(3030, .Left6)
             End If
             If PlcTrigger.Right1 Then
                 PlcTrigger.Right1 = False
-                Modbus.WriteInteger(2032, .Right1)
+                Modbus.WriteInteger(3032, .Right1)
             End If
             If PlcTrigger.Right2 Then
                 PlcTrigger.Right2 = False
-                Modbus.WriteInteger(2034, .Right2)
+                Modbus.WriteInteger(3034, .Right2)
             End If
             If PlcTrigger.Right3 Then
                 PlcTrigger.Right3 = False
-                Modbus.WriteInteger(2036, .Right3)
+                Modbus.WriteInteger(3036, .Right3)
             End If
             If PlcTrigger.Right4 Then
                 PlcTrigger.Right4 = False
-                Modbus.WriteInteger(2038, .Right4)
+                Modbus.WriteInteger(3038, .Right4)
             End If
             If PlcTrigger.Right5 Then
                 PlcTrigger.Right5 = False
-                Modbus.WriteInteger(2040, .Right5)
+                Modbus.WriteInteger(3040, .Right5)
             End If
             If PlcTrigger.Right6 Then
                 PlcTrigger.Right6 = False
-                Modbus.WriteInteger(2042, .Right6)
+                Modbus.WriteInteger(3042, .Right6)
             End If
             If PlcTrigger.MW2000_ Or PlcTrigger.EnableDisable Then
                 PlcTrigger.MW2000_ = False
@@ -1094,6 +1158,41 @@ Public Class MainForm
         End With
     End Sub
     Private Sub PlcReading()
+        With MachineAlarm
+            .AlarmGeneral = Modbus.ReadInteger(90)
+            .DoorLock1 = Modbus.ReadBit(.AlarmGeneral, 0)
+            .DoorLock2 = Modbus.ReadBit(.AlarmGeneral, 1)
+            .DoorLock3 = Modbus.ReadBit(.AlarmGeneral, 2)
+            .DoorLock4 = Modbus.ReadBit(.AlarmGeneral, 3)
+            .Curtain = Modbus.ReadBit(.AlarmGeneral, 4)
+
+            .AlarmST1 = Modbus.ReadInteger(104)
+            .V101 = Modbus.ReadBit(.AlarmST1, 0)
+
+            .AlarmST3 = Modbus.ReadInteger(304)
+            .V301 = Modbus.ReadBit(.AlarmST3, 0)
+            .V302 = Modbus.ReadBit(.AlarmST3, 1)
+            .V303 = Modbus.ReadBit(.AlarmST3, 2)
+            .V304 = Modbus.ReadBit(.AlarmST3, 3)
+
+            .AlarmST4 = Modbus.ReadInteger(404)
+            .V401 = Modbus.ReadBit(.AlarmST4, 0)
+            .LaserError = Modbus.ReadBit(.AlarmST4, 1)
+            .ShutterLaserError = Modbus.ReadBit(.AlarmST4, 2)
+            .InterlockLaserError = Modbus.ReadBit(.AlarmST4, 3)
+
+            .AlarmST5 = Modbus.ReadInteger(504)
+            .V501 = Modbus.ReadBit(.AlarmST5, 0)
+            .V502 = Modbus.ReadBit(.AlarmST5, 1)
+            .V503 = Modbus.ReadBit(.AlarmST5, 2)
+            .CamLeftError = Modbus.ReadBit(.AlarmST5, 3)
+            .CamRightError = Modbus.ReadBit(.AlarmST5, 4)
+
+            .AlarmST6 = Modbus.ReadInteger(604)
+            .V601 = Modbus.ReadBit(.AlarmST6, 0)
+            .V602 = Modbus.ReadBit(.AlarmST6, 1)
+            .V603 = Modbus.ReadBit(.AlarmST6, 2)
+        End With
         With MachineStatus
             .PlcReady = Modbus.ReadInteger(10)
             .Mode = Modbus.ReadInteger(1)
@@ -1148,6 +1247,16 @@ Public Class MainForm
             .RCamOK = Modbus.ReadBit(.RightCamera, 3)
             .RCamReady = Modbus.ReadBit(.RightCamera, 1)
             .RCamRun = Modbus.ReadBit(.RightCamera, 0)
+
+            .CaliStatus = Modbus.ReadInteger(3205)
+            .CaliBusy = Modbus.ReadBit(.CaliStatus, 0)
+
+            .MW1000_ = Modbus.ReadInteger(1000)
+            .MW2000_ = Modbus.ReadInteger(2000)
+            .MW3000_ = Modbus.ReadInteger(3000)
+            .MW4000_ = Modbus.ReadInteger(4000)
+            .MW5000_ = Modbus.ReadInteger(5000)
+            .MW6000_ = Modbus.ReadInteger(6000)
         End With
 
         With GetCylinder
@@ -1246,6 +1355,21 @@ Public Class MainForm
     Private Sub MainForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         If ThreadModbus.IsAlive Then
             ThreadModbus.Abort()
+        End If
+        If ThreadLoadData.IsAlive Then
+            ThreadLoadData.Abort()
+        End If
+        If ThreadST3.IsAlive Then
+            ThreadST3.Abort()
+        End If
+        If ThreadST5.IsAlive Then
+            ThreadST5.Abort()
+        End If
+        If ThreadST6.IsAlive Then
+            ThreadST6.Abort()
+        End If
+        If ThreadAlarm.IsAlive Then
+            ThreadAlarm.Abort()
         End If
     End Sub
 

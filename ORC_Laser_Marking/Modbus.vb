@@ -5,9 +5,11 @@ Public Class Modbus
     Public Sub OpenPort(IP As String, PORT As String)
         modbusClient = New ModbusClient(IP, Val(PORT))
         modbusClient.Connect()
+        IsConnected = True
     End Sub
     Public Sub ClosePort()
         modbusClient.Disconnect()
+        IsConnected = False
     End Sub
     Public Function _ConnectionError() As Boolean
         Return ConnectionError

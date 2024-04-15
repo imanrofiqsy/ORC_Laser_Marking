@@ -5,6 +5,44 @@
     Public SequenceIndex As Integer
     Public LaserTrigger As Boolean
     Public PlcWriteState As Boolean
+    Public AlarmMessage As String
+    Public IsConnected As Boolean
+    Public MachineAlarm As Alarm
+    Public Structure Alarm
+        Dim AlarmGeneral As Integer
+        Dim DoorLock1 As Integer
+        Dim DoorLock2 As Integer
+        Dim DoorLock3 As Integer
+        Dim DoorLock4 As Integer
+        Dim Curtain As Integer
+        'ST1
+        Dim AlarmST1 As Integer
+        Dim V101 As Integer
+        'ST3
+        Dim AlarmST3 As Integer
+        Dim V301 As Integer
+        Dim V302 As Integer
+        Dim V303 As Integer
+        Dim V304 As Integer
+        'ST4
+        Dim AlarmST4 As Integer
+        Dim V401 As Integer
+        Dim LaserError As Integer
+        Dim ShutterLaserError As Integer
+        Dim InterlockLaserError As Integer
+        'ST5
+        Dim AlarmST5 As Integer
+        Dim V501 As Integer
+        Dim V502 As Integer
+        Dim V503 As Integer
+        Dim CamLeftError As Integer
+        Dim CamRightError As Integer
+        'ST6
+        Dim AlarmST6 As Integer
+        Dim V601 As Integer
+        Dim V602 As Integer
+        Dim V603 As Integer
+    End Structure
     Public Fest As Festo
     Public Structure Festo
         'Festo Left
@@ -116,6 +154,7 @@
         Dim Empty As Boolean
 
         ' Calibration
+        Dim StartCali As Boolean
         Dim Left1 As Boolean
         Dim Left2 As Boolean
         Dim Left3 As Boolean
@@ -227,7 +266,9 @@
         Dim RCamNG As Integer
 
         'Calibration
-
+        Dim StartCali As Integer
+        Dim CaliStatus As Integer
+        Dim CaliBusy As Integer
         Dim Left1 As Integer
         Dim Left2 As Integer
         Dim Left3 As Integer

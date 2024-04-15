@@ -24,6 +24,25 @@ Public Class LogForm
     Private Sub LogForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         GetUserLevel()
 
+        With MachineStatus
+            If .State = 1 Then
+                Label2.Text = "RUNNING"
+            ElseIf .State = 2 Then
+                Label2.Text = "STOPPING"
+            ElseIf .State = 3 Then
+                Label2.Text = "INITIALIZED"
+            ElseIf .State = 4 Then
+                Label2.Text = "EMPTYING"
+            ElseIf .State = 5 Then
+                Label2.Text = "EMERGENCY"
+            End If
+
+            If .Mode = 1 Then
+                Label1.Text = "AUTO"
+            ElseIf .Mode = 2 Then
+                Label1.Text = "MANUAL"
+            End If
+        End With
     End Sub
     Private Sub LoadTable()
         Call Database.Connect()
