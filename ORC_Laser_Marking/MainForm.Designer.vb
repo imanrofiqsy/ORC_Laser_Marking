@@ -2033,6 +2033,7 @@ Partial Class MainForm
         Me.dgv_temp.Name = "dgv_temp"
         Me.dgv_temp.Size = New System.Drawing.Size(113, 76)
         Me.dgv_temp.TabIndex = 28
+        Me.dgv_temp.Visible = False
         '
         'StartDate
         '
@@ -2040,6 +2041,7 @@ Partial Class MainForm
         Me.StartDate.Name = "StartDate"
         Me.StartDate.Size = New System.Drawing.Size(113, 20)
         Me.StartDate.TabIndex = 29
+        Me.StartDate.Visible = False
         '
         'EndDate
         '
@@ -2047,6 +2049,7 @@ Partial Class MainForm
         Me.EndDate.Name = "EndDate"
         Me.EndDate.Size = New System.Drawing.Size(113, 20)
         Me.EndDate.TabIndex = 29
+        Me.EndDate.Visible = False
         '
         'btn_st6
         '
