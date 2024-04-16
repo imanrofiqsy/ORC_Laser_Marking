@@ -196,6 +196,8 @@ Partial Class MainForm
         Me.pb_status_bar = New System.Windows.Forms.PictureBox()
         Me.pb_status_mc = New System.Windows.Forms.PictureBox()
         Me.pb_logo = New System.Windows.Forms.PictureBox()
+        Me.Heiden = New System.IO.Ports.SerialPort(Me.components)
+        Me.Hain = New System.IO.Ports.SerialPort(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox78.SuspendLayout()
@@ -2239,6 +2241,18 @@ Partial Class MainForm
         Me.pb_logo.TabIndex = 5
         Me.pb_logo.TabStop = False
         '
+        'Heiden
+        '
+        Me.Heiden.BaudRate = 115200
+        Me.Heiden.PortName = "COM7"
+        Me.Heiden.RtsEnable = True
+        '
+        'Hain
+        '
+        Me.Hain.BaudRate = 115200
+        Me.Hain.PortName = "COM7"
+        Me.Hain.RtsEnable = True
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2476,4 +2490,6 @@ Partial Class MainForm
     Friend WithEvents dgv_temp As DataGridView
     Friend WithEvents StartDate As DateTimePicker
     Friend WithEvents EndDate As DateTimePicker
+    Friend WithEvents Heiden As IO.Ports.SerialPort
+    Friend WithEvents Hain As IO.Ports.SerialPort
 End Class

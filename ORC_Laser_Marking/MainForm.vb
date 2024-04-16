@@ -137,7 +137,8 @@ Public Class MainForm
                 .dbPassword = ReadINI(iniPath, "DATABASE", "Password")
                 .dbDatabase = ReadINI(iniPath, "DATABASE", "Database")
                 Thread.Sleep(500)
-
+                Heiden.Open()
+                Hain.Open()
                 UpdateLoadingBar(60, "Loading?? 3...")
                 Thread.Sleep(500)
 
@@ -156,7 +157,7 @@ Public Class MainForm
                 ThreadAlarm.Start()
                 Thread.Sleep(500)
 
-                UpdateLoadingBar(100, "Loading?? 6...")
+                UpdateLoadingBar(100, "Loading App...")
                 .CountProduct = ReadINI(iniPath, "STATUS", "CountProduct")
                 CountST3 = .CountProduct
                 CountST5 = .CountProduct
@@ -164,7 +165,7 @@ Public Class MainForm
                 Thread.Sleep(500)
             End With
         Catch ex As Exception
-            UpdateLoadingBar(LoadingBarValue, "Error.. " + ex.Message + ", App is Clossing...")
+            UpdateLoadingBar(LoadingBarValue, "Error.. " + ex.Message + ", App is Closing...")
             Thread.Sleep(2000)
             End
         End Try
@@ -572,8 +573,11 @@ Public Class MainForm
                     Config.CountProduct = CountST3
                     WriteINI(iniPath, "STATUS", "CountProduct", Config.CountProduct)
                     ' data aquisition from instrument
-                    Dim LeftHeidenResult As String = "99.9"
-                    Dim RightHeidenResult As String = "99.9"
+                    Heiden.Write("A0100" + vbCr)
+                    Hain.Write("A0100" + vbCr)
+                    Thread.Sleep(100)
+                    Dim LeftHeidenResult As String = HeidenString
+                    Dim RightHeidenResult As String = HainString
                     ' end data aquisition from instrument
                     ' update text box
                     Invoke(Sub()
@@ -1371,6 +1375,8 @@ Public Class MainForm
         If ThreadAlarm.IsAlive Then
             ThreadAlarm.Abort()
         End If
+        Heiden.Close()
+        Hain.Close()
     End Sub
 
     Private Sub btn_run_Click(sender As Object, e As EventArgs) Handles btn_run.Click
@@ -1431,5 +1437,17 @@ Public Class MainForm
             PlcTrigger.Empty = True
             PlcWriteState = True
         End With
+    End Sub
+
+    Private Sub Heiden_DataReceived(sender As Object, e As Ports.SerialDataReceivedEventArgs) Handles Heiden.DataReceived
+        Invoke(Sub()
+                   HeidenString = Heiden.ReadExisting
+               End Sub)
+    End Sub
+
+    Private Sub Hain_DataReceived(sender As Object, e As Ports.SerialDataReceivedEventArgs) Handles Hain.DataReceived
+        Invoke(Sub()
+                   HainString = Hain.ReadExisting
+               End Sub)
     End Sub
 End Class

@@ -7,6 +7,8 @@
     Public PlcWriteState As Boolean
     Public AlarmMessage As String
     Public IsConnected As Boolean
+    Public HeidenString As String
+    Public HainString As String
     Public MachineAlarm As Alarm
     Public Structure Alarm
         Dim AlarmGeneral As Integer
