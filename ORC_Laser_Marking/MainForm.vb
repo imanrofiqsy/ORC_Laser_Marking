@@ -137,8 +137,8 @@ Public Class MainForm
                 .dbPassword = ReadINI(iniPath, "DATABASE", "Password")
                 .dbDatabase = ReadINI(iniPath, "DATABASE", "Database")
                 Thread.Sleep(500)
-                Heiden.Open()
-                Hain.Open()
+                'Heiden.Open()
+                'Hain.Open()
                 UpdateLoadingBar(60, "Loading?? 3...")
                 Thread.Sleep(500)
 

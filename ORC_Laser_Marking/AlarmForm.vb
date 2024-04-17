@@ -24,6 +24,8 @@
                 Label1.Text = "MANUAL"
             End If
         End With
+
+        TextBox1.Text = "ALARM : " + AlarmMessage
     End Sub
     Private Sub btn_home_Click(sender As Object, e As EventArgs) Handles btn_home.Click
         Close()
@@ -52,97 +54,165 @@
     Private Sub btn_refresh_Click(sender As Object, e As EventArgs) Handles btn_refresh.Click
         LoadTable()
     End Sub
-
+    Dim LastAlarm(23) As Integer
     Private Sub LoadTable()
         Dim TableMessage As String = ""
         With MachineAlarm
-            If .DoorLock1 Then
-                TableMessage = "Door Lock 1 Open"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .DoorLock1 <> LastAlarm(1) Then
+                LastAlarm(1) = .DoorLock1
+                If .DoorLock1 Then
+                    TableMessage = "Door Lock 1 Open"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                Else
+
+                End If
             End If
-            If .DoorLock2 Then
-                TableMessage = "Door Lock 2 Open"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .DoorLock2 <> LastAlarm(2) Then
+                LastAlarm(2) = .DoorLock2
+                If .DoorLock2 Then
+                    TableMessage = "Door Lock 2 Open"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .DoorLock3 Then
-                TableMessage = "Door Lock 3 Open"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .DoorLock3 <> LastAlarm(3) Then
+                LastAlarm(3) = .DoorLock3
+                If .DoorLock3 Then
+                    TableMessage = "Door Lock 3 Open"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .DoorLock4 Then
-                TableMessage = "Door Lock 4 Open"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .DoorLock4 <> LastAlarm(4) Then
+                LastAlarm(4) = .DoorLock4
+                If .DoorLock4 Then
+                    TableMessage = "Door Lock 4 Open"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .Curtain Then
-                TableMessage = "Curtain Sensor Discrepancy"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .Curtain <> LastAlarm(5) Then
+                LastAlarm(5) = .Curtain
+                If .Curtain Then
+                    TableMessage = "Curtain Sensor Discrepancy"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .V101 Then
-                TableMessage = "V101 Discrepancy"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .V101 <> LastAlarm(6) Then
+                LastAlarm(6) = .Curtain
+                If .V101 Then
+                    TableMessage = "V101 Discrepancy"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .V301 Then
-                TableMessage = "V301 Discrepancy"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .V301 <> LastAlarm(7) Then
+                LastAlarm(7) = .V301
+                If .V301 Then
+                    TableMessage = "V301 Discrepancy"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .V302 Then
-                TableMessage = "V302 Discrepancy"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .V302 <> LastAlarm(8) Then
+                LastAlarm(8) = .V302
+                If .V302 Then
+                    TableMessage = "V302 Discrepancy"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .V303 Then
-                TableMessage = "V303 Discrepancy"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .V303 <> LastAlarm(9) Then
+                LastAlarm(9) = .V303
+                If .V303 Then
+                    TableMessage = "V303 Discrepancy"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .V304 Then
-                TableMessage = "V304 Discrepancy"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .V304 <> LastAlarm(10) Then
+                LastAlarm(10) = .V304
+                If .V304 Then
+                    TableMessage = "V304 Discrepancy"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .V401 Then
-                TableMessage = "V401 Discrepancy"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .V401 <> LastAlarm(11) Then
+                LastAlarm(11) = .V401
+                If .V401 Then
+                    TableMessage = "V401 Discrepancy"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .LaserError Then
-                TableMessage = "ST4 Laser Error please check the laser"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .LaserError <> LastAlarm(12) Then
+                LastAlarm(12) = .LaserError
+                If .LaserError Then
+                    TableMessage = "ST4 Laser Error please check the laser"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .ShutterLaserError Then
-                TableMessage = "ST4 Shutter Laser Error please check or reset"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .ShutterLaserError <> LastAlarm(13) Then
+                LastAlarm(13) = .ShutterLaserError
+                If .ShutterLaserError Then
+                    TableMessage = "ST4 Shutter Laser Error please check or reset"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .InterlockLaserError Then
-                TableMessage = "ST4 Interlock Laser Error please check or reset"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .InterlockLaserError <> LastAlarm(14) Then
+                LastAlarm(14) = .InterlockLaserError
+                If .InterlockLaserError Then
+                    TableMessage = "ST4 Interlock Laser Error please check or reset"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .V501 Then
-                TableMessage = "V501 Discrepancy"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .V501 <> LastAlarm(15) Then
+                LastAlarm(15) = .V501
+                If .V501 Then
+                    TableMessage = "V501 Discrepancy"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .V502 Then
-                TableMessage = "V502 Discrepancy"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .V502 <> LastAlarm(16) Then
+                LastAlarm(16) = .V502
+                If .V502 Then
+                    TableMessage = "V502 Discrepancy"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .V503 Then
-                TableMessage = "V503 Discrepancy"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .V503 <> LastAlarm(17) Then
+                LastAlarm(17) = .V503
+                If .V503 Then
+                    TableMessage = "V503 Discrepancy"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .CamLeftError Then
-                TableMessage = "ST5 Left Camera Error please reset the camera"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .CamLeftError <> LastAlarm(18) Then
+                LastAlarm(18) = .CamLeftError
+                If .CamLeftError Then
+                    TableMessage = "ST5 Left Camera Error please reset the camera"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .CamRightError Then
-                TableMessage = "ST5 Right Camera Error please reset the camera"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .CamRightError <> LastAlarm(19) Then
+                LastAlarm(19) = .CamRightError
+                If .CamRightError Then
+                    TableMessage = "ST5 Right Camera Error please reset the camera"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .V601 Then
-                TableMessage = "V601 Discrepancy"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .V601 <> LastAlarm(20) Then
+                LastAlarm(20) = .V601
+                If .V601 Then
+                    TableMessage = "V601 Discrepancy"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .V602 Then
-                TableMessage = "V602 Discrepancy"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .V602 <> LastAlarm(21) Then
+                LastAlarm(21) = .V602
+                If .V602 Then
+                    TableMessage = "V602 Discrepancy"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
-            If .V603 Then
-                TableMessage = "V603 Discrepancy"
-                AddDataRow(TableAlarm, TableMessage, Now)
+            If .V603 <> LastAlarm(22) Then
+                LastAlarm(22) = .V603
+                If .V603 Then
+                    TableMessage = "V603 Discrepancy"
+                    AddDataRow(TableAlarm, TableMessage, Now)
+                End If
             End If
             DataGridView1.DataSource = TableAlarm
         End With
