@@ -236,6 +236,8 @@
         Dim CycleST4 As Double
         Dim CycleST5 As Double
         Dim CycleST6 As Double
+        Dim McCT As Double
+
 
         'Laser
         Dim Laser As integer

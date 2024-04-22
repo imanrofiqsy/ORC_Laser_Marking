@@ -7,6 +7,7 @@ Public Class MainForm
     Dim ThreadLoadingBar As Thread
     Dim ThreadModbus As Thread
     Dim ThreadLoadData As Thread
+    Dim ThreadST1 As Thread
     Dim ThreadST3 As Thread
     Dim ThreadST5 As Thread
     Dim ThreadST6 As Thread
@@ -137,8 +138,8 @@ Public Class MainForm
                 .dbPassword = ReadINI(iniPath, "DATABASE", "Password")
                 .dbDatabase = ReadINI(iniPath, "DATABASE", "Database")
                 Thread.Sleep(500)
-                'Heiden.Open()
-                'Hain.Open()
+                Heiden.Open()
+                Hain.Open()
                 UpdateLoadingBar(60, "Loading?? 3...")
                 Thread.Sleep(500)
 
@@ -244,7 +245,7 @@ Public Class MainForm
         Dim _end As String = EndDate.Value.ToString("yyyy-MM-dd 23:59:59")
         Try
             Call Database.Connect()
-            Dim sc As New SqlCommand("SELECT * FROM tb_datalog WHERE [Date Time] BETWEEN '" + _start + "' AND '" + _end + "' ORDER BY [ID] ASC ", Database.Connection)
+            Dim sc As New SqlCommand("SELECT * FROM tb_datalog WHERE [Date Time] BETWEEN '" + _start.Replace(".", ":") + "' AND '" + _end.Replace(".", ":") + "' ORDER BY [ID] ASC ", Database.Connection)
             Dim adapter As New SqlDataAdapter(sc)
             Dim ds As New DataSet
 
@@ -299,458 +300,474 @@ Public Class MainForm
     End Sub
     Private Sub MainST6()
         Do
-            With PlcSave
-                If .MW11100_10 = 1 Then
-                    ' update count
-                    CountProductResult += 1
-                    ' data aquisition from plc
-                    Dim LeftProdResult As Integer = ProductResult.ProductLeft
-                    Dim RightProdResult As Integer = ProductResult.ProductRight
-                    ' end data aquisition from plc
-                    ' update text box
-                    Invoke(Sub()
-                               Select Case MachineStatus.CavityST5
-                                   Case 1
-                                       If LeftProdResult = 1 Then
-                                           lbl_status_l.BackColor = Color.Green
-                                           lbl_status_l.Text = "OK"
-                                       ElseIf LeftProdResult = 2 Then
-                                           lbl_status_l.BackColor = Color.Red
-                                           lbl_status_l.Text = "NG"
-                                       End If
+            If SequenceIndex = MainSequence.ScanQty Then
+                With PlcSave
+                    If .MW11100_10 = 1 Then
+                        ' update count
+                        CountProductResult += 1
+                        ' data aquisition from plc
+                        Dim LeftProdResult As Integer = ProductResult.ProductLeft
+                        Dim RightProdResult As Integer = ProductResult.ProductRight
+                        ' end data aquisition from plc
+                        ' update text box
+                        Invoke(Sub()
+                                   Select Case MachineStatus.CavityST6
+                                       Case 1
+                                           If LeftProdResult = 1 Then
+                                               lbl_status_l.BackColor = Color.Green
+                                               lbl_status_l.Text = "OK"
+                                           ElseIf LeftProdResult = 2 Then
+                                               lbl_status_l.BackColor = Color.Red
+                                               lbl_status_l.Text = "NG"
+                                           End If
 
-                                       If RightProdResult = 1 Then
-                                           lbl_status_r.BackColor = Color.Green
-                                           lbl_status_r.Text = "OK"
-                                       ElseIf RightProdResult = 2 Then
-                                           lbl_status_r.BackColor = Color.Red
-                                           lbl_status_r.Text = "NG"
-                                       End If
-                                   Case 2
-                                       If LeftProdResult = 1 Then
-                                           lbl_status_l_1.BackColor = Color.Green
-                                           lbl_status_l_1.Text = "OK"
-                                       ElseIf LeftProdResult = 2 Then
-                                           lbl_status_l_1.BackColor = Color.Red
-                                           lbl_status_l_1.Text = "NG"
-                                       End If
+                                           If RightProdResult = 1 Then
+                                               lbl_status_r.BackColor = Color.Green
+                                               lbl_status_r.Text = "OK"
+                                           ElseIf RightProdResult = 2 Then
+                                               lbl_status_r.BackColor = Color.Red
+                                               lbl_status_r.Text = "NG"
+                                           End If
+                                       Case 2
+                                           If LeftProdResult = 1 Then
+                                               lbl_status_l_1.BackColor = Color.Green
+                                               lbl_status_l_1.Text = "OK"
+                                           ElseIf LeftProdResult = 2 Then
+                                               lbl_status_l_1.BackColor = Color.Red
+                                               lbl_status_l_1.Text = "NG"
+                                           End If
 
-                                       If RightProdResult = 1 Then
-                                           lbl_status_r_1.BackColor = Color.Green
-                                           lbl_status_r_1.Text = "OK"
-                                       ElseIf RightProdResult = 2 Then
-                                           lbl_status_r_1.BackColor = Color.Red
-                                           lbl_status_r_1.Text = "NG"
-                                       End If
-                                   Case 3
-                                       If LeftProdResult = 1 Then
-                                           lbl_status_l_2.BackColor = Color.Green
-                                           lbl_status_l_2.Text = "OK"
-                                       ElseIf LeftProdResult = 2 Then
-                                           lbl_status_l_2.BackColor = Color.Red
-                                           lbl_status_l_2.Text = "NG"
-                                       End If
+                                           If RightProdResult = 1 Then
+                                               lbl_status_r_1.BackColor = Color.Green
+                                               lbl_status_r_1.Text = "OK"
+                                           ElseIf RightProdResult = 2 Then
+                                               lbl_status_r_1.BackColor = Color.Red
+                                               lbl_status_r_1.Text = "NG"
+                                           End If
+                                       Case 3
+                                           If LeftProdResult = 1 Then
+                                               lbl_status_l_2.BackColor = Color.Green
+                                               lbl_status_l_2.Text = "OK"
+                                           ElseIf LeftProdResult = 2 Then
+                                               lbl_status_l_2.BackColor = Color.Red
+                                               lbl_status_l_2.Text = "NG"
+                                           End If
 
-                                       If RightProdResult = 1 Then
-                                           lbl_status_r_2.BackColor = Color.Green
-                                           lbl_status_r_2.Text = "OK"
-                                       ElseIf RightProdResult = 2 Then
-                                           lbl_status_r_2.BackColor = Color.Red
-                                           lbl_status_r_2.Text = "NG"
-                                       End If
-                                   Case 4
-                                       If LeftProdResult = 1 Then
-                                           lbl_status_l_3.BackColor = Color.Green
-                                           lbl_status_l_3.Text = "OK"
-                                       ElseIf LeftProdResult = 2 Then
-                                           lbl_status_l_3.BackColor = Color.Red
-                                           lbl_status_l_3.Text = "NG"
-                                       End If
+                                           If RightProdResult = 1 Then
+                                               lbl_status_r_2.BackColor = Color.Green
+                                               lbl_status_r_2.Text = "OK"
+                                           ElseIf RightProdResult = 2 Then
+                                               lbl_status_r_2.BackColor = Color.Red
+                                               lbl_status_r_2.Text = "NG"
+                                           End If
+                                       Case 4
+                                           If LeftProdResult = 1 Then
+                                               lbl_status_l_3.BackColor = Color.Green
+                                               lbl_status_l_3.Text = "OK"
+                                           ElseIf LeftProdResult = 2 Then
+                                               lbl_status_l_3.BackColor = Color.Red
+                                               lbl_status_l_3.Text = "NG"
+                                           End If
 
-                                       If RightProdResult = 1 Then
-                                           lbl_status_r_3.BackColor = Color.Green
-                                           lbl_status_r_3.Text = "OK"
-                                       ElseIf RightProdResult = 2 Then
-                                           lbl_status_r_3.BackColor = Color.Red
-                                           lbl_status_r_3.Text = "NG"
-                                       End If
-                                   Case 5
-                                       If LeftProdResult = 1 Then
-                                           lbl_status_l_4.BackColor = Color.Green
-                                           lbl_status_l_4.Text = "OK"
-                                       ElseIf LeftProdResult = 2 Then
-                                           lbl_status_l_4.BackColor = Color.Red
-                                           lbl_status_l_4.Text = "NG"
-                                       End If
+                                           If RightProdResult = 1 Then
+                                               lbl_status_r_3.BackColor = Color.Green
+                                               lbl_status_r_3.Text = "OK"
+                                           ElseIf RightProdResult = 2 Then
+                                               lbl_status_r_3.BackColor = Color.Red
+                                               lbl_status_r_3.Text = "NG"
+                                           End If
+                                       Case 5
+                                           If LeftProdResult = 1 Then
+                                               lbl_status_l_4.BackColor = Color.Green
+                                               lbl_status_l_4.Text = "OK"
+                                           ElseIf LeftProdResult = 2 Then
+                                               lbl_status_l_4.BackColor = Color.Red
+                                               lbl_status_l_4.Text = "NG"
+                                           End If
 
-                                       If RightProdResult = 1 Then
-                                           lbl_status_r_4.BackColor = Color.Green
-                                           lbl_status_r_4.Text = "OK"
-                                       ElseIf RightProdResult = 2 Then
-                                           lbl_status_r_4.BackColor = Color.Red
-                                           lbl_status_r_4.Text = "NG"
-                                       End If
-                                   Case 6
-                                       If LeftProdResult = 1 Then
-                                           lbl_status_l_5.BackColor = Color.Green
-                                           lbl_status_l_5.Text = "OK"
-                                       ElseIf LeftProdResult = 2 Then
-                                           lbl_status_l_5.BackColor = Color.Red
-                                           lbl_status_l_5.Text = "NG"
-                                       End If
+                                           If RightProdResult = 1 Then
+                                               lbl_status_r_4.BackColor = Color.Green
+                                               lbl_status_r_4.Text = "OK"
+                                           ElseIf RightProdResult = 2 Then
+                                               lbl_status_r_4.BackColor = Color.Red
+                                               lbl_status_r_4.Text = "NG"
+                                           End If
+                                       Case 6
+                                           If LeftProdResult = 1 Then
+                                               lbl_status_l_5.BackColor = Color.Green
+                                               lbl_status_l_5.Text = "OK"
+                                           ElseIf LeftProdResult = 2 Then
+                                               lbl_status_l_5.BackColor = Color.Red
+                                               lbl_status_l_5.Text = "NG"
+                                           End If
 
-                                       If RightProdResult = 1 Then
-                                           lbl_status_r_5.BackColor = Color.Green
-                                           lbl_status_r_5.Text = "OK"
-                                       ElseIf RightProdResult = 2 Then
-                                           lbl_status_r_5.BackColor = Color.Red
-                                           lbl_status_r_5.Text = "NG"
-                                       End If
-                               End Select
-                           End Sub)
-                    ' end update text box
-                    ' save database
-                    Call Database.Connect()
-                    Dim sc As New SqlCommand("UPDATE tb_datalog SET [Product Left Result] = '" & LeftProdResult & "', [Product Right Result] = '" & RightProdResult & "' WHERE [ID] = " & CountST5 & "", Database.Connection)
-                    Dim adapter As New SqlDataAdapter(sc)
-                    adapter.SelectCommand.ExecuteNonQuery()
-                    ' end save database
-                    ' save datalog
-                    Invoke(Sub()
-                               SaveDataLog()
-                           End Sub)
-                    ' trigger finish save data
-                    .MW11100_ = Modbus.WriteBit(.MW11100_, 11, 1)
-                    .MW11100_ = Modbus.WriteBit(.MW11100_, 10, 0)
-                    PlcTrigger.MW11100_ = True
-                    PlcWriteState = True
-                    'end trigger finish save data
-                End If
-            End With
+                                           If RightProdResult = 1 Then
+                                               lbl_status_r_5.BackColor = Color.Green
+                                               lbl_status_r_5.Text = "OK"
+                                           ElseIf RightProdResult = 2 Then
+                                               lbl_status_r_5.BackColor = Color.Red
+                                               lbl_status_r_5.Text = "NG"
+                                           End If
+                                   End Select
+                               End Sub)
+                        ' end update text box
+                        ' save database
+                        Call Database.Connect()
+                        Dim sc As New SqlCommand("UPDATE tb_datalog SET [Product Left Result] = '" & LeftProdResult & "', [Product Right Result] = '" & RightProdResult & "' WHERE [ID] = " & CountST5 & "", Database.Connection)
+                        Dim adapter As New SqlDataAdapter(sc)
+                        adapter.SelectCommand.ExecuteNonQuery()
+                        ' end save database
+                        ' save datalog
+                        Invoke(Sub()
+                                   SaveDataLog()
+                               End Sub)
+                        ' trigger finish save data
+                        .MW11100_ = Modbus.WriteBit(.MW11100_, 11, 1)
+                        .MW11100_ = Modbus.WriteBit(.MW11100_, 10, 0)
+                        PlcTrigger.MW11100_ = True
+                        PlcWriteState = True
+                        'end trigger finish save data
+                    End If
+                End With
+            End If
+
             Thread.Sleep(150)
         Loop
     End Sub
     Private Sub MainST5()
         Do
-            With PlcSave
-                If .MW11100_6 = 1 Then
-                    ' update count
-                    CountST5 += 1
-                    ' data aquisition from plc
-                    Dim LeftCameraResult As Integer = ProductResult.CameraLeft
-                    Dim RightCameraResult As Integer = ProductResult.CameraRight
-                    ' end data aquisition from plc
-                    ' update text box
-                    Invoke(Sub()
-                               Select Case MachineStatus.CavityST5
-                                   Case 1
-                                       If LeftCameraResult = 1 Then
-                                           lbl_st5_left_camera.BackColor = Color.Green
-                                           lbl_st5_left_camera.Text = "OK"
-                                       ElseIf LeftCameraResult = 2 Then
-                                           lbl_st5_left_camera.BackColor = Color.Red
-                                           lbl_st5_left_camera.Text = "NG"
-                                       End If
+            If SequenceIndex = MainSequence.ScanQty Then
+                With PlcSave
+                    If .MW11100_6 = 1 Then
+                        ' update count
+                        CountST5 += 1
+                        ' data aquisition from plc
+                        Dim LeftCameraResult As Integer = ProductResult.CameraLeft
+                        Dim RightCameraResult As Integer = ProductResult.CameraRight
+                        ' end data aquisition from plc
+                        ' update text box
+                        Invoke(Sub()
+                                   Select Case MachineStatus.CavityST5
+                                       Case 1
+                                           If LeftCameraResult = 1 Then
+                                               lbl_st5_left_camera.BackColor = Color.Green
+                                               lbl_st5_left_camera.Text = "OK"
+                                           ElseIf LeftCameraResult = 2 Then
+                                               lbl_st5_left_camera.BackColor = Color.Red
+                                               lbl_st5_left_camera.Text = "NG"
+                                           End If
 
-                                       If RightCameraResult = 1 Then
-                                           lbl_st5_right_camera.BackColor = Color.Green
-                                           lbl_st5_right_camera.Text = "OK"
-                                       ElseIf RightCameraResult = 2 Then
-                                           lbl_st5_right_camera.BackColor = Color.Red
-                                           lbl_st5_right_camera.Text = "NG"
-                                       End If
-                                   Case 2
-                                       If LeftCameraResult = 1 Then
-                                           lbl_st5_left_camera_1.BackColor = Color.Green
-                                           lbl_st5_left_camera_1.Text = "OK"
-                                       ElseIf LeftCameraResult = 2 Then
-                                           lbl_st5_left_camera_1.BackColor = Color.Red
-                                           lbl_st5_left_camera_1.Text = "NG"
-                                       End If
+                                           If RightCameraResult = 1 Then
+                                               lbl_st5_right_camera.BackColor = Color.Green
+                                               lbl_st5_right_camera.Text = "OK"
+                                           ElseIf RightCameraResult = 2 Then
+                                               lbl_st5_right_camera.BackColor = Color.Red
+                                               lbl_st5_right_camera.Text = "NG"
+                                           End If
+                                       Case 2
+                                           If LeftCameraResult = 1 Then
+                                               lbl_st5_left_camera_1.BackColor = Color.Green
+                                               lbl_st5_left_camera_1.Text = "OK"
+                                           ElseIf LeftCameraResult = 2 Then
+                                               lbl_st5_left_camera_1.BackColor = Color.Red
+                                               lbl_st5_left_camera_1.Text = "NG"
+                                           End If
 
-                                       If RightCameraResult = 1 Then
-                                           lbl_st5_right_camera_1.BackColor = Color.Green
-                                           lbl_st5_right_camera_1.Text = "OK"
-                                       ElseIf RightCameraResult = 2 Then
-                                           lbl_st5_right_camera_1.BackColor = Color.Red
-                                           lbl_st5_right_camera_1.Text = "NG"
-                                       End If
-                                   Case 3
-                                       If LeftCameraResult = 1 Then
-                                           lbl_st5_left_camera_2.BackColor = Color.Green
-                                           lbl_st5_left_camera_2.Text = "OK"
-                                       ElseIf LeftCameraResult = 2 Then
-                                           lbl_st5_left_camera_2.BackColor = Color.Red
-                                           lbl_st5_left_camera_2.Text = "NG"
-                                       End If
+                                           If RightCameraResult = 1 Then
+                                               lbl_st5_right_camera_1.BackColor = Color.Green
+                                               lbl_st5_right_camera_1.Text = "OK"
+                                           ElseIf RightCameraResult = 2 Then
+                                               lbl_st5_right_camera_1.BackColor = Color.Red
+                                               lbl_st5_right_camera_1.Text = "NG"
+                                           End If
+                                       Case 3
+                                           If LeftCameraResult = 1 Then
+                                               lbl_st5_left_camera_2.BackColor = Color.Green
+                                               lbl_st5_left_camera_2.Text = "OK"
+                                           ElseIf LeftCameraResult = 2 Then
+                                               lbl_st5_left_camera_2.BackColor = Color.Red
+                                               lbl_st5_left_camera_2.Text = "NG"
+                                           End If
 
-                                       If RightCameraResult = 1 Then
-                                           lbl_st5_right_camera_2.BackColor = Color.Green
-                                           lbl_st5_right_camera_2.Text = "OK"
-                                       ElseIf RightCameraResult = 2 Then
-                                           lbl_st5_right_camera_2.BackColor = Color.Red
-                                           lbl_st5_right_camera_2.Text = "NG"
-                                       End If
-                                   Case 4
-                                       If LeftCameraResult = 1 Then
-                                           lbl_st5_left_camera_3.BackColor = Color.Green
-                                           lbl_st5_left_camera_3.Text = "OK"
-                                       ElseIf LeftCameraResult = 2 Then
-                                           lbl_st5_left_camera_3.BackColor = Color.Red
-                                           lbl_st5_left_camera_3.Text = "NG"
-                                       End If
+                                           If RightCameraResult = 1 Then
+                                               lbl_st5_right_camera_2.BackColor = Color.Green
+                                               lbl_st5_right_camera_2.Text = "OK"
+                                           ElseIf RightCameraResult = 2 Then
+                                               lbl_st5_right_camera_2.BackColor = Color.Red
+                                               lbl_st5_right_camera_2.Text = "NG"
+                                           End If
+                                       Case 4
+                                           If LeftCameraResult = 1 Then
+                                               lbl_st5_left_camera_3.BackColor = Color.Green
+                                               lbl_st5_left_camera_3.Text = "OK"
+                                           ElseIf LeftCameraResult = 2 Then
+                                               lbl_st5_left_camera_3.BackColor = Color.Red
+                                               lbl_st5_left_camera_3.Text = "NG"
+                                           End If
 
-                                       If RightCameraResult = 1 Then
-                                           lbl_st5_right_camera_3.BackColor = Color.Green
-                                           lbl_st5_right_camera_3.Text = "OK"
-                                       ElseIf RightCameraResult = 2 Then
-                                           lbl_st5_right_camera_3.BackColor = Color.Red
-                                           lbl_st5_right_camera_3.Text = "NG"
-                                       End If
-                                   Case 5
-                                       If LeftCameraResult = 1 Then
-                                           lbl_st5_left_camera_4.BackColor = Color.Green
-                                           lbl_st5_left_camera_4.Text = "OK"
-                                       ElseIf LeftCameraResult = 2 Then
-                                           lbl_st5_left_camera_4.BackColor = Color.Red
-                                           lbl_st5_left_camera_4.Text = "NG"
-                                       End If
+                                           If RightCameraResult = 1 Then
+                                               lbl_st5_right_camera_3.BackColor = Color.Green
+                                               lbl_st5_right_camera_3.Text = "OK"
+                                           ElseIf RightCameraResult = 2 Then
+                                               lbl_st5_right_camera_3.BackColor = Color.Red
+                                               lbl_st5_right_camera_3.Text = "NG"
+                                           End If
+                                       Case 5
+                                           If LeftCameraResult = 1 Then
+                                               lbl_st5_left_camera_4.BackColor = Color.Green
+                                               lbl_st5_left_camera_4.Text = "OK"
+                                           ElseIf LeftCameraResult = 2 Then
+                                               lbl_st5_left_camera_4.BackColor = Color.Red
+                                               lbl_st5_left_camera_4.Text = "NG"
+                                           End If
 
-                                       If RightCameraResult = 1 Then
-                                           lbl_st5_right_camera_4.BackColor = Color.Green
-                                           lbl_st5_right_camera_4.Text = "OK"
-                                       ElseIf RightCameraResult = 2 Then
-                                           lbl_st5_right_camera_4.BackColor = Color.Red
-                                           lbl_st5_right_camera_4.Text = "NG"
-                                       End If
-                                   Case 6
-                                       If LeftCameraResult = 1 Then
-                                           lbl_st5_left_camera_5.BackColor = Color.Green
-                                           lbl_st5_left_camera_5.Text = "OK"
-                                       ElseIf LeftCameraResult = 2 Then
-                                           lbl_st5_left_camera_5.BackColor = Color.Red
-                                           lbl_st5_left_camera_5.Text = "NG"
-                                       End If
+                                           If RightCameraResult = 1 Then
+                                               lbl_st5_right_camera_4.BackColor = Color.Green
+                                               lbl_st5_right_camera_4.Text = "OK"
+                                           ElseIf RightCameraResult = 2 Then
+                                               lbl_st5_right_camera_4.BackColor = Color.Red
+                                               lbl_st5_right_camera_4.Text = "NG"
+                                           End If
+                                       Case 6
+                                           If LeftCameraResult = 1 Then
+                                               lbl_st5_left_camera_5.BackColor = Color.Green
+                                               lbl_st5_left_camera_5.Text = "OK"
+                                           ElseIf LeftCameraResult = 2 Then
+                                               lbl_st5_left_camera_5.BackColor = Color.Red
+                                               lbl_st5_left_camera_5.Text = "NG"
+                                           End If
 
-                                       If RightCameraResult = 1 Then
-                                           lbl_st5_right_camera_5.BackColor = Color.Green
-                                           lbl_st5_right_camera_5.Text = "OK"
-                                       ElseIf RightCameraResult = 2 Then
-                                           lbl_st5_right_camera_5.BackColor = Color.Red
-                                           lbl_st5_right_camera_5.Text = "NG"
-                                       End If
-                               End Select
-                           End Sub)
-                    ' end update text box
-                    ' save database
-                    Call Database.Connect()
-                    Dim sc As New SqlCommand("UPDATE tb_datalog SET [ST5 Camera Result Left] = '" & LeftCameraResult & "', [ST5 Camera Result Right] = '" & RightCameraResult & "' WHERE [ID] = " & CountST5 & "", Database.Connection)
-                    Dim adapter As New SqlDataAdapter(sc)
-                    adapter.SelectCommand.ExecuteNonQuery()
-                    ' end save database
-                    ' save datalog file
-                    Invoke(Sub()
-                               SaveDataLog()
-                           End Sub)
-                    ' trigger finish save data
-                    .MW11100_ = Modbus.WriteBit(.MW11100_, 7, 1)
-                    .MW11100_ = Modbus.WriteBit(.MW11100_, 6, 0)
-                    PlcTrigger.MW11100_ = True
-                    PlcWriteState = True
-                    'end trigger finish save data
-                End If
-            End With
+                                           If RightCameraResult = 1 Then
+                                               lbl_st5_right_camera_5.BackColor = Color.Green
+                                               lbl_st5_right_camera_5.Text = "OK"
+                                           ElseIf RightCameraResult = 2 Then
+                                               lbl_st5_right_camera_5.BackColor = Color.Red
+                                               lbl_st5_right_camera_5.Text = "NG"
+                                           End If
+                                   End Select
+                               End Sub)
+                        ' end update text box
+                        ' save database
+                        Call Database.Connect()
+                        Dim sc As New SqlCommand("UPDATE tb_datalog SET [ST5 Camera Result Left] = '" & LeftCameraResult & "', [ST5 Camera Result Right] = '" & RightCameraResult & "' WHERE [ID] = " & CountST5 & "", Database.Connection)
+                        Dim adapter As New SqlDataAdapter(sc)
+                        adapter.SelectCommand.ExecuteNonQuery()
+                        ' end save database
+                        ' save datalog file
+                        Invoke(Sub()
+                                   SaveDataLog()
+                               End Sub)
+                        ' trigger finish save data
+                        .MW11100_ = Modbus.WriteBit(.MW11100_, 7, 1)
+                        .MW11100_ = Modbus.WriteBit(.MW11100_, 6, 0)
+                        PlcTrigger.MW11100_ = True
+                        PlcWriteState = True
+                        'end trigger finish save data
+                    End If
+                End With
+            End If
+
             Thread.Sleep(150)
         Loop
     End Sub
     Private Sub MainST3()
         Do
-            With PlcSave
-                If .MW11100_0 = 1 Then
-                    ' update count
-                    CountST3 += 1
-                    ' update config
-                    Config.CountProduct = CountST3
-                    WriteINI(iniPath, "STATUS", "CountProduct", Config.CountProduct)
-                    ' data aquisition from instrument
-                    Heiden.Write("A0100" + vbCr)
-                    Hain.Write("A0100" + vbCr)
-                    Thread.Sleep(100)
-                    Dim LeftHeidenResult As String = HeidenString
-                    Dim RightHeidenResult As String = HainString
-                    ' end data aquisition from instrument
-                    ' update text box
-                    Invoke(Sub()
-                               Select Case MachineStatus.CavityST3
-                                   Case 1
-                                       lbl_st3_left_measure.Text = LeftHeidenResult
-                                       lbl_st3_right_measure.Text = RightHeidenResult
-                                       lbl_st5_left_camera.Text = ""
-                                       lbl_st5_right_camera.Text = ""
-                                       lbl_status_l.Text = ""
-                                       lbl_status_r.Text = ""
-                                   Case 2
-                                       lbl_st3_left_measure_1.Text = LeftHeidenResult
-                                       lbl_st3_right_measure_1.Text = RightHeidenResult
-                                       lbl_st5_left_camera_1.Text = ""
-                                       lbl_st5_right_camera_1.Text = ""
-                                       lbl_status_l_1.Text = ""
-                                       lbl_status_r_1.Text = ""
-                                   Case 3
-                                       lbl_st3_left_measure_2.Text = LeftHeidenResult
-                                       lbl_st3_right_measure_2.Text = RightHeidenResult
-                                       lbl_st5_left_camera_2.Text = ""
-                                       lbl_st5_right_camera_2.Text = ""
-                                       lbl_status_l_2.Text = ""
-                                       lbl_status_r_2.Text = ""
-                                   Case 4
-                                       lbl_st3_left_measure_3.Text = LeftHeidenResult
-                                       lbl_st3_right_measure_3.Text = RightHeidenResult
-                                       lbl_st5_left_camera_3.Text = ""
-                                       lbl_st5_right_camera_3.Text = ""
-                                       lbl_status_l_3.Text = ""
-                                       lbl_status_r_3.Text = ""
-                                   Case 5
-                                       lbl_st3_left_measure_4.Text = LeftHeidenResult
-                                       lbl_st3_right_measure_4.Text = RightHeidenResult
-                                       lbl_st5_left_camera_4.Text = ""
-                                       lbl_st5_right_camera_4.Text = ""
-                                       lbl_status_l_4.Text = ""
-                                       lbl_status_r_4.Text = ""
-                                   Case 6
-                                       lbl_st3_left_measure_5.Text = LeftHeidenResult
-                                       lbl_st3_right_measure_5.Text = RightHeidenResult
-                                       lbl_st5_left_camera_5.Text = ""
-                                       lbl_st5_right_camera_5.Text = ""
-                                       lbl_status_l_5.Text = ""
-                                       lbl_status_r_5.Text = ""
-                               End Select
-                           End Sub)
-                    ' end update text box
-                    ' save database
-                    Call Database.Connect()
-                    Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right]) VALUES(" & CountST3 & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & LeftHeidenResult.Replace(".", ",") & "', '" & LeftHeidenResult.Replace(".", ",") & "')", Database.Connection)
-                    Dim adapter As New SqlDataAdapter(sc)
-                    adapter.SelectCommand.ExecuteNonQuery()
-                    ' end save database
-                    ' save datalog file
-                    Invoke(Sub()
-                               SaveDataLog()
-                           End Sub)
-                    ' end save datalog file
-                    ' send data to modbus
-                    ProductResult.MeasurementLeft = LeftHeidenResult.Replace(".", ",")
-                    ProductResult.MeasurementRight = RightHeidenResult.Replace(".", ",")
-                    PlcTrigger.HeidenResult = True
-                    ' end send data to modbus
-                    ' trigger finish save data
-                    .MW11100_ = Modbus.WriteBit(.MW11100_, 1, 1)
-                    .MW11100_ = Modbus.WriteBit(.MW11100_, 0, 0)
-                    PlcTrigger.MW11100_ = True
-                    PlcWriteState = True
-                    'end trigger finish save data
-                ElseIf .MW11100_2 = 1 Then
-                    ' data aquisition from plc
-                    Dim LeftMeasureResult As Integer = ProductResult.MeasurementLeftStatus
-                    Dim RightMeasureResult As Integer = ProductResult.MeasurementRightStatus
-                    ' end data aquisition from plc
-                    ' update text box
-                    Invoke(Sub()
-                               Select Case MachineStatus.CavityST3
-                                   Case 1
-                                       If LeftMeasureResult = 1 Then
-                                           lbl_st3_left_measure.BackColor = Color.Green
-                                       ElseIf LeftMeasureResult = 2 Then
-                                           lbl_st3_left_measure.BackColor = Color.Red
-                                       End If
+            If SequenceIndex = MainSequence.ScanQty Then
+                With PlcSave
+                    If .MW11100_0 = 1 Then
+                        ' update count
+                        CountST3 += 1
+                        ' update config
+                        Config.CountProduct = CountST3
+                        WriteINI(iniPath, "STATUS", "CountProduct", Config.CountProduct)
+                        ' data aquisition from instrument
+                        Heiden.Write("A00100" + vbCr)
+                        Hain.Write("A00100" + vbCr)
+                        Thread.Sleep(100)
+                        Dim LeftHeidenResult As String = HeidenString.Replace(" ", "")
+                        Dim RightHeidenResult As String = HainString.Replace(" ", "")
+                        ' end data aquisition from instrument
+                        ' update text box
+                        Invoke(Sub()
+                                   Select Case MachineStatus.CavityST3
+                                       Case 1
 
-                                       If RightMeasureResult = 1 Then
-                                           lbl_st3_right_measure.BackColor = Color.Green
-                                       ElseIf RightMeasureResult = 2 Then
-                                           lbl_st3_right_measure.BackColor = Color.Red
-                                       End If
-                                   Case 2
-                                       If LeftMeasureResult = 1 Then
-                                           lbl_st3_left_measure_1.BackColor = Color.Green
-                                       ElseIf LeftMeasureResult = 2 Then
-                                           lbl_st3_left_measure_1.BackColor = Color.Red
-                                       End If
+                                           lbl_st3_left_measure.Text = LeftHeidenResult
+                                           lbl_st3_right_measure.Text = RightHeidenResult
+                                           lbl_st5_left_camera.Text = ""
+                                           lbl_st5_right_camera.Text = ""
+                                           lbl_status_l.Text = ""
+                                           lbl_status_r.Text = ""
+                                       Case 2
 
-                                       If RightMeasureResult = 1 Then
-                                           lbl_st3_right_measure_1.BackColor = Color.Green
-                                       ElseIf RightMeasureResult = 2 Then
-                                           lbl_st3_right_measure_1.BackColor = Color.Red
-                                       End If
-                                   Case 3
-                                       If LeftMeasureResult = 1 Then
-                                           lbl_st3_left_measure_2.BackColor = Color.Green
-                                       ElseIf LeftMeasureResult = 2 Then
-                                           lbl_st3_left_measure_2.BackColor = Color.Red
-                                       End If
+                                           lbl_st3_left_measure_1.Text = LeftHeidenResult
+                                           lbl_st3_right_measure_1.Text = RightHeidenResult
+                                           lbl_st5_left_camera_1.Text = ""
+                                           lbl_st5_right_camera_1.Text = ""
+                                           lbl_status_l_1.Text = ""
+                                           lbl_status_r_1.Text = ""
+                                       Case 3
 
-                                       If RightMeasureResult = 1 Then
-                                           lbl_st3_right_measure_2.BackColor = Color.Green
-                                       ElseIf RightMeasureResult = 2 Then
-                                           lbl_st3_right_measure_2.BackColor = Color.Red
-                                       End If
-                                   Case 4
-                                       If LeftMeasureResult = 1 Then
-                                           lbl_st3_left_measure_3.BackColor = Color.Green
-                                       ElseIf LeftMeasureResult = 2 Then
-                                           lbl_st3_left_measure_3.BackColor = Color.Red
-                                       End If
+                                           lbl_st3_left_measure_2.Text = LeftHeidenResult
+                                           lbl_st3_right_measure_2.Text = RightHeidenResult
+                                           lbl_st5_left_camera_2.Text = ""
+                                           lbl_st5_right_camera_2.Text = ""
+                                           lbl_status_l_2.Text = ""
+                                           lbl_status_r_2.Text = ""
+                                       Case 4
 
-                                       If RightMeasureResult = 1 Then
-                                           lbl_st3_right_measure_3.BackColor = Color.Green
-                                       ElseIf RightMeasureResult = 2 Then
-                                           lbl_st3_right_measure_3.BackColor = Color.Red
-                                       End If
-                                   Case 5
-                                       If LeftMeasureResult = 1 Then
-                                           lbl_st3_left_measure_4.BackColor = Color.Green
-                                       ElseIf LeftMeasureResult = 2 Then
-                                           lbl_st3_left_measure_4.BackColor = Color.Red
-                                       End If
+                                           lbl_st3_left_measure_3.Text = LeftHeidenResult
+                                           lbl_st3_right_measure_3.Text = RightHeidenResult
+                                           lbl_st5_left_camera_3.Text = ""
+                                           lbl_st5_right_camera_3.Text = ""
+                                           lbl_status_l_3.Text = ""
+                                           lbl_status_r_3.Text = ""
+                                       Case 5
 
-                                       If RightMeasureResult = 1 Then
-                                           lbl_st3_right_measure_4.BackColor = Color.Green
-                                       ElseIf RightMeasureResult = 2 Then
-                                           lbl_st3_right_measure_4.BackColor = Color.Red
-                                       End If
-                                   Case 6
-                                       If LeftMeasureResult = 1 Then
-                                           lbl_st3_left_measure_5.BackColor = Color.Green
-                                       ElseIf LeftMeasureResult = 2 Then
-                                           lbl_st3_left_measure_5.BackColor = Color.Red
-                                       End If
+                                           lbl_st3_left_measure_4.Text = LeftHeidenResult
+                                           lbl_st3_right_measure_4.Text = RightHeidenResult
+                                           lbl_st5_left_camera_4.Text = ""
+                                           lbl_st5_right_camera_4.Text = ""
+                                           lbl_status_l_4.Text = ""
+                                           lbl_status_r_4.Text = ""
+                                       Case 6
 
-                                       If RightMeasureResult = 1 Then
-                                           lbl_st3_right_measure_5.BackColor = Color.Green
-                                       ElseIf RightMeasureResult = 2 Then
-                                           lbl_st3_right_measure_5.BackColor = Color.Red
-                                       End If
-                               End Select
-                           End Sub)
-                    ' end update text box
-                    ' save database
-                    Call Database.Connect()
-                    Dim sc As New SqlCommand("UPDATE tb_datalog SET [ST3 Measurement Left Status] = '" & LeftMeasureResult & "', [ST3 Measurement Right Status] = '" & RightMeasureResult & "' WHERE [ID] = " & CountST3 & "", Database.Connection)
-                    Dim adapter As New SqlDataAdapter(sc)
-                    adapter.SelectCommand.ExecuteNonQuery()
-                    ' end save database
-                    ' save datalog file
-                    Invoke(Sub()
-                               SaveDataLog()
-                           End Sub)
-                    ' end save datalog file
-                    ' trigger finish save data
-                    .MW11100_ = Modbus.WriteBit(.MW11100_, 3, 1)
-                    .MW11100_ = Modbus.WriteBit(.MW11100_, 2, 0)
-                    PlcTrigger.MW11100_ = True
-                    PlcWriteState = True
-                    'end trigger finish save data
-                End If
-            End With
+                                           lbl_st3_left_measure_5.Text = LeftHeidenResult
+                                           lbl_st3_right_measure_5.Text = RightHeidenResult
+                                           lbl_st5_left_camera_5.Text = ""
+                                           lbl_st5_right_camera_5.Text = ""
+                                           lbl_status_l_5.Text = ""
+                                           lbl_status_r_5.Text = ""
+                                   End Select
+                               End Sub)
+                        ' end update text box
+                        ' save database
+                        Call Database.Connect()
+                        Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right]) VALUES(" & CountST3 & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & LeftHeidenResult.Replace(".", ",") & "', '" & LeftHeidenResult.Replace(".", ",") & "')", Database.Connection)
+                        Dim adapter As New SqlDataAdapter(sc)
+                        adapter.SelectCommand.ExecuteNonQuery()
+                        ' end save database
+                        ' save datalog file
+                        Invoke(Sub()
+                                   SaveDataLog()
+                               End Sub)
+                        ' end save datalog file
+                        ' send data to modbus
+                        ProductResult.MeasurementLeft = LeftHeidenResult.Replace(".", ",")
+                        ProductResult.MeasurementRight = RightHeidenResult.Replace(".", ",")
+                        PlcTrigger.HeidenResult = True
+                        ' end send data to modbus
+                        ' trigger finish save data
+                        .MW11100_ = Modbus.WriteBit(.MW11100_, 1, 1)
+                        .MW11100_ = Modbus.WriteBit(.MW11100_, 0, 0)
+                        PlcTrigger.MW11100_ = True
+                        PlcWriteState = True
+                        'end trigger finish save data
+                    ElseIf .MW11100_2 = 1 Then
+                        ' data aquisition from plc
+                        Dim LeftMeasureResult As Integer = ProductResult.MeasurementLeftStatus
+                        Dim RightMeasureResult As Integer = ProductResult.MeasurementRightStatus
+                        ' end data aquisition from plc
+                        ' update text box
+                        Invoke(Sub()
+
+                                   Select Case MachineStatus.CavityST3
+                                       Case 1
+                                           If LeftMeasureResult = 1 Then
+                                               lbl_st3_left_measure.BackColor = Color.Green
+                                           ElseIf LeftMeasureResult = 2 Then
+                                               lbl_st3_left_measure.BackColor = Color.Red
+                                           End If
+
+                                           If RightMeasureResult = 1 Then
+                                               lbl_st3_right_measure.BackColor = Color.Green
+                                           ElseIf RightMeasureResult = 2 Then
+                                               lbl_st3_right_measure.BackColor = Color.Red
+                                           End If
+                                       Case 2
+                                           If LeftMeasureResult = 1 Then
+                                               lbl_st3_left_measure_1.BackColor = Color.Green
+                                           ElseIf LeftMeasureResult = 2 Then
+                                               lbl_st3_left_measure_1.BackColor = Color.Red
+                                           End If
+
+                                           If RightMeasureResult = 1 Then
+                                               lbl_st3_right_measure_1.BackColor = Color.Green
+                                           ElseIf RightMeasureResult = 2 Then
+                                               lbl_st3_right_measure_1.BackColor = Color.Red
+                                           End If
+                                       Case 3
+                                           If LeftMeasureResult = 1 Then
+                                               lbl_st3_left_measure_2.BackColor = Color.Green
+                                           ElseIf LeftMeasureResult = 2 Then
+                                               lbl_st3_left_measure_2.BackColor = Color.Red
+                                           End If
+
+                                           If RightMeasureResult = 1 Then
+                                               lbl_st3_right_measure_2.BackColor = Color.Green
+                                           ElseIf RightMeasureResult = 2 Then
+                                               lbl_st3_right_measure_2.BackColor = Color.Red
+                                           End If
+                                       Case 4
+                                           If LeftMeasureResult = 1 Then
+                                               lbl_st3_left_measure_3.BackColor = Color.Green
+                                           ElseIf LeftMeasureResult = 2 Then
+                                               lbl_st3_left_measure_3.BackColor = Color.Red
+                                           End If
+
+                                           If RightMeasureResult = 1 Then
+                                               lbl_st3_right_measure_3.BackColor = Color.Green
+                                           ElseIf RightMeasureResult = 2 Then
+                                               lbl_st3_right_measure_3.BackColor = Color.Red
+                                           End If
+                                       Case 5
+                                           If LeftMeasureResult = 1 Then
+                                               lbl_st3_left_measure_4.BackColor = Color.Green
+                                           ElseIf LeftMeasureResult = 2 Then
+                                               lbl_st3_left_measure_4.BackColor = Color.Red
+                                           End If
+
+                                           If RightMeasureResult = 1 Then
+                                               lbl_st3_right_measure_4.BackColor = Color.Green
+                                           ElseIf RightMeasureResult = 2 Then
+                                               lbl_st3_right_measure_4.BackColor = Color.Red
+                                           End If
+                                       Case 6
+                                           If LeftMeasureResult = 1 Then
+                                               lbl_st3_left_measure_5.BackColor = Color.Green
+                                           ElseIf LeftMeasureResult = 2 Then
+                                               lbl_st3_left_measure_5.BackColor = Color.Red
+                                           End If
+
+                                           If RightMeasureResult = 1 Then
+                                               lbl_st3_right_measure_5.BackColor = Color.Green
+                                           ElseIf RightMeasureResult = 2 Then
+                                               lbl_st3_right_measure_5.BackColor = Color.Red
+                                           End If
+                                   End Select
+                               End Sub)
+                        ' end update text box
+                        ' save database
+                        Call Database.Connect()
+                        Dim sc As New SqlCommand("UPDATE tb_datalog SET [ST3 Measurement Left Status] = '" & LeftMeasureResult & "', [ST3 Measurement Right Status] = '" & RightMeasureResult & "' WHERE [ID] = " & CountST3 & "", Database.Connection)
+                        Dim adapter As New SqlDataAdapter(sc)
+                        adapter.SelectCommand.ExecuteNonQuery()
+                        ' end save database
+                        ' save datalog file
+                        Invoke(Sub()
+                                   SaveDataLog()
+                               End Sub)
+                        ' end save datalog file
+                        ' trigger finish save data
+                        .MW11100_ = Modbus.WriteBit(.MW11100_, 3, 1)
+                        .MW11100_ = Modbus.WriteBit(.MW11100_, 2, 0)
+                        PlcTrigger.MW11100_ = True
+                        PlcWriteState = True
+                        'end trigger finish save data
+                    End If
+                End With
+            End If
+
             Thread.Sleep(150)
         Loop
     End Sub
@@ -909,6 +926,28 @@ Public Class MainForm
                                    lbl_op_ins.Text = "Please Scan Qty Number..."
                                End Sub)
                     End If
+
+                    Try
+                        If IsHandleCreated Then
+                            Invoke(Sub()
+                                       lbl_cav_1.Text = MachineStatus.CavityST1
+                                       lbl_cav_2.Text = MachineStatus.CavityST2
+                                       lbl_cav_3.Text = MachineStatus.CavityST3
+                                       lbl_cav_4.Text = MachineStatus.CavityST4
+                                       lbl_cav_5.Text = MachineStatus.CavityST5
+                                       lbl_cav_6.Text = MachineStatus.CavityST6
+                                       lbl_cyc_1.Text = String.Format("{0:0.00}", MachineStatus.CycleST1)
+                                       lbl_cyc_2.Text = String.Format("{0:0.00}", MachineStatus.CycleST2)
+                                       lbl_cyc_3.Text = String.Format("{0:0.00}", MachineStatus.CycleST3)
+                                       lbl_cyc_4.Text = String.Format("{0:0.00}", MachineStatus.CycleST4)
+                                       lbl_cyc_5.Text = String.Format("{0:0.00}", MachineStatus.CycleST5)
+                                       lbl_cyc_6.Text = String.Format("{0:0.00}", MachineStatus.CycleST6)
+                                       Mc_Cyc_Time.Text = String.Format("{0:0.00}", MachineStatus.McCT)
+                                   End Sub)
+                        End If
+                    Catch ex As Exception
+
+                    End Try
             End Select
             Thread.Sleep(150)
         Loop
@@ -1119,16 +1158,18 @@ Public Class MainForm
 
         With PlcSave
             If PlcTrigger.MW11100_ Then
-                PlcTrigger.MW11100_ = False
+
                 Modbus.WriteInteger(11100, .MW11100_)
+                PlcTrigger.MW11100_ = False
             End If
         End With
 
         With ProductResult
             If PlcTrigger.HeidenResult Then
+
+                Modbus.WriteDoubleInteger(12000, .MeasurementLeft)
+                Modbus.WriteDoubleInteger(12002, .MeasurementRight)
                 PlcTrigger.HeidenResult = False
-                Modbus.WriteFloat(12000, Single.Parse(.MeasurementLeft))
-                Modbus.WriteFloat(12002, Single.Parse(.MeasurementRight))
             End If
         End With
 
@@ -1226,6 +1267,7 @@ Public Class MainForm
             .CycleST4 = Modbus.ReadFloat(4950)
             .CycleST5 = Modbus.ReadFloat(5950)
             .CycleST6 = Modbus.ReadFloat(6950)
+            .McCT = Modbus.ReadFloat(14)
 
             .OutputFail = Modbus.ReadInteger(4)
             .OutputPass = Modbus.ReadInteger(3)
@@ -1442,12 +1484,19 @@ Public Class MainForm
     Private Sub Heiden_DataReceived(sender As Object, e As Ports.SerialDataReceivedEventArgs) Handles Heiden.DataReceived
         Invoke(Sub()
                    HeidenString = Heiden.ReadExisting
+                   Console.WriteLine("heiden : " + HeidenString)
                End Sub)
     End Sub
 
     Private Sub Hain_DataReceived(sender As Object, e As Ports.SerialDataReceivedEventArgs) Handles Hain.DataReceived
         Invoke(Sub()
                    HainString = Hain.ReadExisting
+                   Console.WriteLine("hain : " + HainString)
                End Sub)
+    End Sub
+
+    Private Sub btn_send_cmd_Click(sender As Object, e As EventArgs) Handles btn_send_cmd.Click
+        Heiden.Write(txt_cmd.Text + vbCr)
+        txt_resp.Text = HeidenString
     End Sub
 End Class

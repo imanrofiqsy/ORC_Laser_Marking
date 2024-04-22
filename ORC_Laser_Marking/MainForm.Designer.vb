@@ -32,6 +32,27 @@ Partial Class MainForm
         Me.lbl_user = New System.Windows.Forms.Label()
         Me.DateTime = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox37 = New System.Windows.Forms.GroupBox()
+        Me.lbl_cav_4 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.lbl_cav_1 = New System.Windows.Forms.Label()
+        Me.lbl_cav_6 = New System.Windows.Forms.Label()
+        Me.lbl_cyc_4 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.lbl_cav_5 = New System.Windows.Forms.Label()
+        Me.lbl_cyc_1 = New System.Windows.Forms.Label()
+        Me.lbl_cyc_6 = New System.Windows.Forms.Label()
+        Me.lbl_cav_2 = New System.Windows.Forms.Label()
+        Me.Label58 = New System.Windows.Forms.Label()
+        Me.lbl_cyc_5 = New System.Windows.Forms.Label()
+        Me.lbl_cav_3 = New System.Windows.Forms.Label()
+        Me.Label62 = New System.Windows.Forms.Label()
+        Me.lbl_cyc_2 = New System.Windows.Forms.Label()
+        Me.Label59 = New System.Windows.Forms.Label()
+        Me.lbl_cyc_3 = New System.Windows.Forms.Label()
+        Me.Label61 = New System.Windows.Forms.Label()
+        Me.Label60 = New System.Windows.Forms.Label()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
@@ -198,7 +219,13 @@ Partial Class MainForm
         Me.pb_logo = New System.Windows.Forms.PictureBox()
         Me.Heiden = New System.IO.Ports.SerialPort(Me.components)
         Me.Hain = New System.IO.Ports.SerialPort(Me.components)
+        Me.btn_send_cmd = New System.Windows.Forms.Button()
+        Me.txt_cmd = New System.Windows.Forms.TextBox()
+        Me.txt_resp = New System.Windows.Forms.TextBox()
+        Me.Mc_Cyc_Time = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox37.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox78.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -296,6 +323,10 @@ Partial Class MainForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txt_resp)
+        Me.GroupBox1.Controls.Add(Me.txt_cmd)
+        Me.GroupBox1.Controls.Add(Me.btn_send_cmd)
+        Me.GroupBox1.Controls.Add(Me.GroupBox37)
         Me.GroupBox1.Controls.Add(Me.GroupBox4)
         Me.GroupBox1.Controls.Add(Me.GroupBox78)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
@@ -307,6 +338,254 @@ Partial Class MainForm
         Me.GroupBox1.Size = New System.Drawing.Size(1074, 546)
         Me.GroupBox1.TabIndex = 27
         Me.GroupBox1.TabStop = False
+        '
+        'GroupBox37
+        '
+        Me.GroupBox37.Controls.Add(Me.Label25)
+        Me.GroupBox37.Controls.Add(Me.Mc_Cyc_Time)
+        Me.GroupBox37.Controls.Add(Me.lbl_cav_4)
+        Me.GroupBox37.Controls.Add(Me.Label34)
+        Me.GroupBox37.Controls.Add(Me.Label27)
+        Me.GroupBox37.Controls.Add(Me.lbl_cav_1)
+        Me.GroupBox37.Controls.Add(Me.lbl_cav_6)
+        Me.GroupBox37.Controls.Add(Me.lbl_cyc_4)
+        Me.GroupBox37.Controls.Add(Me.Label26)
+        Me.GroupBox37.Controls.Add(Me.lbl_cav_5)
+        Me.GroupBox37.Controls.Add(Me.lbl_cyc_1)
+        Me.GroupBox37.Controls.Add(Me.lbl_cyc_6)
+        Me.GroupBox37.Controls.Add(Me.lbl_cav_2)
+        Me.GroupBox37.Controls.Add(Me.Label58)
+        Me.GroupBox37.Controls.Add(Me.lbl_cyc_5)
+        Me.GroupBox37.Controls.Add(Me.lbl_cav_3)
+        Me.GroupBox37.Controls.Add(Me.Label62)
+        Me.GroupBox37.Controls.Add(Me.lbl_cyc_2)
+        Me.GroupBox37.Controls.Add(Me.Label59)
+        Me.GroupBox37.Controls.Add(Me.lbl_cyc_3)
+        Me.GroupBox37.Controls.Add(Me.Label61)
+        Me.GroupBox37.Controls.Add(Me.Label60)
+        Me.GroupBox37.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox37.Location = New System.Drawing.Point(418, 304)
+        Me.GroupBox37.Name = "GroupBox37"
+        Me.GroupBox37.Size = New System.Drawing.Size(315, 236)
+        Me.GroupBox37.TabIndex = 81
+        Me.GroupBox37.TabStop = False
+        Me.GroupBox37.Text = "STATION STATUS"
+        '
+        'lbl_cav_4
+        '
+        Me.lbl_cav_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cav_4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_cav_4.Location = New System.Drawing.Point(194, 114)
+        Me.lbl_cav_4.Name = "lbl_cav_4"
+        Me.lbl_cav_4.Size = New System.Drawing.Size(83, 20)
+        Me.lbl_cav_4.TabIndex = 121
+        Me.lbl_cav_4.Text = "..."
+        Me.lbl_cav_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label34
+        '
+        Me.Label34.BackColor = System.Drawing.Color.White
+        Me.Label34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label34.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(194, 22)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(83, 20)
+        Me.Label34.TabIndex = 122
+        Me.Label34.Text = "Cavity No"
+        Me.Label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label27
+        '
+        Me.Label27.BackColor = System.Drawing.Color.White
+        Me.Label27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label27.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(98, 22)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(83, 20)
+        Me.Label27.TabIndex = 122
+        Me.Label27.Text = "Cycle Time"
+        Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl_cav_1
+        '
+        Me.lbl_cav_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cav_1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_cav_1.Location = New System.Drawing.Point(194, 47)
+        Me.lbl_cav_1.Name = "lbl_cav_1"
+        Me.lbl_cav_1.Size = New System.Drawing.Size(83, 20)
+        Me.lbl_cav_1.TabIndex = 115
+        Me.lbl_cav_1.Text = "..."
+        Me.lbl_cav_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl_cav_6
+        '
+        Me.lbl_cav_6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cav_6.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_cav_6.Location = New System.Drawing.Point(194, 160)
+        Me.lbl_cav_6.Name = "lbl_cav_6"
+        Me.lbl_cav_6.Size = New System.Drawing.Size(83, 20)
+        Me.lbl_cav_6.TabIndex = 120
+        Me.lbl_cav_6.Text = "..."
+        Me.lbl_cav_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl_cyc_4
+        '
+        Me.lbl_cyc_4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cyc_4.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_cyc_4.Location = New System.Drawing.Point(98, 114)
+        Me.lbl_cyc_4.Name = "lbl_cyc_4"
+        Me.lbl_cyc_4.Size = New System.Drawing.Size(83, 20)
+        Me.lbl_cyc_4.TabIndex = 121
+        Me.lbl_cyc_4.Text = "..."
+        Me.lbl_cyc_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(14, 114)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(64, 20)
+        Me.Label26.TabIndex = 121
+        Me.Label26.Text = "Station 4"
+        '
+        'lbl_cav_5
+        '
+        Me.lbl_cav_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cav_5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_cav_5.Location = New System.Drawing.Point(194, 137)
+        Me.lbl_cav_5.Name = "lbl_cav_5"
+        Me.lbl_cav_5.Size = New System.Drawing.Size(83, 20)
+        Me.lbl_cav_5.TabIndex = 118
+        Me.lbl_cav_5.Text = "..."
+        Me.lbl_cav_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl_cyc_1
+        '
+        Me.lbl_cyc_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cyc_1.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_cyc_1.Location = New System.Drawing.Point(98, 47)
+        Me.lbl_cyc_1.Name = "lbl_cyc_1"
+        Me.lbl_cyc_1.Size = New System.Drawing.Size(83, 20)
+        Me.lbl_cyc_1.TabIndex = 115
+        Me.lbl_cyc_1.Text = "..."
+        Me.lbl_cyc_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl_cyc_6
+        '
+        Me.lbl_cyc_6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cyc_6.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_cyc_6.Location = New System.Drawing.Point(98, 160)
+        Me.lbl_cyc_6.Name = "lbl_cyc_6"
+        Me.lbl_cyc_6.Size = New System.Drawing.Size(83, 20)
+        Me.lbl_cyc_6.TabIndex = 120
+        Me.lbl_cyc_6.Text = "..."
+        Me.lbl_cyc_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl_cav_2
+        '
+        Me.lbl_cav_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cav_2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_cav_2.Location = New System.Drawing.Point(194, 69)
+        Me.lbl_cav_2.Name = "lbl_cav_2"
+        Me.lbl_cav_2.Size = New System.Drawing.Size(83, 20)
+        Me.lbl_cav_2.TabIndex = 119
+        Me.lbl_cav_2.Text = "..."
+        Me.lbl_cav_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label58
+        '
+        Me.Label58.AutoSize = True
+        Me.Label58.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label58.Location = New System.Drawing.Point(14, 47)
+        Me.Label58.Name = "Label58"
+        Me.Label58.Size = New System.Drawing.Size(64, 20)
+        Me.Label58.TabIndex = 115
+        Me.Label58.Text = "Station 1"
+        '
+        'lbl_cyc_5
+        '
+        Me.lbl_cyc_5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cyc_5.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_cyc_5.Location = New System.Drawing.Point(98, 137)
+        Me.lbl_cyc_5.Name = "lbl_cyc_5"
+        Me.lbl_cyc_5.Size = New System.Drawing.Size(83, 20)
+        Me.lbl_cyc_5.TabIndex = 118
+        Me.lbl_cyc_5.Text = "..."
+        Me.lbl_cyc_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl_cav_3
+        '
+        Me.lbl_cav_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cav_3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_cav_3.Location = New System.Drawing.Point(194, 91)
+        Me.lbl_cav_3.Name = "lbl_cav_3"
+        Me.lbl_cav_3.Size = New System.Drawing.Size(83, 20)
+        Me.lbl_cav_3.TabIndex = 116
+        Me.lbl_cav_3.Text = "..."
+        Me.lbl_cav_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label62
+        '
+        Me.Label62.AutoSize = True
+        Me.Label62.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label62.Location = New System.Drawing.Point(14, 160)
+        Me.Label62.Name = "Label62"
+        Me.Label62.Size = New System.Drawing.Size(64, 20)
+        Me.Label62.TabIndex = 120
+        Me.Label62.Text = "Station 6"
+        '
+        'lbl_cyc_2
+        '
+        Me.lbl_cyc_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cyc_2.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_cyc_2.Location = New System.Drawing.Point(98, 69)
+        Me.lbl_cyc_2.Name = "lbl_cyc_2"
+        Me.lbl_cyc_2.Size = New System.Drawing.Size(83, 20)
+        Me.lbl_cyc_2.TabIndex = 119
+        Me.lbl_cyc_2.Text = "..."
+        Me.lbl_cyc_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label59
+        '
+        Me.Label59.AutoSize = True
+        Me.Label59.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label59.Location = New System.Drawing.Point(14, 137)
+        Me.Label59.Name = "Label59"
+        Me.Label59.Size = New System.Drawing.Size(64, 20)
+        Me.Label59.TabIndex = 118
+        Me.Label59.Text = "Station 5"
+        '
+        'lbl_cyc_3
+        '
+        Me.lbl_cyc_3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.lbl_cyc_3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_cyc_3.Location = New System.Drawing.Point(98, 91)
+        Me.lbl_cyc_3.Name = "lbl_cyc_3"
+        Me.lbl_cyc_3.Size = New System.Drawing.Size(83, 20)
+        Me.lbl_cyc_3.TabIndex = 116
+        Me.lbl_cyc_3.Text = "..."
+        Me.lbl_cyc_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label61
+        '
+        Me.Label61.AutoSize = True
+        Me.Label61.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label61.Location = New System.Drawing.Point(14, 69)
+        Me.Label61.Name = "Label61"
+        Me.Label61.Size = New System.Drawing.Size(64, 20)
+        Me.Label61.TabIndex = 119
+        Me.Label61.Text = "Station 2"
+        '
+        'Label60
+        '
+        Me.Label60.AutoSize = True
+        Me.Label60.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label60.Location = New System.Drawing.Point(14, 91)
+        Me.Label60.Name = "Label60"
+        Me.Label60.Size = New System.Drawing.Size(64, 20)
+        Me.Label60.TabIndex = 116
+        Me.Label60.Text = "Station 3"
         '
         'GroupBox4
         '
@@ -2247,14 +2526,58 @@ Partial Class MainForm
         'Heiden
         '
         Me.Heiden.BaudRate = 115200
-        Me.Heiden.PortName = "COM7"
+        Me.Heiden.PortName = "COM4"
         Me.Heiden.RtsEnable = True
         '
         'Hain
         '
         Me.Hain.BaudRate = 115200
-        Me.Hain.PortName = "COM7"
+        Me.Hain.PortName = "COM5"
         Me.Hain.RtsEnable = True
+        '
+        'btn_send_cmd
+        '
+        Me.btn_send_cmd.Location = New System.Drawing.Point(803, 447)
+        Me.btn_send_cmd.Name = "btn_send_cmd"
+        Me.btn_send_cmd.Size = New System.Drawing.Size(75, 23)
+        Me.btn_send_cmd.TabIndex = 82
+        Me.btn_send_cmd.Text = "Button1"
+        Me.btn_send_cmd.UseVisualStyleBackColor = True
+        '
+        'txt_cmd
+        '
+        Me.txt_cmd.Location = New System.Drawing.Point(803, 395)
+        Me.txt_cmd.Name = "txt_cmd"
+        Me.txt_cmd.Size = New System.Drawing.Size(100, 20)
+        Me.txt_cmd.TabIndex = 83
+        '
+        'txt_resp
+        '
+        Me.txt_resp.Location = New System.Drawing.Point(803, 421)
+        Me.txt_resp.Name = "txt_resp"
+        Me.txt_resp.Size = New System.Drawing.Size(100, 20)
+        Me.txt_resp.TabIndex = 83
+        '
+        'Mc_Cyc_Time
+        '
+        Me.Mc_Cyc_Time.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Mc_Cyc_Time.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Mc_Cyc_Time.Location = New System.Drawing.Point(98, 184)
+        Me.Mc_Cyc_Time.Name = "Mc_Cyc_Time"
+        Me.Mc_Cyc_Time.Size = New System.Drawing.Size(178, 20)
+        Me.Mc_Cyc_Time.TabIndex = 123
+        Me.Mc_Cyc_Time.Text = "..."
+        Me.Mc_Cyc_Time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(14, 183)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(78, 20)
+        Me.Label25.TabIndex = 124
+        Me.Label25.Text = "Cycle Time"
         '
         'MainForm
         '
@@ -2292,6 +2615,9 @@ Partial Class MainForm
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Project Title"
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.GroupBox37.ResumeLayout(False)
+        Me.GroupBox37.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.GroupBox78.ResumeLayout(False)
@@ -2495,4 +2821,30 @@ Partial Class MainForm
     Friend WithEvents EndDate As DateTimePicker
     Friend WithEvents Heiden As IO.Ports.SerialPort
     Friend WithEvents Hain As IO.Ports.SerialPort
+    Friend WithEvents GroupBox37 As GroupBox
+    Friend WithEvents lbl_cav_4 As Label
+    Friend WithEvents Label34 As Label
+    Friend WithEvents Label27 As Label
+    Friend WithEvents lbl_cav_1 As Label
+    Friend WithEvents lbl_cav_6 As Label
+    Friend WithEvents lbl_cyc_4 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents lbl_cav_5 As Label
+    Friend WithEvents lbl_cyc_1 As Label
+    Friend WithEvents lbl_cyc_6 As Label
+    Friend WithEvents lbl_cav_2 As Label
+    Friend WithEvents Label58 As Label
+    Friend WithEvents lbl_cyc_5 As Label
+    Friend WithEvents lbl_cav_3 As Label
+    Friend WithEvents Label62 As Label
+    Friend WithEvents lbl_cyc_2 As Label
+    Friend WithEvents Label59 As Label
+    Friend WithEvents lbl_cyc_3 As Label
+    Friend WithEvents Label61 As Label
+    Friend WithEvents Label60 As Label
+    Friend WithEvents txt_resp As TextBox
+    Friend WithEvents txt_cmd As TextBox
+    Friend WithEvents btn_send_cmd As Button
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Mc_Cyc_Time As Label
 End Class
