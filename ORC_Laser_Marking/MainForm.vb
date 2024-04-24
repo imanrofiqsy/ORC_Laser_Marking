@@ -138,8 +138,8 @@ Public Class MainForm
                 .dbPassword = ReadINI(iniPath, "DATABASE", "Password")
                 .dbDatabase = ReadINI(iniPath, "DATABASE", "Database")
                 Thread.Sleep(500)
-                Heiden.Open()
-                Hain.Open()
+                'Heiden.Open()
+                'Hain.Open()
                 UpdateLoadingBar(60, "Loading?? 3...")
                 Thread.Sleep(500)
 
@@ -184,52 +184,65 @@ Public Class MainForm
     Private Sub MainAlarm()
         Do
             With MachineAlarm
-                If .DoorLock1 Then
-                    AlarmMessage = "Door Lock 1 Open"
-                ElseIf .DoorLock2 Then
-                    AlarmMessage = "Door Lock 2 Open"
-                ElseIf .DoorLock3 Then
-                    AlarmMessage = "Door Lock 3 Open"
-                ElseIf .DoorLock4 Then
-                    AlarmMessage = "Door Lock 4 Open"
-                ElseIf .Curtain Then
-                    AlarmMessage = "Curtain Sensor Discrepancy"
-                ElseIf .V101 Then
-                    AlarmMessage = "V101 Discrepancy"
-                ElseIf .V301 Then
-                    AlarmMessage = "V301 Discrepancy"
-                ElseIf .V302 Then
-                    AlarmMessage = "V302 Discrepancy"
-                ElseIf .V303 Then
-                    AlarmMessage = "V303 Discrepancy"
-                ElseIf .V304 Then
-                    AlarmMessage = "V304 Discrepancy"
-                ElseIf .V401 Then
-                    AlarmMessage = "V401 Discrepancy"
-                ElseIf .LaserError Then
-                    AlarmMessage = "ST4 Laser Error please check the laser"
-                ElseIf .ShutterLaserError Then
-                    AlarmMessage = "ST4 Shutter Laser Error please check or reset"
-                ElseIf .InterlockLaserError Then
-                    AlarmMessage = "ST4 Interlock Laser Error please check or reset"
-                ElseIf .V501 Then
-                    AlarmMessage = "V501 Discrepancy"
-                ElseIf .V502 Then
-                    AlarmMessage = "V502 Discrepancy"
-                ElseIf .V503 Then
-                    AlarmMessage = "V503 Discrepancy"
-                ElseIf .CamLeftError Then
-                    AlarmMessage = "ST5 Left Camera Error please reset the camera"
-                ElseIf .CamRightError Then
-                    AlarmMessage = "ST5 Right Camera Error please reset the camera"
-                ElseIf .V601 Then
-                    AlarmMessage = "V601 Discrepancy"
-                ElseIf .V602 Then
-                    AlarmMessage = "V602 Discrepancy"
-                ElseIf .V603 Then
-                    AlarmMessage = "V603 Discrepancy"
+                If IsConnected Then
+                    If .DoorLock1 Then
+                        AlarmMessage = "Door Lock 1 Open"
+                    ElseIf .DoorLock2 Then
+                        AlarmMessage = "Door Lock 2 Open"
+                    ElseIf .DoorLock3 Then
+                        AlarmMessage = "Door Lock 3 Open"
+                    ElseIf .DoorLock4 Then
+                        AlarmMessage = "Door Lock 4 Open"
+                    ElseIf .Curtain Then
+                        AlarmMessage = "Curtain Sensor Discrepancy"
+                    ElseIf .V101 Then
+                        AlarmMessage = "V101 Discrepancy"
+                    ElseIf .V301 Then
+                        AlarmMessage = "V301 Discrepancy"
+                    ElseIf .V302 Then
+                        AlarmMessage = "V302 Discrepancy"
+                    ElseIf .V303 Then
+                        AlarmMessage = "V303 Discrepancy"
+                    ElseIf .V304 Then
+                        AlarmMessage = "V304 Discrepancy"
+                    ElseIf .V401 Then
+                        AlarmMessage = "V401 Discrepancy"
+                    ElseIf .LaserError Then
+                        AlarmMessage = "ST4 Laser Error please check the laser"
+                    ElseIf .ShutterLaserError Then
+                        AlarmMessage = "ST4 Shutter Laser Error please check or reset"
+                    ElseIf .InterlockLaserError Then
+                        AlarmMessage = "ST4 Interlock Laser Error please check or reset"
+                    ElseIf .V501 Then
+                        AlarmMessage = "V501 Discrepancy"
+                    ElseIf .V502 Then
+                        AlarmMessage = "V502 Discrepancy"
+                    ElseIf .V503 Then
+                        AlarmMessage = "V503 Discrepancy"
+                    ElseIf .CamLeftError Then
+                        AlarmMessage = "ST5 Left Camera Error please reset the camera"
+                    ElseIf .CamRightError Then
+                        AlarmMessage = "ST5 Right Camera Error please reset the camera"
+                    ElseIf .V601 Then
+                        AlarmMessage = "V601 Discrepancy"
+                    ElseIf .V602 Then
+                        AlarmMessage = "V602 Discrepancy"
+                    ElseIf .V603 Then
+                        AlarmMessage = "V603 Discrepancy"
+                    Else
+                        AlarmMessage = ". . . . . . . . "
+                    End If
                 Else
-                    AlarmMessage = ". . . . . . . . "
+                    AlarmMessage = "Modbus Connection Error please check the PLC communication"
+                    If txt_alarm.Text = "ALARM : " + AlarmMessage Then
+                        Dim response As DialogResult = MessageBox.Show("Do you want to reconnect to PLC?", "PLC COMMUNICATION ERROR", MessageBoxButtons.YesNo, MessageBoxIcon.Error)
+                        If response = DialogResult.Yes Then
+                            Try
+                                Modbus.OpenPort(Config.IP, Config.Port)
+                            Catch ex As Exception
+                            End Try
+                        End If
+                    End If
                 End If
                 Invoke(Sub()
                            txt_alarm.Text = "ALARM : " + AlarmMessage
@@ -1100,433 +1113,446 @@ Public Class MainForm
         Loop
     End Sub
     Private Sub PlcWriting()
-        With SetCylinder
-            If PlcTrigger.V101 Then
-                PlcTrigger.V101 = False
-                Modbus.WriteInteger(1101, .V101)
-            End If
-            If PlcTrigger.TurnTable Then
-                PlcTrigger.TurnTable = False
-                Modbus.WriteInteger(1110, .TurnTable)
-            End If
-            If PlcTrigger.V301 = True Then
-                Modbus.WriteInteger(3101, .V301)
-                PlcTrigger.V301 = False
-            End If
-            If PlcTrigger.V302 = True Then
-                Modbus.WriteInteger(3102, .V302)
-                PlcTrigger.V302 = False
-            End If
-            If PlcTrigger.V303 = True Then
-                Modbus.WriteInteger(3103, .V303)
-                PlcTrigger.V303 = False
-            End If
-            If PlcTrigger.V304 = True Then
-                Modbus.WriteInteger(3104, .V304)
-                PlcTrigger.V304 = False
-            End If
-            If PlcTrigger.MW4101_ = True Then
-                Modbus.WriteInteger(4101, .MW4101_)
-                PlcTrigger.MW4101_ = False
-            End If
-            If PlcTrigger.V501 = True Then
-                Modbus.WriteInteger(5101, .V501)
-                PlcTrigger.V501 = False
-            End If
-            If PlcTrigger.V502 = True Then
-                Modbus.WriteInteger(5102, .V502)
-                PlcTrigger.V502 = False
-            End If
-            If PlcTrigger.V503 = True Then
-                Modbus.WriteInteger(5103, .V503)
-                PlcTrigger.V503 = False
-            End If
-            If PlcTrigger.V601 = True Then
-                Modbus.WriteInteger(6101, .V601)
-                PlcTrigger.V601 = False
-            End If
-            If PlcTrigger.V602 = True Then
-                Modbus.WriteInteger(6102, .V602)
-                PlcTrigger.V602 = False
-            End If
-            If PlcTrigger.V603 = True Then
-                Modbus.WriteInteger(6103, .V603)
-                PlcTrigger.V603 = False
-            End If
-            If PlcTrigger.MW5104_ Then
-                PlcTrigger.MW5104_ = False
-                Modbus.WriteInteger(5104, .MW5104_)
-            End If
-            If PlcTrigger.MW5105_ Then
-                PlcTrigger.MW5105_ = False
-                Modbus.WriteInteger(5105, .MW5105_)
-            End If
-        End With
+        Try
+            If IsConnected Then
+                With SetCylinder
+                    If PlcTrigger.V101 Then
+                        PlcTrigger.V101 = False
+                        Modbus.WriteInteger(1101, .V101)
+                    End If
+                    If PlcTrigger.TurnTable Then
+                        PlcTrigger.TurnTable = False
+                        Modbus.WriteInteger(1110, .TurnTable)
+                    End If
+                    If PlcTrigger.V301 = True Then
+                        Modbus.WriteInteger(3101, .V301)
+                        PlcTrigger.V301 = False
+                    End If
+                    If PlcTrigger.V302 = True Then
+                        Modbus.WriteInteger(3102, .V302)
+                        PlcTrigger.V302 = False
+                    End If
+                    If PlcTrigger.V303 = True Then
+                        Modbus.WriteInteger(3103, .V303)
+                        PlcTrigger.V303 = False
+                    End If
+                    If PlcTrigger.V304 = True Then
+                        Modbus.WriteInteger(3104, .V304)
+                        PlcTrigger.V304 = False
+                    End If
+                    If PlcTrigger.MW4101_ = True Then
+                        Modbus.WriteInteger(4101, .MW4101_)
+                        PlcTrigger.MW4101_ = False
+                    End If
+                    If PlcTrigger.V501 = True Then
+                        Modbus.WriteInteger(5101, .V501)
+                        PlcTrigger.V501 = False
+                    End If
+                    If PlcTrigger.V502 = True Then
+                        Modbus.WriteInteger(5102, .V502)
+                        PlcTrigger.V502 = False
+                    End If
+                    If PlcTrigger.V503 = True Then
+                        Modbus.WriteInteger(5103, .V503)
+                        PlcTrigger.V503 = False
+                    End If
+                    If PlcTrigger.V601 = True Then
+                        Modbus.WriteInteger(6101, .V601)
+                        PlcTrigger.V601 = False
+                    End If
+                    If PlcTrigger.V602 = True Then
+                        Modbus.WriteInteger(6102, .V602)
+                        PlcTrigger.V602 = False
+                    End If
+                    If PlcTrigger.V603 = True Then
+                        Modbus.WriteInteger(6103, .V603)
+                        PlcTrigger.V603 = False
+                    End If
+                    If PlcTrigger.MW5104_ Then
+                        PlcTrigger.MW5104_ = False
+                        Modbus.WriteInteger(5104, .MW5104_)
+                    End If
+                    If PlcTrigger.MW5105_ Then
+                        PlcTrigger.MW5105_ = False
+                        Modbus.WriteInteger(5105, .MW5105_)
+                    End If
+                End With
 
-        With MachineStatus
-            If PlcTrigger.App Then
-                PlcTrigger.App = False
-                Modbus.WriteInteger(6, .App)
-            End If
-            If PlcTrigger.TrigLoadData Then
-                PlcTrigger.TrigLoadData = False
-                Modbus.WriteInteger(11, .TrigLoadData)
-            End If
-            If PlcTrigger.Empty Then
-                PlcTrigger.Empty = False
-                Modbus.WriteInteger(9, .EmptyRequest)
-            End If
-            If PlcTrigger.StartCali Then
-                PlcTrigger.StartCali = False
-                Modbus.WriteInteger(3105, .StartCali)
-            End If
-            If PlcTrigger.Left1 Then
-                PlcTrigger.Left1 = False
-                Modbus.WriteInteger(3020, .Left1)
-            End If
-            If PlcTrigger.Left2 Then
-                PlcTrigger.Left2 = False
-                Modbus.WriteInteger(3022, .Left2)
-            End If
-            If PlcTrigger.Left3 Then
-                PlcTrigger.Left3 = False
-                Modbus.WriteInteger(3024, .Left3)
-            End If
-            If PlcTrigger.Left4 Then
-                PlcTrigger.Left4 = False
-                Modbus.WriteInteger(3026, .Left4)
-            End If
-            If PlcTrigger.Left5 Then
-                PlcTrigger.Left5 = False
-                Modbus.WriteInteger(3028, .Left5)
-            End If
-            If PlcTrigger.Left6 Then
-                PlcTrigger.Left6 = False
-                Modbus.WriteInteger(3030, .Left6)
-            End If
-            If PlcTrigger.Right1 Then
-                PlcTrigger.Right1 = False
-                Modbus.WriteInteger(3032, .Right1)
-            End If
-            If PlcTrigger.Right2 Then
-                PlcTrigger.Right2 = False
-                Modbus.WriteInteger(3034, .Right2)
-            End If
-            If PlcTrigger.Right3 Then
-                PlcTrigger.Right3 = False
-                Modbus.WriteInteger(3036, .Right3)
-            End If
-            If PlcTrigger.Right4 Then
-                PlcTrigger.Right4 = False
-                Modbus.WriteInteger(3038, .Right4)
-            End If
-            If PlcTrigger.Right5 Then
-                PlcTrigger.Right5 = False
-                Modbus.WriteInteger(3040, .Right5)
-            End If
-            If PlcTrigger.Right6 Then
-                PlcTrigger.Right6 = False
-                Modbus.WriteInteger(3042, .Right6)
-            End If
-            If PlcTrigger.MW2000_ Or PlcTrigger.EnableDisable Then
-                PlcTrigger.MW2000_ = False
-                Modbus.WriteInteger(2000, .MW2000_)
-            End If
-            If PlcTrigger.EnableDisable Then
-                PlcTrigger.EnableDisable = False
-                Modbus.WriteInteger(1000, .MW1000_)
-                Modbus.WriteInteger(3000, .MW3000_)
-                Modbus.WriteInteger(4000, .MW4000_)
-                Modbus.WriteInteger(5000, .MW5000_)
-                Modbus.WriteInteger(6000, .MW6000_)
-            End If
-        End With
+                With MachineStatus
+                    If PlcTrigger.App Then
+                        PlcTrigger.App = False
+                        Modbus.WriteInteger(6, .App)
+                    End If
+                    If PlcTrigger.TrigLoadData Then
+                        PlcTrigger.TrigLoadData = False
+                        Modbus.WriteInteger(11, .TrigLoadData)
+                    End If
+                    If PlcTrigger.Empty Then
+                        PlcTrigger.Empty = False
+                        Modbus.WriteInteger(9, .EmptyRequest)
+                    End If
+                    If PlcTrigger.StartCali Then
+                        PlcTrigger.StartCali = False
+                        Modbus.WriteInteger(3105, .StartCali)
+                    End If
+                    If PlcTrigger.Left1 Then
+                        PlcTrigger.Left1 = False
+                        Modbus.WriteInteger(3020, .Left1)
+                    End If
+                    If PlcTrigger.Left2 Then
+                        PlcTrigger.Left2 = False
+                        Modbus.WriteInteger(3022, .Left2)
+                    End If
+                    If PlcTrigger.Left3 Then
+                        PlcTrigger.Left3 = False
+                        Modbus.WriteInteger(3024, .Left3)
+                    End If
+                    If PlcTrigger.Left4 Then
+                        PlcTrigger.Left4 = False
+                        Modbus.WriteInteger(3026, .Left4)
+                    End If
+                    If PlcTrigger.Left5 Then
+                        PlcTrigger.Left5 = False
+                        Modbus.WriteInteger(3028, .Left5)
+                    End If
+                    If PlcTrigger.Left6 Then
+                        PlcTrigger.Left6 = False
+                        Modbus.WriteInteger(3030, .Left6)
+                    End If
+                    If PlcTrigger.Right1 Then
+                        PlcTrigger.Right1 = False
+                        Modbus.WriteInteger(3032, .Right1)
+                    End If
+                    If PlcTrigger.Right2 Then
+                        PlcTrigger.Right2 = False
+                        Modbus.WriteInteger(3034, .Right2)
+                    End If
+                    If PlcTrigger.Right3 Then
+                        PlcTrigger.Right3 = False
+                        Modbus.WriteInteger(3036, .Right3)
+                    End If
+                    If PlcTrigger.Right4 Then
+                        PlcTrigger.Right4 = False
+                        Modbus.WriteInteger(3038, .Right4)
+                    End If
+                    If PlcTrigger.Right5 Then
+                        PlcTrigger.Right5 = False
+                        Modbus.WriteInteger(3040, .Right5)
+                    End If
+                    If PlcTrigger.Right6 Then
+                        PlcTrigger.Right6 = False
+                        Modbus.WriteInteger(3042, .Right6)
+                    End If
+                    If PlcTrigger.MW2000_ Or PlcTrigger.EnableDisable Then
+                        PlcTrigger.MW2000_ = False
+                        Modbus.WriteInteger(2000, .MW2000_)
+                    End If
+                    If PlcTrigger.EnableDisable Then
+                        PlcTrigger.EnableDisable = False
+                        Modbus.WriteInteger(1000, .MW1000_)
+                        Modbus.WriteInteger(3000, .MW3000_)
+                        Modbus.WriteInteger(4000, .MW4000_)
+                        Modbus.WriteInteger(5000, .MW5000_)
+                        Modbus.WriteInteger(6000, .MW6000_)
+                    End If
+                End With
 
-        With ProductReferences
-            If PlcTrigger.References Then
-                PlcTrigger.References = False
-                Modbus.WriteInteger(10000, .PunchingMode)
-                Console.WriteLine(Single.Parse(.LevelDistance.ToString.Replace(".", ",")))
-                Modbus.WriteFloat(10002, Single.Parse(.LevelDistance.ToString.Replace(".", ",")))
-                Modbus.WriteFloat(10004, Single.Parse(.LevelTolerance.ToString.Replace(".", ",")))
-                Modbus.WriteInteger(10006, .OringCheck)
-                Modbus.WriteDoubleInteger(10008, .FestoLeftDistance)
-                Modbus.WriteDoubleInteger(10010, .FestoRightDistance)
-                Modbus.WriteInteger(10012, .FestoLeftSpeed)
-                Modbus.WriteInteger(10014, .FestoRightSpeed)
-                Modbus.WriteInteger(10030, .LaserTemplateAddress)
-                Modbus.WriteInteger(10032, .CameraProgram)
-            End If
-        End With
+                With ProductReferences
+                    If PlcTrigger.References Then
+                        PlcTrigger.References = False
+                        Modbus.WriteInteger(10000, .PunchingMode)
+                        Console.WriteLine(Single.Parse(.LevelDistance.ToString.Replace(".", ",")))
+                        Modbus.WriteFloat(10002, Single.Parse(.LevelDistance.ToString.Replace(".", ",")))
+                        Modbus.WriteFloat(10004, Single.Parse(.LevelTolerance.ToString.Replace(".", ",")))
+                        Modbus.WriteInteger(10006, .OringCheck)
+                        Modbus.WriteDoubleInteger(10008, .FestoLeftDistance)
+                        Modbus.WriteDoubleInteger(10010, .FestoRightDistance)
+                        Modbus.WriteInteger(10012, .FestoLeftSpeed)
+                        Modbus.WriteInteger(10014, .FestoRightSpeed)
+                        Modbus.WriteInteger(10030, .LaserTemplateAddress)
+                        Modbus.WriteInteger(10032, .CameraProgram)
+                    End If
+                End With
 
-        If LaserTrigger Then
-            LaserTrigger = False
-            With ProductReferences
-                '' send 20 char string
-                'For index As Integer = 0 To 19
-                '    .LaserCharData = .LaserStringData.Chars(index)
-                '    ''Debug.Write(index & " ")
-                '    ''Debug.WriteLine(char_data & " ")
-                '    Modbus.WriteInteger(10100 + index, Convert.ToInt32(.LaserCharData))
-                'Next
-                Modbus.WriteInteger(10100, Convert.ToInt32(.LaserStringData.Chars(0)))
-                Modbus.WriteInteger(10101, Convert.ToInt32(.LaserStringData.Chars(1)))
-                Modbus.WriteInteger(10102, Convert.ToInt32(.LaserStringData.Chars(2)))
-                Modbus.WriteInteger(10103, Convert.ToInt32(.LaserStringData.Chars(3)))
-                Modbus.WriteInteger(10104, Convert.ToInt32(.LaserStringData.Chars(4)))
-                Modbus.WriteInteger(10105, Convert.ToInt32(.LaserStringData.Chars(5)))
-                Modbus.WriteInteger(10106, Convert.ToInt32(.LaserStringData.Chars(6)))
-                Modbus.WriteInteger(10107, Convert.ToInt32(.LaserStringData.Chars(7)))
-                Modbus.WriteInteger(10108, Convert.ToInt32(.LaserStringData.Chars(8)))
-                Modbus.WriteInteger(10109, Convert.ToInt32(.LaserStringData.Chars(9)))
-                Modbus.WriteInteger(10110, Convert.ToInt32(.LaserStringData.Chars(10)))
-                Modbus.WriteInteger(10111, Convert.ToInt32(.LaserStringData.Chars(11)))
-                Modbus.WriteInteger(10112, Convert.ToInt32(.LaserStringData.Chars(12)))
-                Modbus.WriteInteger(10113, Convert.ToInt32(.LaserStringData.Chars(13)))
-                Modbus.WriteInteger(10114, Convert.ToInt32(.LaserStringData.Chars(14)))
-                Modbus.WriteInteger(10115, Convert.ToInt32(.LaserStringData.Chars(15)))
-                Modbus.WriteInteger(10116, Convert.ToInt32(.LaserStringData.Chars(16)))
-                Modbus.WriteInteger(10117, Convert.ToInt32(.LaserStringData.Chars(17)))
-                Modbus.WriteInteger(10118, Convert.ToInt32(.LaserStringData.Chars(18)))
-                Modbus.WriteInteger(10119, Convert.ToInt32(.LaserStringData.Chars(19)))
-            End With
-        End If
+                If LaserTrigger Then
+                    LaserTrigger = False
+                    With ProductReferences
+                        '' send 20 char string
+                        'For index As Integer = 0 To 19
+                        '    .LaserCharData = .LaserStringData.Chars(index)
+                        '    ''Debug.Write(index & " ")
+                        '    ''Debug.WriteLine(char_data & " ")
+                        '    Modbus.WriteInteger(10100 + index, Convert.ToInt32(.LaserCharData))
+                        'Next
+                        Modbus.WriteInteger(10100, Convert.ToInt32(.LaserStringData.Chars(0)))
+                        Modbus.WriteInteger(10101, Convert.ToInt32(.LaserStringData.Chars(1)))
+                        Modbus.WriteInteger(10102, Convert.ToInt32(.LaserStringData.Chars(2)))
+                        Modbus.WriteInteger(10103, Convert.ToInt32(.LaserStringData.Chars(3)))
+                        Modbus.WriteInteger(10104, Convert.ToInt32(.LaserStringData.Chars(4)))
+                        Modbus.WriteInteger(10105, Convert.ToInt32(.LaserStringData.Chars(5)))
+                        Modbus.WriteInteger(10106, Convert.ToInt32(.LaserStringData.Chars(6)))
+                        Modbus.WriteInteger(10107, Convert.ToInt32(.LaserStringData.Chars(7)))
+                        Modbus.WriteInteger(10108, Convert.ToInt32(.LaserStringData.Chars(8)))
+                        Modbus.WriteInteger(10109, Convert.ToInt32(.LaserStringData.Chars(9)))
+                        Modbus.WriteInteger(10110, Convert.ToInt32(.LaserStringData.Chars(10)))
+                        Modbus.WriteInteger(10111, Convert.ToInt32(.LaserStringData.Chars(11)))
+                        Modbus.WriteInteger(10112, Convert.ToInt32(.LaserStringData.Chars(12)))
+                        Modbus.WriteInteger(10113, Convert.ToInt32(.LaserStringData.Chars(13)))
+                        Modbus.WriteInteger(10114, Convert.ToInt32(.LaserStringData.Chars(14)))
+                        Modbus.WriteInteger(10115, Convert.ToInt32(.LaserStringData.Chars(15)))
+                        Modbus.WriteInteger(10116, Convert.ToInt32(.LaserStringData.Chars(16)))
+                        Modbus.WriteInteger(10117, Convert.ToInt32(.LaserStringData.Chars(17)))
+                        Modbus.WriteInteger(10118, Convert.ToInt32(.LaserStringData.Chars(18)))
+                        Modbus.WriteInteger(10119, Convert.ToInt32(.LaserStringData.Chars(19)))
+                    End With
+                End If
 
-        With PlcSave
-            If PlcTrigger.MW11100_ Then
+                With PlcSave
+                    If PlcTrigger.MW11100_ Then
 
-                Modbus.WriteInteger(11100, .MW11100_)
-                PlcTrigger.MW11100_ = False
-            End If
-        End With
+                        Modbus.WriteInteger(11100, .MW11100_)
+                        PlcTrigger.MW11100_ = False
+                    End If
+                End With
 
-        With ProductResult
-            If PlcTrigger.HeidenResult Then
+                With ProductResult
+                    If PlcTrigger.HeidenResult Then
 
-                Modbus.WriteDoubleInteger(12000, .MeasurementLeft)
-                Modbus.WriteDoubleInteger(12002, .MeasurementRight)
-                PlcTrigger.HeidenResult = False
-            End If
-        End With
+                        Modbus.WriteDoubleInteger(12000, .MeasurementLeft)
+                        Modbus.WriteDoubleInteger(12002, .MeasurementRight)
+                        PlcTrigger.HeidenResult = False
+                    End If
+                End With
 
-        With Fest
-            If PlcTrigger.MW370_ Then
-                PlcTrigger.MW370_ = False
-                Modbus.WriteInteger(370, .MW370_)
+                With Fest
+                    If PlcTrigger.MW370_ Then
+                        PlcTrigger.MW370_ = False
+                        Modbus.WriteInteger(370, .MW370_)
+                    End If
+                    If PlcTrigger.MW380_ Then
+                        PlcTrigger.MW380_ = False
+                        Modbus.WriteInteger(380, .MW380_)
+                    End If
+                    If PlcTrigger.ModPosL Then
+                        PlcTrigger.ModPosL = False
+                        Modbus.WriteInteger(375, .ModPosL)
+                    End If
+                    If PlcTrigger.ModPosR Then
+                        PlcTrigger.ModPosR = False
+                        Modbus.WriteInteger(385, .ModPosR)
+                    End If
+                    If PlcTrigger.TargetPosVelL Then
+                        PlcTrigger.TargetPosVelL = False
+                        Modbus.WriteDoubleInteger(372, .TextTpositionL)
+                        Modbus.WriteInteger(374, .TextTvelocityL)
+                    End If
+                    If PlcTrigger.TargetPosVelR Then
+                        PlcTrigger.TargetPosVelR = False
+                        Modbus.WriteDoubleInteger(382, .TextTpositionR)
+                        Modbus.WriteInteger(384, .TextTvelocityR)
+                    End If
+                End With
             End If
-            If PlcTrigger.MW380_ Then
-                PlcTrigger.MW380_ = False
-                Modbus.WriteInteger(380, .MW380_)
-            End If
-            If PlcTrigger.ModPosL Then
-                PlcTrigger.ModPosL = False
-                Modbus.WriteInteger(375, .ModPosL)
-            End If
-            If PlcTrigger.ModPosR Then
-                PlcTrigger.ModPosR = False
-                Modbus.WriteInteger(385, .ModPosR)
-            End If
-            If PlcTrigger.TargetPosVelL Then
-                PlcTrigger.TargetPosVelL = False
-                Modbus.WriteDoubleInteger(372, .TextTpositionL)
-                Modbus.WriteInteger(374, .TextTvelocityL)
-            End If
-            If PlcTrigger.TargetPosVelR Then
-                PlcTrigger.TargetPosVelR = False
-                Modbus.WriteDoubleInteger(382, .TextTpositionR)
-                Modbus.WriteInteger(384, .TextTvelocityR)
-            End If
-        End With
+        Catch ex As Exception
+            IsConnected = False
+        End Try
     End Sub
     Private Sub PlcReading()
-        With MachineAlarm
-            .AlarmGeneral = Modbus.ReadInteger(90)
-            .DoorLock1 = Modbus.ReadBit(.AlarmGeneral, 0)
-            .DoorLock2 = Modbus.ReadBit(.AlarmGeneral, 1)
-            .DoorLock3 = Modbus.ReadBit(.AlarmGeneral, 2)
-            .DoorLock4 = Modbus.ReadBit(.AlarmGeneral, 3)
-            .Curtain = Modbus.ReadBit(.AlarmGeneral, 4)
+        Try
+            If IsConnected Then
+                With MachineAlarm
+                    .AlarmGeneral = Modbus.ReadInteger(90)
+                    .DoorLock1 = Modbus.ReadBit(.AlarmGeneral, 0)
+                    .DoorLock2 = Modbus.ReadBit(.AlarmGeneral, 1)
+                    .DoorLock3 = Modbus.ReadBit(.AlarmGeneral, 2)
+                    .DoorLock4 = Modbus.ReadBit(.AlarmGeneral, 3)
+                    .Curtain = Modbus.ReadBit(.AlarmGeneral, 4)
 
-            .AlarmST1 = Modbus.ReadInteger(104)
-            .V101 = Modbus.ReadBit(.AlarmST1, 0)
+                    .AlarmST1 = Modbus.ReadInteger(104)
+                    .V101 = Modbus.ReadBit(.AlarmST1, 0)
 
-            .AlarmST3 = Modbus.ReadInteger(304)
-            .V301 = Modbus.ReadBit(.AlarmST3, 0)
-            .V302 = Modbus.ReadBit(.AlarmST3, 1)
-            .V303 = Modbus.ReadBit(.AlarmST3, 2)
-            .V304 = Modbus.ReadBit(.AlarmST3, 3)
+                    .AlarmST3 = Modbus.ReadInteger(304)
+                    .V301 = Modbus.ReadBit(.AlarmST3, 0)
+                    .V302 = Modbus.ReadBit(.AlarmST3, 1)
+                    .V303 = Modbus.ReadBit(.AlarmST3, 2)
+                    .V304 = Modbus.ReadBit(.AlarmST3, 3)
 
-            .AlarmST4 = Modbus.ReadInteger(404)
-            .V401 = Modbus.ReadBit(.AlarmST4, 0)
-            .LaserError = Modbus.ReadBit(.AlarmST4, 1)
-            .ShutterLaserError = Modbus.ReadBit(.AlarmST4, 2)
-            .InterlockLaserError = Modbus.ReadBit(.AlarmST4, 3)
+                    .AlarmST4 = Modbus.ReadInteger(404)
+                    .V401 = Modbus.ReadBit(.AlarmST4, 0)
+                    .LaserError = Modbus.ReadBit(.AlarmST4, 1)
+                    .ShutterLaserError = Modbus.ReadBit(.AlarmST4, 2)
+                    .InterlockLaserError = Modbus.ReadBit(.AlarmST4, 3)
 
-            .AlarmST5 = Modbus.ReadInteger(504)
-            .V501 = Modbus.ReadBit(.AlarmST5, 0)
-            .V502 = Modbus.ReadBit(.AlarmST5, 1)
-            .V503 = Modbus.ReadBit(.AlarmST5, 2)
-            .CamLeftError = Modbus.ReadBit(.AlarmST5, 3)
-            .CamRightError = Modbus.ReadBit(.AlarmST5, 4)
+                    .AlarmST5 = Modbus.ReadInteger(504)
+                    .V501 = Modbus.ReadBit(.AlarmST5, 0)
+                    .V502 = Modbus.ReadBit(.AlarmST5, 1)
+                    .V503 = Modbus.ReadBit(.AlarmST5, 2)
+                    .CamLeftError = Modbus.ReadBit(.AlarmST5, 3)
+                    .CamRightError = Modbus.ReadBit(.AlarmST5, 4)
 
-            .AlarmST6 = Modbus.ReadInteger(604)
-            .V601 = Modbus.ReadBit(.AlarmST6, 0)
-            .V602 = Modbus.ReadBit(.AlarmST6, 1)
-            .V603 = Modbus.ReadBit(.AlarmST6, 2)
-        End With
-        With MachineStatus
-            .PlcReady = Modbus.ReadInteger(10)
-            .Mode = Modbus.ReadInteger(1)
-            .State = Modbus.ReadInteger(2)
+                    .AlarmST6 = Modbus.ReadInteger(604)
+                    .V601 = Modbus.ReadBit(.AlarmST6, 0)
+                    .V602 = Modbus.ReadBit(.AlarmST6, 1)
+                    .V603 = Modbus.ReadBit(.AlarmST6, 2)
+                End With
+                With MachineStatus
+                    .PlcReady = Modbus.ReadInteger(10)
+                    .Mode = Modbus.ReadInteger(1)
+                    .State = Modbus.ReadInteger(2)
 
-            .TrigLoadData = Modbus.ReadInteger(11)
-            .LoadDataBusy = Modbus.ReadBit(.TrigLoadData, 1)
-            .LoadDataFinish = Modbus.ReadBit(.TrigLoadData, 2)
-            .LoadDataFail = Modbus.ReadBit(.TrigLoadData, 3)
+                    .TrigLoadData = Modbus.ReadInteger(11)
+                    .LoadDataBusy = Modbus.ReadBit(.TrigLoadData, 1)
+                    .LoadDataFinish = Modbus.ReadBit(.TrigLoadData, 2)
+                    .LoadDataFail = Modbus.ReadBit(.TrigLoadData, 3)
 
-            .MachineInitialized = Modbus.ReadInteger(11)
+                    .MachineInitialized = Modbus.ReadInteger(11)
 
-            .EmptyRequest = Modbus.ReadInteger(9)
-            .EmptyBusy = Modbus.ReadBit(.EmptyRequest, 1)
-            .EmptyFinish = Modbus.ReadBit(.EmptyRequest, 2)
+                    .EmptyRequest = Modbus.ReadInteger(9)
+                    .EmptyBusy = Modbus.ReadBit(.EmptyRequest, 1)
+                    .EmptyFinish = Modbus.ReadBit(.EmptyRequest, 2)
 
-            .CavityST1 = Modbus.ReadInteger(1952)
-            .CavityST2 = Modbus.ReadInteger(2952)
-            .CavityST3 = Modbus.ReadInteger(3952)
-            .CavityST4 = Modbus.ReadInteger(4952)
-            .CavityST5 = Modbus.ReadInteger(5952)
-            .CavityST6 = Modbus.ReadInteger(6952)
+                    .CavityST1 = Modbus.ReadInteger(1952)
+                    .CavityST2 = Modbus.ReadInteger(2952)
+                    .CavityST3 = Modbus.ReadInteger(3952)
+                    .CavityST4 = Modbus.ReadInteger(4952)
+                    .CavityST5 = Modbus.ReadInteger(5952)
+                    .CavityST6 = Modbus.ReadInteger(6952)
 
-            .CycleST1 = Modbus.ReadFloat(1950)
-            .CycleST2 = Modbus.ReadFloat(2950)
-            .CycleST3 = Modbus.ReadFloat(3950)
-            .CycleST4 = Modbus.ReadFloat(4950)
-            .CycleST5 = Modbus.ReadFloat(5950)
-            .CycleST6 = Modbus.ReadFloat(6950)
-            .McCT = Modbus.ReadFloat(14)
+                    .CycleST1 = Modbus.ReadFloat(1950)
+                    .CycleST2 = Modbus.ReadFloat(2950)
+                    .CycleST3 = Modbus.ReadFloat(3950)
+                    .CycleST4 = Modbus.ReadFloat(4950)
+                    .CycleST5 = Modbus.ReadFloat(5950)
+                    .CycleST6 = Modbus.ReadFloat(6950)
+                    .McCT = Modbus.ReadFloat(14)
 
-            .OutputFail = Modbus.ReadInteger(4)
-            .OutputPass = Modbus.ReadInteger(3)
+                    .OutputFail = Modbus.ReadInteger(4)
+                    .OutputPass = Modbus.ReadInteger(3)
 
-            .Laser = Modbus.ReadInteger(4202)
-            .LaserError = Modbus.ReadBit(.Laser, 0)
-            .LaserReady = Modbus.ReadBit(.Laser, 1)
-            .LaserBusy = Modbus.ReadBit(.Laser, 2)
-            .LaserShutter = Modbus.ReadBit(.Laser, 3)
-            .LaserInterlock = Modbus.ReadBit(.Laser, 4)
-            .LaserCommandOK = Modbus.ReadBit(.Laser, 5)
+                    .Laser = Modbus.ReadInteger(4202)
+                    .LaserError = Modbus.ReadBit(.Laser, 0)
+                    .LaserReady = Modbus.ReadBit(.Laser, 1)
+                    .LaserBusy = Modbus.ReadBit(.Laser, 2)
+                    .LaserShutter = Modbus.ReadBit(.Laser, 3)
+                    .LaserInterlock = Modbus.ReadBit(.Laser, 4)
+                    .LaserCommandOK = Modbus.ReadBit(.Laser, 5)
 
-            .LeftCamera = Modbus.ReadInteger(5204)
-            .LCamError = Modbus.ReadBit(.LeftCamera, 2)
-            .LCamNG = Modbus.ReadBit(.LeftCamera, 4)
-            .LCamOK = Modbus.ReadBit(.LeftCamera, 3)
-            .LCamReady = Modbus.ReadBit(.LeftCamera, 1)
-            .LCamRun = Modbus.ReadBit(.LeftCamera, 0)
+                    .LeftCamera = Modbus.ReadInteger(5204)
+                    .LCamError = Modbus.ReadBit(.LeftCamera, 2)
+                    .LCamNG = Modbus.ReadBit(.LeftCamera, 4)
+                    .LCamOK = Modbus.ReadBit(.LeftCamera, 3)
+                    .LCamReady = Modbus.ReadBit(.LeftCamera, 1)
+                    .LCamRun = Modbus.ReadBit(.LeftCamera, 0)
 
-            .RightCamera = Modbus.ReadInteger(5205)
-            .RCamError = Modbus.ReadBit(.RightCamera, 2)
-            .RCamNG = Modbus.ReadBit(.RightCamera, 4)
-            .RCamOK = Modbus.ReadBit(.RightCamera, 3)
-            .RCamReady = Modbus.ReadBit(.RightCamera, 1)
-            .RCamRun = Modbus.ReadBit(.RightCamera, 0)
+                    .RightCamera = Modbus.ReadInteger(5205)
+                    .RCamError = Modbus.ReadBit(.RightCamera, 2)
+                    .RCamNG = Modbus.ReadBit(.RightCamera, 4)
+                    .RCamOK = Modbus.ReadBit(.RightCamera, 3)
+                    .RCamReady = Modbus.ReadBit(.RightCamera, 1)
+                    .RCamRun = Modbus.ReadBit(.RightCamera, 0)
 
-            .CaliStatus = Modbus.ReadInteger(3205)
-            .CaliBusy = Modbus.ReadBit(.CaliStatus, 0)
+                    .CaliStatus = Modbus.ReadInteger(3205)
+                    .CaliBusy = Modbus.ReadBit(.CaliStatus, 0)
 
-            .MW1000_ = Modbus.ReadInteger(1000)
-            .MW2000_ = Modbus.ReadInteger(2000)
-            .MW3000_ = Modbus.ReadInteger(3000)
-            .MW4000_ = Modbus.ReadInteger(4000)
-            .MW5000_ = Modbus.ReadInteger(5000)
-            .MW6000_ = Modbus.ReadInteger(6000)
-        End With
+                    .MW1000_ = Modbus.ReadInteger(1000)
+                    .MW2000_ = Modbus.ReadInteger(2000)
+                    .MW3000_ = Modbus.ReadInteger(3000)
+                    .MW4000_ = Modbus.ReadInteger(4000)
+                    .MW5000_ = Modbus.ReadInteger(5000)
+                    .MW6000_ = Modbus.ReadInteger(6000)
+                End With
 
-        With GetCylinder
-            .V101 = Modbus.ReadInteger(1201)
-            .V301 = Modbus.ReadInteger(3201)
-            .V302 = Modbus.ReadInteger(3202)
-            .V303 = Modbus.ReadInteger(3203)
-            .V304 = Modbus.ReadInteger(3204)
-            .V401 = Modbus.ReadInteger(4201)
-            .V501 = Modbus.ReadInteger(5201)
-            .V502 = Modbus.ReadInteger(5202)
-            .V503 = Modbus.ReadInteger(5203)
-            .V601 = Modbus.ReadInteger(6201)
-            .V602 = Modbus.ReadInteger(6202)
-            .V603 = Modbus.ReadInteger(6203)
+                With GetCylinder
+                    .V101 = Modbus.ReadInteger(1201)
+                    .V301 = Modbus.ReadInteger(3201)
+                    .V302 = Modbus.ReadInteger(3202)
+                    .V303 = Modbus.ReadInteger(3203)
+                    .V304 = Modbus.ReadInteger(3204)
+                    .V401 = Modbus.ReadInteger(4201)
+                    .V501 = Modbus.ReadInteger(5201)
+                    .V502 = Modbus.ReadInteger(5202)
+                    .V503 = Modbus.ReadInteger(5203)
+                    .V601 = Modbus.ReadInteger(6201)
+                    .V602 = Modbus.ReadInteger(6202)
+                    .V603 = Modbus.ReadInteger(6203)
 
-            .MW1900_ = Modbus.ReadInteger(1900)
-            .MW1900_0 = Modbus.ReadBit(.MW1900_, 0)
-            .MW1900_1 = Modbus.ReadBit(.MW1900_, 1)
+                    .MW1900_ = Modbus.ReadInteger(1900)
+                    .MW1900_0 = Modbus.ReadBit(.MW1900_, 0)
+                    .MW1900_1 = Modbus.ReadBit(.MW1900_, 1)
 
-            .MW2900_ = Modbus.ReadInteger(2900)
-            .MW2900_0 = Modbus.ReadBit(.MW2900_, 0)
-            .MW2900_1 = Modbus.ReadBit(.MW2900_, 1)
-            .MW2900_2 = Modbus.ReadBit(.MW2900_, 2)
+                    .MW2900_ = Modbus.ReadInteger(2900)
+                    .MW2900_0 = Modbus.ReadBit(.MW2900_, 0)
+                    .MW2900_1 = Modbus.ReadBit(.MW2900_, 1)
+                    .MW2900_2 = Modbus.ReadBit(.MW2900_, 2)
 
-            .MW3900_ = Modbus.ReadInteger(3900)
-            .MW3900_0 = Modbus.ReadBit(.MW3900_, 0)
-            .MW3900_1 = Modbus.ReadBit(.MW3900_, 1)
+                    .MW3900_ = Modbus.ReadInteger(3900)
+                    .MW3900_0 = Modbus.ReadBit(.MW3900_, 0)
+                    .MW3900_1 = Modbus.ReadBit(.MW3900_, 1)
 
-            .MW4900_ = Modbus.ReadInteger(4900)
-            .MW4900_0 = Modbus.ReadBit(.MW4900_, 0)
-            .MW4900_1 = Modbus.ReadBit(.MW4900_, 1)
+                    .MW4900_ = Modbus.ReadInteger(4900)
+                    .MW4900_0 = Modbus.ReadBit(.MW4900_, 0)
+                    .MW4900_1 = Modbus.ReadBit(.MW4900_, 1)
 
-            .MW5900_ = Modbus.ReadInteger(5900)
-            .MW5900_0 = Modbus.ReadBit(.MW5900_, 0)
-            .MW5900_1 = Modbus.ReadBit(.MW5900_, 1)
+                    .MW5900_ = Modbus.ReadInteger(5900)
+                    .MW5900_0 = Modbus.ReadBit(.MW5900_, 0)
+                    .MW5900_1 = Modbus.ReadBit(.MW5900_, 1)
 
-            .MW6900_ = Modbus.ReadInteger(6900)
-            .MW6900_0 = Modbus.ReadBit(.MW6900_, 0)
-            .MW6900_1 = Modbus.ReadBit(.MW6900_, 1)
-        End With
+                    .MW6900_ = Modbus.ReadInteger(6900)
+                    .MW6900_0 = Modbus.ReadBit(.MW6900_, 0)
+                    .MW6900_1 = Modbus.ReadBit(.MW6900_, 1)
+                End With
 
-        With PlcSave
-            .MW11100_ = Modbus.ReadInteger(11100)
-            .MW11100_0 = Modbus.ReadBit(.MW11100_, 0)
-            .MW11100_2 = Modbus.ReadBit(.MW11100_, 2)
-            .MW11100_6 = Modbus.ReadBit(.MW11100_, 6)
-            .MW11100_10 = Modbus.ReadBit(.MW11100_, 10)
-        End With
+                With PlcSave
+                    .MW11100_ = Modbus.ReadInteger(11100)
+                    .MW11100_0 = Modbus.ReadBit(.MW11100_, 0)
+                    .MW11100_2 = Modbus.ReadBit(.MW11100_, 2)
+                    .MW11100_6 = Modbus.ReadBit(.MW11100_, 6)
+                    .MW11100_10 = Modbus.ReadBit(.MW11100_, 10)
+                End With
 
-        With ProductResult
-            .MeasurementLeftStatus = Modbus.ReadInteger(12004)
-            .MeasurementRightStatus = Modbus.ReadInteger(12006)
-            .CameraLeft = Modbus.ReadInteger(12008)
-            .CameraRight = Modbus.ReadInteger(12010)
-            .ProductLeft = Modbus.ReadInteger(12012)
-            .ProductRight = Modbus.ReadInteger(12013)
-        End With
+                With ProductResult
+                    .MeasurementLeftStatus = Modbus.ReadInteger(12004)
+                    .MeasurementRightStatus = Modbus.ReadInteger(12006)
+                    .CameraLeft = Modbus.ReadInteger(12008)
+                    .CameraRight = Modbus.ReadInteger(12010)
+                    .ProductLeft = Modbus.ReadInteger(12012)
+                    .ProductRight = Modbus.ReadInteger(12013)
+                End With
 
-        With Fest
-            'Festo Left
-            .IndicatorLeft = Modbus.ReadInteger(371)
-            .IndAxEnabledL = Modbus.ReadBit(.IndicatorLeft, 0)
-            .IndAxPosL = Modbus.ReadBit(.IndicatorLeft, 1)
-            .IndAxSpL = Modbus.ReadBit(.IndicatorLeft, 2)
-            .IndAxAckL = Modbus.ReadBit(.IndicatorLeft, 3)
-            .IndAxRefL = Modbus.ReadBit(.IndicatorLeft, 4)
-            .IndAxWarnL = Modbus.ReadBit(.IndicatorLeft, 5)
-            .IndAxErrorL = Modbus.ReadBit(.IndicatorLeft, 6)
-            .IndLockL = Modbus.ReadBit(.IndicatorLeft, 7)
-            .IndErrorL = Modbus.ReadBit(.IndicatorLeft, 8)
-            .TextAPositionL = Modbus.ReadDoubleInteger(376)
-            .TextFaultL = Modbus.ReadInteger(378)
+                With Fest
+                    'Festo Left
+                    .IndicatorLeft = Modbus.ReadInteger(371)
+                    .IndAxEnabledL = Modbus.ReadBit(.IndicatorLeft, 0)
+                    .IndAxPosL = Modbus.ReadBit(.IndicatorLeft, 1)
+                    .IndAxSpL = Modbus.ReadBit(.IndicatorLeft, 2)
+                    .IndAxAckL = Modbus.ReadBit(.IndicatorLeft, 3)
+                    .IndAxRefL = Modbus.ReadBit(.IndicatorLeft, 4)
+                    .IndAxWarnL = Modbus.ReadBit(.IndicatorLeft, 5)
+                    .IndAxErrorL = Modbus.ReadBit(.IndicatorLeft, 6)
+                    .IndLockL = Modbus.ReadBit(.IndicatorLeft, 7)
+                    .IndErrorL = Modbus.ReadBit(.IndicatorLeft, 8)
+                    .TextAPositionL = Modbus.ReadDoubleInteger(376)
+                    .TextFaultL = Modbus.ReadInteger(378)
 
-            'Festo Right
-            .IndicatorRight = Modbus.ReadInteger(381)
-            .IndAxEnabledR = Modbus.ReadBit(.IndicatorRight, 0)
-            .IndAxPosR = Modbus.ReadBit(.IndicatorRight, 1)
-            .IndAxSpR = Modbus.ReadBit(.IndicatorRight, 2)
-            .IndAxAckR = Modbus.ReadBit(.IndicatorRight, 3)
-            .IndAxRefR = Modbus.ReadBit(.IndicatorRight, 4)
-            .IndAxWarnR = Modbus.ReadBit(.IndicatorRight, 5)
-            .IndAxErrorR = Modbus.ReadBit(.IndicatorRight, 6)
-            .IndLockR = Modbus.ReadBit(.IndicatorRight, 7)
-            .IndErrorR = Modbus.ReadBit(.IndicatorRight, 8)
-            .TextAPositionR = Modbus.ReadDoubleInteger(386)
-            .TextFaultR = Modbus.ReadInteger(388)
-        End With
+                    'Festo Right
+                    .IndicatorRight = Modbus.ReadInteger(381)
+                    .IndAxEnabledR = Modbus.ReadBit(.IndicatorRight, 0)
+                    .IndAxPosR = Modbus.ReadBit(.IndicatorRight, 1)
+                    .IndAxSpR = Modbus.ReadBit(.IndicatorRight, 2)
+                    .IndAxAckR = Modbus.ReadBit(.IndicatorRight, 3)
+                    .IndAxRefR = Modbus.ReadBit(.IndicatorRight, 4)
+                    .IndAxWarnR = Modbus.ReadBit(.IndicatorRight, 5)
+                    .IndAxErrorR = Modbus.ReadBit(.IndicatorRight, 6)
+                    .IndLockR = Modbus.ReadBit(.IndicatorRight, 7)
+                    .IndErrorR = Modbus.ReadBit(.IndicatorRight, 8)
+                    .TextAPositionR = Modbus.ReadDoubleInteger(386)
+                    .TextFaultR = Modbus.ReadInteger(388)
+                End With
+            End If
+        Catch ex As Exception
+            IsConnected = False
+        End Try
+
     End Sub
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
         Hide()
