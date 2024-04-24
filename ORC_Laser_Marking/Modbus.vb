@@ -3,9 +3,13 @@ Public Class Modbus
     Dim modbusClient As ModbusClient
     Dim ConnectionError As Boolean
     Public Sub OpenPort(IP As String, PORT As String)
-        modbusClient = New ModbusClient(IP, Val(PORT))
-        modbusClient.Connect()
-        IsConnected = True
+        Try
+            modbusClient = New ModbusClient(IP, Val(PORT))
+            modbusClient.Connect()
+            IsConnected = True
+        Catch ex As Exception
+            IsConnected = False
+        End Try
     End Sub
     Public Sub ClosePort()
         modbusClient.Disconnect()
@@ -98,8 +102,13 @@ Public Class Modbus
         Return result
     End Function
     Public Function ReadInteger(address As Integer) As Integer
-        Dim val() As Integer = modbusClient.ReadHoldingRegisters(address, 1)
-        Return val(0)
+        Try
+            Dim val() As Integer = modbusClient.ReadHoldingRegisters(address, 1)
+            Return val(0)
+        Catch ex As Exception
+            IsConnected = False
+            Return 0
+        End Try
     End Function
     Public Sub WriteInteger(address As Integer, value As Integer)
         modbusClient.WriteSingleRegister(address, value)
