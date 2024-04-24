@@ -32,7 +32,12 @@ Partial Class MainForm
         Me.lbl_user = New System.Windows.Forms.Label()
         Me.DateTime = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txt_resp = New System.Windows.Forms.TextBox()
+        Me.txt_cmd = New System.Windows.Forms.TextBox()
+        Me.btn_send_cmd = New System.Windows.Forms.Button()
         Me.GroupBox37 = New System.Windows.Forms.GroupBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Mc_Cyc_Time = New System.Windows.Forms.Label()
         Me.lbl_cav_4 = New System.Windows.Forms.Label()
         Me.Label34 = New System.Windows.Forms.Label()
         Me.Label27 = New System.Windows.Forms.Label()
@@ -219,11 +224,6 @@ Partial Class MainForm
         Me.pb_logo = New System.Windows.Forms.PictureBox()
         Me.Heiden = New System.IO.Ports.SerialPort(Me.components)
         Me.Hain = New System.IO.Ports.SerialPort(Me.components)
-        Me.btn_send_cmd = New System.Windows.Forms.Button()
-        Me.txt_cmd = New System.Windows.Forms.TextBox()
-        Me.txt_resp = New System.Windows.Forms.TextBox()
-        Me.Mc_Cyc_Time = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox37.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -339,6 +339,29 @@ Partial Class MainForm
         Me.GroupBox1.TabIndex = 27
         Me.GroupBox1.TabStop = False
         '
+        'txt_resp
+        '
+        Me.txt_resp.Location = New System.Drawing.Point(803, 421)
+        Me.txt_resp.Name = "txt_resp"
+        Me.txt_resp.Size = New System.Drawing.Size(100, 20)
+        Me.txt_resp.TabIndex = 83
+        '
+        'txt_cmd
+        '
+        Me.txt_cmd.Location = New System.Drawing.Point(803, 395)
+        Me.txt_cmd.Name = "txt_cmd"
+        Me.txt_cmd.Size = New System.Drawing.Size(100, 20)
+        Me.txt_cmd.TabIndex = 83
+        '
+        'btn_send_cmd
+        '
+        Me.btn_send_cmd.Location = New System.Drawing.Point(803, 447)
+        Me.btn_send_cmd.Name = "btn_send_cmd"
+        Me.btn_send_cmd.Size = New System.Drawing.Size(75, 23)
+        Me.btn_send_cmd.TabIndex = 82
+        Me.btn_send_cmd.Text = "Button1"
+        Me.btn_send_cmd.UseVisualStyleBackColor = True
+        '
         'GroupBox37
         '
         Me.GroupBox37.Controls.Add(Me.Label25)
@@ -370,6 +393,27 @@ Partial Class MainForm
         Me.GroupBox37.TabIndex = 81
         Me.GroupBox37.TabStop = False
         Me.GroupBox37.Text = "STATION STATUS"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(14, 183)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(78, 20)
+        Me.Label25.TabIndex = 124
+        Me.Label25.Text = "Cycle Time"
+        '
+        'Mc_Cyc_Time
+        '
+        Me.Mc_Cyc_Time.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Mc_Cyc_Time.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Mc_Cyc_Time.Location = New System.Drawing.Point(98, 184)
+        Me.Mc_Cyc_Time.Name = "Mc_Cyc_Time"
+        Me.Mc_Cyc_Time.Size = New System.Drawing.Size(178, 20)
+        Me.Mc_Cyc_Time.TabIndex = 123
+        Me.Mc_Cyc_Time.Text = "..."
+        Me.Mc_Cyc_Time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lbl_cav_4
         '
@@ -2107,7 +2151,6 @@ Partial Class MainForm
         '
         Me.txt_ref.Font = New System.Drawing.Font("Arial Narrow", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txt_ref.FormattingEnabled = True
-        Me.txt_ref.Items.AddRange(New Object() {"PRODUCT0"})
         Me.txt_ref.Location = New System.Drawing.Point(10, 48)
         Me.txt_ref.Name = "txt_ref"
         Me.txt_ref.Size = New System.Drawing.Size(170, 31)
@@ -2534,50 +2577,6 @@ Partial Class MainForm
         Me.Hain.BaudRate = 115200
         Me.Hain.PortName = "COM5"
         Me.Hain.RtsEnable = True
-        '
-        'btn_send_cmd
-        '
-        Me.btn_send_cmd.Location = New System.Drawing.Point(803, 447)
-        Me.btn_send_cmd.Name = "btn_send_cmd"
-        Me.btn_send_cmd.Size = New System.Drawing.Size(75, 23)
-        Me.btn_send_cmd.TabIndex = 82
-        Me.btn_send_cmd.Text = "Button1"
-        Me.btn_send_cmd.UseVisualStyleBackColor = True
-        '
-        'txt_cmd
-        '
-        Me.txt_cmd.Location = New System.Drawing.Point(803, 395)
-        Me.txt_cmd.Name = "txt_cmd"
-        Me.txt_cmd.Size = New System.Drawing.Size(100, 20)
-        Me.txt_cmd.TabIndex = 83
-        '
-        'txt_resp
-        '
-        Me.txt_resp.Location = New System.Drawing.Point(803, 421)
-        Me.txt_resp.Name = "txt_resp"
-        Me.txt_resp.Size = New System.Drawing.Size(100, 20)
-        Me.txt_resp.TabIndex = 83
-        '
-        'Mc_Cyc_Time
-        '
-        Me.Mc_Cyc_Time.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Mc_Cyc_Time.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Mc_Cyc_Time.Location = New System.Drawing.Point(98, 184)
-        Me.Mc_Cyc_Time.Name = "Mc_Cyc_Time"
-        Me.Mc_Cyc_Time.Size = New System.Drawing.Size(178, 20)
-        Me.Mc_Cyc_Time.TabIndex = 123
-        Me.Mc_Cyc_Time.Text = "..."
-        Me.Mc_Cyc_Time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(14, 183)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(78, 20)
-        Me.Label25.TabIndex = 124
-        Me.Label25.Text = "Cycle Time"
         '
         'MainForm
         '
