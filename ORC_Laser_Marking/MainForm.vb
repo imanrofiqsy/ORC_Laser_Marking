@@ -675,6 +675,12 @@ Public Class MainForm
                                            lbl_st5_right_camera.Text = ""
                                            lbl_status_l.Text = ""
                                            lbl_status_r.Text = ""
+                                           lbl_st3_left_measure.BackColor = Color.White
+                                           lbl_st3_right_measure.BackColor = Color.White
+                                           lbl_st5_left_camera.BackColor = Color.White
+                                           lbl_st5_right_camera.BackColor = Color.White
+                                           lbl_status_l.BackColor = Color.White
+                                           lbl_status_r.BackColor = Color.White
                                        Case 2
                                            TempSave_2.MeasurementLeft = LeftHeidenResult
                                            TempSave_2.MeasurementRight = RightHeidenResult
@@ -684,6 +690,12 @@ Public Class MainForm
                                            lbl_st5_right_camera_1.Text = ""
                                            lbl_status_l_1.Text = ""
                                            lbl_status_r_1.Text = ""
+                                           lbl_st3_left_measure_1.BackColor = Color.White
+                                           lbl_st3_right_measure_1.BackColor = Color.White
+                                           lbl_st5_left_camera_1.BackColor = Color.White
+                                           lbl_st5_right_camera_1.BackColor = Color.White
+                                           lbl_status_l_1.BackColor = Color.White
+                                           lbl_status_r_1.BackColor = Color.White
                                        Case 3
                                            TempSave_3.MeasurementLeft = LeftHeidenResult
                                            TempSave_3.MeasurementRight = RightHeidenResult
@@ -693,6 +705,12 @@ Public Class MainForm
                                            lbl_st5_right_camera_2.Text = ""
                                            lbl_status_l_2.Text = ""
                                            lbl_status_r_2.Text = ""
+                                           lbl_st3_left_measure_2.BackColor = Color.White
+                                           lbl_st3_right_measure_2.BackColor = Color.White
+                                           lbl_st5_left_camera_2.BackColor = Color.White
+                                           lbl_st5_right_camera_2.BackColor = Color.White
+                                           lbl_status_l_2.BackColor = Color.White
+                                           lbl_status_r_2.BackColor = Color.White
                                        Case 4
                                            TempSave_4.MeasurementLeft = LeftHeidenResult
                                            TempSave_4.MeasurementRight = RightHeidenResult
@@ -702,6 +720,12 @@ Public Class MainForm
                                            lbl_st5_right_camera_3.Text = ""
                                            lbl_status_l_3.Text = ""
                                            lbl_status_r_3.Text = ""
+                                           lbl_st3_left_measure_3.BackColor = Color.White
+                                           lbl_st3_right_measure_3.BackColor = Color.White
+                                           lbl_st5_left_camera_3.BackColor = Color.White
+                                           lbl_st5_right_camera_3.BackColor = Color.White
+                                           lbl_status_l_3.BackColor = Color.White
+                                           lbl_status_r_3.BackColor = Color.White
                                        Case 5
                                            TempSave_5.MeasurementLeft = LeftHeidenResult
                                            TempSave_5.MeasurementRight = RightHeidenResult
@@ -711,6 +735,12 @@ Public Class MainForm
                                            lbl_st5_right_camera_4.Text = ""
                                            lbl_status_l_4.Text = ""
                                            lbl_status_r_4.Text = ""
+                                           lbl_st3_left_measure_4.BackColor = Color.White
+                                           lbl_st3_right_measure_4.BackColor = Color.White
+                                           lbl_st5_left_camera_4.BackColor = Color.White
+                                           lbl_st5_right_camera_4.BackColor = Color.White
+                                           lbl_status_l_4.BackColor = Color.White
+                                           lbl_status_r_4.BackColor = Color.White
                                        Case 6
                                            TempSave_6.MeasurementLeft = LeftHeidenResult
                                            TempSave_6.MeasurementRight = RightHeidenResult
@@ -720,6 +750,12 @@ Public Class MainForm
                                            lbl_st5_right_camera_5.Text = ""
                                            lbl_status_l_5.Text = ""
                                            lbl_status_r_5.Text = ""
+                                           lbl_st3_left_measure_5.BackColor = Color.White
+                                           lbl_st3_right_measure_5.BackColor = Color.White
+                                           lbl_st5_left_camera_5.BackColor = Color.White
+                                           lbl_st5_right_camera_5.BackColor = Color.White
+                                           lbl_status_l_5.BackColor = Color.White
+                                           lbl_status_r_5.BackColor = Color.White
                                    End Select
                                End Sub)
                         ' end update text box
