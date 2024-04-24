@@ -328,6 +328,9 @@ Public Class MainForm
                                                lbl_status_r.BackColor = Color.Red
                                                lbl_status_r.Text = "NG"
                                            End If
+
+                                           TempSave_1.ProductLeft = LeftProdResult
+                                           TempSave_1.ProductRight = RightProdResult
                                        Case 2
                                            If LeftProdResult = 1 Then
                                                lbl_status_l_1.BackColor = Color.Green
@@ -344,6 +347,9 @@ Public Class MainForm
                                                lbl_status_r_1.BackColor = Color.Red
                                                lbl_status_r_1.Text = "NG"
                                            End If
+
+                                           TempSave_2.ProductLeft = LeftProdResult
+                                           TempSave_2.ProductRight = RightProdResult
                                        Case 3
                                            If LeftProdResult = 1 Then
                                                lbl_status_l_2.BackColor = Color.Green
@@ -360,6 +366,9 @@ Public Class MainForm
                                                lbl_status_r_2.BackColor = Color.Red
                                                lbl_status_r_2.Text = "NG"
                                            End If
+
+                                           TempSave_3.ProductLeft = LeftProdResult
+                                           TempSave_3.ProductRight = RightProdResult
                                        Case 4
                                            If LeftProdResult = 1 Then
                                                lbl_status_l_3.BackColor = Color.Green
@@ -376,6 +385,9 @@ Public Class MainForm
                                                lbl_status_r_3.BackColor = Color.Red
                                                lbl_status_r_3.Text = "NG"
                                            End If
+
+                                           TempSave_4.ProductLeft = LeftProdResult
+                                           TempSave_4.ProductRight = RightProdResult
                                        Case 5
                                            If LeftProdResult = 1 Then
                                                lbl_status_l_4.BackColor = Color.Green
@@ -392,6 +404,9 @@ Public Class MainForm
                                                lbl_status_r_4.BackColor = Color.Red
                                                lbl_status_r_4.Text = "NG"
                                            End If
+
+                                           TempSave_5.ProductLeft = LeftProdResult
+                                           TempSave_5.ProductRight = RightProdResult
                                        Case 6
                                            If LeftProdResult = 1 Then
                                                lbl_status_l_5.BackColor = Color.Green
@@ -408,14 +423,63 @@ Public Class MainForm
                                                lbl_status_r_5.BackColor = Color.Red
                                                lbl_status_r_5.Text = "NG"
                                            End If
+
+                                           TempSave_6.ProductLeft = LeftProdResult
+                                           TempSave_6.ProductRight = RightProdResult
                                    End Select
                                End Sub)
                         ' end update text box
                         ' save database
-                        Call Database.Connect()
-                        Dim sc As New SqlCommand("UPDATE tb_datalog SET [Product Left Result] = '" & LeftProdResult & "', [Product Right Result] = '" & RightProdResult & "' WHERE [ID] = " & CountST5 & "", Database.Connection)
-                        Dim adapter As New SqlDataAdapter(sc)
-                        adapter.SelectCommand.ExecuteNonQuery()
+                        'Call Database.Connect()
+                        'Dim sc As New SqlCommand("UPDATE tb_datalog SET [Product Left Result] = '" & LeftProdResult & "', [Product Right Result] = '" & RightProdResult & "' WHERE [ID] = " & CountST5 & "", Database.Connection)
+                        'Dim adapter As New SqlDataAdapter(sc)
+                        'adapter.SelectCommand.ExecuteNonQuery()
+
+                        Select Case MachineStatus.CavityST6
+                            Case 1
+                                With TempSave_1
+                                    Call Database.Connect()
+                                    Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right], [ST3 Measurement Left Status], [ST3 Measurement Right Status], [ST5 Camera Result Left], [ST5 Camera Result Right], [Product Left Result], [Product Right Result]) VALUES(" & CountProductResult & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & .MeasurementLeft.Replace(".", ",") & "', '" & .MeasurementRight.Replace(".", ",") & "', " & .MeasurementLeftStatus & ", " & .MeasurementRightStatus & ", " & .CameraLeft & ", " & .CameraRight & ", " & .ProductLeft & ", " & .ProductRight & " )", Database.Connection)
+                                    Dim adapter As New SqlDataAdapter(sc)
+                                    adapter.SelectCommand.ExecuteNonQuery()
+                                End With
+                            Case 2
+                                With TempSave_2
+                                    Call Database.Connect()
+                                    Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right], [ST3 Measurement Left Status], [ST3 Measurement Right Status], [ST5 Camera Result Left], [ST5 Camera Result Right], [Product Left Result], [Product Right Result]) VALUES(" & CountProductResult & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & .MeasurementLeft.Replace(".", ",") & "', '" & .MeasurementRight.Replace(".", ",") & "', " & .MeasurementLeftStatus & ", " & .MeasurementRightStatus & ", " & .CameraLeft & ", " & .CameraRight & ", " & .ProductLeft & ", " & .ProductRight & " )", Database.Connection)
+                                    Dim adapter As New SqlDataAdapter(sc)
+                                    adapter.SelectCommand.ExecuteNonQuery()
+                                End With
+                            Case 3
+                                With TempSave_3
+                                    Call Database.Connect()
+                                    Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right], [ST3 Measurement Left Status], [ST3 Measurement Right Status], [ST5 Camera Result Left], [ST5 Camera Result Right], [Product Left Result], [Product Right Result]) VALUES(" & CountProductResult & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & .MeasurementLeft.Replace(".", ",") & "', '" & .MeasurementRight.Replace(".", ",") & "', " & .MeasurementLeftStatus & ", " & .MeasurementRightStatus & ", " & .CameraLeft & ", " & .CameraRight & ", " & .ProductLeft & ", " & .ProductRight & " )", Database.Connection)
+                                    Dim adapter As New SqlDataAdapter(sc)
+                                    adapter.SelectCommand.ExecuteNonQuery()
+                                End With
+                            Case 4
+                                With TempSave_4
+                                    Call Database.Connect()
+                                    Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right], [ST3 Measurement Left Status], [ST3 Measurement Right Status], [ST5 Camera Result Left], [ST5 Camera Result Right], [Product Left Result], [Product Right Result]) VALUES(" & CountProductResult & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & .MeasurementLeft.Replace(".", ",") & "', '" & .MeasurementRight.Replace(".", ",") & "', " & .MeasurementLeftStatus & ", " & .MeasurementRightStatus & ", " & .CameraLeft & ", " & .CameraRight & ", " & .ProductLeft & ", " & .ProductRight & " )", Database.Connection)
+                                    Dim adapter As New SqlDataAdapter(sc)
+                                    adapter.SelectCommand.ExecuteNonQuery()
+                                End With
+                            Case 5
+                                With TempSave_5
+                                    Call Database.Connect()
+                                    Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right], [ST3 Measurement Left Status], [ST3 Measurement Right Status], [ST5 Camera Result Left], [ST5 Camera Result Right], [Product Left Result], [Product Right Result]) VALUES(" & CountProductResult & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & .MeasurementLeft.Replace(".", ",") & "', '" & .MeasurementRight.Replace(".", ",") & "', " & .MeasurementLeftStatus & ", " & .MeasurementRightStatus & ", " & .CameraLeft & ", " & .CameraRight & ", " & .ProductLeft & ", " & .ProductRight & " )", Database.Connection)
+                                    Dim adapter As New SqlDataAdapter(sc)
+                                    adapter.SelectCommand.ExecuteNonQuery()
+                                End With
+                            Case 6
+                                With TempSave_6
+                                    Call Database.Connect()
+                                    Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right], [ST3 Measurement Left Status], [ST3 Measurement Right Status], [ST5 Camera Result Left], [ST5 Camera Result Right], [Product Left Result], [Product Right Result]) VALUES(" & CountProductResult & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & .MeasurementLeft.Replace(".", ",") & "', '" & .MeasurementRight.Replace(".", ",") & "', " & .MeasurementLeftStatus & ", " & .MeasurementRightStatus & ", " & .CameraLeft & ", " & .CameraRight & ", " & .ProductLeft & ", " & .ProductRight & " )", Database.Connection)
+                                    Dim adapter As New SqlDataAdapter(sc)
+                                    adapter.SelectCommand.ExecuteNonQuery()
+                                End With
+                        End Select
+
                         ' end save database
                         ' save datalog
                         Invoke(Sub()
@@ -464,6 +528,8 @@ Public Class MainForm
                                                lbl_st5_right_camera.BackColor = Color.Red
                                                lbl_st5_right_camera.Text = "NG"
                                            End If
+                                           TempSave_1.CameraRight = RightCameraResult
+                                           TempSave_1.CameraLeft = LeftCameraResult
                                        Case 2
                                            If LeftCameraResult = 1 Then
                                                lbl_st5_left_camera_1.BackColor = Color.Green
@@ -480,6 +546,8 @@ Public Class MainForm
                                                lbl_st5_right_camera_1.BackColor = Color.Red
                                                lbl_st5_right_camera_1.Text = "NG"
                                            End If
+                                           TempSave_2.CameraRight = RightCameraResult
+                                           TempSave_2.CameraLeft = LeftCameraResult
                                        Case 3
                                            If LeftCameraResult = 1 Then
                                                lbl_st5_left_camera_2.BackColor = Color.Green
@@ -496,6 +564,8 @@ Public Class MainForm
                                                lbl_st5_right_camera_2.BackColor = Color.Red
                                                lbl_st5_right_camera_2.Text = "NG"
                                            End If
+                                           TempSave_3.CameraRight = RightCameraResult
+                                           TempSave_3.CameraLeft = LeftCameraResult
                                        Case 4
                                            If LeftCameraResult = 1 Then
                                                lbl_st5_left_camera_3.BackColor = Color.Green
@@ -512,6 +582,8 @@ Public Class MainForm
                                                lbl_st5_right_camera_3.BackColor = Color.Red
                                                lbl_st5_right_camera_3.Text = "NG"
                                            End If
+                                           TempSave_4.CameraRight = RightCameraResult
+                                           TempSave_4.CameraLeft = LeftCameraResult
                                        Case 5
                                            If LeftCameraResult = 1 Then
                                                lbl_st5_left_camera_4.BackColor = Color.Green
@@ -528,6 +600,8 @@ Public Class MainForm
                                                lbl_st5_right_camera_4.BackColor = Color.Red
                                                lbl_st5_right_camera_4.Text = "NG"
                                            End If
+                                           TempSave_5.CameraRight = RightCameraResult
+                                           TempSave_5.CameraLeft = LeftCameraResult
                                        Case 6
                                            If LeftCameraResult = 1 Then
                                                lbl_st5_left_camera_5.BackColor = Color.Green
@@ -544,6 +618,8 @@ Public Class MainForm
                                                lbl_st5_right_camera_5.BackColor = Color.Red
                                                lbl_st5_right_camera_5.Text = "NG"
                                            End If
+                                           TempSave_6.CameraRight = RightCameraResult
+                                           TempSave_6.CameraLeft = LeftCameraResult
                                    End Select
                                End Sub)
                         ' end update text box
@@ -591,7 +667,8 @@ Public Class MainForm
                         Invoke(Sub()
                                    Select Case MachineStatus.CavityST3
                                        Case 1
-
+                                           TempSave_1.MeasurementLeft = LeftHeidenResult
+                                           TempSave_1.MeasurementRight = RightHeidenResult
                                            lbl_st3_left_measure.Text = LeftHeidenResult
                                            lbl_st3_right_measure.Text = RightHeidenResult
                                            lbl_st5_left_camera.Text = ""
@@ -599,7 +676,8 @@ Public Class MainForm
                                            lbl_status_l.Text = ""
                                            lbl_status_r.Text = ""
                                        Case 2
-
+                                           TempSave_2.MeasurementLeft = LeftHeidenResult
+                                           TempSave_2.MeasurementRight = RightHeidenResult
                                            lbl_st3_left_measure_1.Text = LeftHeidenResult
                                            lbl_st3_right_measure_1.Text = RightHeidenResult
                                            lbl_st5_left_camera_1.Text = ""
@@ -607,7 +685,8 @@ Public Class MainForm
                                            lbl_status_l_1.Text = ""
                                            lbl_status_r_1.Text = ""
                                        Case 3
-
+                                           TempSave_3.MeasurementLeft = LeftHeidenResult
+                                           TempSave_3.MeasurementRight = RightHeidenResult
                                            lbl_st3_left_measure_2.Text = LeftHeidenResult
                                            lbl_st3_right_measure_2.Text = RightHeidenResult
                                            lbl_st5_left_camera_2.Text = ""
@@ -615,7 +694,8 @@ Public Class MainForm
                                            lbl_status_l_2.Text = ""
                                            lbl_status_r_2.Text = ""
                                        Case 4
-
+                                           TempSave_4.MeasurementLeft = LeftHeidenResult
+                                           TempSave_4.MeasurementRight = RightHeidenResult
                                            lbl_st3_left_measure_3.Text = LeftHeidenResult
                                            lbl_st3_right_measure_3.Text = RightHeidenResult
                                            lbl_st5_left_camera_3.Text = ""
@@ -623,7 +703,8 @@ Public Class MainForm
                                            lbl_status_l_3.Text = ""
                                            lbl_status_r_3.Text = ""
                                        Case 5
-
+                                           TempSave_5.MeasurementLeft = LeftHeidenResult
+                                           TempSave_5.MeasurementRight = RightHeidenResult
                                            lbl_st3_left_measure_4.Text = LeftHeidenResult
                                            lbl_st3_right_measure_4.Text = RightHeidenResult
                                            lbl_st5_left_camera_4.Text = ""
@@ -631,7 +712,8 @@ Public Class MainForm
                                            lbl_status_l_4.Text = ""
                                            lbl_status_r_4.Text = ""
                                        Case 6
-
+                                           TempSave_6.MeasurementLeft = LeftHeidenResult
+                                           TempSave_6.MeasurementRight = RightHeidenResult
                                            lbl_st3_left_measure_5.Text = LeftHeidenResult
                                            lbl_st3_right_measure_5.Text = RightHeidenResult
                                            lbl_st5_left_camera_5.Text = ""
@@ -642,15 +724,15 @@ Public Class MainForm
                                End Sub)
                         ' end update text box
                         ' save database
-                        Call Database.Connect()
-                        Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right]) VALUES(" & CountST3 & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & LeftHeidenResult.Replace(".", ",") & "', '" & LeftHeidenResult.Replace(".", ",") & "')", Database.Connection)
-                        Dim adapter As New SqlDataAdapter(sc)
-                        adapter.SelectCommand.ExecuteNonQuery()
+                        'Call Database.Connect()
+                        'Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right]) VALUES(" & CountST3 & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & LeftHeidenResult.Replace(".", ",") & "', '" & LeftHeidenResult.Replace(".", ",") & "')", Database.Connection)
+                        'Dim adapter As New SqlDataAdapter(sc)
+                        'adapter.SelectCommand.ExecuteNonQuery()
                         ' end save database
                         ' save datalog file
-                        Invoke(Sub()
-                                   SaveDataLog()
-                               End Sub)
+                        'Invoke(Sub()
+                        '           SaveDataLog()
+                        '       End Sub)
                         ' end save datalog file
                         ' send data to modbus
                         ProductResult.MeasurementLeft = LeftHeidenResult.Replace(".", ",")
@@ -684,6 +766,9 @@ Public Class MainForm
                                            ElseIf RightMeasureResult = 2 Then
                                                lbl_st3_right_measure.BackColor = Color.Red
                                            End If
+
+                                           TempSave_1.MeasurementLeftStatus = LeftMeasureResult
+                                           TempSave_1.MeasurementRightStatus = RightMeasureResult
                                        Case 2
                                            If LeftMeasureResult = 1 Then
                                                lbl_st3_left_measure_1.BackColor = Color.Green
@@ -696,6 +781,9 @@ Public Class MainForm
                                            ElseIf RightMeasureResult = 2 Then
                                                lbl_st3_right_measure_1.BackColor = Color.Red
                                            End If
+
+                                           TempSave_2.MeasurementLeftStatus = LeftMeasureResult
+                                           TempSave_2.MeasurementRightStatus = RightMeasureResult
                                        Case 3
                                            If LeftMeasureResult = 1 Then
                                                lbl_st3_left_measure_2.BackColor = Color.Green
@@ -708,6 +796,9 @@ Public Class MainForm
                                            ElseIf RightMeasureResult = 2 Then
                                                lbl_st3_right_measure_2.BackColor = Color.Red
                                            End If
+
+                                           TempSave_3.MeasurementLeftStatus = LeftMeasureResult
+                                           TempSave_3.MeasurementRightStatus = RightMeasureResult
                                        Case 4
                                            If LeftMeasureResult = 1 Then
                                                lbl_st3_left_measure_3.BackColor = Color.Green
@@ -720,6 +811,9 @@ Public Class MainForm
                                            ElseIf RightMeasureResult = 2 Then
                                                lbl_st3_right_measure_3.BackColor = Color.Red
                                            End If
+
+                                           TempSave_4.MeasurementLeftStatus = LeftMeasureResult
+                                           TempSave_4.MeasurementRightStatus = RightMeasureResult
                                        Case 5
                                            If LeftMeasureResult = 1 Then
                                                lbl_st3_left_measure_4.BackColor = Color.Green
@@ -732,6 +826,9 @@ Public Class MainForm
                                            ElseIf RightMeasureResult = 2 Then
                                                lbl_st3_right_measure_4.BackColor = Color.Red
                                            End If
+
+                                           TempSave_5.MeasurementLeftStatus = LeftMeasureResult
+                                           TempSave_5.MeasurementRightStatus = RightMeasureResult
                                        Case 6
                                            If LeftMeasureResult = 1 Then
                                                lbl_st3_left_measure_5.BackColor = Color.Green
@@ -744,19 +841,22 @@ Public Class MainForm
                                            ElseIf RightMeasureResult = 2 Then
                                                lbl_st3_right_measure_5.BackColor = Color.Red
                                            End If
+
+                                           TempSave_6.MeasurementLeftStatus = LeftMeasureResult
+                                           TempSave_6.MeasurementRightStatus = RightMeasureResult
                                    End Select
                                End Sub)
                         ' end update text box
                         ' save database
-                        Call Database.Connect()
-                        Dim sc As New SqlCommand("UPDATE tb_datalog SET [ST3 Measurement Left Status] = '" & LeftMeasureResult & "', [ST3 Measurement Right Status] = '" & RightMeasureResult & "' WHERE [ID] = " & CountST3 & "", Database.Connection)
-                        Dim adapter As New SqlDataAdapter(sc)
-                        adapter.SelectCommand.ExecuteNonQuery()
+                        'Call Database.Connect()
+                        'Dim sc As New SqlCommand("UPDATE tb_datalog SET [ST3 Measurement Left Status] = '" & LeftMeasureResult & "', [ST3 Measurement Right Status] = '" & RightMeasureResult & "' WHERE [ID] = " & CountST3 & "", Database.Connection)
+                        'Dim adapter As New SqlDataAdapter(sc)
+                        'adapter.SelectCommand.ExecuteNonQuery()
                         ' end save database
                         ' save datalog file
-                        Invoke(Sub()
-                                   SaveDataLog()
-                               End Sub)
+                        'Invoke(Sub()
+                        '           SaveDataLog()
+                        '       End Sub)
                         ' end save datalog file
                         ' trigger finish save data
                         .MW11100_ = Modbus.WriteBit(.MW11100_, 3, 1)

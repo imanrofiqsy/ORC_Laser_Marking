@@ -88,6 +88,12 @@
         Dim IndErrorR As Integer
     End Structure
     Public ProductResult As Result
+    Public TempSave_1 As Result
+    Public TempSave_2 As Result
+    Public TempSave_3 As Result
+    Public TempSave_4 As Result
+    Public TempSave_5 As Result
+    Public TempSave_6 As Result
     Public Structure Result
         Dim MeasurementLeft As String
         Dim MeasurementRight As String
