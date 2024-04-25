@@ -13,7 +13,6 @@ Public Class MainForm
     Dim ThreadST6 As Thread
     Dim ThreadAlarm As Thread
     Dim Modbus = New Modbus
-    Dim Database = New DatabaseConnection
 
     Dim fullPath As String = System.AppDomain.CurrentDomain.BaseDirectory
     Dim projectFolder As String = fullPath.Replace("\ORC_Laser_Marking\bin\Debug\", "").Replace("\ORC_Laser_Marking\bin\Release\", "")
@@ -138,8 +137,8 @@ Public Class MainForm
                 .dbPassword = ReadINI(iniPath, "DATABASE", "Password")
                 .dbDatabase = ReadINI(iniPath, "DATABASE", "Database")
                 Thread.Sleep(500)
-                'Heiden.Open()
-                'Hain.Open()
+                Heiden.Open()
+                Hain.Open()
                 UpdateLoadingBar(60, "Loading?? 3...")
                 Thread.Sleep(500)
 
@@ -257,8 +256,8 @@ Public Class MainForm
         Dim _start As String = StartDate.Value.ToString("yyyy-MM-dd 00:00:00")
         Dim _end As String = EndDate.Value.ToString("yyyy-MM-dd 23:59:59")
         Try
-            Call Database.Connect()
-            Dim sc As New SqlCommand("SELECT * FROM tb_datalog WHERE [Date Time] BETWEEN '" + _start.Replace(".", ":") + "' AND '" + _end.Replace(".", ":") + "' ORDER BY [ID] ASC ", Database.Connection)
+            Call DatabaseConnection.Connect()
+            Dim sc As New SqlCommand("SELECT * FROM tb_datalog WHERE [Date Time] BETWEEN '" + _start.Replace(".", ":") + "' AND '" + _end.Replace(".", ":") + "' ORDER BY [ID] ASC ", DatabaseConnection.Connection)
             Dim adapter As New SqlDataAdapter(sc)
             Dim ds As New DataSet
 
@@ -443,55 +442,59 @@ Public Class MainForm
                                End Sub)
                         ' end update text box
                         ' save database
-                        'Call Database.Connect()
-                        'Dim sc As New SqlCommand("UPDATE tb_datalog SET [Product Left Result] = '" & LeftProdResult & "', [Product Right Result] = '" & RightProdResult & "' WHERE [ID] = " & CountST5 & "", Database.Connection)
+                        'Call DatabaseConnection.Connect()
+                        'Dim sc As New SqlCommand("UPDATE tb_datalog SET [Product Left Result] = '" & LeftProdResult & "', [Product Right Result] = '" & RightProdResult & "' WHERE [ID] = " & CountST5 & "", DatabaseConnection.Connection)
                         'Dim adapter As New SqlDataAdapter(sc)
                         'adapter.SelectCommand.ExecuteNonQuery()
 
-                        Select Case MachineStatus.CavityST6
-                            Case 1
-                                With TempSave_1
-                                    Call Database.Connect()
-                                    Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right], [ST3 Measurement Left Status], [ST3 Measurement Right Status], [ST5 Camera Result Left], [ST5 Camera Result Right], [Product Left Result], [Product Right Result]) VALUES(" & CountProductResult & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & .MeasurementLeft.Replace(".", ",") & "', '" & .MeasurementRight.Replace(".", ",") & "', " & .MeasurementLeftStatus & ", " & .MeasurementRightStatus & ", " & .CameraLeft & ", " & .CameraRight & ", " & .ProductLeft & ", " & .ProductRight & " )", Database.Connection)
-                                    Dim adapter As New SqlDataAdapter(sc)
-                                    adapter.SelectCommand.ExecuteNonQuery()
-                                End With
-                            Case 2
-                                With TempSave_2
-                                    Call Database.Connect()
-                                    Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right], [ST3 Measurement Left Status], [ST3 Measurement Right Status], [ST5 Camera Result Left], [ST5 Camera Result Right], [Product Left Result], [Product Right Result]) VALUES(" & CountProductResult & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & .MeasurementLeft.Replace(".", ",") & "', '" & .MeasurementRight.Replace(".", ",") & "', " & .MeasurementLeftStatus & ", " & .MeasurementRightStatus & ", " & .CameraLeft & ", " & .CameraRight & ", " & .ProductLeft & ", " & .ProductRight & " )", Database.Connection)
-                                    Dim adapter As New SqlDataAdapter(sc)
-                                    adapter.SelectCommand.ExecuteNonQuery()
-                                End With
-                            Case 3
-                                With TempSave_3
-                                    Call Database.Connect()
-                                    Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right], [ST3 Measurement Left Status], [ST3 Measurement Right Status], [ST5 Camera Result Left], [ST5 Camera Result Right], [Product Left Result], [Product Right Result]) VALUES(" & CountProductResult & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & .MeasurementLeft.Replace(".", ",") & "', '" & .MeasurementRight.Replace(".", ",") & "', " & .MeasurementLeftStatus & ", " & .MeasurementRightStatus & ", " & .CameraLeft & ", " & .CameraRight & ", " & .ProductLeft & ", " & .ProductRight & " )", Database.Connection)
-                                    Dim adapter As New SqlDataAdapter(sc)
-                                    adapter.SelectCommand.ExecuteNonQuery()
-                                End With
-                            Case 4
-                                With TempSave_4
-                                    Call Database.Connect()
-                                    Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right], [ST3 Measurement Left Status], [ST3 Measurement Right Status], [ST5 Camera Result Left], [ST5 Camera Result Right], [Product Left Result], [Product Right Result]) VALUES(" & CountProductResult & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & .MeasurementLeft.Replace(".", ",") & "', '" & .MeasurementRight.Replace(".", ",") & "', " & .MeasurementLeftStatus & ", " & .MeasurementRightStatus & ", " & .CameraLeft & ", " & .CameraRight & ", " & .ProductLeft & ", " & .ProductRight & " )", Database.Connection)
-                                    Dim adapter As New SqlDataAdapter(sc)
-                                    adapter.SelectCommand.ExecuteNonQuery()
-                                End With
-                            Case 5
-                                With TempSave_5
-                                    Call Database.Connect()
-                                    Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right], [ST3 Measurement Left Status], [ST3 Measurement Right Status], [ST5 Camera Result Left], [ST5 Camera Result Right], [Product Left Result], [Product Right Result]) VALUES(" & CountProductResult & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & .MeasurementLeft.Replace(".", ",") & "', '" & .MeasurementRight.Replace(".", ",") & "', " & .MeasurementLeftStatus & ", " & .MeasurementRightStatus & ", " & .CameraLeft & ", " & .CameraRight & ", " & .ProductLeft & ", " & .ProductRight & " )", Database.Connection)
-                                    Dim adapter As New SqlDataAdapter(sc)
-                                    adapter.SelectCommand.ExecuteNonQuery()
-                                End With
-                            Case 6
-                                With TempSave_6
-                                    Call Database.Connect()
-                                    Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right], [ST3 Measurement Left Status], [ST3 Measurement Right Status], [ST5 Camera Result Left], [ST5 Camera Result Right], [Product Left Result], [Product Right Result]) VALUES(" & CountProductResult & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & .MeasurementLeft.Replace(".", ",") & "', '" & .MeasurementRight.Replace(".", ",") & "', " & .MeasurementLeftStatus & ", " & .MeasurementRightStatus & ", " & .CameraLeft & ", " & .CameraRight & ", " & .ProductLeft & ", " & .ProductRight & " )", Database.Connection)
-                                    Dim adapter As New SqlDataAdapter(sc)
-                                    adapter.SelectCommand.ExecuteNonQuery()
-                                End With
-                        End Select
+                        Try
+                            Select Case MachineStatus.CavityST6
+                                Case 1
+                                    With TempSave_1
+                                        Call DatabaseConnection.Connect()
+                                        Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right], [ST3 Measurement Left Status], [ST3 Measurement Right Status], [ST5 Camera Result Left], [ST5 Camera Result Right], [Product Left Result], [Product Right Result]) VALUES(" & CountProductResult & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & .MeasurementLeft.Replace(".", ",") & "', '" & .MeasurementRight.Replace(".", ",") & "', " & .MeasurementLeftStatus & ", " & .MeasurementRightStatus & ", " & .CameraLeft & ", " & .CameraRight & ", " & .ProductLeft & ", " & .ProductRight & " )", DatabaseConnection.Connection)
+                                        Dim adapter As New SqlDataAdapter(sc)
+                                        adapter.SelectCommand.ExecuteNonQuery()
+                                    End With
+                                Case 2
+                                    With TempSave_2
+                                        Call DatabaseConnection.Connect()
+                                        Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right], [ST3 Measurement Left Status], [ST3 Measurement Right Status], [ST5 Camera Result Left], [ST5 Camera Result Right], [Product Left Result], [Product Right Result]) VALUES(" & CountProductResult & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & .MeasurementLeft.Replace(".", ",") & "', '" & .MeasurementRight.Replace(".", ",") & "', " & .MeasurementLeftStatus & ", " & .MeasurementRightStatus & ", " & .CameraLeft & ", " & .CameraRight & ", " & .ProductLeft & ", " & .ProductRight & " )", DatabaseConnection.Connection)
+                                        Dim adapter As New SqlDataAdapter(sc)
+                                        adapter.SelectCommand.ExecuteNonQuery()
+                                    End With
+                                Case 3
+                                    With TempSave_3
+                                        Call DatabaseConnection.Connect()
+                                        Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right], [ST3 Measurement Left Status], [ST3 Measurement Right Status], [ST5 Camera Result Left], [ST5 Camera Result Right], [Product Left Result], [Product Right Result]) VALUES(" & CountProductResult & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & .MeasurementLeft.Replace(".", ",") & "', '" & .MeasurementRight.Replace(".", ",") & "', " & .MeasurementLeftStatus & ", " & .MeasurementRightStatus & ", " & .CameraLeft & ", " & .CameraRight & ", " & .ProductLeft & ", " & .ProductRight & " )", DatabaseConnection.Connection)
+                                        Dim adapter As New SqlDataAdapter(sc)
+                                        adapter.SelectCommand.ExecuteNonQuery()
+                                    End With
+                                Case 4
+                                    With TempSave_4
+                                        Call DatabaseConnection.Connect()
+                                        Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right], [ST3 Measurement Left Status], [ST3 Measurement Right Status], [ST5 Camera Result Left], [ST5 Camera Result Right], [Product Left Result], [Product Right Result]) VALUES(" & CountProductResult & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & .MeasurementLeft.Replace(".", ",") & "', '" & .MeasurementRight.Replace(".", ",") & "', " & .MeasurementLeftStatus & ", " & .MeasurementRightStatus & ", " & .CameraLeft & ", " & .CameraRight & ", " & .ProductLeft & ", " & .ProductRight & " )", DatabaseConnection.Connection)
+                                        Dim adapter As New SqlDataAdapter(sc)
+                                        adapter.SelectCommand.ExecuteNonQuery()
+                                    End With
+                                Case 5
+                                    With TempSave_5
+                                        Call DatabaseConnection.Connect()
+                                        Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right], [ST3 Measurement Left Status], [ST3 Measurement Right Status], [ST5 Camera Result Left], [ST5 Camera Result Right], [Product Left Result], [Product Right Result]) VALUES(" & CountProductResult & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & .MeasurementLeft.Replace(".", ",") & "', '" & .MeasurementRight.Replace(".", ",") & "', " & .MeasurementLeftStatus & ", " & .MeasurementRightStatus & ", " & .CameraLeft & ", " & .CameraRight & ", " & .ProductLeft & ", " & .ProductRight & " )", DatabaseConnection.Connection)
+                                        Dim adapter As New SqlDataAdapter(sc)
+                                        adapter.SelectCommand.ExecuteNonQuery()
+                                    End With
+                                Case 6
+                                    With TempSave_6
+                                        Call DatabaseConnection.Connect()
+                                        Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right], [ST3 Measurement Left Status], [ST3 Measurement Right Status], [ST5 Camera Result Left], [ST5 Camera Result Right], [Product Left Result], [Product Right Result]) VALUES(" & CountProductResult & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & .MeasurementLeft.Replace(".", ",") & "', '" & .MeasurementRight.Replace(".", ",") & "', " & .MeasurementLeftStatus & ", " & .MeasurementRightStatus & ", " & .CameraLeft & ", " & .CameraRight & ", " & .ProductLeft & ", " & .ProductRight & " )", DatabaseConnection.Connection)
+                                        Dim adapter As New SqlDataAdapter(sc)
+                                        adapter.SelectCommand.ExecuteNonQuery()
+                                    End With
+                            End Select
+                        Catch ex As Exception
+
+                        End Try
 
                         ' end save database
                         ' save datalog
@@ -637,10 +640,10 @@ Public Class MainForm
                                End Sub)
                         ' end update text box
                         ' save database
-                        Call Database.Connect()
-                        Dim sc As New SqlCommand("UPDATE tb_datalog SET [ST5 Camera Result Left] = '" & LeftCameraResult & "', [ST5 Camera Result Right] = '" & RightCameraResult & "' WHERE [ID] = " & CountST5 & "", Database.Connection)
-                        Dim adapter As New SqlDataAdapter(sc)
-                        adapter.SelectCommand.ExecuteNonQuery()
+                        'Call DatabaseConnection.Connect()
+                        'Dim sc As New SqlCommand("UPDATE tb_datalog SET [ST5 Camera Result Left] = '" & LeftCameraResult & "', [ST5 Camera Result Right] = '" & RightCameraResult & "' WHERE [ID] = " & CountST5 & "", DatabaseConnection.Connection)
+                        'Dim adapter As New SqlDataAdapter(sc)
+                        'adapter.SelectCommand.ExecuteNonQuery()
                         ' end save database
                         ' save datalog file
                         Invoke(Sub()
@@ -673,8 +676,15 @@ Public Class MainForm
                         Heiden.Write("A00100" + vbCr)
                         Hain.Write("A00100" + vbCr)
                         Thread.Sleep(100)
-                        Dim LeftHeidenResult As String = HeidenString.Replace(" ", "")
-                        Dim RightHeidenResult As String = HainString.Replace(" ", "")
+                        Dim LeftHeidenResult As String = ""
+                        Dim RightHeidenResult As String = ""
+                        Try
+                            LeftHeidenResult = HeidenString.Replace(" ", "")
+                            RightHeidenResult = HainString.Replace(" ", "")
+                        Catch ex As Exception
+                            LeftHeidenResult = "0"
+                            RightHeidenResult = "0"
+                        End Try
                         ' end data aquisition from instrument
                         ' update text box
                         Invoke(Sub()
@@ -773,8 +783,8 @@ Public Class MainForm
                                End Sub)
                         ' end update text box
                         ' save database
-                        'Call Database.Connect()
-                        'Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right]) VALUES(" & CountST3 & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & LeftHeidenResult.Replace(".", ",") & "', '" & LeftHeidenResult.Replace(".", ",") & "')", Database.Connection)
+                        'Call DatabaseConnection.Connect()
+                        'Dim sc As New SqlCommand("INSERT INTO tb_datalog ([ID], [Date Time], [References], [Operator], [Product Order], [ST3 Measurement Left], [ST3 Measurement Right]) VALUES(" & CountST3 & ", '" & Date.Now.ToString("yyyy-MM-dd HH:mm:ss").Replace(".", ":") & "', '" & ProductReferences.References & "', '" & txt_ope_id.Text & "', '" & txt_po_num.Text & "', '" & LeftHeidenResult.Replace(".", ",") & "', '" & LeftHeidenResult.Replace(".", ",") & "')", DatabaseConnection.Connection)
                         'Dim adapter As New SqlDataAdapter(sc)
                         'adapter.SelectCommand.ExecuteNonQuery()
                         ' end save database
@@ -897,8 +907,8 @@ Public Class MainForm
                                End Sub)
                         ' end update text box
                         ' save database
-                        'Call Database.Connect()
-                        'Dim sc As New SqlCommand("UPDATE tb_datalog SET [ST3 Measurement Left Status] = '" & LeftMeasureResult & "', [ST3 Measurement Right Status] = '" & RightMeasureResult & "' WHERE [ID] = " & CountST3 & "", Database.Connection)
+                        'Call DatabaseConnection.Connect()
+                        'Dim sc As New SqlCommand("UPDATE tb_datalog SET [ST3 Measurement Left Status] = '" & LeftMeasureResult & "', [ST3 Measurement Right Status] = '" & RightMeasureResult & "' WHERE [ID] = " & CountST3 & "", DatabaseConnection.Connection)
                         'Dim adapter As New SqlDataAdapter(sc)
                         'adapter.SelectCommand.ExecuteNonQuery()
                         ' end save database
@@ -970,9 +980,9 @@ Public Class MainForm
                     Invoke(Sub()
                                If txt_ref.Text <> "" Then
                                    ' program check reference
-                                   Call Database.Connect()
+                                   Call DatabaseConnection.Connect()
                                    Dim Query As String = "SELECT * FROM tb_References WHERE [References]='" & txt_ref.Text & "'"
-                                   Dim sc As New SqlCommand(Query, Database.Connection)
+                                   Dim sc As New SqlCommand(Query, DatabaseConnection.Connection)
                                    Dim rd As SqlDataReader = sc.ExecuteReader()
                                    rd.Read()
 

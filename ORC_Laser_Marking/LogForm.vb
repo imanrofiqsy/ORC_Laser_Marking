@@ -1,6 +1,5 @@
 ﻿Imports System.Data.SqlClient
 Public Class LogForm
-    Dim Database = New DatabaseConnection
     Private Sub DateTime_Tick(sender As Object, e As EventArgs) Handles DateTime.Tick
         lbl_date.Text = Date.Now.ToString("dd-MM-yyyy")
         lbl_curr_time.Text = Date.Now.ToString("hh:mm:ss")
@@ -45,8 +44,8 @@ Public Class LogForm
         End With
     End Sub
     Private Sub LoadTable()
-        Call Database.Connect()
-        Dim sc As New SqlCommand("SELECT * FROM tb_datalog", Database.Connection)
+        Call DatabaseConnection.Connect()
+        Dim sc As New SqlCommand("SELECT * FROM tb_datalog", DatabaseConnection.Connection)
         Dim adapter As New SqlDataAdapter(sc)
         Dim ds As New DataSet
 

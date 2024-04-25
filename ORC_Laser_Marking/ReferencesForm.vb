@@ -1,6 +1,5 @@
 ﻿Imports System.Data.SqlClient
 Public Class ReferencesForm
-    Dim Database = New DatabaseConnection
     Private Sub DateTime_Tick(sender As Object, e As EventArgs) Handles DateTime.Tick
         lbl_date.Text = Date.Now.ToString("dd-MM-yyyy")
         lbl_curr_time.Text = Date.Now.ToString("hh:mm:ss")
@@ -45,8 +44,8 @@ Public Class ReferencesForm
         End If
     End Sub
     Private Sub LoadTable()
-        Call Database.Connect()
-        Dim sc As New SqlCommand("SELECT * FROM tb_references", Database.Connection)
+        Call DatabaseConnection.Connect()
+        Dim sc As New SqlCommand("SELECT * FROM tb_references", DatabaseConnection.Connection)
         Dim adapter As New SqlDataAdapter(sc)
         Dim ds As New DataSet
 
@@ -56,8 +55,8 @@ Public Class ReferencesForm
     Private Sub btn_add_Click(sender As Object, e As EventArgs) Handles btn_add.Click
         If txt_actuation_mode.Text <> "" And txt_camera_program.Text <> "" And txt_festo_distance_left.Text <> "" And txt_festo_distance_right.Text <> "" And txt_laser_template.Text <> "" And txt_level_distance.Text <> "" And txt_level_tolerance.Text <> "" And txt_oring_check.Text <> "" And txt_references.Text <> "" And txt_festo_speed_left.Text <> "" And txt_festo_speed_right.Text <> "" Then
             Try
-                Call Database.Connect()
-                Dim sc As New SqlCommand("INSERT INTO tb_references ([References], [Punching Mode], [Level Distance], [Level Tolerance], [Oring Check], [Festo Left Distance], [Festo Right Distance], [Festo Left Speed], [Festo Right Speed], [Laser Template Address], [Camera Program]) VALUES('" & txt_references.Text & "', '" & CInt(txt_actuation_mode.Text) & "', '" & txt_level_distance.Text.Replace(".", ",") & "', '" & txt_level_tolerance.Text.Replace(".", ",") & "', '" & txt_oring_check.Text & "', '" & Convert.ToInt32(txt_festo_distance_left.Text) & "', '" & Convert.ToInt32(txt_festo_distance_right.Text) & "', '" & CInt(txt_festo_speed_left.Text) & "', '" & CInt(txt_festo_speed_right.Text) & "', '" & CInt(txt_laser_template.Text) & "', '" & CInt(txt_camera_program.Text) & "')", Database.Connection)
+                Call DatabaseConnection.Connect()
+                Dim sc As New SqlCommand("INSERT INTO tb_references ([References], [Punching Mode], [Level Distance], [Level Tolerance], [Oring Check], [Festo Left Distance], [Festo Right Distance], [Festo Left Speed], [Festo Right Speed], [Laser Template Address], [Camera Program]) VALUES('" & txt_references.Text & "', '" & CInt(txt_actuation_mode.Text) & "', '" & txt_level_distance.Text.Replace(".", ",") & "', '" & txt_level_tolerance.Text.Replace(".", ",") & "', '" & txt_oring_check.Text & "', '" & Convert.ToInt32(txt_festo_distance_left.Text) & "', '" & Convert.ToInt32(txt_festo_distance_right.Text) & "', '" & CInt(txt_festo_speed_left.Text) & "', '" & CInt(txt_festo_speed_right.Text) & "', '" & CInt(txt_laser_template.Text) & "', '" & CInt(txt_camera_program.Text) & "')", DatabaseConnection.Connection)
                 Dim adapter As New SqlDataAdapter(sc)
                 adapter.SelectCommand.ExecuteNonQuery()
                 LoadTable()
@@ -74,8 +73,8 @@ Public Class ReferencesForm
 
     Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
         Try
-            Call Database.Connect()
-            Dim sc As New SqlCommand("SELECT * FROM tb_references WHERE [References]='" & DataGridView1.CurrentCell.Value & "'", Database.Connection)
+            Call DatabaseConnection.Connect()
+            Dim sc As New SqlCommand("SELECT * FROM tb_references WHERE [References]='" & DataGridView1.CurrentCell.Value & "'", DatabaseConnection.Connection)
             Dim rd As SqlDataReader = sc.ExecuteReader
             rd.Read()
 
@@ -103,8 +102,8 @@ Public Class ReferencesForm
     Private Sub btn_update_Click(sender As Object, e As EventArgs) Handles btn_update.Click
         If txt_actuation_mode.Text <> "" And txt_camera_program.Text <> "" And txt_festo_distance_left.Text <> "" And txt_festo_distance_right.Text <> "" And txt_laser_template.Text <> "" And txt_level_distance.Text <> "" And txt_level_tolerance.Text <> "" And txt_oring_check.Text <> "" And txt_references.Text <> "" And txt_festo_speed_left.Text <> "" And txt_festo_speed_right.Text <> "" Then
             Try
-                Call Database.Connect()
-                Dim sc As New SqlCommand("UPDATE tb_references SET [Punching Mode] = '" & CInt(txt_actuation_mode.Text) & "', [Level Distance] = '" & Double.Parse(txt_level_distance.Text.Replace(".", ",")) & "', [Level Tolerance] = '" & Double.Parse(txt_level_tolerance.Text.Replace(".", ",")) & "', [Oring Check] = '" & txt_oring_check.Text & "', [Festo Left Distance] = '" & Convert.ToInt32(txt_festo_distance_left.Text) & "', [Festo Right Distance] = '" & Convert.ToInt32(txt_festo_distance_right.Text) & "', [Festo Left Speed] = '" & CInt(txt_festo_speed_left.Text) & "', [Festo Right Speed] = '" & CInt(txt_festo_speed_right.Text) & "', [Laser Template Address] = '" & CInt(txt_laser_template.Text) & "', [Camera Program] = '" & CInt(txt_camera_program.Text) & "' WHERE [References] = '" & txt_references.Text & "'", Database.Connection)
+                Call DatabaseConnection.Connect()
+                Dim sc As New SqlCommand("UPDATE tb_references SET [Punching Mode] = '" & CInt(txt_actuation_mode.Text) & "', [Level Distance] = '" & Double.Parse(txt_level_distance.Text.Replace(".", ",")) & "', [Level Tolerance] = '" & Double.Parse(txt_level_tolerance.Text.Replace(".", ",")) & "', [Oring Check] = '" & txt_oring_check.Text & "', [Festo Left Distance] = '" & Convert.ToInt32(txt_festo_distance_left.Text) & "', [Festo Right Distance] = '" & Convert.ToInt32(txt_festo_distance_right.Text) & "', [Festo Left Speed] = '" & CInt(txt_festo_speed_left.Text) & "', [Festo Right Speed] = '" & CInt(txt_festo_speed_right.Text) & "', [Laser Template Address] = '" & CInt(txt_laser_template.Text) & "', [Camera Program] = '" & CInt(txt_camera_program.Text) & "' WHERE [References] = '" & txt_references.Text & "'", DatabaseConnection.Connection)
                 Dim adapter As New SqlDataAdapter(sc)
                 adapter.SelectCommand.ExecuteNonQuery()
                 LoadTable()
@@ -122,8 +121,8 @@ Public Class ReferencesForm
     Private Sub btn_delete_Click(sender As Object, e As EventArgs) Handles btn_delete.Click
         If txt_references.Text <> "" Then
             Try
-                Call Database.Connect()
-                Dim sc As New SqlCommand("DELETE FROM tb_references WHERE [References] = '" & txt_references.Text & "'", Database.Connection)
+                Call DatabaseConnection.Connect()
+                Dim sc As New SqlCommand("DELETE FROM tb_references WHERE [References] = '" & txt_references.Text & "'", DatabaseConnection.Connection)
                 Dim adapter As New SqlDataAdapter(sc)
                 adapter.SelectCommand.ExecuteNonQuery()
                 LoadTable()

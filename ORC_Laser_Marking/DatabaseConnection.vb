@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
-Public Class DatabaseConnection
+Module DatabaseConnection
     Public Connection As SqlConnection
-    Public Function Connect() As Boolean
+    Public Sub Connect()
         Try
             Dim database As String
             With Config
@@ -12,11 +12,9 @@ Public Class DatabaseConnection
                 MultipleActiveResultSets=true"
             End With
             Connection = New SqlConnection(database)
-            If Connection.State = ConnectionState.Closed Then Connection.Open() Else Connection.Close()
-            Return True
+            If Connection.State = ConnectionState.Closed Then Connection.Open() ' Else Connection.Close()
         Catch ex As Exception
             MsgBox("Database Connection Error -> " + ex.Message)
-            Return False
         End Try
-    End Function
-End Class
+    End Sub
+End Module
